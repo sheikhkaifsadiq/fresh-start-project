@@ -5,7 +5,7 @@ import { MagneticLink } from "./MagneticLink";
 export function Hero() {
   const [link, setLink] = useState("https://acme.com/q4/launch?utm=press");
   const [time, setTime] = useState("");
-  const subRef = useParallaxRef<HTMLParagraphElement>(0.06);
+  const subRef = useParallaxRef<HTMLDivElement>(0.06);
   const metaRef = useParallaxRef<HTMLDivElement>(0.04);
   const blob1 = usePointerParallax<HTMLDivElement>(28);
   const blob2 = usePointerParallax<HTMLDivElement>(-22);
@@ -57,14 +57,14 @@ export function Hero() {
               style={{ marginTop: 24 }}
             />
 
-            <p ref={subRef} className="hero-sub" style={{ marginTop: 40 }}>
+            <div ref={subRef} className="hero-sub" style={{ marginTop: 40 }}>
               <Mask delay={900} duration={1000}>
                 AegisRoute is an edge-routed URL platform with AI threat
                 detection and real-time analytics. Every redirect is
                 inspected, scored, and decided in under twelve milliseconds —
                 close to the request, far from the harm.
               </Mask>
-            </p>
+            </div>
 
             <Mask delay={1100} duration={900}>
               <div className="link-bar">

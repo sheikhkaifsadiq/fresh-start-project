@@ -301,14 +301,26 @@ export function useInView<T extends HTMLElement>(threshold = 0.2) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    const check = () => {
+      const r = el.getBoundingClientRect();
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      if (r.top < vh * 0.95 && r.bottom > 0) {
+        setSeen(true);
+        return true;
+      }
+      return false;
+    };
+    if (check()) return;
     const io = new IntersectionObserver(
       (es) => es.forEach((e) => {
         if (e.isIntersecting) { setSeen(true); io.disconnect(); }
       }),
-      { threshold, rootMargin: "0px 0px -8% 0px" }
+      { threshold, rootMargin: "0px 0px -5% 0px" }
     );
     io.observe(el);
-    return () => io.disconnect();
+    const onScroll = () => { if (check()) { io.disconnect(); window.removeEventListener('scroll', onScroll); } };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => { io.disconnect(); window.removeEventListener('scroll', onScroll); };
   }, [threshold]);
   return [ref, seen] as const;
 }
