@@ -41,7 +41,7 @@ export function Hero() {
   }, []);
 
   return (
-    <header id="top" className="hero hero-stage">
+    <header id="hero" className="hero hero-stage">
       <div className="hero-bg" aria-hidden>
         <div ref={blob1} className="blob b1" />
         <div ref={blob2} className="blob b2" />

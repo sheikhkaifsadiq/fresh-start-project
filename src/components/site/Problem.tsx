@@ -103,7 +103,7 @@ function Card({ item, idx }: { item: typeof ITEMS[number]; idx: number }) {
 
 export function Problem() {
   return (
-    <section className="section">
+    <section id="problem" className="section">
       <div className="container-x">
         <SectionHead
           num="01 / Problem"

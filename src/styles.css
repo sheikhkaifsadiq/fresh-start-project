@@ -1196,3 +1196,96 @@ body { padding-bottom: 44px; } /* room for fixed telemetry strip */
   .hf-row { grid-template-columns: 1fr auto; gap: 8px; }
   .hf-row .hf-asn, .hf-row .hf-geo { display: none; }
 }
+
+/* =========================================================================
+   Handoff token — one canonical object visibly carried scene-to-scene
+   ========================================================================= */
+.handoff-wrap {
+  position: fixed;
+  top: 0; right: clamp(16px, 2.6vw, 36px);
+  z-index: 55;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .6s var(--ease-out);
+  will-change: transform, opacity;
+}
+.handoff-chip {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 10px 14px 10px 12px;
+  background: var(--ink); color: var(--paper);
+  font-family: var(--font-mono);
+  border-radius: 999px;
+  transition:
+    background .9s var(--ease-out),
+    color .9s var(--ease-out),
+    box-shadow .9s var(--ease-out);
+  box-shadow: 0 14px 36px -16px rgba(20,22,26,0.30), 0 0 0 1px rgba(20,22,26,0.30);
+  max-width: 280px;
+}
+.handoff-shape {
+  position: relative;
+  width: 14px; height: 14px;
+  display: inline-grid; place-items: center;
+  flex: 0 0 14px;
+}
+.handoff-shape::before {
+  content: ""; position: absolute; inset: 0;
+  transition: clip-path .7s var(--ease-out), border-radius .7s var(--ease-out), transform .7s var(--ease-out);
+  background: currentColor;
+  border-radius: 50%;
+}
+.handoff-shape[data-shape="ring"]::before {
+  background: transparent; border: 1.5px solid currentColor; border-radius: 50%;
+}
+.handoff-shape[data-shape="bar"]::before {
+  border-radius: 1px; clip-path: inset(38% 0 38% 0);
+}
+.handoff-shape[data-shape="shield"]::before {
+  border-radius: 2px 2px 50% 50% / 2px 2px 60% 60%;
+  clip-path: polygon(50% 0, 100% 18%, 100% 60%, 50% 100%, 0 60%, 0 18%);
+}
+.handoff-shape[data-shape="node"]::before {
+  border-radius: 50%; transform: scale(.55);
+  box-shadow: 0 0 0 3px currentColor; opacity: .85;
+}
+.handoff-shape[data-shape="burst"]::before {
+  border-radius: 50%;
+  animation: handoff-burst 2.2s var(--ease-in-out) infinite;
+}
+@keyframes handoff-burst {
+  0%, 100% { transform: scale(.85); opacity: 1; }
+  50%      { transform: scale(1.15); opacity: .75; }
+}
+.handoff-text {
+  display: flex; flex-direction: column; gap: 2px; line-height: 1.15;
+}
+.handoff-label {
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  transition: opacity .4s var(--ease-out);
+}
+.handoff-sub {
+  font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase;
+  opacity: 0.65;
+}
+.handoff-next {
+  font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase;
+  opacity: 0; margin-top: 2px;
+}
+@media (max-width: 720px) {
+  .handoff-wrap { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .handoff-shape[data-shape="burst"]::before { animation: none; }
+  .handoff-chip { transition: none; }
+}
+
+/* Scene framing — subtle rotational push between scenes.
+   Adds the cinematic "perspective shift" without disturbing layout. */
+.scene-frame {
+  position: relative;
+  transform-origin: center 60%;
+  will-change: transform;
+}
+
+/* Reduce a competing ambient: bot-grid pulse in Problem.
+   Keep visual, halve frequency so it reads as backdrop, not foreground. */
