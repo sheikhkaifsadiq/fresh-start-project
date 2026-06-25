@@ -75,13 +75,13 @@ function Card({ item, idx }: { item: typeof ITEMS[number]; idx: number }) {
     <Mask delay={idx * 140} duration={1100}>
       <div ref={ref} style={{
         background: "#fff", padding: 32, minHeight: 320,
-        display: "flex", flexDirection: "column", justifyContent: "space-between",
+        display: "flex", flexDirection: "column", gap: 24,
         transformStyle: "preserve-3d",
       }}>
         <div className="tag danger" style={{ alignSelf: "flex-start", transform: "translateZ(20px)" }}>
           {item.tag}
         </div>
-        <div style={{ transform: "translateZ(30px)" }}>{item.diagram}</div>
+        <div style={{ transform: "translateZ(30px)", flex: 1, display: "flex", alignItems: "center" }}>{item.diagram}</div>
         <div style={{ transform: "translateZ(20px)" }}>
           <h3 style={{
             fontFamily: "var(--font-display)", fontWeight: 400,

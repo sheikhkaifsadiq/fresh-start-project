@@ -241,14 +241,14 @@ body {
 /* Section base */
 .section {
   position: relative;
-  padding: 140px 0;
+  padding: 88px 0;
   border-top: 1px solid var(--rule);
 }
 .section-head {
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 56px;
-  margin-bottom: 72px;
+  margin-bottom: 48px;
 }
 @media (max-width: 900px) {
   .section-head { grid-template-columns: 1fr; gap: 24px; }
@@ -457,7 +457,7 @@ body {
 /* CTA finale */
 .finale {
   position: relative;
-  padding: 180px 0 140px;
+  padding: 120px 0 80px;
   background: var(--graphite);
   color: var(--metal-1);
   overflow: hidden;
@@ -465,8 +465,8 @@ body {
 }
 .finale h2 {
   font-family: var(--font-display); font-weight: 300;
-  font-size: clamp(56px, 11vw, 180px);
-  line-height: 0.94; letter-spacing: -0.04em;
+  font-size: clamp(48px, 8vw, 120px);
+  line-height: 0.96; letter-spacing: -0.04em;
   margin: 24px 0 40px;
   color: #f3eee0;
 }
@@ -475,6 +475,11 @@ body {
   background: #f3eee0; color: var(--graphite); border-color: #f3eee0;
 }
 .finale .btn:hover { background: #fff; }
+.finale .btn-ghost {
+  background: transparent; color: #f3eee0;
+  border-color: color-mix(in oklab, #f3eee0 35%, transparent);
+}
+.finale .btn-ghost:hover { background: transparent; border-color: #f3eee0; color: #fff; }
 .finale .kicker { color: #9aa0a8; }
 .finale .kicker::before { background: #5a5e66; }
 
@@ -482,7 +487,7 @@ body {
 .foot {
   background: var(--graphite);
   color: #9aa0a8;
-  padding: 40px 0;
+  padding: 24px 0;
   border-top: 1px solid #23262c;
   font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
 }
