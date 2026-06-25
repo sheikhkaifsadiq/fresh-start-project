@@ -15,6 +15,7 @@ import { Route as AuthenticatedRouteImport } from './routes/_authenticated'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
 import { Route as ApiV1LinksIndexRouteImport } from './routes/api/v1/links/index'
+import { Route as ApiV1LinksCheckSlugRouteImport } from './routes/api/v1/links/check-slug'
 import { Route as ApiV1AuthSignupRouteImport } from './routes/api/v1/auth/signup'
 import { Route as ApiV1AuthMeRouteImport } from './routes/api/v1/auth/me'
 import { Route as ApiV1AuthLogoutRouteImport } from './routes/api/v1/auth/logout'
@@ -49,6 +50,11 @@ const ApiV1LinksIndexRoute = ApiV1LinksIndexRouteImport.update({
   path: '/api/v1/links/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiV1LinksCheckSlugRoute = ApiV1LinksCheckSlugRouteImport.update({
+  id: '/api/v1/links/check-slug',
+  path: '/api/v1/links/check-slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiV1AuthSignupRoute = ApiV1AuthSignupRouteImport.update({
   id: '/api/v1/auth/signup',
   path: '/api/v1/auth/signup',
@@ -79,6 +85,7 @@ export interface FileRoutesByFullPath {
   '/api/v1/auth/logout': typeof ApiV1AuthLogoutRoute
   '/api/v1/auth/me': typeof ApiV1AuthMeRoute
   '/api/v1/auth/signup': typeof ApiV1AuthSignupRoute
+  '/api/v1/links/check-slug': typeof ApiV1LinksCheckSlugRoute
   '/api/v1/links/': typeof ApiV1LinksIndexRoute
 }
 export interface FileRoutesByTo {
@@ -90,6 +97,7 @@ export interface FileRoutesByTo {
   '/api/v1/auth/logout': typeof ApiV1AuthLogoutRoute
   '/api/v1/auth/me': typeof ApiV1AuthMeRoute
   '/api/v1/auth/signup': typeof ApiV1AuthSignupRoute
+  '/api/v1/links/check-slug': typeof ApiV1LinksCheckSlugRoute
   '/api/v1/links': typeof ApiV1LinksIndexRoute
 }
 export interface FileRoutesById {
@@ -103,6 +111,7 @@ export interface FileRoutesById {
   '/api/v1/auth/logout': typeof ApiV1AuthLogoutRoute
   '/api/v1/auth/me': typeof ApiV1AuthMeRoute
   '/api/v1/auth/signup': typeof ApiV1AuthSignupRoute
+  '/api/v1/links/check-slug': typeof ApiV1LinksCheckSlugRoute
   '/api/v1/links/': typeof ApiV1LinksIndexRoute
 }
 export interface FileRouteTypes {
@@ -116,6 +125,7 @@ export interface FileRouteTypes {
     | '/api/v1/auth/logout'
     | '/api/v1/auth/me'
     | '/api/v1/auth/signup'
+    | '/api/v1/links/check-slug'
     | '/api/v1/links/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -127,6 +137,7 @@ export interface FileRouteTypes {
     | '/api/v1/auth/logout'
     | '/api/v1/auth/me'
     | '/api/v1/auth/signup'
+    | '/api/v1/links/check-slug'
     | '/api/v1/links'
   id:
     | '__root__'
@@ -139,6 +150,7 @@ export interface FileRouteTypes {
     | '/api/v1/auth/logout'
     | '/api/v1/auth/me'
     | '/api/v1/auth/signup'
+    | '/api/v1/links/check-slug'
     | '/api/v1/links/'
   fileRoutesById: FileRoutesById
 }
@@ -151,6 +163,7 @@ export interface RootRouteChildren {
   ApiV1AuthLogoutRoute: typeof ApiV1AuthLogoutRoute
   ApiV1AuthMeRoute: typeof ApiV1AuthMeRoute
   ApiV1AuthSignupRoute: typeof ApiV1AuthSignupRoute
+  ApiV1LinksCheckSlugRoute: typeof ApiV1LinksCheckSlugRoute
   ApiV1LinksIndexRoute: typeof ApiV1LinksIndexRoute
 }
 
@@ -196,6 +209,13 @@ declare module '@tanstack/react-router' {
       path: '/api/v1/links'
       fullPath: '/api/v1/links/'
       preLoaderRoute: typeof ApiV1LinksIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/v1/links/check-slug': {
+      id: '/api/v1/links/check-slug'
+      path: '/api/v1/links/check-slug'
+      fullPath: '/api/v1/links/check-slug'
+      preLoaderRoute: typeof ApiV1LinksCheckSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/v1/auth/signup': {
@@ -250,6 +270,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiV1AuthLogoutRoute: ApiV1AuthLogoutRoute,
   ApiV1AuthMeRoute: ApiV1AuthMeRoute,
   ApiV1AuthSignupRoute: ApiV1AuthSignupRoute,
+  ApiV1LinksCheckSlugRoute: ApiV1LinksCheckSlugRoute,
   ApiV1LinksIndexRoute: ApiV1LinksIndexRoute,
 }
 export const routeTree = rootRouteImport
