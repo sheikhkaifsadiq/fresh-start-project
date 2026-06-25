@@ -12,7 +12,8 @@ const ROTATING_REQS = [
 ];
 
 export function Hero() {
-  const [link, setLink] = useState("https://acme.com/q4/launch?utm=press");
+  const token = useRequestToken();
+  const [link, setLink] = useState(token.url);
   const [time, setTime] = useState("");
   const subRef = useParallaxRef<HTMLDivElement>(0.06);
   const metaRef = useParallaxRef<HTMLDivElement>(0.04);
