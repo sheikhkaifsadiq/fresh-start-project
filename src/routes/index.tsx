@@ -13,7 +13,7 @@ import { Confidence } from "../components/site/Confidence";
 import { Finale } from "../components/site/Finale";
 import { Ambient } from "../components/site/Ambient";
 import { CursorRing } from "../components/site/CursorRing";
-import { Mask, Kinetic } from "../lib/motion";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -36,24 +36,18 @@ export const Route = createFileRoute("/")({
 });
 
 function DriftBand() {
+  const phrase = "Inspect · Score · Decide · Route · Observe · Repeat";
   return (
-    <section aria-hidden style={{ overflow: "hidden" }}>
-      <div className="drift-band">
-        <Mask>
-          <Kinetic
-            as="div"
-            text="Inspect · Score · Decide · Route · Observe · Repeat"
-            split="word"
-            stagger={60}
-            duration={1100}
-            italicWords={[0, 2, 4]}
-            style={{ display: "inline-block", whiteSpace: "nowrap" }}
-          />
-        </Mask>
+    <section aria-hidden className="drift-band">
+      <div className="drift-track">
+        {Array.from({ length: 4 }).map((_, i) => (
+          <span key={i} className="drift-item">{phrase}<span className="drift-sep">·</span></span>
+        ))}
       </div>
     </section>
   );
 }
+
 
 function Index() {
   return (
