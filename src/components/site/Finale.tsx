@@ -24,7 +24,9 @@ export function Finale() {
 
       <div className="container-x" style={{ position: "relative" }}>
         <Mask delay={0}>
-          <div className="kicker">Invitation · v3 now in general availability</div>
+          <div className="kicker">
+            REQ 0x{token.id} resolved · {token.ms}ms · {token.verdict} · {token.pop}
+          </div>
         </Mask>
 
         <Kinetic
