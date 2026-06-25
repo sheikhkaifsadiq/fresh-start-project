@@ -87,20 +87,59 @@ export function RoutingField() {
       });
     };
 
-    const spawnPacket = (now: number) => {
+    /**
+     * Scene-aware ambient.
+     * 9 scenes (Hero → Finale). For each: density, threat rate, and a
+     * directional bias. The background tells the same story as the foreground.
+     *   0 Hero      — sparse traffic, idle
+     *   1 Problem   — congested, high threat rate (blind redirect)
+     *   2 Pipeline  — directed, even flow
+     *   3 Threat    — interception spikes
+     *   4 Analytics — organised traffic
+     *   5 Network   — global traffic, fastest
+     *   6 Layers    — filtered traffic (low threat survives)
+     *   7 Confidence— calm
+     *   8 Finale    — convergent, near-silent — every system steps aside for CTA
+     */
+    const SCENES = [
+      { density: 0.04, threat: 0.08, speed: 0.85 }, // hero
+      { density: 0.32, threat: 0.55, speed: 1.20 }, // problem (congestion)
+      { density: 0.18, threat: 0.22, speed: 1.00 }, // pipeline
+      { density: 0.26, threat: 0.74, speed: 1.15 }, // threat (interception spikes)
+      { density: 0.20, threat: 0.18, speed: 0.95 }, // analytics
+      { density: 0.30, threat: 0.20, speed: 1.35 }, // network (global)
+      { density: 0.14, threat: 0.06, speed: 0.90 }, // layers (filtered)
+      { density: 0.08, threat: 0.04, speed: 0.80 }, // confidence
+      { density: 0.02, threat: 0.00, speed: 0.65 }, // finale (calm)
+    ];
+
+    // Smoothly interpolate between adjacent scenes — no hard scene cuts.
+    const sceneState = (p: number) => {
+      const f = p * (SCENES.length - 1);
+      const i = Math.min(SCENES.length - 2, Math.max(0, Math.floor(f)));
+      const k = f - i;
+      const a = SCENES[i], b = SCENES[i + 1];
+      return {
+        density: a.density + (b.density - a.density) * k,
+        threat:  a.threat  + (b.threat  - a.threat)  * k,
+        speed:   a.speed   + (b.speed   - a.speed)   * k,
+      };
+    };
+
+    const spawnPacket = (now: number, threatRate: number, speedMult: number) => {
       if (!links.length) return;
       const [a, b] = links[Math.floor(Math.random() * links.length)];
       const dir = Math.random() < 0.5;
-      const bad = Math.random() < 0.18; // ~18% threat traffic
+      const bad = Math.random() < threatRate;
       packets.push({
         from: dir ? a : b,
         to:   dir ? b : a,
         t: 0,
-        speed: 0.6 + Math.random() * 0.9, // traversal units / sec
+        speed: (0.6 + Math.random() * 0.9) * speedMult,
         bad,
         born: now,
       });
-      if (packets.length > 120) packets.shift();
+      if (packets.length > 140) packets.shift();
     };
 
     resize();
@@ -115,10 +154,11 @@ export function RoutingField() {
       lastFrame = now;
       const f = stage.frame.current;
 
-      // density: base + scroll modulated
-      const density = reduced ? 0 : 0.05 + f.scrollProgress * 0.18;
+      // scene-aware density (no global "scroll = more" curve any more)
+      const sc = sceneState(f.scrollProgress);
+      const density = reduced ? 0 : sc.density;
       if (now - lastSpawn > 16 && !reduced) {
-        if (Math.random() < density) spawnPacket(now);
+        if (Math.random() < density) spawnPacket(now, sc.threat, sc.speed);
         lastSpawn = now;
       }
 
