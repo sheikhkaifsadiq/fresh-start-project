@@ -93,8 +93,13 @@ export function Hero() {
                 }}>Route →</MagneticLink>
               </div>
             </Mask>
+
+            <Mask delay={1400} duration={900}>
+              <LiveFeed />
+            </Mask>
           </div>
         </div>
+
 
         <div ref={ruleRef} className="hero-rule" />
 
