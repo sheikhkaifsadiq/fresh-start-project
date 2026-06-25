@@ -1411,3 +1411,215 @@ body { padding-bottom: 44px; } /* room for fixed telemetry strip */
   .hp-readout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+
+/* ============================================================
+   Authenticated console + auth pages
+   Reuses the editorial paper/ink language of the public site.
+   ============================================================ */
+
+.auth-gate {
+  min-height: 100vh; display: grid; place-items: center;
+  background: var(--paper); color: var(--ink-soft);
+}
+
+/* ---------- Auth page ---------- */
+.auth-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(1200px 600px at 80% -10%, color-mix(in oklab, var(--ember) 8%, transparent), transparent 60%),
+    var(--paper);
+  color: var(--ink);
+  display: flex; flex-direction: column;
+}
+.auth-nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 22px 40px; border-bottom: 1px solid var(--rule);
+}
+.auth-stage {
+  flex: 1; display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px; align-items: center;
+  padding: 60px 80px;
+  max-width: 1320px; width: 100%; margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .auth-stage { grid-template-columns: 1fr; gap: 40px; padding: 40px 24px; }
+  .auth-nav { padding: 18px 24px; }
+}
+.auth-copy h1 em { font-style: italic; color: color-mix(in oklab, var(--ink) 55%, var(--ember) 45%); }
+
+.auth-card {
+  background: color-mix(in oklab, var(--paper) 92%, white 8%);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 32px;
+  display: flex; flex-direction: column; gap: 16px;
+  box-shadow: 0 30px 80px -40px color-mix(in oklab, var(--ink) 30%, transparent);
+}
+.auth-tabs {
+  display: flex; gap: 4px; padding: 4px;
+  border: 1px solid var(--rule); border-radius: 999px;
+  align-self: flex-start;
+}
+.auth-tab {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--ink-soft);
+  background: transparent; border: 0; padding: 8px 14px; border-radius: 999px;
+  cursor: pointer; transition: background .3s var(--ease-out), color .3s var(--ease-out);
+}
+.auth-tab.is-active { background: var(--ink); color: var(--paper); }
+
+.auth-field { display: flex; flex-direction: column; gap: 6px; }
+.auth-field > span {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--muted);
+}
+.auth-field input {
+  font-family: var(--font-mono); font-size: 14px;
+  color: var(--ink); background: transparent;
+  border: 0; border-bottom: 1px solid color-mix(in oklab, var(--ink) 20%, transparent);
+  padding: 10px 2px; outline: none;
+  transition: border-color .3s var(--ease-out);
+}
+.auth-field input:focus { border-color: var(--ink); }
+
+.auth-error {
+  font-family: var(--font-mono); font-size: 12px;
+  color: #b3261e; padding: 10px 12px;
+  background: color-mix(in oklab, #b3261e 8%, transparent);
+  border-left: 2px solid #b3261e;
+}
+.auth-info {
+  font-family: var(--font-mono); font-size: 12px;
+  color: var(--ink-soft); padding: 10px 12px;
+  border-left: 2px solid color-mix(in oklab, var(--ink) 30%, transparent);
+}
+.auth-submit { justify-content: center; margin-top: 8px; }
+.auth-submit[disabled] { opacity: 0.6; cursor: progress; }
+.auth-foot {
+  font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+  text-align: center; margin-top: 4px;
+}
+.auth-link {
+  background: transparent; border: 0; padding: 0; cursor: pointer;
+  font: inherit; color: var(--ink); text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ---------- App shell ---------- */
+.app-shell {
+  min-height: 100vh; display: grid;
+  grid-template-columns: 248px 1fr;
+  background: var(--paper); color: var(--ink);
+}
+@media (max-width: 900px) {
+  .app-shell { grid-template-columns: 1fr; }
+  .app-sidebar { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--rule); }
+}
+
+.app-sidebar {
+  position: sticky; top: 0; height: 100vh;
+  display: flex; flex-direction: column;
+  border-right: 1px solid var(--rule);
+  padding: 26px 22px;
+  background: color-mix(in oklab, var(--paper) 94%, white 6%);
+}
+.app-brand {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--font-mono); font-size: 13px;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--ink); text-decoration: none;
+}
+.app-brand-mark {
+  width: 18px; height: 18px; border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #f6f1e4, #14161a 70%);
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--ink) 30%, transparent);
+}
+.app-nav { margin-top: 36px; display: flex; flex-direction: column; gap: 24px; flex: 1; overflow-y: auto; }
+.app-nav-group { display: flex; flex-direction: column; gap: 4px; }
+.app-nav-label {
+  font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--muted); margin: 0 8px 6px;
+}
+.app-nav-link {
+  font-family: var(--font-mono); font-size: 13px;
+  color: var(--ink-soft); text-decoration: none;
+  padding: 8px 10px; border-radius: 3px;
+  transition: color .2s var(--ease-out), background .2s var(--ease-out);
+}
+.app-nav-link:hover { color: var(--ink); background: color-mix(in oklab, var(--ink) 4%, transparent); }
+.app-nav-link.is-active { color: var(--ink); background: color-mix(in oklab, var(--ink) 7%, transparent); }
+
+.app-sidebar-foot {
+  border-top: 1px solid var(--rule); padding-top: 16px; margin-top: 16px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.app-user-email {
+  font-family: var(--font-mono); font-size: 12px; color: var(--ink);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.app-user-role {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--muted);
+}
+.app-signout {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--ink-soft);
+  background: transparent; border: 1px solid var(--rule);
+  padding: 8px 10px; border-radius: 3px; cursor: pointer;
+  transition: background .2s var(--ease-out), color .2s var(--ease-out);
+}
+.app-signout:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+.app-main { display: flex; flex-direction: column; min-width: 0; }
+.app-topbar {
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 24px;
+  padding: 40px 56px 24px; border-bottom: 1px solid var(--rule);
+}
+@media (max-width: 720px) { .app-topbar { padding: 28px 24px 18px; } }
+.app-title {
+  font-family: var(--font-display); font-weight: 300;
+  font-size: clamp(32px, 4.2vw, 56px); letter-spacing: -0.02em;
+  line-height: 1.05; margin: 8px 0 0; color: var(--ink);
+}
+.app-topbar-meta {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--muted);
+}
+.app-content { padding: 40px 56px 80px; display: flex; flex-direction: column; gap: 32px; }
+@media (max-width: 720px) { .app-content { padding: 28px 24px 60px; } }
+
+/* ---------- Dashboard ---------- */
+.dash-grid {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+@media (max-width: 1100px) { .dash-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .dash-grid { grid-template-columns: 1fr; } }
+.dash-card {
+  border: 1px solid var(--rule); border-radius: 4px; padding: 22px;
+  background: color-mix(in oklab, var(--paper) 96%, white 4%);
+  display: flex; flex-direction: column; gap: 10px; min-height: 140px;
+}
+.dash-card-label {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--muted);
+}
+.dash-card-value {
+  font-family: var(--font-display); font-weight: 300;
+  font-size: 44px; letter-spacing: -0.02em; color: var(--ink);
+}
+.dash-card-foot {
+  margin-top: auto;
+  font-family: var(--font-mono); font-size: 12px; color: var(--ink-soft);
+}
+.dash-panel {
+  border: 1px solid var(--rule); border-radius: 4px;
+  padding: 28px; background: color-mix(in oklab, var(--paper) 96%, white 4%);
+}
+.dash-todo {
+  margin: 12px 0 0; padding: 0; list-style: none;
+  display: flex; flex-direction: column; gap: 8px;
+  font-family: var(--font-mono); font-size: 14px; color: var(--ink);
+}
+.dash-todo em { font-family: var(--font-display); font-style: italic; color: var(--ink); }
