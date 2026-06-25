@@ -77,9 +77,13 @@ export function StageProvider({ children }: { children: ReactNode }) {
       f.dt = dt;
 
       // scroll
+      const prevY = f.scrollY;
       f.scrollY = window.scrollY;
       f.scrollMax = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
       f.scrollProgress = Math.min(1, Math.max(0, f.scrollY / f.scrollMax));
+      const instV = (f.scrollY - prevY) / Math.max(1, dt * 1000); // px/ms
+      f.scrollV += (instV - f.scrollV) * Math.min(1, dt * 8);
+      f.scrollVAbs += (Math.min(1, Math.abs(instV) / 3) - f.scrollVAbs) * Math.min(1, dt * 5);
 
       // pointer velocity
       const ptDt = Math.max(1, now - ltp);
