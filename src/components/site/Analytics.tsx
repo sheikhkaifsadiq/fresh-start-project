@@ -41,10 +41,16 @@ function AreaChart() {
       <path d={area} fill="url(#ga)" style={{ transition: "d .8s var(--ease-out)" }} />
       <path d={path} fill="none" stroke="#14161a" strokeWidth="1.5"
         style={{ transition: "d .8s var(--ease-out)" }} />
-      {/* Live cursor */}
+      {/* Highlighted datapoint — the canonical request's score, breathing in place. */}
       <circle cx={pts[pts.length - 1][0]} cy={pts[pts.length - 1][1]} r="4" fill="#c25535">
-        <animate attributeName="r" values="3;6;3" dur="1.6s" repeatCount="indefinite" />
+        <animate attributeName="r" values="3;7;3" dur="2.2s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="2.2s" repeatCount="indefinite" />
       </circle>
+      <line
+        x1={pts[pts.length - 1][0]} x2={pts[pts.length - 1][0]}
+        y1={pts[pts.length - 1][1] + 6} y2={140}
+        stroke="#c25535" strokeWidth="1" strokeDasharray="2 3" opacity="0.5"
+      />
     </svg>
   );
 }
