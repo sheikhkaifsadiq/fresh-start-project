@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { SectionHead } from "./SectionHead";
+import { useStage } from "../../lib/stage";
 
 const ROWS = [
   { step: "01", ttl: "Detection",    desc: "Signature, fingerprint, and behavioural anomaly detection on every request.", v: 0.96 },
@@ -8,24 +9,26 @@ const ROWS = [
   { step: "04", ttl: "Routing",      desc: "Clean traffic forwarded; abusive traffic sunk or rerouted, never to origin.",   v: 1.0  },
 ];
 
+/**
+ * Layers — each row stacks upward on scroll (z + shadow), coverage meter
+ * fills as a *consequence* of the row landing. Defense, sequenced.
+ */
 export function Layers() {
-  const ref = useRef<HTMLDivElement>(null);
+  const stage = useStage();
+  const wrap = useRef<HTMLDivElement>(null);
   const [t, setT] = useState(0);
 
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    let raf = 0;
-    const loop = () => {
+    return stage.subscribe(() => {
+      const el = wrap.current;
+      if (!el) return;
       const rect = el.getBoundingClientRect();
       const vh = window.innerHeight;
-      const p = 1 - (rect.top + rect.height * 0.2) / vh;
-      setT(Math.min(1, Math.max(0, p)));
-      raf = requestAnimationFrame(loop);
-    };
-    raf = requestAnimationFrame(loop);
-    return () => cancelAnimationFrame(raf);
-  }, []);
+      // Progress from when section enters bottom to when it leaves top
+      const raw = (vh - rect.top) / (vh + rect.height);
+      setT(Math.min(1, Math.max(0, (raw - 0.18) / 0.64)));
+    });
+  }, [stage]);
 
   return (
     <section id="security" className="section">
@@ -36,23 +39,37 @@ export function Layers() {
           title={<>Four passes between the request and the <em>response.</em></>}
           body="Each layer is independently configurable, independently observable, and fails closed. No layer trusts the verdict of the one before it."
         />
-        <div className="layers" ref={ref}>
+        <div className="layers layers-stack" ref={wrap}>
           {ROWS.map((r, i) => {
             const local = Math.min(1, Math.max(0, t * ROWS.length - i));
-            const on = local > 0.05;
+            const on = local > 0.06;
+            // z-stack: each row arrives from below + rotates flat
+            const ty = (1 - local) * 90;
+            const rx = (1 - local) * -22;
+            const sh = local * 24;
             return (
-              <div key={i} className={`layer-row ${on ? "is-on" : ""}`} style={{
-                transform: `translateX(${(1 - local) * (i % 2 === 0 ? -40 : 40)}px)`,
-                opacity: 0.3 + local * 0.7,
-                transition: "transform .6s var(--ease-out), opacity .6s var(--ease-out)",
-              }}>
+              <div
+                key={i}
+                className={`layer-row ${on ? "is-on" : ""}`}
+                style={{
+                  transform: `translate3d(0, ${ty}px, 0) rotateX(${rx}deg)`,
+                  opacity: 0.25 + local * 0.75,
+                  boxShadow: `0 ${sh}px ${sh * 2}px -${sh}px rgba(20,22,26,${0.10 + local * 0.10})`,
+                  background: on ? "#fff" : "color-mix(in oklab, #fff 60%, var(--paper-2))",
+                  zIndex: 10 + i,
+                  position: "relative",
+                }}
+              >
                 <div className="step">{r.step}</div>
                 <div>
                   <div className="ttl">{r.ttl}</div>
                   <div className="desc" style={{ marginTop: 6 }}>{r.desc}</div>
                 </div>
                 <div className="meter"><i style={{ width: `${local * r.v * 100}%` }} /></div>
-                <div style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--muted)" }}>
+                <div style={{
+                  textAlign: "right", fontFamily: "var(--font-mono)",
+                  fontSize: 11, color: "var(--muted)", fontVariantNumeric: "tabular-nums",
+                }}>
                   {(local * r.v * 100).toFixed(0)}% coverage
                 </div>
               </div>
