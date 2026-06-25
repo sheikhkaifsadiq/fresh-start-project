@@ -1,9 +1,0 @@
-fastapi
-uvicorn
-pydantic
-pydantic-settings
-duckdb
-pandas
-scikit-learn
-python-dotenv
-python-multipart
