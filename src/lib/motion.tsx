@@ -319,7 +319,7 @@ export function useInView<T extends HTMLElement>(threshold = 0.2) {
 
 type KineticProps = {
   text: string;
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
   className?: string;
   style?: CSSProperties;
   split?: "word" | "char";
