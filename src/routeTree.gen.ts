@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ApiV1AuthSignupRouteImport } from './routes/api/v1/auth/signup'
+import { Route as ApiV1AuthMeRouteImport } from './routes/api/v1/auth/me'
 import { Route as ApiV1AuthLogoutRouteImport } from './routes/api/v1/auth/logout'
 import { Route as ApiV1AuthLoginRouteImport } from './routes/api/v1/auth/login'
 
@@ -30,6 +31,11 @@ const ApiV1AuthSignupRoute = ApiV1AuthSignupRouteImport.update({
   path: '/api/v1/auth/signup',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiV1AuthMeRoute = ApiV1AuthMeRouteImport.update({
+  id: '/api/v1/auth/me',
+  path: '/api/v1/auth/me',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiV1AuthLogoutRoute = ApiV1AuthLogoutRouteImport.update({
   id: '/api/v1/auth/logout',
   path: '/api/v1/auth/logout',
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/v1/auth/login': typeof ApiV1AuthLoginRoute
   '/api/v1/auth/logout': typeof ApiV1AuthLogoutRoute
+  '/api/v1/auth/me': typeof ApiV1AuthMeRoute
   '/api/v1/auth/signup': typeof ApiV1AuthSignupRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/v1/auth/login': typeof ApiV1AuthLoginRoute
   '/api/v1/auth/logout': typeof ApiV1AuthLogoutRoute
+  '/api/v1/auth/me': typeof ApiV1AuthMeRoute
   '/api/v1/auth/signup': typeof ApiV1AuthSignupRoute
 }
 export interface FileRoutesById {
@@ -61,6 +69,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/v1/auth/login': typeof ApiV1AuthLoginRoute
   '/api/v1/auth/logout': typeof ApiV1AuthLogoutRoute
+  '/api/v1/auth/me': typeof ApiV1AuthMeRoute
   '/api/v1/auth/signup': typeof ApiV1AuthSignupRoute
 }
 export interface FileRouteTypes {
@@ -70,6 +79,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/api/v1/auth/login'
     | '/api/v1/auth/logout'
+    | '/api/v1/auth/me'
     | '/api/v1/auth/signup'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -77,6 +87,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/api/v1/auth/login'
     | '/api/v1/auth/logout'
+    | '/api/v1/auth/me'
     | '/api/v1/auth/signup'
   id:
     | '__root__'
@@ -84,6 +95,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/api/v1/auth/login'
     | '/api/v1/auth/logout'
+    | '/api/v1/auth/me'
     | '/api/v1/auth/signup'
   fileRoutesById: FileRoutesById
 }
@@ -92,6 +104,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ApiV1AuthLoginRoute: typeof ApiV1AuthLoginRoute
   ApiV1AuthLogoutRoute: typeof ApiV1AuthLogoutRoute
+  ApiV1AuthMeRoute: typeof ApiV1AuthMeRoute
   ApiV1AuthSignupRoute: typeof ApiV1AuthSignupRoute
 }
 
@@ -118,6 +131,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiV1AuthSignupRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/v1/auth/me': {
+      id: '/api/v1/auth/me'
+      path: '/api/v1/auth/me'
+      fullPath: '/api/v1/auth/me'
+      preLoaderRoute: typeof ApiV1AuthMeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/v1/auth/logout': {
       id: '/api/v1/auth/logout'
       path: '/api/v1/auth/logout'
@@ -140,6 +160,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ApiV1AuthLoginRoute: ApiV1AuthLoginRoute,
   ApiV1AuthLogoutRoute: ApiV1AuthLogoutRoute,
+  ApiV1AuthMeRoute: ApiV1AuthMeRoute,
   ApiV1AuthSignupRoute: ApiV1AuthSignupRoute,
 }
 export const routeTree = rootRouteImport
