@@ -35,21 +35,47 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+function DriftBand() {
+  return (
+    <section aria-hidden style={{ overflow: "hidden" }}>
+      <div className="drift-band">
+        <Mask>
+          <Kinetic
+            as="div"
+            text="Inspect · Score · Decide · Route · Observe · Repeat"
+            split="word"
+            stagger={60}
+            duration={1100}
+            italicWords={[0, 2, 4]}
+            style={{ display: "inline-block", whiteSpace: "nowrap" }}
+          />
+        </Mask>
+      </div>
+    </section>
+  );
+}
+
 function Index() {
   return (
-    <ScrollProgressProvider>
-      <Nav />
-      <main>
-        <Hero />
-        <Problem />
-        <Pipeline />
-        <Threat />
-        <Analytics />
-        <Network />
-        <Layers />
-        <Confidence />
-        <Finale />
-      </main>
-    </ScrollProgressProvider>
+    <MotionProvider>
+      <ScrollProgressProvider>
+        <Ambient />
+        <CursorRing />
+        <Nav />
+        <main>
+          <Hero />
+          <Problem />
+          <DriftBand />
+          <Pipeline />
+          <Threat />
+          <Analytics />
+          <DriftBand />
+          <Network />
+          <Layers />
+          <Confidence />
+          <Finale />
+        </main>
+      </ScrollProgressProvider>
+    </MotionProvider>
   );
 }
