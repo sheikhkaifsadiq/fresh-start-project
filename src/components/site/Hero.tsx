@@ -96,7 +96,7 @@ export function Hero() {
             </Mask>
 
             <Mask delay={1400} duration={900}>
-              <LiveFeed />
+              <LiveFeed token={token} />
             </Mask>
           </div>
         </div>
