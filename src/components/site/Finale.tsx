@@ -2,9 +2,13 @@ import { Mask, Kinetic } from "../../lib/motion";
 import { MagneticLink } from "./MagneticLink";
 import { Marquee } from "./Marquee";
 import { useRequestToken } from "../../lib/token";
+import { useAuthStore } from "@/lib/stores/auth-store";
 
 export function Finale() {
   const token = useRequestToken();
+  const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
+  const ctaHref = isAuthenticated ? "/dashboard" : "/auth";
+  const ctaLabel = isAuthenticated ? "Open Dashboard" : "Route a Link";
   return (
     <section id="cta" className="finale">
       <div style={{
