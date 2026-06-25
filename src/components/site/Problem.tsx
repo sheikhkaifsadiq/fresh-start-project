@@ -72,21 +72,27 @@ const ITEMS = [
 function Card({ item, idx }: { item: typeof ITEMS[number]; idx: number }) {
   const ref = useTilt<HTMLDivElement>(6, 1.01);
   return (
-    <Mask delay={idx * 140} duration={1100}>
+    <Mask delay={idx * 140} duration={1100} style={{ height: "100%" }}>
       <div ref={ref} style={{
-        background: "#fff", padding: 32, minHeight: 320,
+        background: "#fff", padding: 32, height: "100%",
         display: "flex", flexDirection: "column", gap: 24,
         transformStyle: "preserve-3d",
       }}>
         <div className="tag danger" style={{ alignSelf: "flex-start", transform: "translateZ(20px)" }}>
           {item.tag}
         </div>
-        <div style={{ transform: "translateZ(30px)", flex: 1, display: "flex", alignItems: "center" }}>{item.diagram}</div>
-        <div style={{ transform: "translateZ(20px)" }}>
+        <div style={{
+          transform: "translateZ(30px)",
+          height: 140,
+          display: "flex", alignItems: "center", justifyContent: "center",
+        }}>
+          <div style={{ width: "100%" }}>{item.diagram}</div>
+        </div>
+        <div style={{ transform: "translateZ(20px)", marginTop: "auto" }}>
           <h3 style={{
             fontFamily: "var(--font-display)", fontWeight: 400,
             fontSize: 24, letterSpacing: "-0.01em",
-            margin: "22px 0 8px",
+            margin: "0 0 8px",
           }}>{item.title as ReactNode}</h3>
           <p style={{ color: "var(--ink-soft)", fontSize: 13, lineHeight: 1.6 }}>{item.body}</p>
         </div>
