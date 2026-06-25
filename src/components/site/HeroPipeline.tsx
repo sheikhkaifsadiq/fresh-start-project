@@ -108,11 +108,12 @@ export function HeroPipeline() {
       </div>
 
       <div className="hp-readout">
-        <Field label="Source"   value={sample.src} />
-        <Field label="Client"   value={sample.ua} />
-        <Field label="ASN"      value={sample.asn} />
+        <Field label="Source" value={sample.src} show />
+        <Field label="Client" value={sample.ua} show={stage >= 1} />
+        <Field label="ASN"    value={sample.asn} show={stage >= 1} />
         <Field
           label="Score"
+          show={stage >= 1}
           value={
             <span style={{ color: verdictColor }}>
               {sample.score.toFixed(2)}
@@ -130,34 +131,34 @@ export function HeroPipeline() {
         />
         <Field
           label="Verdict"
+          show={stage >= 2}
           value={
-            stage >= 2 ? (
-              <span style={{ color: verdictColor, letterSpacing: "0.18em" }}>{sample.verdict}</span>
-            ) : (
-              <span style={{ color: "var(--muted)" }}>—</span>
-            )
+            <span style={{ color: verdictColor, letterSpacing: "0.18em" }}>{sample.verdict}</span>
           }
         />
         <Field
           label="Routed → POP"
-          value={
-            stage >= 3 ? (
-              <span style={{ color: "var(--ink)" }}>{sample.pop}</span>
-            ) : (
-              <span style={{ color: "var(--muted)" }}>—</span>
-            )
-          }
+          show={stage >= 3}
+          value={<span style={{ color: "var(--ink)" }}>{sample.pop}</span>}
         />
       </div>
     </div>
   );
 }
 
-function Field({ label, value }: { label: string; value: React.ReactNode }) {
+function Field({ label, value, show }: { label: string; value: React.ReactNode; show: boolean }) {
   return (
-    <div className="hp-field">
+    <div
+      className="hp-field"
+      style={{
+        opacity: show ? 1 : 0.18,
+        transform: show ? "translateY(0)" : "translateY(4px)",
+        transition: "opacity .55s var(--ease-out), transform .55s var(--ease-out)",
+      }}
+    >
       <div className="hp-field-l">{label}</div>
-      <div className="hp-field-v">{value}</div>
+      <div className="hp-field-v">{show ? value : <span style={{ color: "var(--muted)" }}>—</span>}</div>
     </div>
   );
 }
+
