@@ -1289,3 +1289,94 @@ body { padding-bottom: 44px; } /* room for fixed telemetry strip */
 
 /* Reduce a competing ambient: bot-grid pulse in Problem.
    Keep visual, halve frequency so it reads as backdrop, not foreground. */
+
+/* ==========================================================================
+   Hero Pipeline — live product demo above the fold.
+   Incoming Link → AI Inspection → Threat Decision → Safe Route
+   ========================================================================== */
+.hp-stage {
+  margin-top: 40px;
+  padding: 22px 24px 26px;
+  background: color-mix(in oklab, var(--paper) 92%, var(--ink) 4%);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  position: relative;
+}
+.hp-head {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-mono); font-size: 10.5px;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+}
+.hp-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  animation: hf-pulse 1.6s ease-in-out infinite;
+}
+.hp-rail {
+  position: relative;
+  margin: 46px 8px 18px;
+  height: 86px;
+}
+.hp-line {
+  position: absolute; left: 0; right: 0; top: 11px;
+  height: 1px; background: var(--rule);
+}
+.hp-line-fill {
+  right: auto; height: 1px;
+  transition: width 1.6s cubic-bezier(0.76,0,0.24,1), background .2s linear;
+}
+.hp-node {
+  position: absolute; top: 0; transform: translateX(-50%);
+  text-align: center; width: 140px;
+}
+.hp-bullet {
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--paper); border: 1px solid var(--rule);
+  margin: 5px auto 0;
+  transition: background .25s, border-color .25s, transform .25s;
+}
+.hp-node.on .hp-bullet { transform: scale(1.05); }
+.hp-step {
+  font-family: var(--font-mono); font-size: 9.5px;
+  letter-spacing: 0.2em; color: var(--muted); margin-top: 14px;
+}
+.hp-name {
+  font-family: var(--font-display); font-size: 13px;
+  letter-spacing: -0.01em; color: var(--ink); margin-top: 4px;
+}
+.hp-node:first-child { transform: translateX(0); text-align: left; }
+.hp-node:first-child .hp-bullet { margin-left: 0; }
+.hp-node:last-child  { transform: translateX(-100%); text-align: right; }
+.hp-node:last-child .hp-bullet { margin-right: 0; margin-left: auto; }
+.hp-packet {
+  position: absolute; top: 0; transform: translate(-50%, -100%);
+  padding: 4px 8px; font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.14em; color: var(--paper); border-radius: 1px;
+  box-shadow: 0 6px 16px -8px rgba(0,0,0,.35);
+  white-space: nowrap;
+}
+.hp-readout {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px;
+  margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--rule);
+}
+.hp-field-l {
+  font-family: var(--font-mono); font-size: 9.5px;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted);
+}
+.hp-field-v {
+  font-family: var(--font-mono); font-size: 12px;
+  margin-top: 6px; color: var(--ink); min-height: 18px;
+  display: flex; align-items: center; gap: 8px;
+}
+.hp-bar {
+  display: inline-block; width: 56px; height: 3px;
+  background: var(--paper-2); position: relative; overflow: hidden;
+}
+.hp-bar-fill {
+  position: absolute; inset: 0; width: 0%;
+  transition: width .9s cubic-bezier(0.76,0,0.24,1);
+}
+@media (max-width: 720px) {
+  .hp-readout { grid-template-columns: repeat(2, 1fr); }
+  .hp-name { font-size: 11px; }
+  .hp-node { width: 96px; }
+}
