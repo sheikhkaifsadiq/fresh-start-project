@@ -1,8 +1,10 @@
 import { Mask, Kinetic } from "../../lib/motion";
 import { MagneticLink } from "./MagneticLink";
 import { Marquee } from "./Marquee";
+import { useRequestToken } from "../../lib/token";
 
 export function Finale() {
+  const token = useRequestToken();
   return (
     <section id="cta" className="finale">
       <div style={{
