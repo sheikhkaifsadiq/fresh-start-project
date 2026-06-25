@@ -115,4 +115,4 @@ export function Hero() {
     </header>
   );
 }
-}
+
