@@ -12,6 +12,7 @@ import { useState } from "react";
 import { Mask, Kinetic } from "@/lib/motion";
 import { LinksTable } from "./LinksTable";
 import { CreateLinkPanel } from "./CreateLinkPanel";
+import { RuleBuilder } from "./RuleBuilder";
 
 type Tab = "inventory" | "routing" | "bulk" | "qr";
 
@@ -63,6 +64,8 @@ export function LinksManager() {
             refreshKey={refreshKey}
             onCreate={() => setPanelOpen(true)}
           />
+        ) : tab === "routing" ? (
+          <RuleBuilder />
         ) : (
           <div className="lk-soon">
             <div className="kicker">{active.label}</div>

@@ -1696,3 +1696,56 @@ body { padding-bottom: 44px; } /* room for fixed telemetry strip */
   .lk-table th, .lk-table td { padding: 12px 14px; }
   .lk-dest { max-width: 180px; }
 }
+
+/* ============== Routing matrix — phase 3 ============== */
+.rb-shell { display: flex; flex-direction: column; gap: 16px; }
+.rb-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid color-mix(in oklab, var(--ink) 8%, transparent); }
+.rb-toolbar-actions { display: flex; gap: 10px; align-items: center; }
+
+.rb-stage-grid { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 16px; align-items: stretch; min-height: 640px; }
+@media (max-width: 1080px) { .rb-stage-grid { grid-template-columns: 1fr; } }
+
+.rb-canvas { position: relative; overflow: auto; border: 1px solid color-mix(in oklab, var(--ink) 12%, transparent); border-radius: 14px; background:
+  repeating-linear-gradient(0deg, transparent 0 39px, color-mix(in oklab, var(--ink) 4%, transparent) 39px 40px),
+  repeating-linear-gradient(90deg, transparent 0 39px, color-mix(in oklab, var(--ink) 4%, transparent) 39px 40px),
+  var(--paper, #fbf8f1);
+  min-height: 640px;
+}
+.rb-canvas-inner { min-width: max-content; padding: 56px 64px; display: flex; justify-content: center; }
+
+.rb-branch { display: flex; flex-direction: column; align-items: center; position: relative; }
+.rb-node { position: relative; width: 232px; padding: 14px 14px 16px; border-radius: 12px; background: var(--paper, #fbf8f1); border: 1px solid color-mix(in oklab, var(--ink) 16%, transparent); text-align: left; cursor: pointer; transition: transform .35s cubic-bezier(.22,.61,.36,1), border-color .25s ease, box-shadow .25s ease; z-index: 2; }
+.rb-node:hover { border-color: color-mix(in oklab, var(--ink) 30%, transparent); }
+.rb-node.is-selected { border-color: var(--ink); box-shadow: 0 8px 28px -16px color-mix(in oklab, var(--ink) 50%, transparent); transform: translateY(-1px); }
+.rb-action[data-subtype="block"] { border-left: 3px solid #b3261e; }
+.rb-action[data-subtype="route"] { border-left: 3px solid #1f7a4d; }
+.rb-action[data-subtype="webhook"] { border-left: 3px solid #8a6d2a; }
+.rb-condition { border-left: 3px solid color-mix(in oklab, var(--ink) 40%, transparent); }
+
+.rb-node-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.rb-node-kind { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+.rb-node-del { cursor: pointer; font-size: 18px; line-height: 1; color: var(--muted); padding: 0 4px; border-radius: 4px; }
+.rb-node-del:hover { color: #b3261e; background: color-mix(in oklab, #b3261e 12%, transparent); }
+.rb-node-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); margin-bottom: 6px; }
+.rb-node-value { font-family: var(--mono); font-size: 12px; color: var(--muted); word-break: break-word; }
+.rb-add-row { position: absolute; left: 50%; bottom: -34px; transform: translateX(-50%); display: flex; gap: 6px; z-index: 4; }
+
+.rb-children { display: flex; margin-top: 48px; padding-top: 18px; position: relative; gap: 32px; }
+.rb-stem { position: absolute; top: -30px; left: 50%; transform: translateX(-50%); width: 1px; height: 30px; background: color-mix(in oklab, var(--ink) 30%, transparent); }
+.rb-bar { position: absolute; top: 0; left: 12%; right: 12%; height: 1px; background: color-mix(in oklab, var(--ink) 30%, transparent); }
+.rb-child { display: flex; flex-direction: column; align-items: center; position: relative; min-width: 260px; }
+.rb-child::before { content: ""; position: absolute; top: -18px; left: 50%; transform: translateX(-50%); width: 1px; height: 18px; background: color-mix(in oklab, var(--ink) 30%, transparent); }
+.rb-edge-label { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); background: var(--paper, #fbf8f1); padding: 2px 8px; border: 1px solid color-mix(in oklab, var(--ink) 12%, transparent); border-radius: 999px; margin-bottom: 10px; }
+
+.rb-config { border: 1px solid color-mix(in oklab, var(--ink) 12%, transparent); border-radius: 14px; background: var(--paper, #fbf8f1); overflow: hidden; display: flex; flex-direction: column; }
+.rb-config-head { padding: 18px 20px; border-bottom: 1px solid color-mix(in oklab, var(--ink) 8%, transparent); }
+.rb-config-title { font-family: var(--display); font-size: 22px; margin: 4px 0 0; }
+.rb-config-body { padding: 18px 20px; display: flex; flex-direction: column; gap: 16px; overflow-y: auto; }
+.rb-config-empty { padding: 28px 22px; color: var(--muted); }
+.rb-config-empty p { font-size: 13px; margin-top: 8px; }
+.rb-hint { display: block; color: var(--muted); font-size: 11px; margin-top: 4px; }
+.rb-json { border-top: 1px solid color-mix(in oklab, var(--ink) 8%, transparent); padding-top: 14px; }
+.rb-json pre { font-size: 11px; line-height: 1.45; color: var(--muted); white-space: pre-wrap; word-break: break-word; max-height: 220px; overflow: auto; margin: 0; }
+
+.auth-field select, .auth-field input[type="number"], .auth-field input[type="datetime-local"], .auth-field input[type="url"], .auth-field input[type="text"] { width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid color-mix(in oklab, var(--ink) 14%, transparent); background: transparent; font-family: var(--mono); font-size: 12px; color: var(--ink); }
+.auth-field select:focus, .auth-field input:focus { outline: none; border-color: var(--ink); }
