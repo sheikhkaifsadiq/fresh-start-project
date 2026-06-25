@@ -441,8 +441,8 @@ export function Mask({
       className={`mask-reveal ${className}`}
       style={{
         ...style,
-        clipPath: seen || reduced ? "inset(0 0 0 0)" : closed,
-        WebkitClipPath: seen || reduced ? "inset(0 0 0 0)" : closed,
+        clipPath: seen || reduced ? "inset(-200px -200px -200px -200px)" : closed,
+        WebkitClipPath: seen || reduced ? "inset(-200px -200px -200px -200px)" : closed,
         transition: `clip-path ${duration}ms cubic-bezier(0.76, 0, 0.24, 1) ${delay}ms, -webkit-clip-path ${duration}ms cubic-bezier(0.76, 0, 0.24, 1) ${delay}ms`,
       }}
     >
