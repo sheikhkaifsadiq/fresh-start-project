@@ -16,6 +16,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
 import { Route as ApiV1LinksIndexRouteImport } from './routes/api/v1/links/index'
 import { Route as ApiV1LinksCheckSlugRouteImport } from './routes/api/v1/links/check-slug'
+import { Route as ApiV1LinksIdRouteImport } from './routes/api/v1/links/$id'
 import { Route as ApiV1AuthSignupRouteImport } from './routes/api/v1/auth/signup'
 import { Route as ApiV1AuthMeRouteImport } from './routes/api/v1/auth/me'
 import { Route as ApiV1AuthLogoutRouteImport } from './routes/api/v1/auth/logout'
@@ -55,6 +56,11 @@ const ApiV1LinksCheckSlugRoute = ApiV1LinksCheckSlugRouteImport.update({
   path: '/api/v1/links/check-slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiV1LinksIdRoute = ApiV1LinksIdRouteImport.update({
+  id: '/api/v1/links/$id',
+  path: '/api/v1/links/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiV1AuthSignupRoute = ApiV1AuthSignupRouteImport.update({
   id: '/api/v1/auth/signup',
   path: '/api/v1/auth/signup',
@@ -85,6 +91,7 @@ export interface FileRoutesByFullPath {
   '/api/v1/auth/logout': typeof ApiV1AuthLogoutRoute
   '/api/v1/auth/me': typeof ApiV1AuthMeRoute
   '/api/v1/auth/signup': typeof ApiV1AuthSignupRoute
+  '/api/v1/links/$id': typeof ApiV1LinksIdRoute
   '/api/v1/links/check-slug': typeof ApiV1LinksCheckSlugRoute
   '/api/v1/links/': typeof ApiV1LinksIndexRoute
 }
@@ -97,6 +104,7 @@ export interface FileRoutesByTo {
   '/api/v1/auth/logout': typeof ApiV1AuthLogoutRoute
   '/api/v1/auth/me': typeof ApiV1AuthMeRoute
   '/api/v1/auth/signup': typeof ApiV1AuthSignupRoute
+  '/api/v1/links/$id': typeof ApiV1LinksIdRoute
   '/api/v1/links/check-slug': typeof ApiV1LinksCheckSlugRoute
   '/api/v1/links': typeof ApiV1LinksIndexRoute
 }
@@ -111,6 +119,7 @@ export interface FileRoutesById {
   '/api/v1/auth/logout': typeof ApiV1AuthLogoutRoute
   '/api/v1/auth/me': typeof ApiV1AuthMeRoute
   '/api/v1/auth/signup': typeof ApiV1AuthSignupRoute
+  '/api/v1/links/$id': typeof ApiV1LinksIdRoute
   '/api/v1/links/check-slug': typeof ApiV1LinksCheckSlugRoute
   '/api/v1/links/': typeof ApiV1LinksIndexRoute
 }
@@ -125,6 +134,7 @@ export interface FileRouteTypes {
     | '/api/v1/auth/logout'
     | '/api/v1/auth/me'
     | '/api/v1/auth/signup'
+    | '/api/v1/links/$id'
     | '/api/v1/links/check-slug'
     | '/api/v1/links/'
   fileRoutesByTo: FileRoutesByTo
@@ -137,6 +147,7 @@ export interface FileRouteTypes {
     | '/api/v1/auth/logout'
     | '/api/v1/auth/me'
     | '/api/v1/auth/signup'
+    | '/api/v1/links/$id'
     | '/api/v1/links/check-slug'
     | '/api/v1/links'
   id:
@@ -150,6 +161,7 @@ export interface FileRouteTypes {
     | '/api/v1/auth/logout'
     | '/api/v1/auth/me'
     | '/api/v1/auth/signup'
+    | '/api/v1/links/$id'
     | '/api/v1/links/check-slug'
     | '/api/v1/links/'
   fileRoutesById: FileRoutesById
@@ -163,6 +175,7 @@ export interface RootRouteChildren {
   ApiV1AuthLogoutRoute: typeof ApiV1AuthLogoutRoute
   ApiV1AuthMeRoute: typeof ApiV1AuthMeRoute
   ApiV1AuthSignupRoute: typeof ApiV1AuthSignupRoute
+  ApiV1LinksIdRoute: typeof ApiV1LinksIdRoute
   ApiV1LinksCheckSlugRoute: typeof ApiV1LinksCheckSlugRoute
   ApiV1LinksIndexRoute: typeof ApiV1LinksIndexRoute
 }
@@ -218,6 +231,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiV1LinksCheckSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/v1/links/$id': {
+      id: '/api/v1/links/$id'
+      path: '/api/v1/links/$id'
+      fullPath: '/api/v1/links/$id'
+      preLoaderRoute: typeof ApiV1LinksIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/v1/auth/signup': {
       id: '/api/v1/auth/signup'
       path: '/api/v1/auth/signup'
@@ -270,6 +290,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiV1AuthLogoutRoute: ApiV1AuthLogoutRoute,
   ApiV1AuthMeRoute: ApiV1AuthMeRoute,
   ApiV1AuthSignupRoute: ApiV1AuthSignupRoute,
+  ApiV1LinksIdRoute: ApiV1LinksIdRoute,
   ApiV1LinksCheckSlugRoute: ApiV1LinksCheckSlugRoute,
   ApiV1LinksIndexRoute: ApiV1LinksIndexRoute,
 }
