@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Kinetic, Mask, useParallaxRef, usePointerParallax } from "../../lib/motion";
 import { MagneticLink } from "./MagneticLink";
+import { useRequestToken } from "../../lib/token";
 
-const LIVE_REQS = [
-  { ua: "chrome/126 · macOS",  asn: "AS13335", geo: "US-CA", score: 0.04, verdict: "ALLOW" },
+const ROTATING_REQS = [
   { ua: "headless/119 · linux", asn: "AS14061", geo: "DE-HE", score: 0.91, verdict: "SINK"  },
   { ua: "safari/17 · iOS",      asn: "AS7922",  geo: "US-NY", score: 0.07, verdict: "ALLOW" },
   { ua: "curl/8.4",             asn: "AS16509", geo: "IE-D",  score: 0.74, verdict: "CHLG"  },
