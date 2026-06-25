@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ScrollProgressProvider } from "../lib/scroll-progress";
+import { MotionProvider } from "../lib/motion";
 import { Nav } from "../components/site/Nav";
 import { Hero } from "../components/site/Hero";
 import { Problem } from "../components/site/Problem";
@@ -10,6 +11,9 @@ import { Network } from "../components/site/Network";
 import { Layers } from "../components/site/Layers";
 import { Confidence } from "../components/site/Confidence";
 import { Finale } from "../components/site/Finale";
+import { Ambient } from "../components/site/Ambient";
+import { CursorRing } from "../components/site/CursorRing";
+import { Mask, Kinetic } from "../lib/motion";
 
 export const Route = createFileRoute("/")({
   head: () => ({
