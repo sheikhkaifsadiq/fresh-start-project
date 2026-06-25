@@ -43,7 +43,7 @@ export function AppShell({
 
   const handleLogout = async () => {
     await logout();
-    navigate({ to: "/auth" });
+    navigate({ to: "/" });
   };
 
   const groups: Record<NavItem["group"], string> = {
