@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRequestToken } from "../../lib/token";
+import { useStage } from "../../lib/stage";
+
 
 /**
  * HeroPipeline — the product, visible in the first viewport.
