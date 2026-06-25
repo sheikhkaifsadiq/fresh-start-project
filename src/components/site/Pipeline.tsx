@@ -55,16 +55,12 @@ export function Pipeline() {
   const barRefs = useRef<Array<HTMLDivElement | null>>([]);
   const stageRefs = useRef<Array<HTMLDivElement | null>>([]);
   const stage = useStage();
+  const token = useRequestToken();
   const [verdict, setVerdict] = useState<"unknown" | "threat" | "safe">("unknown");
   const [activeIdx, setActiveIdx] = useState(0);
   const [tMs, setTMs] = useState("0.00");
-  const isThreat = useRef(false);
-
-  useEffect(() => {
-    // Decide once per scrub of the section, deterministically — flips when
-    // the user re-scrolls past from above.
-    isThreat.current = Math.random() < 0.45;
-  }, []);
+  // Deterministic — the canonical token resolves the same on every render.
+  const isThreat = useRef(token.verdict !== "ALLOW");
 
   useEffect(() => {
     const el = wrap.current;
