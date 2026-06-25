@@ -189,19 +189,38 @@ export function Pipeline() {
                   <div className="pcin-stamp">STAGE / {STAGES[activeIdx].idx} · {STAGES[activeIdx].ttl.toUpperCase()}</div>
                 </div>
 
-                {/* Stages rail */}
+                {/* Stages rail — only active stage holds the description */}
                 <div className="pcin-rail">
-                  {STAGES.map((s, i) => (
-                    <div
-                      key={s.idx}
-                      ref={(el) => { stageRefs.current[i] = el; }}
-                      className="pcin-stage"
-                    >
-                      <div className="pcin-idx">{s.idx}</div>
-                      <div className="pcin-ttl">{s.ttl}</div>
-                      <div className="pcin-desc">{s.desc}</div>
-                    </div>
-                  ))}
+                  {STAGES.map((s, i) => {
+                    const active = i === activeIdx;
+                    const past = i < activeIdx;
+                    return (
+                      <div
+                        key={s.idx}
+                        ref={(el) => { stageRefs.current[i] = el; }}
+                        className="pcin-stage"
+                        style={{
+                          opacity: active ? 1 : past ? 0.42 : 0.22,
+                          transform: active ? "translateY(-2px)" : "translateY(0)",
+                          transition: "opacity .6s var(--ease-out), transform .6s var(--ease-out), border-color .4s, background .4s",
+                        }}
+                      >
+                        <div className="pcin-idx">{s.idx}</div>
+                        <div className="pcin-ttl">{s.ttl}</div>
+                        <div
+                          className="pcin-desc"
+                          style={{
+                            opacity: active ? 1 : 0,
+                            maxHeight: active ? 120 : 0,
+                            overflow: "hidden",
+                            transition: "opacity .5s var(--ease-out), max-height .5s var(--ease-out)",
+                          }}
+                        >
+                          {s.desc}
+                        </div>
+                      </div>
+                    );
+                  })}
 
                   {/* Track + packet */}
                   <div ref={trackRef} className="pcin-track" aria-hidden>
@@ -215,6 +234,7 @@ export function Pipeline() {
                     <path d="M 720 120 Q 820 120 880 180" className="branch threat" />
                   </svg>
                 </div>
+
 
                 {/* Floating overlays — fingerprint + ML score */}
                 <div className="pcin-overlays">
