@@ -219,10 +219,10 @@ export function Pipeline() {
                 {/* Floating overlays — fingerprint + ML score */}
                 <div className="pcin-overlays">
                   <div ref={fpRef} className="pcin-fp" style={{ opacity: 0 }}>
-                    <div className="pcin-stamp">FINGERPRINT · JA4</div>
-                    <div className="pcin-fp-hash">t13d1516h2_8daaf6152771_b1ff8ab2d16f</div>
+                    <div className="pcin-stamp">FINGERPRINT · JA4 · REQ 0x{token.id}</div>
+                    <div className="pcin-fp-hash">{token.hash}</div>
                     <div className="pcin-fp-meta">
-                      <span>asn 14061</span><span>geo PT</span><span>ua chrome/126</span><span>tls 1.3</span>
+                      <span>{token.asn.toLowerCase()}</span><span>geo {token.geo.split(" ")[0]}</span><span>ua {token.ua.split(" · ")[0].toLowerCase()}</span><span>tls 1.3</span>
                     </div>
                   </div>
 
