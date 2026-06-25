@@ -647,3 +647,7 @@ main, .nav, .finale { position: relative; z-index: 1; }
 @media (prefers-reduced-motion: reduce) {
   .ki, .mask-reveal, .marquee-track, .ambient { transition: none !important; transform: none !important; clip-path: none !important; }
 }
+
+/* Pipeline active visibility fix (light bg) */
+.pipeline-stage.is-active .ttl { color: var(--ember); }
+.pipeline-stage.is-active .num-big { color: color-mix(in oklab, var(--ember) 22%, transparent); }
