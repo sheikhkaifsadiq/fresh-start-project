@@ -120,7 +120,7 @@ export function Analytics() {
             }}>
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 24 }}>
                 <div>
-                  <div className="kicker">Traffic · /q4/launch · {range}</div>
+                  <div className="kicker">Traffic · /q4/launch · {range} · highlighting REQ 0x{token.id}</div>
                   <div className="font-display" style={{ fontSize: 32, marginTop: 8, letterSpacing: "-0.02em" }}>
                     {displayedClicks.toLocaleString()} <span style={{ color: "var(--muted)", fontSize: 14, fontFamily: "var(--font-mono)" }}>requests</span>
                   </div>
