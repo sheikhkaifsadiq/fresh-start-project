@@ -184,7 +184,7 @@ export function Pipeline() {
               <div className="pipeline-cinema">
                 {/* Header strip */}
                 <div className="pcin-head">
-                  <div className="pcin-stamp">REQ · 0x{((Math.random() * 0xffff) | 0).toString(16).padStart(4, "0")}</div>
+                  <div className="pcin-stamp">REQ · 0x{token.id}</div>
                   <div className="pcin-stamp">T+{tMs}ms</div>
                   <div className="pcin-stamp">STAGE / {STAGES[activeIdx].idx} · {STAGES[activeIdx].ttl.toUpperCase()}</div>
                 </div>
