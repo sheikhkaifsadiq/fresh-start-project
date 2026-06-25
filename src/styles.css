@@ -1313,7 +1313,7 @@ body { padding-bottom: 44px; } /* room for fixed telemetry strip */
 }
 .hp-rail {
   position: relative;
-  margin: 46px 8px 18px;
+  margin: 46px 40px 18px;
   height: 86px;
 }
 .hp-line {
