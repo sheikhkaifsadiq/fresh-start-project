@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Kinetic, Mask, useParallaxRef, usePointerParallax } from "../../lib/motion";
 import { MagneticLink } from "./MagneticLink";
 import { useRequestToken } from "../../lib/token";
+import { HeroPipeline } from "./HeroPipeline";
 
 const ROTATING_REQS = [
   { ua: "headless/119 · linux", asn: "AS14061", geo: "DE-HE", score: 0.91, verdict: "SINK"  },
