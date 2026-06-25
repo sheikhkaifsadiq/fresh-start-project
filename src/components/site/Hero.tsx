@@ -119,3 +119,36 @@ export function Hero() {
     </header>
   );
 }
+
+function LiveFeed() {
+  const [rows, setRows] = useState(() => LIVE_REQS.slice(0, 4));
+  const [tick, setTick] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => {
+      setRows((r) => {
+        const next = LIVE_REQS[(tick + r.length) % LIVE_REQS.length];
+        return [next, ...r.slice(0, 3)];
+      });
+      setTick((t) => t + 1);
+    }, 1400);
+    return () => clearInterval(id);
+  }, [tick]);
+  return (
+    <div className="hero-feed" aria-hidden>
+      <div className="hero-feed-head">
+        <span className="dot" /> LIVE · last 4 decisions
+      </div>
+      <div className="hero-feed-rows">
+        {rows.map((r, i) => (
+          <div key={`${r.ua}-${i}-${tick}`} className={`hf-row ${r.score > 0.6 ? "bad" : "ok"}`}>
+            <span className="hf-ua">{r.ua}</span>
+            <span className="hf-asn">{r.asn}</span>
+            <span className="hf-geo">{r.geo}</span>
+            <span className="hf-score">{r.score.toFixed(2)}</span>
+            <span className="hf-verdict">{r.verdict}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
