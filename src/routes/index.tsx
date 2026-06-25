@@ -72,6 +72,7 @@ function Index() {
   return (
     <MotionProvider>
       <ScrollProgressProvider>
+        <Preloader />
         <Ambient />
         <CursorRing />
         <Nav />
