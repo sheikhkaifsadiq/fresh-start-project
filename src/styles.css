@@ -1388,4 +1388,3 @@ body { padding-bottom: 44px; } /* room for fixed telemetry strip */
   .hp-readout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-}
