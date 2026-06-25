@@ -1,0 +1,9 @@
+# AegisRoute
+
+> Edge-routed URL shortening with AI threat detection and real-time analytics. Every redirect is inspected, scored, and decided in under 12ms at the perimeter.
+
+AegisRoute pairs URL shortening with an ML threat-detection pipeline that inspects every redirect at the edge, scores risk in real time, and routes traffic through a global anycast network.
+
+## Pages
+
+- [Home](/): Product overview — intelligent routing, AI threat detection, analytics, global edge network, and security layers.

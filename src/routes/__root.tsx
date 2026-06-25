@@ -79,23 +79,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "theme-color", content: "#f3efe6" },
       { title: "AegisRoute — Routing, Shielded." },
-      {
-        name: "description",
-        content:
-          "An edge-routed link, watched in real time. AegisRoute pairs URL shortening with AI threat detection at the perimeter.",
-      },
       { name: "author", content: "AegisRoute" },
-      { property: "og:title", content: "AegisRoute — Routing, Shielded." },
-      {
-        property: "og:description",
-        content: "An edge-routed link, watched in real time. URL shortening with AI threat detection.",
-      },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "AegisRoute" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "AegisRoute — Routing, Shielded." },
-      { name: "description", content: "Creates a new, empty project for development." },
-      { property: "og:description", content: "Creates a new, empty project for development." },
-      { name: "twitter:description", content: "Creates a new, empty project for development." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/71066c7c-f8a5-459e-973d-763863b028fb/id-preview-6fd5b017--6d8c51e4-8f7e-40d5-801e-632f55e47d48.lovable.app-1782399244860.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/71066c7c-f8a5-459e-973d-763863b028fb/id-preview-6fd5b017--6d8c51e4-8f7e-40d5-801e-632f55e47d48.lovable.app-1782399244860.png" },
     ],
@@ -106,6 +93,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "AegisRoute",
+          url: "https://aegisroute.lovable.app",
+          description:
+            "Edge-routed URL shortening with AI threat detection and real-time analytics.",
+        }),
       },
     ],
   }),
