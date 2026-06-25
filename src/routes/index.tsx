@@ -13,6 +13,7 @@ import { Confidence } from "../components/site/Confidence";
 import { Finale } from "../components/site/Finale";
 import { Ambient } from "../components/site/Ambient";
 import { CursorRing } from "../components/site/CursorRing";
+import { Preloader } from "../components/site/Preloader";
 
 
 export const Route = createFileRoute("/")({
@@ -71,6 +72,7 @@ function Index() {
   return (
     <MotionProvider>
       <ScrollProgressProvider>
+        <Preloader />
         <Ambient />
         <CursorRing />
         <Nav />
