@@ -3,7 +3,7 @@ import createGlobe from "cobe";
 import { SectionHead } from "./SectionHead";
 
 // Well-spaced edge POPs across distinct regions
-const NODES = [
+const NODES: { name: string; lat: number; lon: number }[] = [
   { name: "SFO", lat: 37.77, lon: -122.42 },
   { name: "GRU", lat: -23.55, lon: -46.63 },
   { name: "LHR", lat: 51.50, lon: -0.12 },
@@ -15,55 +15,87 @@ const NODES = [
   { name: "SYD", lat: -33.87, lon: 151.21 },
 ];
 
+const ARC_PAIRS: [string, string][] = [
+  ["SFO", "LHR"], ["LHR", "FRA"], ["FRA", "DXB"], ["DXB", "SIN"],
+  ["SIN", "HND"], ["SIN", "SYD"], ["SFO", "HND"], ["LHR", "GRU"], ["FRA", "JNB"],
+];
+
 export function Network() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const phiRef = useRef(4.2); // start centered on Atlantic / Europe
-  const widthRef = useRef(0);
-  const pointerInteracting = useRef<number | null>(null);
-  const pointerDelta = useRef(0);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    let frame = 0;
 
-    const onResize = () => {
-      if (!canvas) return;
-      widthRef.current = canvas.offsetWidth;
-    };
-    onResize();
-    window.addEventListener("resize", onResize);
+    let width = canvas.offsetWidth;
+    let phi = 4.2;
+    let pointerDelta = 0;
+    let pointerStart: number | null = null;
+    let raf = 0;
 
-    const globe = createGlobe(canvas, {
-      devicePixelRatio: Math.min(window.devicePixelRatio || 1, 2),
-      width: widthRef.current * 2,
-      height: widthRef.current * 2,
-      phi: phiRef.current,
-      theta: 0.25,
-      dark: 1,
-      diffuse: 1.2,
-      mapSamples: 18000,
-      mapBrightness: 5.2,
-      baseColor: [0.32, 0.34, 0.38],
-      markerColor: [0.76, 0.33, 0.21], // ember
-      glowColor: [0.16, 0.16, 0.18],
-      markers: NODES.map((n) => ({ location: [n.lat, n.lon] as [number, number], size: 0.06 })),
-      onRender: (state) => {
-        if (pointerInteracting.current === null) {
-          phiRef.current += 0.0022;
-        }
-        state.phi = phiRef.current + pointerDelta.current;
-        state.width = widthRef.current * 2;
-        state.height = widthRef.current * 2;
-        if (!frame) setReady(true);
-        frame++;
-      },
+    const arcs = ARC_PAIRS.map(([a, b]) => {
+      const na = NODES.find((n) => n.name === a)!;
+      const nb = NODES.find((n) => n.name === b)!;
+      return {
+        from: [na.lat, na.lon] as [number, number],
+        to: [nb.lat, nb.lon] as [number, number],
+      };
     });
 
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const globe = createGlobe(canvas, {
+      devicePixelRatio: dpr,
+      width: width * dpr,
+      height: width * dpr,
+      phi,
+      theta: 0.22,
+      dark: 1,
+      diffuse: 1.25,
+      mapSamples: 20000,
+      mapBrightness: 5.6,
+      mapBaseBrightness: 0.08,
+      baseColor: [0.34, 0.36, 0.40],
+      markerColor: [0.78, 0.34, 0.22],
+      glowColor: [0.14, 0.14, 0.16],
+      markers: NODES.map((n) => ({ location: [n.lat, n.lon] as [number, number], size: 0.06 })),
+      arcs,
+      arcColor: [0.83, 0.40, 0.26],
+      arcWidth: 1.2,
+      arcHeight: 0.32,
+    });
+
+    let first = true;
+    const tick = () => {
+      if (pointerStart === null) phi += 0.0022;
+      globe.update({ phi: phi + pointerDelta, width: width * dpr, height: width * dpr });
+      if (first) {
+        first = false;
+        requestAnimationFrame(() => setReady(true));
+      }
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+
+    const onResize = () => { width = canvas.offsetWidth; };
+    window.addEventListener("resize", onResize);
+
+    const onDown = (e: PointerEvent) => { pointerStart = e.clientX - pointerDelta * 100; canvas.style.cursor = "grabbing"; };
+    const onUp = () => { pointerStart = null; canvas.style.cursor = "grab"; };
+    const onMove = (e: PointerEvent) => {
+      if (pointerStart !== null) pointerDelta = (e.clientX - pointerStart) / 100;
+    };
+    canvas.addEventListener("pointerdown", onDown);
+    window.addEventListener("pointerup", onUp);
+    window.addEventListener("pointermove", onMove);
+
     return () => {
+      cancelAnimationFrame(raf);
       globe.destroy();
       window.removeEventListener("resize", onResize);
+      canvas.removeEventListener("pointerdown", onDown);
+      window.removeEventListener("pointerup", onUp);
+      window.removeEventListener("pointermove", onMove);
     };
   }, []);
 
@@ -81,30 +113,7 @@ export function Network() {
             <canvas
               ref={canvasRef}
               className="globe-canvas"
-              style={{ opacity: ready ? 1 : 0 }}
-              onPointerDown={(e) => {
-                pointerInteracting.current = e.clientX - pointerDelta.current * 100;
-                (e.currentTarget as HTMLCanvasElement).style.cursor = "grabbing";
-              }}
-              onPointerUp={(e) => {
-                pointerInteracting.current = null;
-                (e.currentTarget as HTMLCanvasElement).style.cursor = "grab";
-              }}
-              onPointerOut={() => {
-                pointerInteracting.current = null;
-              }}
-              onMouseMove={(e) => {
-                if (pointerInteracting.current !== null) {
-                  const delta = e.clientX - pointerInteracting.current;
-                  pointerDelta.current = delta / 100;
-                }
-              }}
-              onTouchMove={(e) => {
-                if (pointerInteracting.current !== null && e.touches[0]) {
-                  const delta = e.touches[0].clientX - pointerInteracting.current;
-                  pointerDelta.current = delta / 100;
-                }
-              }}
+              style={{ opacity: ready ? 1 : 0, cursor: "grab" }}
             />
           </div>
 
