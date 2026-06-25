@@ -156,7 +156,7 @@ body {
   background: transparent; color: var(--ink);
   border: 1px solid color-mix(in oklab, var(--ink) 25%, transparent);
 }
-.btn-ghost:hover { border-color: var(--ink); }
+.btn-ghost:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 
 .btn .arrow { transition: transform .3s var(--ease-out); }
 .btn:hover .arrow { transform: translateX(4px); }
