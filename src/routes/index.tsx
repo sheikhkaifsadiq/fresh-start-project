@@ -22,13 +22,31 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "AegisRoute is an edge-routed URL platform with AI threat detection and real-time analytics. Every redirect inspected, scored, and decided in under twelve milliseconds.",
+          "Edge-routed URL shortening with AI threat detection and real-time analytics. Every redirect inspected and decided in under 12ms.",
       },
       { property: "og:title", content: "AegisRoute — A smarter route for every link." },
       {
         property: "og:description",
         content:
-          "Edge-routed URL shortening with AI threat detection and real-time analytics for serious teams.",
+          "Edge-routed URL shortening with AI threat detection and real-time analytics.",
+      },
+      { property: "og:url", content: "https://aegisroute.lovable.app/" },
+    ],
+    links: [{ rel: "canonical", href: "https://aegisroute.lovable.app/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "AegisRoute",
+          applicationCategory: "SecurityApplication",
+          operatingSystem: "Web",
+          url: "https://aegisroute.lovable.app/",
+          description:
+            "Edge-routed URL shortening with AI threat detection and real-time analytics.",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        }),
       },
     ],
   }),
