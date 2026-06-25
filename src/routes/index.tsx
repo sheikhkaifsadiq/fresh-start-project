@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ScrollProgressProvider } from "../lib/scroll-progress";
 import { MotionProvider } from "../lib/motion";
 import { StageProvider } from "../lib/stage";
+import { TokenProvider } from "../lib/token";
 import { Nav } from "../components/site/Nav";
 import { Hero } from "../components/site/Hero";
 import { Problem } from "../components/site/Problem";
@@ -93,6 +94,7 @@ function Index() {
   return (
     <MotionProvider>
       <StageProvider>
+        <TokenProvider>
         <ScrollProgressProvider>
           <Preloader />
           <RoutingField />
@@ -131,6 +133,7 @@ function Index() {
           </main>
           <TelemetryChrome />
         </ScrollProgressProvider>
+        </TokenProvider>
       </StageProvider>
     </MotionProvider>
   );

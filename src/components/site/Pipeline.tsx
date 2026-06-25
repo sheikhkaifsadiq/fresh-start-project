@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { SectionHead } from "./SectionHead";
 import { useStage } from "../../lib/stage";
+import { useRequestToken } from "../../lib/token";
 
 /**
  * Decision Pipeline — the centerpiece. 320vh pinned.
@@ -54,16 +55,12 @@ export function Pipeline() {
   const barRefs = useRef<Array<HTMLDivElement | null>>([]);
   const stageRefs = useRef<Array<HTMLDivElement | null>>([]);
   const stage = useStage();
+  const token = useRequestToken();
   const [verdict, setVerdict] = useState<"unknown" | "threat" | "safe">("unknown");
   const [activeIdx, setActiveIdx] = useState(0);
   const [tMs, setTMs] = useState("0.00");
-  const isThreat = useRef(false);
-
-  useEffect(() => {
-    // Decide once per scrub of the section, deterministically — flips when
-    // the user re-scrolls past from above.
-    isThreat.current = Math.random() < 0.45;
-  }, []);
+  // Deterministic — the canonical token resolves the same on every render.
+  const isThreat = useRef(token.verdict !== "ALLOW");
 
   useEffect(() => {
     const el = wrap.current;
@@ -187,7 +184,7 @@ export function Pipeline() {
               <div className="pipeline-cinema">
                 {/* Header strip */}
                 <div className="pcin-head">
-                  <div className="pcin-stamp">REQ · 0x{((Math.random() * 0xffff) | 0).toString(16).padStart(4, "0")}</div>
+                  <div className="pcin-stamp">REQ · 0x{token.id}</div>
                   <div className="pcin-stamp">T+{tMs}ms</div>
                   <div className="pcin-stamp">STAGE / {STAGES[activeIdx].idx} · {STAGES[activeIdx].ttl.toUpperCase()}</div>
                 </div>
@@ -222,10 +219,10 @@ export function Pipeline() {
                 {/* Floating overlays — fingerprint + ML score */}
                 <div className="pcin-overlays">
                   <div ref={fpRef} className="pcin-fp" style={{ opacity: 0 }}>
-                    <div className="pcin-stamp">FINGERPRINT · JA4</div>
-                    <div className="pcin-fp-hash">t13d1516h2_8daaf6152771_b1ff8ab2d16f</div>
+                    <div className="pcin-stamp">FINGERPRINT · JA4 · REQ 0x{token.id}</div>
+                    <div className="pcin-fp-hash">{token.hash}</div>
                     <div className="pcin-fp-meta">
-                      <span>asn 14061</span><span>geo PT</span><span>ua chrome/126</span><span>tls 1.3</span>
+                      <span>{token.asn.toLowerCase()}</span><span>geo {token.geo.split(" ")[0]}</span><span>ua {token.ua.split(" · ")[0].toLowerCase()}</span><span>tls 1.3</span>
                     </div>
                   </div>
 

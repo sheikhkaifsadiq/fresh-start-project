@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { SectionHead } from "./SectionHead";
 import { useTilt, Mask } from "../../lib/motion";
+import { useRequestToken } from "../../lib/token";
 
-type Row = { ip: string; ua: string; score: number; verdict: "ALLOW" | "DENY" | "CHALLENGE" };
+type Row = { ip: string; ua: string; score: number; verdict: "ALLOW" | "DENY" | "CHALLENGE"; canonical?: boolean; id?: string };
 
 const SEED: Row[] = [
-  { ip: "104.28.7.91",  ua: "Mozilla/5.0 (Macintosh) Safari/17.4",  score: 0.04, verdict: "ALLOW" },
   { ip: "45.155.205.12", ua: "python-requests/2.31",                score: 0.94, verdict: "DENY" },
   { ip: "188.114.97.3", ua: "Chrome/124 (Headless)",                score: 0.71, verdict: "CHALLENGE" },
   { ip: "73.92.144.18", ua: "Mozilla/5.0 (iPhone) Mobile/15E148",   score: 0.08, verdict: "ALLOW" },
@@ -16,16 +16,26 @@ const SEED: Row[] = [
 ];
 
 export function Threat() {
-  const [rows, setRows] = useState(SEED);
+  const token = useRequestToken();
+  const canonicalRow: Row = {
+    ip: token.ip,
+    ua: token.ua,
+    score: token.score,
+    verdict: token.verdict,
+    canonical: true,
+    id: token.id,
+  };
+  const [rows, setRows] = useState<Row[]>([canonicalRow, ...SEED]);
   const tilt1 = useTilt<HTMLDivElement>(4, 1.005);
   const tilt2 = useTilt<HTMLDivElement>(4, 1.005);
 
   useEffect(() => {
     const id = setInterval(() => {
       setRows((r) => {
-        const next = [...r];
-        next.unshift(next.pop()!);
-        return next;
+        // Pin canonical request at the top; rotate everything below it.
+        const [head, ...tail] = r;
+        tail.unshift(tail.pop()!);
+        return [head, ...tail];
       });
     }, 1800);
     return () => clearInterval(id);
@@ -57,7 +67,7 @@ export function Threat() {
                       borderRadius: "50%", marginRight: 8,
                       animation: "pulseDot 1.6s infinite",
                     }} />
-                    Live · /q4/launch
+                    Live · /q4/launch · tracking 0x{token.id}
                   </span>
                   <span>Last 60s</span>
                 </div>
@@ -67,10 +77,13 @@ export function Threat() {
                       key={r.ip + i}
                       className={`req-row ${r.verdict === "ALLOW" ? "ok" : "bad"}`}
                       style={{
-                        animation: i === 0 ? "rowIn .55s var(--ease-out)" : undefined,
+                        animation: i === 0 ? undefined : "rowIn .55s var(--ease-out)",
+                        background: r.canonical ? "color-mix(in oklab, var(--ink) 4%, transparent)" : undefined,
+                        borderLeft: r.canonical ? "2px solid var(--ink)" : undefined,
+                        paddingLeft: r.canonical ? 10 : undefined,
                       }}
                     >
-                      <div className="ip">{r.ip}</div>
+                      <div className="ip">{r.ip}{r.canonical ? "  · REQ 0x" + r.id : ""}</div>
                       <div className="ua">{r.ua}</div>
                       <div className="score">{r.score.toFixed(2)}</div>
                       <div className="verdict">{r.verdict}</div>
