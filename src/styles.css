@@ -489,11 +489,13 @@ body {
 .foot {
   background: var(--graphite);
   color: #9aa0a8;
-  padding: 24px 0;
+  height: 64px;
+  display: flex;
+  align-items: center;
   border-top: 1px solid #23262c;
   font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
 }
-.foot-inner { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.foot-inner { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; width: 100%; }
 
 /* Reveal */
 .reveal {
