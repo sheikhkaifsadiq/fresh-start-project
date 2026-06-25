@@ -5,7 +5,7 @@ import { MagneticLink } from "./MagneticLink";
 export function Hero() {
   const [link, setLink] = useState("https://acme.com/q4/launch?utm=press");
   const [time, setTime] = useState("");
-  const subRef = useParallaxRef<HTMLParagraphElement>(0.06);
+  const subRef = useParallaxRef<HTMLDivElement>(0.06);
   const metaRef = useParallaxRef<HTMLDivElement>(0.04);
   const blob1 = usePointerParallax<HTMLDivElement>(28);
   const blob2 = usePointerParallax<HTMLDivElement>(-22);
