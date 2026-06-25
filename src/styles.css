@@ -464,7 +464,7 @@ body {
 /* CTA finale */
 .finale {
   position: relative;
-  padding: 120px 0 80px;
+  padding: 120px 0 0;
   background: var(--graphite);
   color: var(--metal-1);
   overflow: hidden;
