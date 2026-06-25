@@ -133,6 +133,7 @@ function Index() {
           </main>
           <TelemetryChrome />
         </ScrollProgressProvider>
+        </TokenProvider>
       </StageProvider>
     </MotionProvider>
   );
