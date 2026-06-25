@@ -80,6 +80,7 @@ function RegionBar({ l, v, on, delay }: { l: string; v: number; on: boolean; del
 }
 
 export function Analytics() {
+  const token = useRequestToken();
   const [range, setRange] = useState<"1H" | "24H" | "7D">("24H");
   const deltaByRange = { "1H": 1, "24H": 4, "7D": 14 } as const;
   const multByRange = { "1H": 0.04, "24H": 1, "7D": 6.8 } as const;
