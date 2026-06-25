@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ScrollProgressProvider } from "../lib/scroll-progress";
+import { MotionProvider } from "../lib/motion";
 import { Nav } from "../components/site/Nav";
 import { Hero } from "../components/site/Hero";
 import { Problem } from "../components/site/Problem";
@@ -10,6 +11,9 @@ import { Network } from "../components/site/Network";
 import { Layers } from "../components/site/Layers";
 import { Confidence } from "../components/site/Confidence";
 import { Finale } from "../components/site/Finale";
+import { Ambient } from "../components/site/Ambient";
+import { CursorRing } from "../components/site/CursorRing";
+import { Mask, Kinetic } from "../lib/motion";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -31,21 +35,47 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+function DriftBand() {
+  return (
+    <section aria-hidden style={{ overflow: "hidden" }}>
+      <div className="drift-band">
+        <Mask>
+          <Kinetic
+            as="div"
+            text="Inspect · Score · Decide · Route · Observe · Repeat"
+            split="word"
+            stagger={60}
+            duration={1100}
+            italicWords={[0, 2, 4]}
+            style={{ display: "inline-block", whiteSpace: "nowrap" }}
+          />
+        </Mask>
+      </div>
+    </section>
+  );
+}
+
 function Index() {
   return (
-    <ScrollProgressProvider>
-      <Nav />
-      <main>
-        <Hero />
-        <Problem />
-        <Pipeline />
-        <Threat />
-        <Analytics />
-        <Network />
-        <Layers />
-        <Confidence />
-        <Finale />
-      </main>
-    </ScrollProgressProvider>
+    <MotionProvider>
+      <ScrollProgressProvider>
+        <Ambient />
+        <CursorRing />
+        <Nav />
+        <main>
+          <Hero />
+          <Problem />
+          <DriftBand />
+          <Pipeline />
+          <Threat />
+          <Analytics />
+          <DriftBand />
+          <Network />
+          <Layers />
+          <Confidence />
+          <Finale />
+        </main>
+      </ScrollProgressProvider>
+    </MotionProvider>
   );
 }
