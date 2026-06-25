@@ -13,7 +13,7 @@ import { Confidence } from "../components/site/Confidence";
 import { Finale } from "../components/site/Finale";
 import { Ambient } from "../components/site/Ambient";
 import { CursorRing } from "../components/site/CursorRing";
-import { Mask, Kinetic } from "../lib/motion";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
