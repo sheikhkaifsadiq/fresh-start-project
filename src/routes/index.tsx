@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ScrollProgressProvider } from "../lib/scroll-progress";
 import { MotionProvider } from "../lib/motion";
+import { StageProvider } from "../lib/stage";
 import { Nav } from "../components/site/Nav";
 import { Hero } from "../components/site/Hero";
 import { Problem } from "../components/site/Problem";
@@ -11,10 +12,11 @@ import { Network } from "../components/site/Network";
 import { Layers } from "../components/site/Layers";
 import { Confidence } from "../components/site/Confidence";
 import { Finale } from "../components/site/Finale";
-import { Ambient } from "../components/site/Ambient";
+import { RoutingField } from "../components/site/RoutingField";
+import { TelemetryChrome } from "../components/site/TelemetryChrome";
 import { CursorRing } from "../components/site/CursorRing";
 import { Preloader } from "../components/site/Preloader";
-
+import { SectionGlyph } from "../components/site/SectionGlyph";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -67,29 +69,69 @@ function DriftBand() {
   );
 }
 
+/** Wrap a section with an oversized drifting editorial fragment. */
+function Scene({
+  children, glyph, align = "right", size = "18vw", over = false, top = "auto", shade,
+}: {
+  children: React.ReactNode;
+  glyph: string;
+  align?: "left" | "right" | "center";
+  size?: string;
+  over?: boolean;
+  top?: string;
+  shade?: "ink" | "ember" | "paper";
+}) {
+  return (
+    <div style={{ position: "relative" }}>
+      <SectionGlyph text={glyph} align={align} size={size} over={over} top={top} shade={shade} />
+      {children}
+    </div>
+  );
+}
 
 function Index() {
   return (
     <MotionProvider>
-      <ScrollProgressProvider>
-        <Preloader />
-        <Ambient />
-        <CursorRing />
-        <Nav />
-        <main>
-          <Hero />
-          <Problem />
-          <DriftBand />
-          <Pipeline />
-          <Threat />
-          <Analytics />
-          <DriftBand />
-          <Network />
-          <Layers />
-          <Confidence />
-          <Finale />
-        </main>
-      </ScrollProgressProvider>
+      <StageProvider>
+        <ScrollProgressProvider>
+          <Preloader />
+          <RoutingField />
+          <CursorRing />
+          <Nav />
+          <main>
+            <Scene glyph="route." size="22vw" top="22vh" align="right">
+              <Hero />
+            </Scene>
+            <Scene glyph="blind." size="20vw" top="6vh" align="left" shade="ember">
+              <Problem />
+            </Scene>
+            <DriftBand />
+            <Scene glyph="inspect." size="20vw" top="4vh" align="right" over>
+              <Pipeline />
+            </Scene>
+            <Scene glyph="score." size="22vw" top="2vh" align="left" shade="ember">
+              <Threat />
+            </Scene>
+            <Scene glyph="observe." size="20vw" top="4vh" align="right">
+              <Analytics />
+            </Scene>
+            <DriftBand />
+            <Scene glyph="38 regions" size="14vw" top="4vh" align="left" over>
+              <Network />
+            </Scene>
+            <Scene glyph="layer." size="22vw" top="2vh" align="right">
+              <Layers />
+            </Scene>
+            <Scene glyph="proof." size="20vw" top="6vh" align="left">
+              <Confidence />
+            </Scene>
+            <Scene glyph="routed." size="26vw" top="40%" align="center" shade="paper">
+              <Finale />
+            </Scene>
+          </main>
+          <TelemetryChrome />
+        </ScrollProgressProvider>
+      </StageProvider>
     </MotionProvider>
   );
 }

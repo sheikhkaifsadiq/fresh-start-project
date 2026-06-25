@@ -519,26 +519,76 @@ body {
 /*  MOTION SYSTEM                                                       */
 /* ------------------------------------------------------------------ */
 
-/* Ambient pointer-reactive field, behind everything */
-.ambient {
+/* Ambient pointer-reactive field, behind everything (deprecated — replaced by .routing-field) */
+.ambient { display: none; }
+
+/* Page-wide routing field — canvas, fixed, behind all content */
+.routing-field {
   position: fixed; inset: 0; z-index: 0; pointer-events: none;
-  background:
-    radial-gradient(620px 460px at var(--ax, 50%) var(--ay, 30%),
-      color-mix(in oklab, var(--ember) 14%, transparent) 0%, transparent 60%),
-    radial-gradient(720px 520px at var(--bx, 60%) var(--by, 70%),
-      color-mix(in oklab, var(--signal) 12%, transparent) 0%, transparent 60%);
-  filter: blur(8px) saturate(120%);
-  opacity: 0.55;
-  transition: opacity .6s ease;
+  opacity: 0.85;
 }
-.ambient::after {
-  content: ""; position: absolute; inset: 0;
-  background-image: radial-gradient(rgba(20,22,26,0.06) 1px, transparent 1px);
-  background-size: 3px 3px;
-  mix-blend-mode: multiply;
-  opacity: 0.4;
+main, .nav, .finale, .tchrome { position: relative; z-index: 1; }
+
+/* Telemetry chrome — bottom-edge always-on infrastructure readout */
+.tchrome {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  z-index: 60; pointer-events: none;
+  border-top: 1px solid color-mix(in oklab, var(--rule) 80%, transparent);
+  background: color-mix(in oklab, var(--paper) 86%, transparent);
+  backdrop-filter: blur(10px) saturate(120%);
+  font-family: var(--font-mono);
+  font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--ink-soft);
 }
-main, .nav, .finale { position: relative; z-index: 1; }
+.finale ~ .tchrome,
+body:has(.finale.visible) .tchrome { /* keep visible regardless */ }
+.tchrome-row {
+  display: flex; align-items: center; gap: 28px;
+  padding: 10px clamp(20px, 3vw, 36px);
+  max-width: 1600px; margin: 0 auto;
+}
+.tchrome-cell { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+.tchrome-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--ember);
+  box-shadow: 0 0 0 0 color-mix(in oklab, var(--ember) 60%, transparent);
+  animation: tchrome-pulse 1.6s var(--ease-in-out) infinite;
+}
+@keyframes tchrome-pulse {
+  0%,100% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--ember) 55%, transparent); }
+  50%     { box-shadow: 0 0 0 8px color-mix(in oklab, var(--ember) 0%, transparent); }
+}
+.tchrome-k { color: var(--muted); }
+.tchrome-v { color: var(--ink); }
+.tchrome-v em { font-style: normal; color: var(--muted); margin-left: 2px; font-size: 9px; }
+.tabular { font-variant-numeric: tabular-nums; }
+.tchrome-track { flex: 1; min-width: 80px; }
+.tchrome-track-bar { position: relative; display: block; height: 2px; background: color-mix(in oklab, var(--rule) 80%, transparent); }
+.tchrome-track-fill {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, var(--ink) 0%, var(--ember) 100%);
+  transform-origin: left center; transform: scaleX(0);
+}
+.tchrome-track-tick {
+  position: absolute; top: 50%; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--ember); transform: translate(-50%, -50%); left: 0%;
+  box-shadow: 0 0 10px color-mix(in oklab, var(--ember) 70%, transparent);
+}
+.tchrome-end { margin-left: auto; }
+@media (max-width: 720px) {
+  .tchrome-row { gap: 14px; padding: 8px 16px; font-size: 9.5px; letter-spacing: 0.12em; }
+  .tchrome-track { display: none; }
+  .tchrome-cell:nth-child(3) { display: none; }
+}
+
+/* Section glyphs — oversized editorial drift */
+.section-glyph { user-select: none; mix-blend-mode: multiply; }
+.section-glyph.over { mix-blend-mode: normal; }
+.finale .section-glyph { mix-blend-mode: screen; }
+
+main > section { position: relative; }
+main > section { padding-bottom: 100px; } /* room below telemetry */
+body { padding-bottom: 44px; } /* room for fixed telemetry strip */
 
 /* Kinetic typography */
 .kinetic { display: block; }
@@ -597,20 +647,9 @@ main, .nav, .finale { position: relative; z-index: 1; }
 @media (prefers-reduced-motion: reduce) { .drift-track { animation: none; } }
 
 
-/* Hero floaters */
+/* Hero — replace decorative blobs with structural marks (kept hidden) */
 .hero-stage { position: relative; }
-.hero-bg {
-  position: absolute; inset: -10% -10% 0 -10%; pointer-events: none; z-index: 0;
-}
-.hero-bg .blob {
-  position: absolute; border-radius: 50%;
-  filter: blur(40px);
-  opacity: 0.55;
-  will-change: transform;
-}
-.hero-bg .b1 { width: 480px; height: 480px; left: -120px; top: -40px; background: color-mix(in oklab, var(--ember) 24%, transparent); }
-.hero-bg .b2 { width: 360px; height: 360px; right: -60px; top: 80px; background: color-mix(in oklab, var(--signal) 24%, transparent); }
-.hero-bg .b3 { width: 280px; height: 280px; left: 40%; top: 380px; background: color-mix(in oklab, #6b6f76 30%, transparent); }
+.hero-bg { display: none; }
 .hero > .container-x { position: relative; z-index: 2; }
 
 .hero-rule {
@@ -869,3 +908,128 @@ main, .nav, .finale { position: relative; z-index: 1; }
   .pre-grid, .pre-dot, .pre-marquee-track { animation: none; }
 }
 
+
+/* =========================================================================
+   Preloader v3 — diagonal curtain, axes, request stream
+   ========================================================================= */
+.pre-axes { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.pre-axis { position: absolute; background: color-mix(in oklab, var(--paper) 28%, transparent); transform-origin: left top; }
+.pre-axis-h { left: 0; right: 0; top: 50%; height: 1px; transform-origin: left center; }
+.pre-axis-v { top: 0; bottom: 0; width: 1px; transform-origin: center top; }
+.pre-axis-v1 { left: 16%; }
+.pre-axis-v2 { left: 50%; }
+.pre-axis-v3 { left: 84%; }
+
+/* Request stream traveling across the horizon underneath the brand */
+.pre-stream { position: absolute; inset: 0; z-index: 2; overflow: hidden; pointer-events: none; }
+.pre-pkt {
+  position: absolute; left: -10%; width: 32px; height: 1.5px;
+  background: linear-gradient(to right, transparent, color-mix(in oklab, var(--paper) 60%, transparent));
+  animation: pre-pkt 3.6s linear infinite;
+}
+.pre-pkt.is-bad {
+  background: linear-gradient(to right, transparent, var(--ember));
+  animation-name: pre-pkt-bad;
+}
+@keyframes pre-pkt {
+  0%   { transform: translateX(0); opacity: 0; }
+  10%  { opacity: 1; }
+  100% { transform: translateX(110vw); opacity: 0; }
+}
+@keyframes pre-pkt-bad {
+  0%   { transform: translateX(0); opacity: 0; }
+  10%  { opacity: 1; }
+  55%  { transform: translateX(55vw); opacity: 1; }
+  58%  { transform: translateX(55vw) scaleX(2.5); opacity: 0.9; background: var(--ember); }
+  60%  { opacity: 0; }
+  100% { transform: translateX(55vw); opacity: 0; }
+}
+
+/* Counter rebuild — telemetry label, smaller scale */
+.pre-counter {
+  font-family: var(--font-display); font-weight: 300;
+  font-size: clamp(80px, 14vw, 220px);
+  line-height: 0.86; letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+  display: flex; flex-direction: column; gap: 14px;
+  color: var(--paper);
+}
+.pre-counter-num { display: inline-block; }
+.pre-counter-label {
+  font-family: var(--font-mono); font-size: 11px;
+  letter-spacing: 0.32em; text-transform: uppercase;
+  color: color-mix(in oklab, var(--paper) 50%, transparent);
+}
+
+/* Diagonal panel curtain — replaces horizontal panels */
+.pre-curtain { display: none; }  /* hide old horizontal panels */
+.pre-curtain-a, .pre-curtain-b {
+  display: block;
+  position: absolute; inset: -10%;
+  background: var(--paper);
+  z-index: 5; pointer-events: none;
+  transform-origin: 50% 50%;
+  transition: transform 1.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.pre-curtain-a {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+  transform: translate(0, -110%);
+}
+.pre-curtain-b {
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 100% 0);
+  transform: translate(0, 110%);
+}
+.preloader.is-done .pre-curtain-a { transform: translate(-30%, -110%); }
+.preloader.is-done .pre-curtain-b { transform: translate(30%, 110%); }
+.preloader.is-done .pre-axes,
+.preloader.is-done .pre-top,
+.preloader.is-done .pre-stage,
+.preloader.is-done .pre-marquee,
+.preloader.is-done .pre-rule,
+.preloader.is-done .pre-stream { opacity: 0; transition: opacity .5s var(--ease-out); }
+
+/* =========================================================================
+   Confidence — horizontal scroll testimonial track
+   ========================================================================= */
+.h-rail-pin { position: relative; }
+.h-rail-sticky { position: sticky; top: 0; height: 100vh; display: flex; align-items: center; overflow: hidden; }
+.h-rail-track { display: flex; gap: 28px; padding: 0 8vw; will-change: transform; }
+.h-rail-card {
+  flex: 0 0 clamp(280px, 32vw, 440px);
+  background: #fff;
+  border: 1px solid var(--rule);
+  padding: 36px 32px;
+  display: flex; flex-direction: column; gap: 18px; min-height: 360px;
+}
+.h-rail-card .quote {
+  font-family: var(--font-display); font-weight: 300;
+  font-size: clamp(20px, 1.6vw, 26px); line-height: 1.35;
+  letter-spacing: -0.015em; color: var(--ink); margin: 0; flex: 1;
+}
+.h-rail-card .quote em { font-style: italic; color: var(--ember); }
+.h-rail-card .who {
+  font-family: var(--font-mono); font-size: 10.5px;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+  display: flex; justify-content: space-between; border-top: 1px solid var(--rule);
+  padding-top: 16px;
+}
+
+/* =========================================================================
+   Layers — z-stack on scroll
+   ========================================================================= */
+.layers-stack { position: relative; perspective: 1600px; }
+.layers-stack .layer-row {
+  transform-origin: center top;
+  will-change: transform, box-shadow;
+}
+
+/* Pipeline token trail */
+.pipeline-trail {
+  position: absolute; top: 9px; left: 0; height: 2px;
+  background: linear-gradient(to right, transparent, color-mix(in oklab, var(--ember) 60%, transparent));
+  pointer-events: none;
+}
+
+/* Routing field z-stacking */
+.routing-field { mix-blend-mode: multiply; }
+.finale .routing-field { mix-blend-mode: screen; }

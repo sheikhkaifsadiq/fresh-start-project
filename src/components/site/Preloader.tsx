@@ -1,52 +1,68 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
+/**
+ * Authored entry sequence. The site is *already in motion* underneath —
+ * routing field is rendering, hero is already typing — and the curtain
+ * uncovers it diagonally. Counter is product telemetry (requests
+ * inspected this session), not a loading percent label.
+ *
+ * Reduced motion: snap straight to revealed state on first paint.
+ */
 const STATUSES = [
-  "INITIALIZING EDGE MESH",
-  "LINKING 312 NODES",
+  "INITIALISING EDGE MESH",
+  "LINKING 38 REGIONS",
   "WARMING ML MODELS",
-  "CALIBRATING THREAT FEED",
-  "TUNING SIGNAL",
+  "SYNCING REPUTATION GRAPH",
   "HANDSHAKE COMPLETE",
 ];
-
-const MARQUEE = "AEGISROUTE — INTELLIGENT URL ROUTING — EDGE NETWORK — AI THREAT DETECTION — REAL-TIME ANALYTICS — ";
 
 export function Preloader() {
   const [progress, setProgress] = useState(0);
   const [done, setDone] = useState(false);
   const [gone, setGone] = useState(false);
   const [statusIdx, setStatusIdx] = useState(0);
+  const [tag, setTag] = useState("READY");
+  const [counter, setCounter] = useState(0);
+  const charsRef = useRef<HTMLSpanElement[]>([]);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setProgress(1);
-      setDone(true);
-      setTimeout(() => setGone(true), 50);
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduced) {
+      setProgress(1); setCounter(2147893);
+      setDone(true); setTimeout(() => setGone(true), 80);
       return;
     }
 
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
     const start = performance.now();
-    const duration = 2600;
+    const duration = 2400;
     let raf = 0;
+
     const tick = (t: number) => {
       const k = Math.min(1, (t - start) / duration);
-      const eased = 1 - Math.pow(1 - k, 2.2);
+      const eased = 1 - Math.pow(1 - k, 2.4);
       setProgress(eased);
+      // odometer-style counter, ends at a plausible session figure
+      setCounter(Math.round(eased * 2147893));
       if (k < 1) raf = requestAnimationFrame(tick);
       else {
-        setTimeout(() => setDone(true), 280);
-        setTimeout(() => setGone(true), 1800);
+        setTag("ROUTING");
+        setTimeout(() => setDone(true), 240);   // start curtain
+        setTimeout(() => {
+          setGone(true);
+          document.body.style.overflow = prev;
+        }, 1700);
       }
     };
     raf = requestAnimationFrame(tick);
 
     const statusTimer = setInterval(() => {
-      setStatusIdx((i) => (i + 1) % STATUSES.length);
-    }, 360);
+      setStatusIdx((i) => Math.min(STATUSES.length - 1, i + 1));
+    }, 340);
 
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
     return () => {
       cancelAnimationFrame(raf);
       clearInterval(statusTimer);
@@ -54,48 +70,66 @@ export function Preloader() {
     };
   }, []);
 
-  useEffect(() => {
-    if (done) document.body.style.overflow = "";
-  }, [done]);
-
   if (gone) return null;
 
-  const pct = Math.min(100, Math.round(progress * 100));
-  const pctStr = String(pct).padStart(3, "0");
   const brand = "AEGISROUTE";
 
   return (
     <div className={`preloader ${done ? "is-done" : ""}`} aria-hidden={done}>
-      <div className="pre-noise" />
+      {/* Structural axes draw in first */}
+      <div className="pre-axes" aria-hidden>
+        <span className="pre-axis pre-axis-h" style={{ transform: `scaleX(${Math.min(1, progress * 4)})` }} />
+        <span className="pre-axis pre-axis-v pre-axis-v1" style={{ transform: `scaleY(${Math.min(1, Math.max(0, (progress - 0.05) * 4))})` }} />
+        <span className="pre-axis pre-axis-v pre-axis-v2" style={{ transform: `scaleY(${Math.min(1, Math.max(0, (progress - 0.12) * 4))})` }} />
+        <span className="pre-axis pre-axis-v pre-axis-v3" style={{ transform: `scaleY(${Math.min(1, Math.max(0, (progress - 0.18) * 4))})` }} />
+      </div>
+
       <div className="pre-grid" />
+      <div className="pre-noise" />
 
       {/* Top chrome */}
       <header className="pre-top">
         <div className="pre-mono pre-top-l">
           <span className="pre-dot" />
-          <span>AR · BOOT SEQUENCE</span>
+          <span>AR · ROUTING FABRIC · {tag}</span>
         </div>
         <div className="pre-mono pre-top-c">N 37.7749° · W 122.4194° / SFO-EDGE-01</div>
-        <div className="pre-mono pre-top-r">© 2026 / V1.0.0</div>
+        <div className="pre-mono pre-top-r">© 2026 / V3.0.0</div>
       </header>
+
+      {/* Request stream on the horizon */}
+      <div className="pre-stream" aria-hidden>
+        {Array.from({ length: 14 }).map((_, i) => {
+          const delay = (i * 0.18) % 2.4;
+          const bad = i % 5 === 2;
+          return (
+            <span
+              key={i}
+              className={`pre-pkt ${bad ? "is-bad" : ""}`}
+              style={{ animationDelay: `${delay}s`, top: `${(i * 7) % 84 + 6}%` }}
+            />
+          );
+        })}
+      </div>
 
       {/* Center stage */}
       <section className="pre-stage">
-        <div className="pre-counter" aria-label={`Loading ${pct}%`}>
-          <span className="pre-counter-num">{pctStr}</span>
-          <span className="pre-counter-pct">%</span>
+        <div className="pre-counter" aria-label={`${counter} requests inspected`}>
+          <span className="pre-counter-num">{counter.toLocaleString()}</span>
+          <span className="pre-counter-label">REQUESTS · INSPECTED · SESSION</span>
         </div>
 
         <h1 className="pre-brand" aria-label={brand}>
           {brand.split("").map((c, i) => {
-            const charProgress = Math.max(0, Math.min(1, progress * brand.length - i));
+            const cp = Math.max(0, Math.min(1, progress * (brand.length + 2) - i - 0.2));
             return (
               <span key={i} className="pre-char-wrap">
                 <span
+                  ref={(el) => { if (el) charsRef.current[i] = el; }}
                   className="pre-char"
                   style={{
-                    transform: `translateY(${(1 - charProgress) * 100}%)`,
-                    opacity: 0.15 + charProgress * 0.85,
+                    transform: `translate3d(0, ${(1 - cp) * 110}%, 0)`,
+                    opacity: 0.1 + cp * 0.9,
                   }}
                 >
                   {c}
@@ -112,16 +146,18 @@ export function Preloader() {
           </div>
           <div className="pre-meta-col pre-meta-col--right">
             <span className="pre-mono pre-meta-k">CHANNEL</span>
-            <span className="pre-mono pre-meta-v">SECURE / TLS 1.3</span>
+            <span className="pre-mono pre-meta-v">TLS 1.3 · QUIC · 0-RTT</span>
           </div>
         </div>
       </section>
 
-      {/* Marquee strip */}
-      <div className="pre-marquee">
+      {/* Marquee */}
+      <div className="pre-marquee" aria-hidden>
         <div className="pre-marquee-track">
           {Array.from({ length: 6 }).map((_, i) => (
-            <span key={i} className="pre-marquee-item">{MARQUEE}</span>
+            <span key={i} className="pre-marquee-item">
+              ROUTE · INSPECT · SCORE · DECIDE · OBSERVE — ROUTE · INSPECT · SCORE · DECIDE · OBSERVE — 
+            </span>
           ))}
         </div>
       </div>
@@ -132,9 +168,9 @@ export function Preloader() {
         <span className="pre-rule-tick" style={{ left: `${progress * 100}%` }} />
       </div>
 
-      {/* Curtain reveal */}
-      <div className="pre-curtain pre-curtain-top" />
-      <div className="pre-curtain pre-curtain-bot" />
+      {/* Diagonal panel curtain reveal */}
+      <div className="pre-curtain pre-curtain-a" />
+      <div className="pre-curtain pre-curtain-b" />
     </div>
   );
 }
