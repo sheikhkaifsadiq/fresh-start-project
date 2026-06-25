@@ -2,14 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { Kinetic, Mask, useParallaxRef, usePointerParallax } from "../../lib/motion";
 import { MagneticLink } from "./MagneticLink";
 import { useRequestToken } from "../../lib/token";
+import { HeroPipeline } from "./HeroPipeline";
 
-const ROTATING_REQS = [
-  { ua: "headless/119 · linux", asn: "AS14061", geo: "DE-HE", score: 0.91, verdict: "SINK"  },
-  { ua: "safari/17 · iOS",      asn: "AS7922",  geo: "US-NY", score: 0.07, verdict: "ALLOW" },
-  { ua: "curl/8.4",             asn: "AS16509", geo: "IE-D",  score: 0.74, verdict: "CHLG"  },
-  { ua: "firefox/128 · linux",  asn: "AS3320",  geo: "DE-BY", score: 0.11, verdict: "ALLOW" },
-  { ua: "python-requests/2.31", asn: "AS8075",  geo: "US-WA", score: 0.83, verdict: "SINK"  },
-];
 
 export function Hero() {
   const token = useRequestToken();
@@ -95,9 +89,10 @@ export function Hero() {
               </div>
             </Mask>
 
-            <Mask delay={1400} duration={900}>
-              <LiveFeed token={token} />
+            <Mask delay={1300} duration={900}>
+              <HeroPipeline />
             </Mask>
+
           </div>
         </div>
 
@@ -121,56 +116,3 @@ export function Hero() {
   );
 }
 
-type FeedRow = { ua: string; asn: string; geo: string; score: number; verdict: string };
-
-function LiveFeed({ token }: { token: ReturnType<typeof useRequestToken> }) {
-  // The canonical request is pinned at the top — the same token Pipeline,
-  // Threat, Analytics, Network, Layers, and Confidence all describe.
-  const canonical: FeedRow = {
-    ua: token.ua.toLowerCase(),
-    asn: token.asn,
-    geo: token.geo.split(" ")[0],
-    score: token.score,
-    verdict: token.verdict === "ALLOW" ? "ALLOW" : token.verdict === "DENY" ? "SINK" : "CHLG",
-  };
-  const [rows, setRows] = useState<FeedRow[]>(() => [canonical, ...ROTATING_REQS.slice(0, 3)]);
-  const [tick, setTick] = useState(0);
-  useEffect(() => {
-    const id = setInterval(() => {
-      setRows((r) => {
-        const next = ROTATING_REQS[(tick + r.length) % ROTATING_REQS.length];
-        // canonical stays at top; only the rotating tail changes
-        return [canonical, next, ...r.slice(1, 3)];
-      });
-      setTick((t) => t + 1);
-    }, 1400);
-    return () => clearInterval(id);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [tick]);
-  return (
-    <div className="hero-feed" aria-hidden>
-      <div className="hero-feed-head">
-        <span className="dot" /> LIVE · tracking REQ 0x{token.id}
-      </div>
-      <div className="hero-feed-rows">
-        {rows.map((r, i) => (
-          <div
-            key={`${r.ua}-${i}-${tick}`}
-            className={`hf-row ${r.score > 0.6 ? "bad" : "ok"}`}
-            style={i === 0 ? {
-              borderLeft: "2px solid var(--ink)",
-              paddingLeft: 10,
-              marginLeft: -12,
-            } : undefined}
-          >
-            <span className="hf-ua">{r.ua}{i === 0 ? "  · 0x" + token.id : ""}</span>
-            <span className="hf-asn">{r.asn}</span>
-            <span className="hf-geo">{r.geo}</span>
-            <span className="hf-score">{r.score.toFixed(2)}</span>
-            <span className="hf-verdict">{r.verdict}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
