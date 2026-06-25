@@ -37,7 +37,7 @@ const StageCtx = createContext<StageApi | null>(null);
 
 const initFrame = (): StageFrame => ({
   t: 0, dt: 0,
-  scrollY: 0, scrollMax: 1, scrollProgress: 0,
+  scrollY: 0, scrollMax: 1, scrollProgress: 0, scrollV: 0, scrollVAbs: 0,
   vh: typeof window !== "undefined" ? window.innerHeight : 800,
   vw: typeof window !== "undefined" ? window.innerWidth  : 1280,
   px: 0, py: 0, nx: 0, ny: 0, sx: 0, sy: 0,
