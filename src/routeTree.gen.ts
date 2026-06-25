@@ -13,6 +13,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AuthenticatedRouteImport } from './routes/_authenticated'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthenticatedLinksRouteImport } from './routes/_authenticated/links'
 import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
 import { Route as ApiV1LinksIndexRouteImport } from './routes/api/v1/links/index'
 import { Route as ApiV1LinksCheckSlugRouteImport } from './routes/api/v1/links/check-slug'
@@ -40,6 +41,11 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedLinksRoute = AuthenticatedLinksRouteImport.update({
+  id: '/links',
+  path: '/links',
+  getParentRoute: () => AuthenticatedRoute,
 } as any)
 const AuthenticatedDashboardRoute = AuthenticatedDashboardRouteImport.update({
   id: '/dashboard',
@@ -87,6 +93,7 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
+  '/links': typeof AuthenticatedLinksRoute
   '/api/v1/auth/login': typeof ApiV1AuthLoginRoute
   '/api/v1/auth/logout': typeof ApiV1AuthLogoutRoute
   '/api/v1/auth/me': typeof ApiV1AuthMeRoute
@@ -100,6 +107,7 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
+  '/links': typeof AuthenticatedLinksRoute
   '/api/v1/auth/login': typeof ApiV1AuthLoginRoute
   '/api/v1/auth/logout': typeof ApiV1AuthLogoutRoute
   '/api/v1/auth/me': typeof ApiV1AuthMeRoute
@@ -115,6 +123,7 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/_authenticated/dashboard': typeof AuthenticatedDashboardRoute
+  '/_authenticated/links': typeof AuthenticatedLinksRoute
   '/api/v1/auth/login': typeof ApiV1AuthLoginRoute
   '/api/v1/auth/logout': typeof ApiV1AuthLogoutRoute
   '/api/v1/auth/me': typeof ApiV1AuthMeRoute
@@ -130,6 +139,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/sitemap.xml'
     | '/dashboard'
+    | '/links'
     | '/api/v1/auth/login'
     | '/api/v1/auth/logout'
     | '/api/v1/auth/me'
@@ -143,6 +153,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/sitemap.xml'
     | '/dashboard'
+    | '/links'
     | '/api/v1/auth/login'
     | '/api/v1/auth/logout'
     | '/api/v1/auth/me'
@@ -157,6 +168,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/sitemap.xml'
     | '/_authenticated/dashboard'
+    | '/_authenticated/links'
     | '/api/v1/auth/login'
     | '/api/v1/auth/logout'
     | '/api/v1/auth/me'
@@ -209,6 +221,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated/links': {
+      id: '/_authenticated/links'
+      path: '/links'
+      fullPath: '/links'
+      preLoaderRoute: typeof AuthenticatedLinksRouteImport
+      parentRoute: typeof AuthenticatedRoute
     }
     '/_authenticated/dashboard': {
       id: '/_authenticated/dashboard'
@@ -271,10 +290,12 @@ declare module '@tanstack/react-router' {
 
 interface AuthenticatedRouteChildren {
   AuthenticatedDashboardRoute: typeof AuthenticatedDashboardRoute
+  AuthenticatedLinksRoute: typeof AuthenticatedLinksRoute
 }
 
 const AuthenticatedRouteChildren: AuthenticatedRouteChildren = {
   AuthenticatedDashboardRoute: AuthenticatedDashboardRoute,
+  AuthenticatedLinksRoute: AuthenticatedLinksRoute,
 }
 
 const AuthenticatedRouteWithChildren = AuthenticatedRoute._addFileChildren(
