@@ -53,8 +53,8 @@ export function Finale() {
 
         <Mask delay={950}>
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap", alignItems: "center" }}>
-            <MagneticLink href="#top" className="btn">
-              Route a Link
+            <MagneticLink href={ctaHref} className="btn">
+              {ctaLabel}
               <span className="arrow" style={{ marginLeft: 10 }}>→</span>
             </MagneticLink>
             <MagneticLink href="#routing" className="btn btn-ghost" style={{
