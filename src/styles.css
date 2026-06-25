@@ -519,26 +519,76 @@ body {
 /*  MOTION SYSTEM                                                       */
 /* ------------------------------------------------------------------ */
 
-/* Ambient pointer-reactive field, behind everything */
-.ambient {
+/* Ambient pointer-reactive field, behind everything (deprecated — replaced by .routing-field) */
+.ambient { display: none; }
+
+/* Page-wide routing field — canvas, fixed, behind all content */
+.routing-field {
   position: fixed; inset: 0; z-index: 0; pointer-events: none;
-  background:
-    radial-gradient(620px 460px at var(--ax, 50%) var(--ay, 30%),
-      color-mix(in oklab, var(--ember) 14%, transparent) 0%, transparent 60%),
-    radial-gradient(720px 520px at var(--bx, 60%) var(--by, 70%),
-      color-mix(in oklab, var(--signal) 12%, transparent) 0%, transparent 60%);
-  filter: blur(8px) saturate(120%);
-  opacity: 0.55;
-  transition: opacity .6s ease;
+  opacity: 0.85;
 }
-.ambient::after {
-  content: ""; position: absolute; inset: 0;
-  background-image: radial-gradient(rgba(20,22,26,0.06) 1px, transparent 1px);
-  background-size: 3px 3px;
-  mix-blend-mode: multiply;
-  opacity: 0.4;
+main, .nav, .finale, .tchrome { position: relative; z-index: 1; }
+
+/* Telemetry chrome — bottom-edge always-on infrastructure readout */
+.tchrome {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  z-index: 60; pointer-events: none;
+  border-top: 1px solid color-mix(in oklab, var(--rule) 80%, transparent);
+  background: color-mix(in oklab, var(--paper) 86%, transparent);
+  backdrop-filter: blur(10px) saturate(120%);
+  font-family: var(--font-mono);
+  font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--ink-soft);
 }
-main, .nav, .finale { position: relative; z-index: 1; }
+.finale ~ .tchrome,
+body:has(.finale.visible) .tchrome { /* keep visible regardless */ }
+.tchrome-row {
+  display: flex; align-items: center; gap: 28px;
+  padding: 10px clamp(20px, 3vw, 36px);
+  max-width: 1600px; margin: 0 auto;
+}
+.tchrome-cell { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+.tchrome-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--ember);
+  box-shadow: 0 0 0 0 color-mix(in oklab, var(--ember) 60%, transparent);
+  animation: tchrome-pulse 1.6s var(--ease-in-out) infinite;
+}
+@keyframes tchrome-pulse {
+  0%,100% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--ember) 55%, transparent); }
+  50%     { box-shadow: 0 0 0 8px color-mix(in oklab, var(--ember) 0%, transparent); }
+}
+.tchrome-k { color: var(--muted); }
+.tchrome-v { color: var(--ink); }
+.tchrome-v em { font-style: normal; color: var(--muted); margin-left: 2px; font-size: 9px; }
+.tabular { font-variant-numeric: tabular-nums; }
+.tchrome-track { flex: 1; min-width: 80px; }
+.tchrome-track-bar { position: relative; display: block; height: 2px; background: color-mix(in oklab, var(--rule) 80%, transparent); }
+.tchrome-track-fill {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, var(--ink) 0%, var(--ember) 100%);
+  transform-origin: left center; transform: scaleX(0);
+}
+.tchrome-track-tick {
+  position: absolute; top: 50%; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--ember); transform: translate(-50%, -50%); left: 0%;
+  box-shadow: 0 0 10px color-mix(in oklab, var(--ember) 70%, transparent);
+}
+.tchrome-end { margin-left: auto; }
+@media (max-width: 720px) {
+  .tchrome-row { gap: 14px; padding: 8px 16px; font-size: 9.5px; letter-spacing: 0.12em; }
+  .tchrome-track { display: none; }
+  .tchrome-cell:nth-child(3) { display: none; }
+}
+
+/* Section glyphs — oversized editorial drift */
+.section-glyph { user-select: none; mix-blend-mode: multiply; }
+.section-glyph.over { mix-blend-mode: normal; }
+.finale .section-glyph { mix-blend-mode: screen; }
+
+main > section { position: relative; }
+main > section { padding-bottom: 100px; } /* room below telemetry */
+body { padding-bottom: 44px; } /* room for fixed telemetry strip */
 
 /* Kinetic typography */
 .kinetic { display: block; }
