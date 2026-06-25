@@ -14,6 +14,8 @@ export type StageFrame = {
   scrollY: number;
   scrollMax: number;
   scrollProgress: number; // 0..1
+  scrollV: number;        // smoothed scroll velocity, signed, ~px/ms
+  scrollVAbs: number;     // smoothed |velocity|, 0..1 normalised
   vh: number;
   vw: number;
   // pointer (smoothed)
