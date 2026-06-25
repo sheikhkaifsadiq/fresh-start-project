@@ -162,6 +162,10 @@ export function RoutingField() {
         lastSpawn = now;
       }
 
+      // Convergence — as the user nears the CTA the whole field steps aside.
+      const finaleCalm = Math.max(0, (f.scrollProgress - 0.86) / 0.14);
+      canvas.style.opacity = String(1 - finaleCalm * 0.85);
+
       ctx.clearRect(0, 0, w, h);
 
       // Pointer attraction: nodes lean toward cursor
