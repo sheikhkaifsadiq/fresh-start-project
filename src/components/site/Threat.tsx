@@ -67,7 +67,7 @@ export function Threat() {
                       borderRadius: "50%", marginRight: 8,
                       animation: "pulseDot 1.6s infinite",
                     }} />
-                    Live · /q4/launch
+                    Live · /q4/launch · tracking 0x{token.id}
                   </span>
                   <span>Last 60s</span>
                 </div>
@@ -77,10 +77,13 @@ export function Threat() {
                       key={r.ip + i}
                       className={`req-row ${r.verdict === "ALLOW" ? "ok" : "bad"}`}
                       style={{
-                        animation: i === 0 ? "rowIn .55s var(--ease-out)" : undefined,
+                        animation: i === 0 ? undefined : "rowIn .55s var(--ease-out)",
+                        background: r.canonical ? "color-mix(in oklab, var(--ink) 4%, transparent)" : undefined,
+                        borderLeft: r.canonical ? "2px solid var(--ink)" : undefined,
+                        paddingLeft: r.canonical ? 10 : undefined,
                       }}
                     >
-                      <div className="ip">{r.ip}</div>
+                      <div className="ip">{r.ip}{r.canonical ? "  · REQ 0x" + r.id : ""}</div>
                       <div className="ua">{r.ua}</div>
                       <div className="score">{r.score.toFixed(2)}</div>
                       <div className="verdict">{r.verdict}</div>
