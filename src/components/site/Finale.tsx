@@ -50,7 +50,7 @@ export function Finale() {
         </Mask>
       </div>
 
-      <footer className="foot" style={{ marginTop: 80, position: "relative" }}>
+      <footer className="foot" style={{ marginTop: 48, position: "relative" }}>
         <div className="container-x foot-inner">
           <span>AegisRoute · 2026 · Routing, shielded.</span>
           <span>SOC 2 · ISO 27001 · GDPR</span>
