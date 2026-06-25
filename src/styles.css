@@ -241,14 +241,14 @@ body {
 /* Section base */
 .section {
   position: relative;
-  padding: 140px 0;
+  padding: 88px 0;
   border-top: 1px solid var(--rule);
 }
 .section-head {
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 56px;
-  margin-bottom: 72px;
+  margin-bottom: 48px;
 }
 @media (max-width: 900px) {
   .section-head { grid-template-columns: 1fr; gap: 24px; }
