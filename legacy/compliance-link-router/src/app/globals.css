@@ -1,0 +1,320 @@
+@import url('https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   CSS CUSTOM PROPERTIES — POWER AI THEME
+   ============================================================ */
+@layer base {
+  :root {
+    --background: 260 87% 3%;
+    --foreground: 40 6% 95%;
+    --hero-sub: 40 6% 82%;
+    
+    --card: 260 87% 5%;
+    --card-foreground: 40 6% 95%;
+    --popover: 260 87% 5%;
+    --popover-foreground: 40 6% 95%;
+    --primary: 260 87% 60%;
+    --primary-foreground: 40 6% 95%;
+    --secondary: 260 30% 15%;
+    --secondary-foreground: 40 6% 95%;
+    --muted: 260 30% 15%;
+    --muted-foreground: 40 6% 82%;
+    --accent: 260 87% 60%;
+    --accent-foreground: 40 6% 95%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 40 6% 95%;
+    --border: 260 30% 15%;
+    --input: 260 30% 15%;
+    --ring: 260 87% 60%;
+    --radius: 0.75rem;
+
+    /* Custom organic palette from prior step (kept for inner components) */
+    --neon-rose: 244 63 94;
+    --neon-amber: 245 158 11;
+    --neon-blue: 59 130 246;
+    --neon-green: 34 197 94;
+    --neon-red: 239 68 68;
+    --neon-orange: 249 115 22;
+  }
+}
+
+/* ============================================================
+   BASE RESETS & GLOBAL STYLES
+   ============================================================ */
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Geist Sans', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'General Sans', system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  code, pre, kbd, samp {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* ============================================================
+   CUSTOM SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(260, 87%, 3%);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* ============================================================
+   LIQUID GLASS
+   ============================================================ */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.01);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(4px);
+  border: none;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+.liquid-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%, rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ============================================================
+   MARQUEE SCROLL
+   ============================================================ */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+/* ============================================================
+   KEYFRAME ANIMATIONS — JAPANESE ANIME LEVEL MOTION
+   ============================================================ */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-15px) rotate(1deg); }
+  75% { transform: translateY(-8px) rotate(-1deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.02), 0 0 30px rgba(255, 255, 255, 0.01);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.05), 0 0 60px rgba(255, 255, 255, 0.02);
+  }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ============================================================
+   GLASSMORPHISM UTILITIES
+   ============================================================ */
+@layer utilities {
+  /* Legacy gradient text for features */
+  .gradient-text {
+    background: linear-gradient(135deg, rgb(244, 63, 94) 0%, rgb(245, 158, 11) 50%, rgb(244, 63, 94) 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 4s ease infinite;
+  }
+
+  .gradient-text-static {
+    background: linear-gradient(135deg, rgb(244, 63, 94) 0%, rgb(245, 158, 11) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Power AI Specific Text Gradient */
+  .gradient-power-ai {
+    background: linear-gradient(to left, #6366f1, #a855f7, #fcd34d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hover-lift {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5), 0 0 40px rgba(255, 255, 255, 0.05);
+  }
+
+  /* Status pulse indicator */
+  .status-online {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .status-online::before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgb(34, 197, 94);
+    box-shadow: 0 0 8px rgba(34, 197, 94, 0.4);
+  }
+
+  /* Gradient animated button (Legacy) */
+  .btn-gradient {
+    background: linear-gradient(135deg, rgb(244, 63, 94) 0%, rgb(245, 158, 11) 100%);
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+    border: none;
+    color: white;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(244, 63, 94, 0.3);
+  }
+  .btn-gradient:active {
+    transform: translateY(0);
+  }
+  
+  /* Hero Secondary Button */
+  .hero-secondary-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--foreground);
+    border-radius: 9999px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  .hero-secondary-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* ============================================================
+   TABLE ENTERPRISE STYLING
+   ============================================================ */
+.enterprise-table tr {
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.enterprise-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+.enterprise-table td, .enterprise-table th {
+  padding: 14px 16px;
+  font-size: 0.875rem;
+}
+.enterprise-table th {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+}
+
+/* ============================================================
+   SIDEBAR PREMIUM STYLING
+   ============================================================ */
+.sidebar-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.sidebar-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 1);
+}
+.sidebar-item.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgb(255, 255, 255);
+}
+
+/* ============================================================
+   BADGE / CHIP VARIANTS
+   ============================================================ */
+.badge-online {
+  background: rgba(34, 197, 94, 0.1);
+  color: rgb(34, 197, 94);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+.badge-bot {
+  background: rgba(239, 68, 68, 0.1);
+  color: rgb(239, 68, 68);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+.badge-uncertain {
+  background: rgba(249, 115, 22, 0.1);
+  color: rgb(249, 115, 22);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+.badge-human {
+  background: rgba(34, 197, 94, 0.1);
+  color: rgb(34, 197, 94);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+/* ============================================================
+   SELECTION COLOR
+   ============================================================ */
+::selection {
+  background: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 1);
+}
