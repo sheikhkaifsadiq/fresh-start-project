@@ -1,43 +1,72 @@
-import { useEffect, useState } from "react";
-import { Reveal } from "./Reveal";
+import { useEffect, useRef, useState } from "react";
+import { Kinetic, Mask, useParallaxRef, usePointerParallax } from "../../lib/motion";
+import { MagneticLink } from "./MagneticLink";
 
 export function Hero() {
   const [link, setLink] = useState("https://acme.com/q4/launch?utm=press");
   const [time, setTime] = useState("");
+  const subRef = useParallaxRef<HTMLParagraphElement>(0.06);
+  const metaRef = useParallaxRef<HTMLDivElement>(0.04);
+  const blob1 = usePointerParallax<HTMLDivElement>(28);
+  const blob2 = usePointerParallax<HTMLDivElement>(-22);
+  const blob3 = usePointerParallax<HTMLDivElement>(14);
+  const ruleRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const t = setInterval(() => {
       const d = new Date();
-      setTime(
-        d.toUTCString().split(" ").slice(4, 5).join("") + " UTC"
-      );
+      setTime(d.toUTCString().split(" ").slice(4, 5).join("") + " UTC");
     }, 1000);
     return () => clearInterval(t);
   }, []);
 
+  useEffect(() => {
+    const el = ruleRef.current;
+    if (!el) return;
+    el.style.transform = "scaleX(0)";
+    requestAnimationFrame(() => {
+      el.style.transition = "transform 1.4s cubic-bezier(0.76,0,0.24,1) 700ms";
+      el.style.transform = "scaleX(1)";
+    });
+  }, []);
+
   return (
-    <header id="top" className="hero">
+    <header id="top" className="hero hero-stage">
+      <div className="hero-bg" aria-hidden>
+        <div ref={blob1} className="blob b1" />
+        <div ref={blob2} className="blob b2" />
+        <div ref={blob3} className="blob b3" />
+      </div>
+
       <div className="container-x">
         <div className="hero-grid">
           <div>
-            <Reveal>
+            <Mask delay={120}>
               <div className="kicker">AegisRoute · v3 · {time || "00:00:00 UTC"}</div>
-            </Reveal>
-            <Reveal delay={80}>
-              <h1>
-                A smarter route<br />
-                for every <em>link.</em>
-              </h1>
-            </Reveal>
-            <Reveal delay={200}>
-              <p className="hero-sub" style={{ marginTop: 40 }}>
+            </Mask>
+
+            <Kinetic
+              as="h1"
+              text="A smarter route for every link."
+              split="word"
+              from="bottom"
+              delay={220}
+              stagger={70}
+              duration={1200}
+              italicWords={[5]}
+              style={{ marginTop: 24 }}
+            />
+
+            <p ref={subRef} className="hero-sub" style={{ marginTop: 40 }}>
+              <Mask delay={900} duration={1000}>
                 AegisRoute is an edge-routed URL platform with AI threat
                 detection and real-time analytics. Every redirect is
                 inspected, scored, and decided in under twelve milliseconds —
                 close to the request, far from the harm.
-              </p>
-            </Reveal>
-            <Reveal delay={300}>
+              </Mask>
+            </p>
+
+            <Mask delay={1100} duration={900}>
               <div className="link-bar">
                 <div className="prefix">aegis.to /</div>
                 <input
@@ -46,20 +75,32 @@ export function Hero() {
                   spellCheck={false}
                   aria-label="Destination URL"
                 />
-                <button type="button">Route →</button>
+                <MagneticLink href="#cta" className="hero-route-btn" style={{
+                  display: "inline-flex", alignItems: "center",
+                  background: "var(--ink)", color: "var(--paper)",
+                  padding: "0 22px", fontFamily: "var(--font-mono)",
+                  fontSize: 11, letterSpacing: "0.18em",
+                  textTransform: "uppercase", textDecoration: "none",
+                }}>Route →</MagneticLink>
               </div>
-            </Reveal>
+            </Mask>
           </div>
         </div>
 
-        <Reveal delay={400}>
-          <div className="hero-meta">
-            <div className="cell"><div className="v">11.4ms</div><div className="l">Median Decision</div></div>
-            <div className="cell"><div className="v">2.1B</div><div className="l">Links Routed / Mo</div></div>
-            <div className="cell"><div className="v">99.997%</div><div className="l">Uptime · 12 Mo</div></div>
-            <div className="cell"><div className="v">38</div><div className="l">Edge Regions</div></div>
-          </div>
-        </Reveal>
+        <div ref={ruleRef} className="hero-rule" />
+
+        <div ref={metaRef} className="hero-meta">
+          {[
+            { v: "11.4ms",   l: "Median Decision" },
+            { v: "2.1B",     l: "Links Routed / Mo" },
+            { v: "99.997%",  l: "Uptime · 12 Mo" },
+            { v: "38",       l: "Edge Regions" },
+          ].map((c, i) => (
+            <Mask key={i} delay={1300 + i * 120} duration={900}>
+              <div className="cell"><div className="v">{c.v}</div><div className="l">{c.l}</div></div>
+            </Mask>
+          ))}
+        </div>
       </div>
     </header>
   );

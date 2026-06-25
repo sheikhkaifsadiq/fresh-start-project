@@ -1,8 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { SectionHead } from "./SectionHead";
-import { Reveal } from "./Reveal";
 
-// Approximate equirectangular coords (lon, lat) → SVG (x, y) for a 960x440 map
 const NODES = [
   { id: "sfo", name: "SFO", lon: -122.4, lat: 37.8 },
   { id: "iad", name: "IAD", lon: -77.0,  lat: 38.9 },
@@ -20,11 +18,10 @@ const NODES = [
 
 const W = 960;
 const H = 440;
-const project = (lon: number, lat: number): [number, number] => {
-  const x = ((lon + 180) / 360) * W;
-  const y = ((90 - lat) / 180) * H;
-  return [x, y];
-};
+const project = (lon: number, lat: number): [number, number] => [
+  ((lon + 180) / 360) * W,
+  ((90 - lat) / 180) * H,
+];
 
 const ARCS: [string, string][] = [
   ["sfo", "iad"], ["iad", "lhr"], ["lhr", "fra"], ["fra", "dxb"],
@@ -41,29 +38,41 @@ function arcPath(a: [number, number], b: [number, number]) {
 }
 
 export function Network() {
-  const ref = useRef<SVGSVGElement>(null);
+  const wrap = useRef<HTMLDivElement>(null);
+  const svgRef = useRef<SVGSVGElement>(null);
+  const [progress, setProgress] = useState(0);
+  const [pulse, setPulse] = useState(0);
 
   useEffect(() => {
-    const paths = ref.current?.querySelectorAll<SVGPathElement>("path[data-arc]");
-    if (!paths) return;
-    paths.forEach((p, i) => {
-      const len = p.getTotalLength();
-      p.style.strokeDasharray = `${len}`;
-      p.style.strokeDashoffset = `${len}`;
-      p.style.transition = `stroke-dashoffset 1.6s var(--ease-out) ${i * 90}ms`;
-    });
-    const io = new IntersectionObserver(
-      (entries) => entries.forEach((e) => {
-        if (e.isIntersecting) {
-          paths.forEach((p) => { p.style.strokeDashoffset = "0"; });
-          io.disconnect();
-        }
-      }),
-      { threshold: 0.25 }
-    );
-    if (ref.current) io.observe(ref.current);
-    return () => io.disconnect();
+    const el = wrap.current;
+    if (!el) return;
+    let raf = 0;
+    const loop = () => {
+      const rect = el.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const p = 1 - (rect.top + rect.height / 2) / (vh + rect.height / 2);
+      setProgress(Math.min(1, Math.max(0, p)));
+      raf = requestAnimationFrame(loop);
+    };
+    raf = requestAnimationFrame(loop);
+    return () => cancelAnimationFrame(raf);
   }, []);
+
+  useEffect(() => {
+    let raf = 0;
+    let start = performance.now();
+    const loop = (t: number) => {
+      setPulse(((t - start) / 2200) % 1);
+      raf = requestAnimationFrame(loop);
+    };
+    raf = requestAnimationFrame(loop);
+    return () => cancelAnimationFrame(raf);
+  }, []);
+
+  // Camera language: pan from west to east, zoom in slightly mid-scroll
+  const pan = (progress - 0.5) * 200;
+  const zoom = 1 + Math.sin(progress * Math.PI) * 0.18;
+  const rotate = (progress - 0.5) * 2;
 
   return (
     <section id="network" className="section">
@@ -74,21 +83,23 @@ export function Network() {
           title={<>38 regions. One <em>routing fabric.</em></>}
           body="Every decision runs on the POP nearest the user. Models, policy, and reputation are replicated continuously — no round-trip to a central brain."
         />
-        <Reveal>
-          <div className="edge">
-            <svg ref={ref} viewBox={`0 0 ${W} ${H}`} style={{ width: "100%", height: "auto" }}>
-              {/* Land-mass stippling */}
+        <div ref={wrap} className="edge edge-wrap">
+          <div style={{
+            transform: `translate3d(${-pan}px, 0, 0) scale(${zoom}) rotate(${rotate}deg)`,
+            transformOrigin: "50% 50%",
+            transition: "transform .15s linear",
+          }}>
+            <svg ref={svgRef} viewBox={`0 0 ${W} ${H}`} style={{ width: "100%", height: "auto", display: "block" }}>
               {Array.from({ length: 1100 }).map((_, i) => {
                 const x = (i * 53) % W;
                 const y = ((i * 89) % H);
-                // sparse mask roughly approximating continents (visual texture)
                 const inLand =
-                  (x > 110 && x < 280 && y > 80 && y < 240) || // NA
-                  (x > 260 && x < 360 && y > 240 && y < 360) || // SA
-                  (x > 430 && x < 580 && y > 80 && y < 230) || // EU
-                  (x > 480 && x < 640 && y > 230 && y < 360) || // AF
-                  (x > 580 && x < 820 && y > 100 && y < 260) || // ASIA
-                  (x > 770 && x < 880 && y > 290 && y < 360);   // AU
+                  (x > 110 && x < 280 && y > 80 && y < 240) ||
+                  (x > 260 && x < 360 && y > 240 && y < 360) ||
+                  (x > 430 && x < 580 && y > 80 && y < 230) ||
+                  (x > 480 && x < 640 && y > 230 && y < 360) ||
+                  (x > 580 && x < 820 && y > 100 && y < 260) ||
+                  (x > 770 && x < 880 && y > 290 && y < 360);
                 if (!inLand) return null;
                 return <circle key={i} cx={x} cy={y} r={0.9} fill="#3a3d44" />;
               })}
@@ -98,42 +109,53 @@ export function Network() {
                 const nb = NODES.find((n) => n.id === b)!;
                 const pa = project(na.lon, na.lat);
                 const pb = project(nb.lon, nb.lat);
+                const d = arcPath(pa, pb);
+                const seg = Math.min(1, Math.max(0, progress * ARCS.length - i));
                 return (
-                  <path
-                    key={i}
-                    data-arc
-                    d={arcPath(pa, pb)}
-                    fill="none"
-                    stroke="#c25535"
-                    strokeOpacity="0.7"
-                    strokeWidth="1"
-                  />
+                  <g key={i}>
+                    <path d={d} fill="none" stroke="#c25535" strokeOpacity="0.22" strokeWidth="1" />
+                    <path
+                      d={d}
+                      fill="none" stroke="#c25535" strokeOpacity="0.95" strokeWidth="1.3"
+                      pathLength={1}
+                      strokeDasharray="1"
+                      strokeDashoffset={1 - seg}
+                      style={{ transition: "stroke-dashoffset .15s linear" }}
+                    />
+                    {seg > 0.4 && (
+                      <circle r="2.4" fill="#f3eee0">
+                        <animateMotion dur="2.2s" repeatCount="indefinite" path={d}
+                          keyTimes="0;1" keyPoints={`${pulse};${pulse + 0.001}`} />
+                      </circle>
+                    )}
+                  </g>
                 );
               })}
 
-              {NODES.map((n) => {
+              {NODES.map((n, i) => {
                 const [x, y] = project(n.lon, n.lat);
+                const lit = progress * NODES.length > i;
                 return (
-                  <g key={n.id}>
-                    <circle cx={x} cy={y} r="6" fill="#c25535" opacity="0.18" />
+                  <g key={n.id} style={{ opacity: lit ? 1 : 0.3, transition: "opacity .4s" }}>
+                    <circle cx={x} cy={y} r="10" fill="#c25535" opacity={lit ? 0.18 : 0.05}>
+                      {lit && <animate attributeName="r" values="6;14;6" dur="2.8s" repeatCount="indefinite" />}
+                    </circle>
                     <circle cx={x} cy={y} r="2.4" fill="#f3eee0" />
                     <text x={x + 8} y={y + 3}
                       fontFamily="IBM Plex Mono" fontSize="9"
-                      fill="#cfc8b6" letterSpacing="1.5">
-                      {n.name}
-                    </text>
+                      fill="#cfc8b6" letterSpacing="1.5">{n.name}</text>
                   </g>
                 );
               })}
             </svg>
-
-            <div className="edge-legend">
-              <span><i style={{ background: "#c25535" }} /> Active routing path</span>
-              <span><i style={{ background: "#f3eee0" }} /> Edge POP</span>
-              <span>p50 RTT · 11.4ms · p95 · 28.0ms</span>
-            </div>
           </div>
-        </Reveal>
+
+          <div className="edge-legend">
+            <span><i style={{ background: "#c25535" }} /> Active routing path</span>
+            <span><i style={{ background: "#f3eee0" }} /> Edge POP · {Math.round(progress * NODES.length)} of {NODES.length} online</span>
+            <span>p50 RTT · 11.4ms · p95 · 28.0ms</span>
+          </div>
+        </div>
       </div>
     </section>
   );
