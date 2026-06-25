@@ -164,22 +164,22 @@ body {
 /* Hero */
 .hero {
   position: relative;
-  padding: 32px 0 96px;
+  padding: 40px 0 128px;
   overflow: hidden;
 }
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 56px;
+  gap: 72px;
   align-items: end;
 }
 .hero h1 {
   font-family: var(--font-display);
   font-weight: 300;
-  font-size: clamp(48px, 9vw, 148px);
-  line-height: 0.96;
-  letter-spacing: -0.035em;
-  margin: 24px 0 0;
+  font-size: clamp(52px, 9.6vw, 164px);
+  line-height: 0.94;
+  letter-spacing: -0.038em;
+  margin: 28px 0 0;
   color: var(--ink);
 }
 .hero h1 em {
@@ -188,20 +188,20 @@ body {
 }
 .hero-sub {
   max-width: 520px;
-  font-size: 15px;
-  line-height: 1.65;
+  font-size: 14px;
+  line-height: 1.7;
   color: var(--ink-soft);
 }
 .hero-meta {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  margin-top: 72px;
-  padding-top: 28px;
+  gap: 28px;
+  margin-top: 104px;
+  padding-top: 32px;
   border-top: 1px solid var(--rule);
 }
-.hero-meta .cell .v { font-family: var(--font-display); font-size: 32px; letter-spacing: -0.02em; }
-.hero-meta .cell .l { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
+.hero-meta .cell .v { font-family: var(--font-display); font-size: 36px; letter-spacing: -0.02em; }
+.hero-meta .cell .l { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-top: 10px; }
 @media (max-width: 720px) {
   .hero-meta { grid-template-columns: repeat(2, 1fr); }
 }
@@ -241,28 +241,28 @@ body {
 /* Section base */
 .section {
   position: relative;
-  padding: 88px 0;
+  padding: 120px 0;
   border-top: 1px solid var(--rule);
 }
 .section-head {
   display: grid;
   grid-template-columns: 220px 1fr;
-  gap: 56px;
-  margin-bottom: 48px;
+  gap: 64px;
+  margin-bottom: 64px;
 }
 @media (max-width: 900px) {
-  .section-head { grid-template-columns: 1fr; gap: 24px; }
+  .section-head { grid-template-columns: 1fr; gap: 28px; }
 }
 .section-head h2 {
   font-family: var(--font-display); font-weight: 300;
-  font-size: clamp(34px, 5vw, 62px);
-  line-height: 1.02; letter-spacing: -0.025em;
-  margin: 12px 0 0;
-  max-width: 880px;
+  font-size: clamp(38px, 5.6vw, 72px);
+  line-height: 1.0; letter-spacing: -0.028em;
+  margin: 14px 0 0;
+  max-width: 920px;
 }
 .section-head p {
-  margin-top: 18px; max-width: 620px;
-  color: var(--ink-soft); font-size: 14px; line-height: 1.7;
+  margin-top: 22px; max-width: 600px;
+  color: var(--muted); font-size: 13px; line-height: 1.75;
 }
 
 .eyebrow-col .num {
@@ -464,7 +464,7 @@ body {
 /* CTA finale */
 .finale {
   position: relative;
-  padding: 120px 0 0;
+  padding: 160px 0 0;
   background: var(--graphite);
   color: var(--metal-1);
   overflow: hidden;
@@ -472,9 +472,9 @@ body {
 }
 .finale h2 {
   font-family: var(--font-display); font-weight: 300;
-  font-size: clamp(48px, 8vw, 120px);
-  line-height: 0.96; letter-spacing: -0.04em;
-  margin: 24px 0 40px;
+  font-size: clamp(56px, 9vw, 144px);
+  line-height: 0.94; letter-spacing: -0.042em;
+  margin: 28px 0 32px;
   color: #f3eee0;
 }
 .finale h2 em { font-style: italic; color: color-mix(in oklab, var(--ember-soft) 70%, #f3eee0); }
@@ -489,6 +489,25 @@ body {
 .finale .btn-ghost:hover { background: transparent; border-color: #f3eee0; color: #fff; }
 .finale .kicker { color: #9aa0a8; }
 .finale .kicker::before { background: #5a5e66; }
+
+/* Resolved arrow — the canonical request lands here */
+.finale-resolved {
+  display: flex; align-items: center; gap: 18px;
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: color-mix(in oklab, #f3eee0 55%, transparent);
+  margin: 8px 0 28px;
+}
+.finale-resolved .line {
+  flex: 0 0 auto; width: 96px; height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--ember-soft) 70%, #f3eee0));
+  transform-origin: left center;
+  animation: resolveLine 1100ms cubic-bezier(0.76,0,0.24,1) 200ms both;
+}
+@keyframes resolveLine {
+  from { transform: scaleX(0); opacity: 0; }
+  to   { transform: scaleX(1); opacity: 1; }
+}
 
 /* Footer */
 .foot {

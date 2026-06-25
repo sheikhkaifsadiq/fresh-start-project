@@ -33,13 +33,21 @@ export function Finale() {
           as="h2"
           text="Route a link. See what was actually on the other side."
           split="char"
-          stagger={14}
+          stagger={16}
           duration={1100}
           italicWords={[4]}
-          style={{ margin: "24px 0 40px" }}
+          style={{ margin: "28px 0 32px" }}
         />
 
-        <Mask delay={900}>
+        <Mask delay={700}>
+          <div className="finale-resolved" aria-hidden>
+            <span>your request</span>
+            <span className="line" />
+            <span style={{ color: "#f3eee0", letterSpacing: "0.18em" }}>resolved →</span>
+          </div>
+        </Mask>
+
+        <Mask delay={950}>
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap", alignItems: "center" }}>
             <MagneticLink href="#top" className="btn">
               Route a Link
@@ -54,7 +62,7 @@ export function Finale() {
         </Mask>
       </div>
 
-      <footer className="foot" style={{ marginTop: 48, position: "relative" }}>
+      <footer className="foot" style={{ marginTop: 80, position: "relative" }}>
         <div className="container-x foot-inner">
           <span>AegisRoute · 2026 · Routing, shielded.</span>
           <span>SOC 2 · ISO 27001 · GDPR</span>
