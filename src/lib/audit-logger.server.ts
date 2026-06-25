@@ -54,7 +54,9 @@ export async function logEvent(
   ipAddress: string | null = null,
 ): Promise<void> {
   try {
-    const admin = createAdminClient();
+    const admin = createAdminClient() as unknown as {
+      from: (table: string) => { insert: (row: unknown) => Promise<unknown> };
+    };
     await admin.from("audit_logs").insert({
       user_id: userId,
       event_type: eventType,
