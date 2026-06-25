@@ -51,7 +51,7 @@ export function Confidence() {
   }, [stage]);
 
   return (
-    <section className="section" style={{ paddingBottom: 0 }}>
+    <section id="confidence" className="section" style={{ paddingBottom: 0 }}>
       <div className="container-x">
         <SectionHead
           num="07 / Operational Confidence"
