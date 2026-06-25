@@ -1367,12 +1367,16 @@ body { padding-bottom: 44px; } /* room for fixed telemetry strip */
 .hp-node:first-child .hp-bullet { margin-left: 0; }
 .hp-node:last-child  { transform: translateX(-100%); text-align: right; }
 .hp-node:last-child .hp-bullet { margin-right: 0; margin-left: auto; }
+.hp-packet-pos {
+  position: absolute; top: 0;
+  will-change: left, transform;
+}
 .hp-packet {
-  position: absolute; top: 0; transform: translate(-50%, -100%);
   padding: 4px 8px; font-family: var(--font-mono); font-size: 10px;
   letter-spacing: 0.14em; color: var(--paper); border-radius: 1px;
   box-shadow: 0 6px 16px -8px rgba(0,0,0,.35);
   white-space: nowrap;
+  will-change: transform;
 }
 .hp-readout {
   display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px;
