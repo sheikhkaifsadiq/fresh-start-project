@@ -2,6 +2,15 @@ import { useEffect, useRef, useState } from "react";
 import { Kinetic, Mask, useParallaxRef, usePointerParallax } from "../../lib/motion";
 import { MagneticLink } from "./MagneticLink";
 
+const LIVE_REQS = [
+  { ua: "chrome/126 · macOS",  asn: "AS13335", geo: "US-CA", score: 0.04, verdict: "ALLOW" },
+  { ua: "headless/119 · linux", asn: "AS14061", geo: "DE-HE", score: 0.91, verdict: "SINK"  },
+  { ua: "safari/17 · iOS",      asn: "AS7922",  geo: "US-NY", score: 0.07, verdict: "ALLOW" },
+  { ua: "curl/8.4",             asn: "AS16509", geo: "IE-D",  score: 0.74, verdict: "CHLG"  },
+  { ua: "firefox/128 · linux",  asn: "AS3320",  geo: "DE-BY", score: 0.11, verdict: "ALLOW" },
+  { ua: "python-requests/2.31", asn: "AS8075",  geo: "US-WA", score: 0.83, verdict: "SINK"  },
+];
+
 export function Hero() {
   const [link, setLink] = useState("https://acme.com/q4/launch?utm=press");
   const [time, setTime] = useState("");
@@ -84,8 +93,13 @@ export function Hero() {
                 }}>Route →</MagneticLink>
               </div>
             </Mask>
+
+            <Mask delay={1400} duration={900}>
+              <LiveFeed />
+            </Mask>
           </div>
         </div>
+
 
         <div ref={ruleRef} className="hero-rule" />
 
@@ -103,5 +117,38 @@ export function Hero() {
         </div>
       </div>
     </header>
+  );
+}
+
+function LiveFeed() {
+  const [rows, setRows] = useState(() => LIVE_REQS.slice(0, 4));
+  const [tick, setTick] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => {
+      setRows((r) => {
+        const next = LIVE_REQS[(tick + r.length) % LIVE_REQS.length];
+        return [next, ...r.slice(0, 3)];
+      });
+      setTick((t) => t + 1);
+    }, 1400);
+    return () => clearInterval(id);
+  }, [tick]);
+  return (
+    <div className="hero-feed" aria-hidden>
+      <div className="hero-feed-head">
+        <span className="dot" /> LIVE · last 4 decisions
+      </div>
+      <div className="hero-feed-rows">
+        {rows.map((r, i) => (
+          <div key={`${r.ua}-${i}-${tick}`} className={`hf-row ${r.score > 0.6 ? "bad" : "ok"}`}>
+            <span className="hf-ua">{r.ua}</span>
+            <span className="hf-asn">{r.asn}</span>
+            <span className="hf-geo">{r.geo}</span>
+            <span className="hf-score">{r.score.toFixed(2)}</span>
+            <span className="hf-verdict">{r.verdict}</span>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

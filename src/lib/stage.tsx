@@ -14,6 +14,8 @@ export type StageFrame = {
   scrollY: number;
   scrollMax: number;
   scrollProgress: number; // 0..1
+  scrollV: number;        // smoothed scroll velocity, signed, ~px/ms
+  scrollVAbs: number;     // smoothed |velocity|, 0..1 normalised
   vh: number;
   vw: number;
   // pointer (smoothed)
@@ -35,7 +37,7 @@ const StageCtx = createContext<StageApi | null>(null);
 
 const initFrame = (): StageFrame => ({
   t: 0, dt: 0,
-  scrollY: 0, scrollMax: 1, scrollProgress: 0,
+  scrollY: 0, scrollMax: 1, scrollProgress: 0, scrollV: 0, scrollVAbs: 0,
   vh: typeof window !== "undefined" ? window.innerHeight : 800,
   vw: typeof window !== "undefined" ? window.innerWidth  : 1280,
   px: 0, py: 0, nx: 0, ny: 0, sx: 0, sy: 0,
@@ -75,9 +77,13 @@ export function StageProvider({ children }: { children: ReactNode }) {
       f.dt = dt;
 
       // scroll
+      const prevY = f.scrollY;
       f.scrollY = window.scrollY;
       f.scrollMax = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
       f.scrollProgress = Math.min(1, Math.max(0, f.scrollY / f.scrollMax));
+      const instV = (f.scrollY - prevY) / Math.max(1, dt * 1000); // px/ms
+      f.scrollV += (instV - f.scrollV) * Math.min(1, dt * 8);
+      f.scrollVAbs += (Math.min(1, Math.abs(instV) / 3) - f.scrollVAbs) * Math.min(1, dt * 5);
 
       // pointer velocity
       const ptDt = Math.max(1, now - ltp);
