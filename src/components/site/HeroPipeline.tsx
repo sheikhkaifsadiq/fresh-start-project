@@ -39,6 +39,9 @@ export function HeroPipeline() {
   const [i, setI] = useState(0);          // which sample
   const [stage, setStage] = useState(0);  // 0..3
   const sample = SAMPLES[i];
+  const stageBus = useStage();
+  const packetWrapRef = useRef<HTMLDivElement>(null);
+  const railRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -50,6 +53,25 @@ export function HeroPipeline() {
     }, STAGE_MS);
     return () => clearInterval(id);
   }, []);
+
+  // Scroll-velocity carry-over: packet overshoots on fast scroll, drifts
+  // back on slow scroll, with a touch of micro-drift so it never sits still.
+  useEffect(() => {
+    let cx = 0, cy = 0;
+    return stageBus.subscribe((f) => {
+      const railW = railRef.current?.offsetWidth ?? 600;
+      const tx = Math.max(-railW * 0.18, Math.min(railW * 0.18, f.scrollV * 14));
+      const ty = Math.sin(f.t * 1.6) * 1.2; // micro drift, ~1px
+      cx += (tx - cx) * 0.12;
+      cy += (ty - cy) * 0.2;
+      if (packetWrapRef.current) {
+        packetWrapRef.current.style.transform =
+          `translate3d(${cx.toFixed(2)}px, ${cy.toFixed(2)}px, 0)`;
+      }
+    });
+  }, [stageBus]);
+
+
 
   // 0..1 progress used to position the packet on the rail.
   const progress = Math.min(1, stage / 3);
