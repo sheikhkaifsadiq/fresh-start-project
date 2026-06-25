@@ -73,9 +73,13 @@ function RegionBar({ l, v, on, delay }: { l: string; v: number; on: boolean; del
 }
 
 export function Analytics() {
-  const clicks = useTicker(2147893, 4);
-  const blocked = useTicker(184412, 2);
+  const [range, setRange] = useState<"1H" | "24H" | "7D">("24H");
+  const deltaByRange = { "1H": 1, "24H": 4, "7D": 14 } as const;
+  const multByRange = { "1H": 0.04, "24H": 1, "7D": 6.8 } as const;
+  const clicks = useTicker(2147893, deltaByRange[range]);
+  const blocked = useTicker(184412, Math.max(1, Math.round(deltaByRange[range] / 2)));
   const uniq = useTicker(412708, 1);
+  const displayedClicks = Math.round(clicks * multByRange[range]);
 
   const wrap = useRef<HTMLDivElement>(null);
   const [on, setOn] = useState(false);
@@ -108,15 +112,35 @@ export function Analytics() {
             }}>
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 24 }}>
                 <div>
-                  <div className="kicker">Traffic · /q4/launch · 24h</div>
+                  <div className="kicker">Traffic · /q4/launch · {range}</div>
                   <div className="font-display" style={{ fontSize: 32, marginTop: 8, letterSpacing: "-0.02em" }}>
-                    {clicks.toLocaleString()} <span style={{ color: "var(--muted)", fontSize: 14, fontFamily: "var(--font-mono)" }}>requests</span>
+                    {displayedClicks.toLocaleString()} <span style={{ color: "var(--muted)", fontSize: 14, fontFamily: "var(--font-mono)" }}>requests</span>
                   </div>
                 </div>
                 <div style={{ display: "flex", gap: 8 }}>
-                  <span className="tag">1H</span>
-                  <span className="tag" style={{ background: "var(--ink)", color: "var(--paper)", borderColor: "var(--ink)" }}>24H</span>
-                  <span className="tag">7D</span>
+                  {(["1H", "24H", "7D"] as const).map((r) => {
+                    const active = r === range;
+                    return (
+                      <button
+                        key={r}
+                        type="button"
+                        onClick={() => setRange(r)}
+                        className="tag"
+                        style={{
+                          cursor: "pointer",
+                          background: active ? "var(--ink)" : "transparent",
+                          color: active ? "var(--paper)" : "var(--ink)",
+                          borderColor: active ? "var(--ink)" : undefined,
+                          font: "inherit",
+                          letterSpacing: "inherit",
+                          textTransform: "inherit",
+                        }}
+                        aria-pressed={active}
+                      >
+                        {r}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
               <AreaChart />
