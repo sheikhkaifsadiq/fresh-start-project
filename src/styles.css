@@ -647,20 +647,9 @@ body { padding-bottom: 44px; } /* room for fixed telemetry strip */
 @media (prefers-reduced-motion: reduce) { .drift-track { animation: none; } }
 
 
-/* Hero floaters */
+/* Hero — replace decorative blobs with structural marks (kept hidden) */
 .hero-stage { position: relative; }
-.hero-bg {
-  position: absolute; inset: -10% -10% 0 -10%; pointer-events: none; z-index: 0;
-}
-.hero-bg .blob {
-  position: absolute; border-radius: 50%;
-  filter: blur(40px);
-  opacity: 0.55;
-  will-change: transform;
-}
-.hero-bg .b1 { width: 480px; height: 480px; left: -120px; top: -40px; background: color-mix(in oklab, var(--ember) 24%, transparent); }
-.hero-bg .b2 { width: 360px; height: 360px; right: -60px; top: 80px; background: color-mix(in oklab, var(--signal) 24%, transparent); }
-.hero-bg .b3 { width: 280px; height: 280px; left: 40%; top: 380px; background: color-mix(in oklab, #6b6f76 30%, transparent); }
+.hero-bg { display: none; }
 .hero > .container-x { position: relative; z-index: 2; }
 
 .hero-rule {
