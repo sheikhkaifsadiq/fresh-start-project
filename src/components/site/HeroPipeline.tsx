@@ -87,7 +87,7 @@ export function HeroPipeline() {
         <span>LIVE · running on tracked REQ 0x{token.id}</span>
       </div>
 
-      <div className="hp-rail">
+      <div className="hp-rail" ref={railRef}>
         {/* base rail */}
         <div className="hp-line" />
         {/* progress rail */}
@@ -116,20 +116,30 @@ export function HeroPipeline() {
           );
         })}
 
-        {/* travelling packet — translate scales with progress so it never overflows the rail */}
+        {/* travelling packet — base position state-driven; outer wrap carries scroll-velocity overshoot + micro drift */}
         <div
-          className="hp-packet"
+          className="hp-packet-pos"
           style={{
             left: `${progress * 100}%`,
             transform: `translate(${-progress * 100}%, -100%)`,
-            background: verdictColor,
-            transition: `left ${STAGE_MS}ms cubic-bezier(0.76,0,0.24,1), transform ${STAGE_MS}ms cubic-bezier(0.76,0,0.24,1), background .2s linear`,
+            transition: `left ${STAGE_MS}ms cubic-bezier(0.76,0,0.24,1), transform ${STAGE_MS}ms cubic-bezier(0.76,0,0.24,1)`,
           }}
         >
-          0x{sample.id}
+          <div
+            ref={packetWrapRef}
+            className="hp-packet"
+            style={{
+              background: verdictColor,
+              transition: "background .25s linear, box-shadow .25s linear",
+              boxShadow: `0 0 0 1px ${verdictColor}, 0 6px 18px -8px ${verdictColor}`,
+            }}
+          >
+            0x{sample.id}
+          </div>
         </div>
 
       </div>
+
 
       <div className="hp-readout">
         <Field label="Source" value={sample.src} show />
