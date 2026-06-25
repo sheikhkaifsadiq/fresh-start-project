@@ -20,10 +20,10 @@ const NODES = [
 
 const W = 960;
 const H = 440;
-const project = (lon: number, lat: number) => {
+const project = (lon: number, lat: number): [number, number] => {
   const x = ((lon + 180) / 360) * W;
   const y = ((90 - lat) / 180) * H;
-  return [x, y] as const;
+  return [x, y];
 };
 
 const ARCS: [string, string][] = [

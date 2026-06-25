@@ -1,14 +1,14 @@
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode, type ElementType } from "react";
 
 type Props = {
   children: ReactNode;
   delay?: number;
-  as?: keyof JSX.IntrinsicElements;
+  as?: ElementType;
   className?: string;
 };
 
-export function Reveal({ children, delay = 0, as = "div", className = "" }: Props) {
-  const ref = useRef<HTMLElement>(null);
+export function Reveal({ children, delay = 0, as: Tag = "div", className = "" }: Props) {
+  const ref = useRef<HTMLElement | null>(null);
   const [seen, setSeen] = useState(false);
 
   useEffect(() => {
@@ -29,14 +29,14 @@ export function Reveal({ children, delay = 0, as = "div", className = "" }: Prop
     return () => io.disconnect();
   }, []);
 
-  const Tag = as as any;
+  const Comp = Tag as ElementType;
   return (
-    <Tag
+    <Comp
       ref={ref as any}
       className={`reveal ${seen ? "in" : ""} ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       {children}
-    </Tag>
+    </Comp>
   );
 }

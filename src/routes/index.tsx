@@ -1,31 +1,30 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { lazy, Suspense, useEffect, useRef, useState } from "react";
-import { ScrollProgressProvider, useProgressRef } from "../lib/scroll-progress";
-import { detectTier, supportsWebGL, type Tier } from "../lib/capabilities";
-import { Chrome } from "../components/site/Chrome";
-import { Overlay } from "../components/site/Overlay";
-import { Loader } from "../components/site/Loader";
-import { Cursor } from "../components/site/Cursor";
-import { Fallback } from "../components/site/Fallback";
-
-const World = lazy(() =>
-  import("../components/scene/World").then((m) => ({ default: m.World }))
-);
+import { ScrollProgressProvider } from "../lib/scroll-progress";
+import { Nav } from "../components/site/Nav";
+import { Hero } from "../components/site/Hero";
+import { Problem } from "../components/site/Problem";
+import { Pipeline } from "../components/site/Pipeline";
+import { Threat } from "../components/site/Threat";
+import { Analytics } from "../components/site/Analytics";
+import { Network } from "../components/site/Network";
+import { Layers } from "../components/site/Layers";
+import { Confidence } from "../components/site/Confidence";
+import { Finale } from "../components/site/Finale";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "AegisRoute — Routing, Shielded." },
+      { title: "AegisRoute — A smarter route for every link." },
       {
         name: "description",
         content:
-          "An edge-routed link, watched in real time. AegisRoute pairs URL shortening with AI threat detection at the perimeter.",
+          "AegisRoute is an edge-routed URL platform with AI threat detection and real-time analytics. Every redirect inspected, scored, and decided in under twelve milliseconds.",
       },
-      { property: "og:title", content: "AegisRoute — Routing, Shielded." },
+      { property: "og:title", content: "AegisRoute — A smarter route for every link." },
       {
         property: "og:description",
         content:
-          "An edge-routed link, watched in real time. URL shortening with AI threat detection.",
+          "Edge-routed URL shortening with AI threat detection and real-time analytics for serious teams.",
       },
     ],
   }),
@@ -33,55 +32,20 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const [mounted, setMounted] = useState(false);
-  const [tier, setTier] = useState<Tier>("high");
-  const [hasWebGL, setHasWebGL] = useState(true);
-
-  useEffect(() => {
-    setTier(detectTier());
-    setHasWebGL(supportsWebGL());
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return (
-      <div style={{ minHeight: "100vh", background: "var(--background)" }} />
-    );
-  }
-
-  if (!hasWebGL) {
-    return <Fallback />;
-  }
-
   return (
     <ScrollProgressProvider>
-      <Film tier={tier} />
+      <Nav />
+      <main>
+        <Hero />
+        <Problem />
+        <Pipeline />
+        <Threat />
+        <Analytics />
+        <Network />
+        <Layers />
+        <Confidence />
+        <Finale />
+      </main>
     </ScrollProgressProvider>
-  );
-}
-
-function Film({ tier }: { tier: Tier }) {
-  const progressRef = useProgressRef();
-  const [ready, setReady] = useState(false);
-
-  // give the canvas a beat to compile shaders before lifting the loader
-  useEffect(() => {
-    const t = setTimeout(() => setReady(true), 900);
-    return () => clearTimeout(t);
-  }, []);
-
-  return (
-    <>
-      <div className="film-stage">
-        <Suspense fallback={null}>
-          <World progressRef={progressRef} tier={tier} />
-        </Suspense>
-      </div>
-      <Chrome />
-      <Overlay />
-      <Cursor />
-      <div className="film-scroll-length" />
-      <Loader ready={ready} />
-    </>
   );
 }
