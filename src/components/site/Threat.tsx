@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { SectionHead } from "./SectionHead";
 import { useTilt, Mask } from "../../lib/motion";
+import { useRequestToken } from "../../lib/token";
 
-type Row = { ip: string; ua: string; score: number; verdict: "ALLOW" | "DENY" | "CHALLENGE" };
+type Row = { ip: string; ua: string; score: number; verdict: "ALLOW" | "DENY" | "CHALLENGE"; canonical?: boolean; id?: string };
 
 const SEED: Row[] = [
-  { ip: "104.28.7.91",  ua: "Mozilla/5.0 (Macintosh) Safari/17.4",  score: 0.04, verdict: "ALLOW" },
   { ip: "45.155.205.12", ua: "python-requests/2.31",                score: 0.94, verdict: "DENY" },
   { ip: "188.114.97.3", ua: "Chrome/124 (Headless)",                score: 0.71, verdict: "CHALLENGE" },
   { ip: "73.92.144.18", ua: "Mozilla/5.0 (iPhone) Mobile/15E148",   score: 0.08, verdict: "ALLOW" },
@@ -16,7 +16,16 @@ const SEED: Row[] = [
 ];
 
 export function Threat() {
-  const [rows, setRows] = useState(SEED);
+  const token = useRequestToken();
+  const canonicalRow: Row = {
+    ip: token.ip,
+    ua: token.ua,
+    score: token.score,
+    verdict: token.verdict,
+    canonical: true,
+    id: token.id,
+  };
+  const [rows, setRows] = useState<Row[]>([canonicalRow, ...SEED]);
   const tilt1 = useTilt<HTMLDivElement>(4, 1.005);
   const tilt2 = useTilt<HTMLDivElement>(4, 1.005);
 
