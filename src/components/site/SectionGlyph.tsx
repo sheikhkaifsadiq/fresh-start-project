@@ -40,6 +40,7 @@ export function SectionGlyph({
     io.observe(wrap);
 
     let cy = 0;
+    let cx = 0;
     let raf = 0;
     const unsub = stage.subscribe((f) => {
       if (!visible) return;
@@ -47,10 +48,14 @@ export function SectionGlyph({
       const center = rect.top + rect.height / 2;
       const dist = (center - f.vh / 2) / f.vh; // -1..+1ish
       const parallax = dist * -180 * 1.15;     // moves opposite scroll, faster
+      // velocity-driven overshoot — fast scroll = type lags, then catches up
+      const overshoot = f.scrollV * 6;
       const drift = f.sx * 14;                 // mouse drift
-      const target = parallax + drift;
-      cy += (target - cy) * 0.18;
-      inner.style.transform = `translate3d(${cy.toFixed(2)}px, 0, 0)`;
+      const targetY = parallax + overshoot;
+      const targetX = drift;
+      cy += (targetY - cy) * 0.14;
+      cx += (targetX - cx) * 0.18;
+      inner.style.transform = `translate3d(${cx.toFixed(2)}px, ${cy.toFixed(2)}px, 0)`;
     });
     return () => { io.disconnect(); unsub(); cancelAnimationFrame(raf); };
   }, [stage]);
