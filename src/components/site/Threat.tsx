@@ -32,9 +32,10 @@ export function Threat() {
   useEffect(() => {
     const id = setInterval(() => {
       setRows((r) => {
-        const next = [...r];
-        next.unshift(next.pop()!);
-        return next;
+        // Pin canonical request at the top; rotate everything below it.
+        const [head, ...tail] = r;
+        tail.unshift(tail.pop()!);
+        return [head, ...tail];
       });
     }, 1800);
     return () => clearInterval(id);
