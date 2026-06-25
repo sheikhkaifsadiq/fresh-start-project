@@ -64,6 +64,8 @@ export function LinksManager() {
             refreshKey={refreshKey}
             onCreate={() => setPanelOpen(true)}
           />
+        ) : tab === "routing" ? (
+          <RuleBuilder />
         ) : (
           <div className="lk-soon">
             <div className="kicker">{active.label}</div>
