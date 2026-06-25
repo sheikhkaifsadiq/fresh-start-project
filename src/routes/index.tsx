@@ -94,6 +94,7 @@ function Index() {
   return (
     <MotionProvider>
       <StageProvider>
+        <TokenProvider>
         <ScrollProgressProvider>
           <Preloader />
           <RoutingField />
