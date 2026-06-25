@@ -465,7 +465,7 @@ export function CountUp({
     const loop = (t: number) => {
       const k = Math.min(1, (t - start) / duration);
       const eased = 1 - Math.pow(1 - k, 3);
-      setV(Math.round(to * eased));
+      setV(to * eased);
       if (k < 1) raf = requestAnimationFrame(loop);
     };
     raf = requestAnimationFrame(loop);
