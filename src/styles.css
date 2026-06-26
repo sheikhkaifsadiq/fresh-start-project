@@ -1291,7 +1291,13 @@ body { padding-bottom: 44px; } /* room for fixed telemetry strip */
   opacity: 0; margin-top: 2px;
 }
 @media (max-width: 720px) {
-  .handoff-wrap { display: none; }
+  /* Keep the canonical token visible on mobile but compressed:
+     smaller chip, tucked into the safe-area edge, sub/next hidden. */
+  .handoff-wrap { right: 12px; top: 64px; }
+  .handoff-chip { padding: 7px 11px 7px 9px; gap: 8px; max-width: 64vw; box-shadow: 0 8px 22px -12px rgba(20,22,26,0.32), 0 0 0 1px rgba(20,22,26,0.25); }
+  .handoff-shape { width: 10px; height: 10px; flex: 0 0 10px; }
+  .handoff-label { font-size: 9.5px; letter-spacing: 0.06em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .handoff-sub, .handoff-next { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .handoff-shape[data-shape="burst"]::before { animation: none; }
