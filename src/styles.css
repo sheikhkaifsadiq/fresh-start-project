@@ -2601,3 +2601,165 @@ table { max-width: 100%; }
    ═══════════════════════════════════════════════════════════════ */
 html, body { overflow-x: hidden; }
 pre { max-width: 100%; overflow-x: auto; }
+
+/* ════════════════════════════════════════════════════════════════
+   PIPELINE — vertical stepper recomposition (≤720px)
+   The decision pipeline is the centerpiece. On phones the horizontal
+   5-stage rail is recomposed as a top-to-bottom stepper with a left
+   rail connector. The stage activation, fingerprint extraction, ML
+   score bars and verdict overlays all stay live; only the orientation
+   of the rail and the horizontal token-travel are recomposed.
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 720px) {
+  .pipeline-pin { min-height: 220vh !important; }
+  .pipeline-cinema { padding: 18px 16px 22px !important; }
+  .pcin-head {
+    flex-wrap: wrap; gap: 8px 14px; font-size: 9.5px !important;
+    padding-bottom: 12px;
+  }
+  .pcin-rail {
+    grid-template-columns: 1fr !important;
+    overflow: visible !important;
+    margin-top: 20px;
+    position: relative;
+    padding-left: 22px;
+  }
+  /* Left rail connector — replaces the horizontal track */
+  .pcin-rail::before {
+    content: "";
+    position: absolute;
+    left: 7px; top: 8px; bottom: 8px;
+    width: 1px;
+    background: linear-gradient(to bottom,
+      transparent, var(--rule) 6%, var(--rule) 94%, transparent);
+  }
+  .pcin-stage {
+    border: 1px solid var(--rule) !important;
+    border-radius: 2px;
+    padding: 14px 16px 16px !important;
+    min-height: 0 !important;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .pcin-stage:last-child { margin-bottom: 0; }
+  /* Stepper bullet on the connector */
+  .pcin-stage::before {
+    content: "";
+    position: absolute;
+    left: -19px; top: 22px;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 1.5px solid color-mix(in oklab, var(--ink) 35%, var(--rule));
+    transition: background .35s var(--ease-out), border-color .35s var(--ease-out), box-shadow .35s var(--ease-out);
+  }
+  /* Active stage uses the JS-set background to drive bullet colour */
+  .pcin-stage[style*="ember"]::before {
+    background: var(--ember);
+    border-color: var(--ember);
+    box-shadow: 0 0 0 4px color-mix(in oklab, var(--ember) 18%, transparent);
+  }
+  .pcin-ttl { font-size: 18px !important; margin-top: 6px !important; }
+  .pcin-desc { font-size: 11.5px !important; line-height: 1.55; }
+
+  /* Horizontal travel is meaningless vertically — hide track, token, branch */
+  .pcin-track, .pcin-branch { display: none !important; }
+
+  .pcin-overlays {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    margin-top: 20px !important;
+  }
+  .pcin-fp, .pcin-score, .pcin-verdict { padding: 14px 16px !important; }
+  .pcin-fp-hash { font-size: 11px; }
+  .pcin-fp-meta { gap: 8px 12px; font-size: 9.5px; }
+  .pcin-bar-row {
+    grid-template-columns: 1fr !important;
+    gap: 4px !important;
+    margin-top: 10px !important;
+  }
+  .pcin-bar-k { font-size: 10px; letter-spacing: 0.12em; }
+  .pcin-bar { height: 5px; }
+  .pcin-verdict-val { font-size: 17px !important; }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   THREAT — live request rows → stacked cards (≤720px)
+   Each row keeps the same canonical data (ip, ua, score, verdict)
+   plus the canonical-request highlight; layout becomes a card with
+   verdict pill top-right and ua wrapping under ip.
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 720px) {
+  .req-row {
+    grid-template-columns: 1fr auto !important;
+    grid-template-areas:
+      "ip       verdict"
+      "ua       ua"
+      "score    score" !important;
+    gap: 6px 12px !important;
+    padding: 14px 14px !important;
+    font-size: 12px !important;
+  }
+  .req-row .ip      { grid-area: ip; font-size: 12.5px; }
+  .req-row .ua      {
+    grid-area: ua; white-space: normal !important;
+    overflow: visible !important; text-overflow: clip !important;
+    font-size: 10.5px; line-height: 1.45;
+  }
+  .req-row .score   {
+    grid-area: score; font-size: 13px;
+    display: inline-flex; align-items: baseline; gap: 8px;
+  }
+  .req-row .score::before {
+    content: "SCORE";
+    font-family: var(--font-mono); font-size: 9px;
+    letter-spacing: 0.18em; color: var(--muted);
+  }
+  .req-row .verdict {
+    grid-area: verdict; text-align: right;
+    padding: 4px 8px;
+    border: 1px solid currentColor;
+    border-radius: 2px;
+    font-size: 9px;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   ANALYTICS — header wraps; stat cells stack at very narrow
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 720px) {
+  .dash > * { padding: 20px 18px !important; }
+  .dash-stats { gap: 14px !important; }
+  .dash-stats .cell .v { font-size: 26px !important; }
+  .dash-stats .cell .l { font-size: 9px !important; }
+}
+@media (max-width: 420px) {
+  .dash-stats { grid-template-columns: 1fr !important; }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   NETWORK / EDGE — tighter framing on mobile; globe stays live
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 720px) {
+  .edge { padding: 28px 20px 24px !important; }
+  .globe-stage { max-width: 320px; }
+  .edge-legend { flex-wrap: wrap; gap: 10px 14px; font-size: 9px; }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   LAYERS — extra breathing room when stacked
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 720px) {
+  .layer-row { padding: 20px 18px !important; gap: 8px 16px !important; }
+  .layer-row .ttl { font-size: 22px !important; }
+  .layer-row .desc { font-size: 12.5px; }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   FINALE — tighter hero on phones
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 720px) {
+  .finale { padding-top: 88px !important; }
+  .finale h2 { font-size: clamp(34px, 10vw, 52px) !important; line-height: 1.02; }
+  .finale .btn, .finale .btn-ghost { width: 100%; justify-content: center; min-height: 48px; }
+}
