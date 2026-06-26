@@ -2913,10 +2913,11 @@ pre { max-width: 100%; overflow-x: auto; }
    marquee on desktop and is hidden on mobile by the earlier rule. */
 
 /* ─── Terminology mobile pinned chapter ─── */
+/* ─── Terminology mobile pinned chapter ─── */
 .term-chapter {
   position: relative;
-  /* tall enough to host one viewport per card */
-  height: calc(100vh * 3.2);
+  /* one viewport per card (6 cards) + tail beat so the last card holds centre */
+  height: calc(100vh * 5.4);
   background: var(--paper);
 }
 .term-sticky {
