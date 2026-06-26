@@ -20,6 +20,7 @@ import { CursorRing } from "../components/site/CursorRing";
 import { Preloader } from "../components/site/Preloader";
 import { SectionGlyph } from "../components/site/SectionGlyph";
 import { HandoffToken } from "../components/site/HandoffToken";
+import { Terminology } from "../components/site/Terminology";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -155,7 +156,7 @@ function Experience() {
             <Scene glyph="blind." size="20vw" top="6vh" align="left" shade="ember" framing="tiltL">
               <Problem />
             </Scene>
-            <DriftBand />
+            <Terminology />
             <Scene glyph="inspect." size="20vw" top="4vh" align="right" over framing="push">
               <Pipeline />
             </Scene>

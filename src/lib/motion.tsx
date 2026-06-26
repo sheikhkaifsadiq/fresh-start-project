@@ -304,7 +304,9 @@ export function useInView<T extends HTMLElement>(threshold = 0.2) {
     const check = () => {
       const r = el.getBoundingClientRect();
       const vh = window.innerHeight || document.documentElement.clientHeight;
-      if (r.top < vh * 0.95 && r.bottom > 0) {
+      // Fire earlier — reveal as the section's top crosses ~115% of the
+      // viewport (≈ section bottom at 35–40% from viewport bottom).
+      if (r.top < vh * 1.15 && r.bottom > 0) {
         setSeen(true);
         return true;
       }
@@ -315,7 +317,7 @@ export function useInView<T extends HTMLElement>(threshold = 0.2) {
       (es) => es.forEach((e) => {
         if (e.isIntersecting) { setSeen(true); io.disconnect(); }
       }),
-      { threshold, rootMargin: "0px 0px -5% 0px" }
+      { threshold, rootMargin: "0px 0px 25% 0px" }
     );
     io.observe(el);
     const onScroll = () => { if (check()) { io.disconnect(); window.removeEventListener('scroll', onScroll); } };

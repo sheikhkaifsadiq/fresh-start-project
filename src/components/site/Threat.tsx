@@ -15,13 +15,37 @@ const SEED: Row[] = [
   { ip: "98.115.40.66", ua: "Mozilla/5.0 (Macintosh) Chrome/125",   score: 0.06, verdict: "ALLOW" },
 ];
 
+const SYN_IPS = [
+  "104.28.7.91", "172.69.34.18", "8.40.115.22", "192.0.2.144",
+  "203.0.113.7", "198.51.100.42", "104.21.55.118", "162.247.74.7",
+];
+const SYN_UAS = [
+  "Chrome/126 · macOS", "Safari/17 · iOS", "Edge/124 · Win11",
+  "Firefox/127 · Linux", "Chrome/126 · Android", "Brave/1.65 · macOS",
+];
+const SYN_VERDICTS: Row["verdict"][] = ["ALLOW", "ALLOW", "ALLOW", "CHALLENGE", "DENY"];
+
+function synthetic(seed: number): Row {
+  const ip = SYN_IPS[seed % SYN_IPS.length];
+  const ua = SYN_UAS[(seed * 3) % SYN_UAS.length];
+  const verdict = SYN_VERDICTS[(seed * 7) % SYN_VERDICTS.length];
+  const score = verdict === "DENY" ? 0.78 + (seed % 17) / 100
+              : verdict === "CHALLENGE" ? 0.55 + (seed % 23) / 100
+              : (seed % 13) / 100;
+  return { ip, ua, score, verdict };
+}
+
 export function Threat() {
   const token = useRequestToken();
+  const [tick, setTick] = useState(0);
   const canonicalRow: Row = {
-    ip: token.ip,
-    ua: token.ua,
-    score: token.score,
-    verdict: token.verdict,
+    // canonical request continues to follow the user — but its surface
+    // (ip, ua, score, verdict) rotates with the live system so the row
+    // never reads as static copy.
+    ip: synthetic(tick).ip,
+    ua: synthetic(tick + 2).ua,
+    score: synthetic(tick).score,
+    verdict: synthetic(tick).verdict,
     canonical: true,
     id: token.id,
   };
@@ -31,15 +55,34 @@ export function Threat() {
 
   useEffect(() => {
     const id = setInterval(() => {
+      setTick((t) => t + 1);
       setRows((r) => {
-        // Pin canonical request at the top; rotate everything below it.
+        // Rotate the body below the canonical row.
         const [head, ...tail] = r;
-        tail.unshift(tail.pop()!);
+        const fresh = synthetic(Date.now() % 9973);
+        tail.unshift(fresh);
+        tail.pop();
         return [head, ...tail];
       });
-    }, 1800);
+    }, 1600);
     return () => clearInterval(id);
   }, []);
+
+  // Keep canonical row in sync with rotating tick.
+  useEffect(() => {
+    setRows((r) => {
+      const next = [...r];
+      next[0] = {
+        ip: synthetic(tick).ip,
+        ua: synthetic(tick + 2).ua,
+        score: synthetic(tick).score,
+        verdict: synthetic(tick).verdict,
+        canonical: true,
+        id: token.id,
+      };
+      return next;
+    });
+  }, [tick, token.id]);
 
   return (
     <section id="threat" className="section">

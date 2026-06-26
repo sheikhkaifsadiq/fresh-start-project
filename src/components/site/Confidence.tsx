@@ -67,21 +67,21 @@ export function Confidence() {
       </Mask>
 
       <div className="container-x">
-        <div style={{
+        <div className="conf-metrics" style={{
           display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 0,
           borderBottom: "1px solid var(--rule)", borderTop: "1px solid var(--rule)",
         }}>
           {METRICS.map((m, i) => (
             <Mask key={i} delay={i * 110} duration={900}>
-              <div style={{
+              <div className="conf-metric" style={{
                 padding: "44px 28px",
                 borderRight: i < METRICS.length - 1 ? "1px solid var(--rule)" : "none",
               }}>
-                <div className="font-display" style={{ fontSize: 48, letterSpacing: "-0.025em" }}>
+                <div className="conf-metric-v font-display" style={{ fontSize: 48, letterSpacing: "-0.025em" }}>
                   <CountUp to={m.v} duration={1800} format={(n) => m.fmt(n)} />
                   <span style={{ color: "var(--ember)" }}>{m.suf}</span>
                 </div>
-                <div style={{
+                <div className="conf-metric-l" style={{
                   fontFamily: "var(--font-mono)", fontSize: 10,
                   letterSpacing: "0.18em", textTransform: "uppercase",
                   color: "var(--muted)", marginTop: 12,
