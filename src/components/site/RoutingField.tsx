@@ -38,7 +38,8 @@ export function RoutingField() {
     if (!ctx) return;
 
     const reduced = reducedMotion();
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const isPhone = typeof window !== "undefined" && window.innerWidth < 560;
+    const dpr = Math.min(window.devicePixelRatio || 1, isPhone ? 1.25 : 2);
     let w = 0, h = 0;
     let nodes: Node[] = [];
     let links: [number, number][] = [];
@@ -156,7 +157,8 @@ export function RoutingField() {
 
       // scene-aware density (no global "scroll = more" curve any more)
       const sc = sceneState(f.scrollProgress);
-      const density = reduced ? 0 : sc.density;
+      const phoneScale = isPhone ? 0.35 : 1;
+      const density = reduced ? 0 : sc.density * phoneScale;
       if (now - lastSpawn > 16 && !reduced) {
         if (Math.random() < density) spawnPacket(now, sc.threat, sc.speed);
         lastSpawn = now;

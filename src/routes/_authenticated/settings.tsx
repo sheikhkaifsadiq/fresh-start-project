@@ -67,7 +67,7 @@ function ProfileTab() {
           </select>
         </div>
       </div>
-      <div><button className="ds-btn">Save profile</button></div>
+      <div className="ds-action-bar"><button className="ds-btn">Save profile</button></div>
     </div>
   );
 }

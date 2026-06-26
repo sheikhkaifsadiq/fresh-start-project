@@ -53,22 +53,24 @@ function MLEnginePage() {
         <div>
           <div className="ds-kicker">Feature importance</div>
           <h2 className="ds-section-title">Signals the model weights most.</h2>
-          <table className="ds-table" style={{ marginTop: 18 }}>
-            <thead><tr><th>Feature</th><th>Weight</th><th className="num">Score</th></tr></thead>
-            <tbody>
-              {FEATURES.map((f) => (
-                <tr key={f.k}>
-                  <td>{f.k}</td>
-                  <td>
-                    <div style={{ height: 4, background: "var(--rule)", position: "relative" }}>
-                      <div style={{ position: "absolute", inset: 0, width: `${f.v * 100}%`, background: "var(--ink)" }} />
-                    </div>
-                  </td>
-                  <td className="num">{f.v.toFixed(2)}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <div className="ds-table-wrap">
+            <table className="ds-table ds-table-cards" style={{ marginTop: 18 }}>
+              <thead><tr><th>Feature</th><th>Weight</th><th className="num">Score</th></tr></thead>
+              <tbody>
+                {FEATURES.map((f) => (
+                  <tr key={f.k}>
+                    <td data-label="Feature">{f.k}</td>
+                    <td data-label="Weight">
+                      <div style={{ height: 4, background: "var(--rule)", position: "relative", width: "100%", minWidth: 80 }}>
+                        <div style={{ position: "absolute", inset: 0, width: `${f.v * 100}%`, background: "var(--ink)" }} />
+                      </div>
+                    </td>
+                    <td className="num" data-label="Score">{f.v.toFixed(2)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <div>

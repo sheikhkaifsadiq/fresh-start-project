@@ -77,10 +77,12 @@ function LinkDetailPage() {
             <div>
               <div className="ds-kicker">Recent verdicts</div>
               <h2 className="ds-section-title">Decision log.</h2>
-              <table className="ds-table" style={{ marginTop: 16 }}>
-                <thead><tr><th>Time</th><th>Verdict</th><th>Reason</th></tr></thead>
-                <tbody><tr><td colSpan={3} className="muted" style={{ padding: 32, textAlign: "center" }}>— no verdicts yet —</td></tr></tbody>
-              </table>
+              <div className="ds-table-wrap">
+                <table className="ds-table ds-table-cards" style={{ marginTop: 16 }}>
+                  <thead><tr><th>Time</th><th>Verdict</th><th>Reason</th></tr></thead>
+                  <tbody><tr><td colSpan={3} className="muted" style={{ padding: 32, textAlign: "center" }}>— no verdicts yet —</td></tr></tbody>
+                </table>
+              </div>
             </div>
           </section>
         </>

@@ -88,32 +88,36 @@ function AnalyticsPage() {
         <div>
           <div className="ds-kicker">Top routed links</div>
           <h2 className="ds-section-title">No links inspected yet.</h2>
-          <table className="ds-table" style={{ marginTop: 18 }}>
-            <thead>
-              <tr><th>Slug</th><th>Destination</th><th className="num">Clicks</th><th className="num">Block %</th></tr>
-            </thead>
-            <tbody>
-              <tr><td colSpan={4}><div className="ds-empty" style={{ padding: 32 }}>
-                <div className="ds-empty-title">Awaiting first click.</div>
-                <div className="ds-empty-note">Issue a short link, share it, and verdicts will appear here within seconds.</div>
-              </div></td></tr>
-            </tbody>
-          </table>
+          <div className="ds-table-wrap">
+            <table className="ds-table ds-table-cards" style={{ marginTop: 18 }}>
+              <thead>
+                <tr><th>Slug</th><th>Destination</th><th className="num">Clicks</th><th className="num">Block %</th></tr>
+              </thead>
+              <tbody>
+                <tr><td colSpan={4}><div className="ds-empty" style={{ padding: 32 }}>
+                  <div className="ds-empty-title">Awaiting first click.</div>
+                  <div className="ds-empty-note">Issue a short link, share it, and verdicts will appear here within seconds.</div>
+                </div></td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <div>
           <div className="ds-kicker">Verdict ledger</div>
           <h2 className="ds-section-title">Live decisions.</h2>
-          <table className="ds-table" style={{ marginTop: 18 }}>
-            <thead>
-              <tr><th>Time</th><th>Slug</th><th>Verdict</th><th>Reason</th></tr>
-            </thead>
-            <tbody>
-              <tr><td colSpan={4} className="muted" style={{ padding: 32, textAlign: "center" }}>
-                — no verdicts in the last {range.toLowerCase()} —
-              </td></tr>
-            </tbody>
-          </table>
+          <div className="ds-table-wrap">
+            <table className="ds-table ds-table-cards" style={{ marginTop: 18 }}>
+              <thead>
+                <tr><th>Time</th><th>Slug</th><th>Verdict</th><th>Reason</th></tr>
+              </thead>
+              <tbody>
+                <tr><td colSpan={4} className="muted" style={{ padding: 32, textAlign: "center" }}>
+                  — no verdicts in the last {range.toLowerCase()} —
+                </td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
     </AppShell>
