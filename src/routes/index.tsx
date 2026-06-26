@@ -156,7 +156,7 @@ function Experience() {
             <Scene glyph="blind." size="20vw" top="6vh" align="left" shade="ember" framing="tiltL">
               <Problem />
             </Scene>
-            <DriftBand />
+            <Terminology />
             <Scene glyph="inspect." size="20vw" top="4vh" align="right" over framing="push">
               <Pipeline />
             </Scene>
