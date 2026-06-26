@@ -67,7 +67,7 @@ export function Confidence() {
       </Mask>
 
       <div className="container-x">
-        <div style={{
+        <div className="conf-metrics" style={{
           display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 0,
           borderBottom: "1px solid var(--rule)", borderTop: "1px solid var(--rule)",
         }}>
