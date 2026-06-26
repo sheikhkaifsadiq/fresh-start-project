@@ -230,7 +230,7 @@ export function Pipeline() {
                 </div>
 
                 {/* Stages rail — only active stage holds the description */}
-                <div className="pcin-rail">
+                <div ref={railRef} className="pcin-rail" style={{ willChange: "transform" }}>
                   {STAGES.map((s, i) => {
                     const active = i === activeIdx;
                     const past = i < activeIdx;
