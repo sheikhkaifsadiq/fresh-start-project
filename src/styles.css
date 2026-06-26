@@ -1291,7 +1291,13 @@ body { padding-bottom: 44px; } /* room for fixed telemetry strip */
   opacity: 0; margin-top: 2px;
 }
 @media (max-width: 720px) {
-  .handoff-wrap { display: none; }
+  /* Keep the canonical token visible on mobile but compressed:
+     smaller chip, tucked into the safe-area edge, sub/next hidden. */
+  .handoff-wrap { right: 12px; top: 64px; }
+  .handoff-chip { padding: 7px 11px 7px 9px; gap: 8px; max-width: 64vw; box-shadow: 0 8px 22px -12px rgba(20,22,26,0.32), 0 0 0 1px rgba(20,22,26,0.25); }
+  .handoff-shape { width: 10px; height: 10px; flex: 0 0 10px; }
+  .handoff-label { font-size: 9.5px; letter-spacing: 0.06em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .handoff-sub, .handoff-next { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .handoff-shape[data-shape="burst"]::before { animation: none; }
@@ -2194,16 +2200,16 @@ input, select, textarea {
   /* Section glyph: keep but tame */
   .scene-frame { overflow: hidden; }
 
-  /* Hide cinematic ornamentation that competes with content */
-  .cursor-ring { display: none !important; }
+  /* Cursor ring already hidden for coarse pointers via (hover: none).
+     Cinematic ornamentation stays alive on mobile — only its density scales. */
 }
 
 @media (max-width: 560px) {
-  /* Telemetry footer is decorative on phones — surface only the bar */
-  .telemetry-chrome { font-size: 9.5px; padding: 8px 12px !important; }
-  .telemetry-chrome .tel-cell:nth-child(n+4) { display: none; }
-  /* Handoff token chip is dense, hide on narrow */
-  .handoff-token { display: none !important; }
+  /* Telemetry footer compresses on phones — every cell stays alive, the rail
+     becomes horizontally scrollable so the live system signal is never lost. */
+  .telemetry-chrome { font-size: 9.5px; padding: 8px 12px !important; gap: 14px !important; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; mask-image: linear-gradient(90deg, transparent, #000 18px, #000 calc(100% - 18px), transparent); }
+  .telemetry-chrome::-webkit-scrollbar { display: none; }
+  .telemetry-chrome .tel-cell { flex: 0 0 auto; }
 }
 
 /* ---------- Routing field & ambient: lighter on small / battery ---------- */
@@ -2584,11 +2590,10 @@ table { max-width: 100%; }
   .ds-panel-title { font-size: 18px; }
 }
 
-/* ════════════════════════════════════════════════════════════════
-   Telemetry chrome already condensed; ensure hidden on very small
-   ═══════════════════════════════════════════════════════════════ */
+/* Telemetry chrome stays alive at every viewport — the live system signal is
+   part of the product, not decoration. Sub-420 just tightens the rail. */
 @media (max-width: 420px) {
-  .telemetry-chrome { display: none !important; }
+  .telemetry-chrome { font-size: 9px; padding: 6px 10px !important; gap: 12px !important; }
 }
 
 /* ════════════════════════════════════════════════════════════════
