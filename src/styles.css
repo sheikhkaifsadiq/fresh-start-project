@@ -2873,9 +2873,7 @@ pre { max-width: 100%; overflow-x: auto; }
   }
 
   /* ----- TERMINOLOGY chapter (pinned horizontal) ----- */
-  .drift-band { display: block !important; }  /* show our replacement */
   .term-chapter { display: block; }
-  .drift-band:not(.term-chapter) { display: none !important; }  /* the 2nd legacy drift-band stays hidden on mobile */
 }
 
 /* Default: terminology only renders inside .term-chapter wrapper. The
