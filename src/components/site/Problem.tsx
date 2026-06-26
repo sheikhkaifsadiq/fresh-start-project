@@ -103,7 +103,20 @@ function Card({ item, idx }: { item: typeof ITEMS[number]; idx: number }) {
   );
 }
 
+function useIsMobile() {
+  const [m, setM] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 720px)");
+    const fn = () => setM(mq.matches);
+    fn();
+    mq.addEventListener("change", fn);
+    return () => mq.removeEventListener("change", fn);
+  }, []);
+  return m;
+}
+
 export function Problem() {
+  const isMobile = useIsMobile();
   return (
     <section id="problem" className="section">
       <div className="container-x">
@@ -113,11 +126,71 @@ export function Problem() {
           title={<>The link layer is the last surface still <em>operating blind.</em></>}
           body="Every other surface — DNS, CDN, app, database — has telemetry, posture, and policy. The redirect itself does not. AegisRoute closes that gap."
         />
-        <div className="problem-rail">
-
-          {ITEMS.map((it, i) => <Card key={i} item={it} idx={i} />)}
-        </div>
       </div>
+      {isMobile ? <ProblemMobileRail /> : (
+        <div className="container-x">
+          <div className="problem-rail">
+            {ITEMS.map((it, i) => <Card key={i} item={it} idx={i} />)}
+          </div>
+        </div>
+      )}
     </section>
   );
 }
+
+/**
+ * Mobile: pinned-horizontal rail — vertical page scroll is converted into
+ * horizontal card translation. Each card snaps to viewport centre via the
+ * scroll-progress mapping. Background telemetry continues to progress.
+ */
+function ProblemMobileRail() {
+  const pinRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const idxRef = useRef<HTMLSpanElement>(null);
+  const stage = useStage();
+  useEffect(() => {
+    return stage.subscribe((f) => {
+      const pin = pinRef.current;
+      const track = trackRef.current;
+      if (!pin || !track) return;
+      const r = pin.getBoundingClientRect();
+      const total = r.height - f.vh;
+      if (total <= 0) return;
+      const p = Math.min(1, Math.max(0, -r.top / total));
+      const maxX = track.scrollWidth - f.vw;
+      const x = -p * Math.max(0, maxX);
+      track.style.transform = `translate3d(${x.toFixed(2)}px, 0, 0)`;
+      if (idxRef.current) {
+        const active = Math.min(ITEMS.length - 1, Math.floor(p * ITEMS.length + 0.0001));
+        idxRef.current.textContent = String(active + 1).padStart(2, "0");
+      }
+    });
+  }, [stage]);
+  return (
+    <div ref={pinRef} className="problem-pin" aria-label="Problem rail">
+      <div className="problem-sticky">
+        <div className="problem-progress">
+          <span ref={idxRef}>01</span> / {String(ITEMS.length).padStart(2, "0")}
+          <span className="problem-progress-sep">·</span>
+          Scroll to advance
+        </div>
+        <div className="problem-viewport">
+          <div ref={trackRef} className="problem-track">
+            {ITEMS.map((it, i) => (
+              <article key={i} className="problem-mcard">
+                <div className="tag danger" style={{ alignSelf: "flex-start" }}>{it.tag}</div>
+                <div className="problem-mcard-diagram">{it.diagram}</div>
+                <div>
+                  <h3 className="problem-mcard-title">{it.title as ReactNode}</h3>
+                  <p className="problem-mcard-body">{it.body}</p>
+                </div>
+              </article>
+            ))}
+            <div className="problem-mtail" aria-hidden />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
