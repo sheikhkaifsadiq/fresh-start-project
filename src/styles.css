@@ -2078,3 +2078,152 @@ body { padding-bottom: 44px; } /* room for fixed telemetry strip */
 /* Section spacing helper */
 .ds-stack { display: flex; flex-direction: column; gap: 48px; }
 .ds-stack-sm { display: flex; flex-direction: column; gap: 24px; }
+
+/* ============================================================
+   RESPONSIVE PASS — global, last in cascade so it always wins
+   Covers: safe-areas, fluid containers, mobile shell drawer,
+   adaptive landing chrome, table scroll, form/touch targets,
+   reduced motion density on small viewports.
+   ============================================================ */
+
+/* iOS safe area + true viewport units everywhere */
+@supports (padding: env(safe-area-inset-left)) {
+  .container-x { padding-left: max(20px, env(safe-area-inset-left)); padding-right: max(20px, env(safe-area-inset-right)); }
+  .app-sidebar { padding-left: max(22px, env(safe-area-inset-left)); }
+  .app-content { padding-bottom: max(60px, env(safe-area-inset-bottom)); }
+}
+body { min-height: 100dvh; }
+
+/* Fluid container — no hard 32px wall until there's room for it */
+.container-x { padding-left: clamp(16px, 4vw, 32px); padding-right: clamp(16px, 4vw, 32px); }
+
+/* ---------- AppShell: hamburger + slide-over drawer ---------- */
+.app-menu-btn {
+  display: none;
+  width: 40px; height: 40px;
+  background: transparent; border: 1px solid var(--rule);
+  cursor: pointer; padding: 0;
+  align-items: center; justify-content: center;
+  flex-direction: column; gap: 4px;
+  flex-shrink: 0;
+}
+.app-menu-btn span { width: 16px; height: 1px; background: var(--ink); display: block; }
+.app-scrim { display: none; }
+
+.app-topbar-title { min-width: 0; flex: 1; }
+.app-title { word-break: break-word; }
+
+@media (max-width: 960px) {
+  .app-shell { grid-template-columns: 1fr; }
+  .app-menu-btn { display: inline-flex; }
+  .app-sidebar {
+    position: fixed; top: 0; bottom: 0; left: 0;
+    width: min(86vw, 320px); height: 100dvh;
+    z-index: 90;
+    transform: translateX(-100%);
+    transition: transform .32s var(--ease-out);
+    border-right: 1px solid var(--rule);
+    border-bottom: 0;
+    box-shadow: 0 0 40px rgba(0,0,0,0);
+    background: color-mix(in oklab, var(--paper) 96%, white 4%);
+    overflow-y: auto;
+  }
+  .app-shell.is-drawer-open .app-sidebar {
+    transform: translateX(0);
+    box-shadow: 0 0 40px rgba(0,0,0,0.18);
+  }
+  .app-scrim {
+    display: block; position: fixed; inset: 0; z-index: 85;
+    background: rgba(20,22,26,0); pointer-events: none;
+    transition: background .32s var(--ease-out);
+    border: 0; padding: 0;
+  }
+  .app-shell.is-drawer-open .app-scrim {
+    background: rgba(20,22,26,0.45); pointer-events: auto;
+  }
+  .app-topbar {
+    padding: 20px clamp(16px, 4vw, 28px) 16px;
+    gap: 16px; align-items: center;
+  }
+  .app-content { padding: 24px clamp(16px, 4vw, 28px) 64px; gap: 24px; }
+  .app-title { font-size: clamp(24px, 6vw, 36px); }
+  .app-topbar-meta { display: none; }
+  .app-nav-link { padding: 12px 10px; font-size: 14px; }  /* touch target */
+}
+@media (min-width: 961px) {
+  .app-menu-btn { display: none !important; }
+}
+
+/* ---------- Tables: horizontal scroll fallback on narrow ---------- */
+.ds-table-wrap { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.lk-table-scroll { -webkit-overflow-scrolling: touch; }
+@media (max-width: 720px) {
+  .ds-table thead th, .ds-table tbody td { padding: 10px 10px; font-size: 11.5px; }
+  .lk-table th, .lk-table td { padding: 10px 10px !important; font-size: 12px; }
+  .lk-dest { max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+}
+
+/* ---------- Touch targets ---------- */
+@media (hover: none) and (pointer: coarse) {
+  button, .btn, .lk-mini-btn, .ds-pagination button, .app-nav-link, .app-signout {
+    min-height: 44px;
+  }
+  .lk-mini-btn { padding: 10px 12px; }
+}
+
+/* ---------- Forms ---------- */
+input, select, textarea {
+  font-size: 16px;  /* prevent iOS auto-zoom */
+}
+@media (min-width: 721px) {
+  input, select, textarea { font-size: 14px; }
+}
+
+/* ---------- Landing page mobile pass ---------- */
+@media (max-width: 720px) {
+  .hero { padding: 24px 0 72px; }
+  .hero-grid { gap: 40px; }
+  .hero h1 { font-size: clamp(40px, 12vw, 64px); margin-top: 16px; }
+  .hero-sub { margin-top: 24px !important; max-width: 100%; }
+  .hero-meta { grid-template-columns: repeat(2, 1fr) !important; gap: 18px; margin-top: 56px; padding-top: 20px; }
+  .hero-meta .v { font-size: clamp(22px, 7vw, 32px) !important; }
+  .link-bar { flex-wrap: wrap; }
+  .link-bar input { min-width: 0; flex: 1 1 140px; }
+  .hero-route-btn { flex: 0 0 100%; justify-content: center; padding: 14px 22px !important; margin-top: 8px; }
+
+  /* Section glyph: keep but tame */
+  .scene-frame { overflow: hidden; }
+
+  /* Hide cinematic ornamentation that competes with content */
+  .cursor-ring { display: none !important; }
+}
+
+@media (max-width: 560px) {
+  /* Telemetry footer is decorative on phones — surface only the bar */
+  .telemetry-chrome { font-size: 9.5px; padding: 8px 12px !important; }
+  .telemetry-chrome .tel-cell:nth-child(n+4) { display: none; }
+  /* Handoff token chip is dense, hide on narrow */
+  .handoff-token { display: none !important; }
+}
+
+/* ---------- Routing field & ambient: lighter on small / battery ---------- */
+@media (max-width: 720px), (prefers-reduced-motion: reduce) {
+  .routing-field { opacity: 0.5; }
+  .drift-band { display: none; }
+  .blob { filter: blur(40px) !important; opacity: 0.4 !important; }
+}
+
+/* ---------- Universal overflow guard ---------- */
+img, svg, video, canvas { max-width: 100%; height: auto; }
+table { max-width: 100%; }
+
+/* ---------- Section spacing on small screens ---------- */
+@media (max-width: 720px) {
+  section, .problem, .pipeline-section, .threat-section, .analytics-section,
+  .network-section, .layers-section, .confidence-section, .finale {
+    padding-top: 64px !important; padding-bottom: 64px !important;
+  }
+  .ds-stack { gap: 28px; }
+  .ds-panel { padding: 18px; }
+  .ds-panel-title { font-size: 18px; }
+}
