@@ -111,10 +111,8 @@ export function Problem() {
           title={<>The link layer is the last surface still <em>operating blind.</em></>}
           body="Every other surface — DNS, CDN, app, database — has telemetry, posture, and policy. The redirect itself does not. AegisRoute closes that gap."
         />
-        <div className="problem-rail" style={{
-          display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 1,
-          background: "var(--rule)", border: "1px solid var(--rule)",
-        }}>
+        <div className="problem-rail">
+
           {ITEMS.map((it, i) => <Card key={i} item={it} idx={i} />)}
         </div>
       </div>
