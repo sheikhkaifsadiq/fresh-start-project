@@ -13,8 +13,16 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AuthenticatedRouteImport } from './routes/_authenticated'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthenticatedSettingsRouteImport } from './routes/_authenticated/settings'
+import { Route as AuthenticatedSecurityRouteImport } from './routes/_authenticated/security'
+import { Route as AuthenticatedRulesRouteImport } from './routes/_authenticated/rules'
+import { Route as AuthenticatedMlEngineRouteImport } from './routes/_authenticated/ml-engine'
 import { Route as AuthenticatedLinksRouteImport } from './routes/_authenticated/links'
+import { Route as AuthenticatedDocsRouteImport } from './routes/_authenticated/docs'
 import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
+import { Route as AuthenticatedAuditLogsRouteImport } from './routes/_authenticated/audit-logs'
+import { Route as AuthenticatedAnalyticsRouteImport } from './routes/_authenticated/analytics'
+import { Route as AuthenticatedLinksIdRouteImport } from './routes/_authenticated/links.$id'
 import { Route as ApiV1LinksIndexRouteImport } from './routes/api/v1/links/index'
 import { Route as ApiV1LinksCheckSlugRouteImport } from './routes/api/v1/links/check-slug'
 import { Route as ApiV1LinksIdRouteImport } from './routes/api/v1/links/$id'
@@ -42,15 +50,55 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticatedSettingsRoute = AuthenticatedSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => AuthenticatedRoute,
+} as any)
+const AuthenticatedSecurityRoute = AuthenticatedSecurityRouteImport.update({
+  id: '/security',
+  path: '/security',
+  getParentRoute: () => AuthenticatedRoute,
+} as any)
+const AuthenticatedRulesRoute = AuthenticatedRulesRouteImport.update({
+  id: '/rules',
+  path: '/rules',
+  getParentRoute: () => AuthenticatedRoute,
+} as any)
+const AuthenticatedMlEngineRoute = AuthenticatedMlEngineRouteImport.update({
+  id: '/ml-engine',
+  path: '/ml-engine',
+  getParentRoute: () => AuthenticatedRoute,
+} as any)
 const AuthenticatedLinksRoute = AuthenticatedLinksRouteImport.update({
   id: '/links',
   path: '/links',
+  getParentRoute: () => AuthenticatedRoute,
+} as any)
+const AuthenticatedDocsRoute = AuthenticatedDocsRouteImport.update({
+  id: '/docs',
+  path: '/docs',
   getParentRoute: () => AuthenticatedRoute,
 } as any)
 const AuthenticatedDashboardRoute = AuthenticatedDashboardRouteImport.update({
   id: '/dashboard',
   path: '/dashboard',
   getParentRoute: () => AuthenticatedRoute,
+} as any)
+const AuthenticatedAuditLogsRoute = AuthenticatedAuditLogsRouteImport.update({
+  id: '/audit-logs',
+  path: '/audit-logs',
+  getParentRoute: () => AuthenticatedRoute,
+} as any)
+const AuthenticatedAnalyticsRoute = AuthenticatedAnalyticsRouteImport.update({
+  id: '/analytics',
+  path: '/analytics',
+  getParentRoute: () => AuthenticatedRoute,
+} as any)
+const AuthenticatedLinksIdRoute = AuthenticatedLinksIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => AuthenticatedLinksRoute,
 } as any)
 const ApiV1LinksIndexRoute = ApiV1LinksIndexRouteImport.update({
   id: '/api/v1/links/',
@@ -92,8 +140,16 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/analytics': typeof AuthenticatedAnalyticsRoute
+  '/audit-logs': typeof AuthenticatedAuditLogsRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
-  '/links': typeof AuthenticatedLinksRoute
+  '/docs': typeof AuthenticatedDocsRoute
+  '/links': typeof AuthenticatedLinksRouteWithChildren
+  '/ml-engine': typeof AuthenticatedMlEngineRoute
+  '/rules': typeof AuthenticatedRulesRoute
+  '/security': typeof AuthenticatedSecurityRoute
+  '/settings': typeof AuthenticatedSettingsRoute
+  '/links/$id': typeof AuthenticatedLinksIdRoute
   '/api/v1/auth/login': typeof ApiV1AuthLoginRoute
   '/api/v1/auth/logout': typeof ApiV1AuthLogoutRoute
   '/api/v1/auth/me': typeof ApiV1AuthMeRoute
@@ -106,8 +162,16 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/analytics': typeof AuthenticatedAnalyticsRoute
+  '/audit-logs': typeof AuthenticatedAuditLogsRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
-  '/links': typeof AuthenticatedLinksRoute
+  '/docs': typeof AuthenticatedDocsRoute
+  '/links': typeof AuthenticatedLinksRouteWithChildren
+  '/ml-engine': typeof AuthenticatedMlEngineRoute
+  '/rules': typeof AuthenticatedRulesRoute
+  '/security': typeof AuthenticatedSecurityRoute
+  '/settings': typeof AuthenticatedSettingsRoute
+  '/links/$id': typeof AuthenticatedLinksIdRoute
   '/api/v1/auth/login': typeof ApiV1AuthLoginRoute
   '/api/v1/auth/logout': typeof ApiV1AuthLogoutRoute
   '/api/v1/auth/me': typeof ApiV1AuthMeRoute
@@ -122,8 +186,16 @@ export interface FileRoutesById {
   '/_authenticated': typeof AuthenticatedRouteWithChildren
   '/auth': typeof AuthRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/_authenticated/analytics': typeof AuthenticatedAnalyticsRoute
+  '/_authenticated/audit-logs': typeof AuthenticatedAuditLogsRoute
   '/_authenticated/dashboard': typeof AuthenticatedDashboardRoute
-  '/_authenticated/links': typeof AuthenticatedLinksRoute
+  '/_authenticated/docs': typeof AuthenticatedDocsRoute
+  '/_authenticated/links': typeof AuthenticatedLinksRouteWithChildren
+  '/_authenticated/ml-engine': typeof AuthenticatedMlEngineRoute
+  '/_authenticated/rules': typeof AuthenticatedRulesRoute
+  '/_authenticated/security': typeof AuthenticatedSecurityRoute
+  '/_authenticated/settings': typeof AuthenticatedSettingsRoute
+  '/_authenticated/links/$id': typeof AuthenticatedLinksIdRoute
   '/api/v1/auth/login': typeof ApiV1AuthLoginRoute
   '/api/v1/auth/logout': typeof ApiV1AuthLogoutRoute
   '/api/v1/auth/me': typeof ApiV1AuthMeRoute
@@ -138,8 +210,16 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/sitemap.xml'
+    | '/analytics'
+    | '/audit-logs'
     | '/dashboard'
+    | '/docs'
     | '/links'
+    | '/ml-engine'
+    | '/rules'
+    | '/security'
+    | '/settings'
+    | '/links/$id'
     | '/api/v1/auth/login'
     | '/api/v1/auth/logout'
     | '/api/v1/auth/me'
@@ -152,8 +232,16 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/sitemap.xml'
+    | '/analytics'
+    | '/audit-logs'
     | '/dashboard'
+    | '/docs'
     | '/links'
+    | '/ml-engine'
+    | '/rules'
+    | '/security'
+    | '/settings'
+    | '/links/$id'
     | '/api/v1/auth/login'
     | '/api/v1/auth/logout'
     | '/api/v1/auth/me'
@@ -167,8 +255,16 @@ export interface FileRouteTypes {
     | '/_authenticated'
     | '/auth'
     | '/sitemap.xml'
+    | '/_authenticated/analytics'
+    | '/_authenticated/audit-logs'
     | '/_authenticated/dashboard'
+    | '/_authenticated/docs'
     | '/_authenticated/links'
+    | '/_authenticated/ml-engine'
+    | '/_authenticated/rules'
+    | '/_authenticated/security'
+    | '/_authenticated/settings'
+    | '/_authenticated/links/$id'
     | '/api/v1/auth/login'
     | '/api/v1/auth/logout'
     | '/api/v1/auth/me'
@@ -222,11 +318,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated/settings': {
+      id: '/_authenticated/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof AuthenticatedSettingsRouteImport
+      parentRoute: typeof AuthenticatedRoute
+    }
+    '/_authenticated/security': {
+      id: '/_authenticated/security'
+      path: '/security'
+      fullPath: '/security'
+      preLoaderRoute: typeof AuthenticatedSecurityRouteImport
+      parentRoute: typeof AuthenticatedRoute
+    }
+    '/_authenticated/rules': {
+      id: '/_authenticated/rules'
+      path: '/rules'
+      fullPath: '/rules'
+      preLoaderRoute: typeof AuthenticatedRulesRouteImport
+      parentRoute: typeof AuthenticatedRoute
+    }
+    '/_authenticated/ml-engine': {
+      id: '/_authenticated/ml-engine'
+      path: '/ml-engine'
+      fullPath: '/ml-engine'
+      preLoaderRoute: typeof AuthenticatedMlEngineRouteImport
+      parentRoute: typeof AuthenticatedRoute
+    }
     '/_authenticated/links': {
       id: '/_authenticated/links'
       path: '/links'
       fullPath: '/links'
       preLoaderRoute: typeof AuthenticatedLinksRouteImport
+      parentRoute: typeof AuthenticatedRoute
+    }
+    '/_authenticated/docs': {
+      id: '/_authenticated/docs'
+      path: '/docs'
+      fullPath: '/docs'
+      preLoaderRoute: typeof AuthenticatedDocsRouteImport
       parentRoute: typeof AuthenticatedRoute
     }
     '/_authenticated/dashboard': {
@@ -235,6 +366,27 @@ declare module '@tanstack/react-router' {
       fullPath: '/dashboard'
       preLoaderRoute: typeof AuthenticatedDashboardRouteImport
       parentRoute: typeof AuthenticatedRoute
+    }
+    '/_authenticated/audit-logs': {
+      id: '/_authenticated/audit-logs'
+      path: '/audit-logs'
+      fullPath: '/audit-logs'
+      preLoaderRoute: typeof AuthenticatedAuditLogsRouteImport
+      parentRoute: typeof AuthenticatedRoute
+    }
+    '/_authenticated/analytics': {
+      id: '/_authenticated/analytics'
+      path: '/analytics'
+      fullPath: '/analytics'
+      preLoaderRoute: typeof AuthenticatedAnalyticsRouteImport
+      parentRoute: typeof AuthenticatedRoute
+    }
+    '/_authenticated/links/$id': {
+      id: '/_authenticated/links/$id'
+      path: '/$id'
+      fullPath: '/links/$id'
+      preLoaderRoute: typeof AuthenticatedLinksIdRouteImport
+      parentRoute: typeof AuthenticatedLinksRoute
     }
     '/api/v1/links/': {
       id: '/api/v1/links/'
@@ -288,14 +440,39 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface AuthenticatedLinksRouteChildren {
+  AuthenticatedLinksIdRoute: typeof AuthenticatedLinksIdRoute
+}
+
+const AuthenticatedLinksRouteChildren: AuthenticatedLinksRouteChildren = {
+  AuthenticatedLinksIdRoute: AuthenticatedLinksIdRoute,
+}
+
+const AuthenticatedLinksRouteWithChildren =
+  AuthenticatedLinksRoute._addFileChildren(AuthenticatedLinksRouteChildren)
+
 interface AuthenticatedRouteChildren {
+  AuthenticatedAnalyticsRoute: typeof AuthenticatedAnalyticsRoute
+  AuthenticatedAuditLogsRoute: typeof AuthenticatedAuditLogsRoute
   AuthenticatedDashboardRoute: typeof AuthenticatedDashboardRoute
-  AuthenticatedLinksRoute: typeof AuthenticatedLinksRoute
+  AuthenticatedDocsRoute: typeof AuthenticatedDocsRoute
+  AuthenticatedLinksRoute: typeof AuthenticatedLinksRouteWithChildren
+  AuthenticatedMlEngineRoute: typeof AuthenticatedMlEngineRoute
+  AuthenticatedRulesRoute: typeof AuthenticatedRulesRoute
+  AuthenticatedSecurityRoute: typeof AuthenticatedSecurityRoute
+  AuthenticatedSettingsRoute: typeof AuthenticatedSettingsRoute
 }
 
 const AuthenticatedRouteChildren: AuthenticatedRouteChildren = {
+  AuthenticatedAnalyticsRoute: AuthenticatedAnalyticsRoute,
+  AuthenticatedAuditLogsRoute: AuthenticatedAuditLogsRoute,
   AuthenticatedDashboardRoute: AuthenticatedDashboardRoute,
-  AuthenticatedLinksRoute: AuthenticatedLinksRoute,
+  AuthenticatedDocsRoute: AuthenticatedDocsRoute,
+  AuthenticatedLinksRoute: AuthenticatedLinksRouteWithChildren,
+  AuthenticatedMlEngineRoute: AuthenticatedMlEngineRoute,
+  AuthenticatedRulesRoute: AuthenticatedRulesRoute,
+  AuthenticatedSecurityRoute: AuthenticatedSecurityRoute,
+  AuthenticatedSettingsRoute: AuthenticatedSettingsRoute,
 }
 
 const AuthenticatedRouteWithChildren = AuthenticatedRoute._addFileChildren(

@@ -22,7 +22,7 @@ const NAV: NavItem[] = [
   { to: "/rules", label: "Rules", group: "ops" },
   { to: "/security", label: "Security", group: "ops" },
   { to: "/ml-engine", label: "ML Engine", group: "ops" },
-  { to: "/audit-logs", label: "Audit Logs", group: "system" },
+  { to: "/audit-logs", label: "Audit", group: "system" },
   { to: "/settings", label: "Settings", group: "system" },
   { to: "/docs", label: "Docs", group: "system" },
 ];
