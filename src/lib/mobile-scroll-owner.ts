@@ -87,7 +87,7 @@ export function useMobileScrollOwner({
       if (sr.bottom <= window.innerHeight * 0.45 || sr.top >= window.innerHeight * 0.72) return false;
       const r = trigger.getBoundingClientRect();
       const center = r.top + r.height / 2;
-      return center <= window.innerHeight * 0.54 && center >= window.innerHeight * 0.18;
+      return center <= window.innerHeight * 0.54;
     };
 
     const release = (direction: "forward" | "backward") => {
