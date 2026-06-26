@@ -2215,7 +2215,8 @@ input, select, textarea {
 /* ---------- Routing field & ambient: lighter on small / battery ---------- */
 @media (max-width: 720px), (prefers-reduced-motion: reduce) {
   .routing-field { opacity: 0.5; }
-  .drift-band { display: none; }
+  /* Keep .drift-band--mobile visible — it's the restored vocabulary marquee. */
+  .drift-band:not(.drift-band--mobile) { display: none; }
   .blob { filter: blur(40px) !important; opacity: 0.4 !important; }
 }
 
@@ -2611,23 +2612,34 @@ pre { max-width: 100%; overflow-x: auto; }
    of the rail and the horizontal token-travel are recomposed.
    ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 720px) {
-  .pipeline-pin { min-height: 300vh !important; }
-  .pipeline-cinema { padding: 18px 16px 22px !important; }
+  /* Pinned 360vh so each of the 5 stages owns ~70vh of vertical scroll.
+     The sticky frame is 100vh; the inner stage column is translated by JS
+     so the active stage is always at viewport centre. */
+  .pipeline-pin { min-height: 360vh !important; }
+  .pipeline-section .pipeline-pin .sticky {
+    top: 0 !important; height: 100vh !important;
+    align-items: flex-start !important;
+    overflow: hidden;
+  }
+  .pipeline-cinema { padding: 14px 16px 18px !important; height: 100vh; box-sizing: border-box; display: flex; flex-direction: column; }
   .pcin-head {
     flex-wrap: wrap; gap: 8px 14px; font-size: 9.5px !important;
-    padding-bottom: 12px;
+    padding-bottom: 10px; flex: 0 0 auto;
   }
+  /* Stage column — JS translates this vertically. No internal scroll. */
   .pcin-rail {
     grid-template-columns: 1fr !important;
     overflow: visible !important;
-    margin-top: 20px;
+    margin-top: 8px;
     position: relative;
     padding-left: 22px;
+    flex: 1 1 auto;
+    align-content: flex-start;
+    transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
   }
-  /* Left rail connector — replaces the horizontal track */
+  /* Left rail connector */
   .pcin-rail::before {
-    content: "";
-    position: absolute;
+    content: ""; position: absolute;
     left: 7px; top: 8px; bottom: 8px;
     width: 1px;
     background: linear-gradient(to bottom,
@@ -2636,52 +2648,39 @@ pre { max-width: 100%; overflow-x: auto; }
   .pcin-stage {
     border: 1px solid var(--rule) !important;
     border-radius: 2px;
-    padding: 14px 16px 16px !important;
+    padding: 18px 18px 20px !important;
     min-height: 0 !important;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
     position: relative;
+    background: var(--paper);
+    transition: opacity .35s var(--ease-out), transform .35s var(--ease-out), border-color .4s, background .4s !important;
   }
   .pcin-stage:last-child { margin-bottom: 0; }
-  /* Stepper bullet on the connector */
   .pcin-stage::before {
-    content: "";
-    position: absolute;
-    left: -19px; top: 22px;
+    content: ""; position: absolute;
+    left: -19px; top: 24px;
     width: 9px; height: 9px;
     border-radius: 50%;
     background: var(--paper);
     border: 1.5px solid color-mix(in oklab, var(--ink) 35%, var(--rule));
     transition: background .35s var(--ease-out), border-color .35s var(--ease-out), box-shadow .35s var(--ease-out);
   }
-  /* Active stage uses the JS-set background to drive bullet colour */
   .pcin-stage[style*="ember"]::before {
     background: var(--ember);
     border-color: var(--ember);
     box-shadow: 0 0 0 4px color-mix(in oklab, var(--ember) 18%, transparent);
   }
-  .pcin-ttl { font-size: 18px !important; margin-top: 6px !important; }
-  .pcin-desc { font-size: 11.5px !important; line-height: 1.55; }
+  .pcin-ttl { font-size: 20px !important; margin-top: 6px !important; }
+  .pcin-desc { font-size: 12px !important; line-height: 1.55; }
 
-  /* Horizontal travel is meaningless vertically — hide track, token, branch */
+  /* Horizontal travel is meaningless vertically — hide track + branch. */
   .pcin-track, .pcin-branch { display: none !important; }
 
-  .pcin-overlays {
-    grid-template-columns: 1fr !important;
-    gap: 14px !important;
-    margin-top: 20px !important;
-  }
-  .pcin-fp, .pcin-score, .pcin-verdict { padding: 14px 16px !important; }
-  .pcin-fp-hash { font-size: 11px; }
-  .pcin-fp-meta { gap: 8px 12px; font-size: 9.5px; }
-  .pcin-bar-row {
-    grid-template-columns: 1fr !important;
-    gap: 4px !important;
-    margin-top: 10px !important;
-  }
-  .pcin-bar-k { font-size: 10px; letter-spacing: 0.12em; }
-  .pcin-bar { height: 5px; }
-  .pcin-verdict-val { font-size: 17px !important; }
+  /* Overlays hidden on mobile — they don't fit the 100vh sticky frame.
+     Fingerprint/score/verdict information is implied by the active card. */
+  .pcin-overlays { display: none !important; }
 }
+
 
 /* ════════════════════════════════════════════════════════════════
    THREAT — live request rows → stacked cards (≤720px)
@@ -2809,66 +2808,102 @@ pre { max-width: 100%; overflow-x: auto; }
   }
   /* shrink the button label so input dominates */
 
-  /* ----- PROBLEM (Section 01): swipeable horizontal snap rail ----- */
-  .problem-rail {
-    display: flex !important;
-    grid-template-columns: none !important;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    border: none !important;
-    background: transparent !important;
-    gap: 12px !important;
-    margin: 0 -20px;
-    padding: 4px 20px 16px;
-    mask-image: linear-gradient(90deg, transparent, #000 16px, #000 calc(100% - 32px), transparent);
+  /* ----- PROBLEM (Section 01): pinned horizontal scroll-driven rail -----
+     Real scroll ownership — vertical page scroll is converted into horizontal
+     card translation by Problem.tsx (useStage subscriber). No native overflow,
+     no scroll-snap, no fake CSS scrolling. */
+  .problem-pin {
+    position: relative;
+    /* one viewport per card + a tail viewport so the third card has a beat
+       at centre before releasing scroll */
+    height: calc(100vh * 3.2);
+    background: var(--paper);
   }
-  .problem-rail::-webkit-scrollbar { display: none; }
-  .problem-rail > * {
-    flex: 0 0 82%;
-    scroll-snap-align: center;
+  .problem-sticky {
+    position: sticky; top: 0;
+    height: 100vh;
+    display: flex; flex-direction: column;
+    overflow: hidden;
+  }
+  .problem-progress {
+    padding: 16px 20px 12px;
+    font-family: var(--font-mono); font-size: 10px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--rule);
+  }
+  .problem-progress span { color: var(--ink); font-weight: 500; }
+  .problem-progress-sep { margin: 0 8px; color: var(--rule); }
+  .problem-viewport {
+    flex: 1 1 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .problem-track {
+    position: absolute; inset: 0;
+    display: flex; align-items: center;
+    gap: 14px;
+    padding: 0 9vw;
+    will-change: transform;
+  }
+  .problem-mcard {
+    flex: 0 0 82vw;
+    height: 68vh;
     border: 1px solid var(--rule);
     background: var(--paper);
     border-radius: 3px;
-    min-height: 360px;
+    padding: 22px 20px;
+    display: flex; flex-direction: column; gap: 18px;
+    position: relative;
+    overflow: hidden;
   }
-  /* page-dot affordance under the rail */
-  .problem-rail::after { content: ""; }
+  .problem-mcard .tag.danger { font-size: 10px; }
+  .problem-mcard-diagram { flex: 1 1 auto; min-height: 0; display: flex; align-items: center; justify-content: center; }
+  .problem-mcard-diagram > * { width: 100%; max-height: 100%; }
+  .problem-mcard-title {
+    font-family: var(--font-display); font-weight: 400;
+    font-size: 22px; letter-spacing: -0.01em; line-height: 1.15;
+    margin: 0 0 6px;
+  }
+  .problem-mcard-body { color: var(--ink-soft); font-size: 13px; line-height: 1.55; margin: 0; }
+  .problem-mtail { flex: 0 0 9vw; }
 
   /* ----- PIPELINE → THREAT transition: kill the void ----- */
   .pipeline-pin { padding-bottom: 0 !important; margin-bottom: -24px; }
   .pipeline-section { padding-bottom: 24px !important; }
   .threat-section { padding-top: 28px !important; }
 
-  /* ----- CONFIDENCE (Section 07): stacked KPI ledger, no overflow ----- */
+  /* ----- CONFIDENCE (Section 07): single-column stacked ledger.
+     Typography preserved at editorial scale; each row owns full width so
+     long values (99.997%, 11.4ms) never collide. ----- */
   .conf-metrics {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: 1fr !important;
     border-left: 1px solid var(--rule);
     border-right: 1px solid var(--rule);
   }
   .conf-metric {
-    padding: 22px 18px !important;
-    border-right: 1px solid var(--rule) !important;
+    padding: 22px 20px !important;
+    border-right: none !important;
     border-bottom: 1px solid var(--rule);
     min-width: 0;
+    display: flex; flex-direction: column; gap: 8px;
   }
-  .conf-metric:nth-child(2n) { border-right: none !important; }
-  .conf-metric:nth-last-child(-n+2) { border-bottom: none; }
+  .conf-metric:last-child { border-bottom: none; }
   .conf-metric-v {
-    font-size: clamp(26px, 8.2vw, 38px) !important;
+    font-size: clamp(32px, 9.4vw, 46px) !important;
     line-height: 1 !important;
+    letter-spacing: -0.03em !important;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: clip;
-    letter-spacing: -0.03em !important;
   }
   .conf-metric-l {
-    font-size: 9px !important;
-    letter-spacing: 0.16em !important;
-    margin-top: 8px !important;
+    font-size: 10px !important;
+    letter-spacing: 0.18em !important;
     line-height: 1.4;
+    color: var(--muted);
   }
+
 
   /* ----- TERMINOLOGY chapter (pinned horizontal) ----- */
   .term-chapter { display: block; }
@@ -2879,10 +2914,11 @@ pre { max-width: 100%; overflow-x: auto; }
    marquee on desktop and is hidden on mobile by the earlier rule. */
 
 /* ─── Terminology mobile pinned chapter ─── */
+/* ─── Terminology mobile pinned chapter ─── */
 .term-chapter {
   position: relative;
-  /* tall enough to host one viewport per card */
-  height: calc(100vh * 3.2);
+  /* one viewport per card (6 cards) + tail beat so the last card holds centre */
+  height: calc(100vh * 5.4);
   background: var(--paper);
 }
 .term-sticky {

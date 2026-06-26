@@ -46,6 +46,7 @@ const range = (x: number, [a, b]: number[]) => clamp((x - a) / (b - a));
 
 export function Pipeline() {
   const wrap = useRef<HTMLDivElement>(null);
+  const railRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const tokenRef = useRef<HTMLDivElement>(null);
   const cameraRef = useRef<HTMLDivElement>(null);
@@ -160,6 +161,44 @@ export function Pipeline() {
         verdictRef.current.style.opacity = String(range(t, [T.decide[0], T.decide[1]]));
       }
 
+      // ─── Mobile-only: translate the vertical stage column so the active
+      // card sits at viewport centre, drifts up to ~30%, then the next card
+      // takes the centre. The whole rail behaves like a scroll-driven stack. ─
+      const rail = railRef.current;
+      if (rail && window.innerWidth <= 720) {
+        const cards = stageRefs.current.filter(Boolean) as HTMLDivElement[];
+        if (cards.length) {
+          // Map timeline [0..1] across N stages, each owns ~equal slice.
+          const N = cards.length;
+          const seg = clamp(t) * N;          // 0..N
+          const i = Math.min(N - 1, Math.floor(seg));
+          const k = seg - i;                  // 0..1 within current stage
+          const current = cards[i];
+          const next = cards[Math.min(N - 1, i + 1)];
+          const railRect = rail.getBoundingClientRect();
+          const curTop = current.offsetTop;
+          const nxtTop = next.offsetTop;
+          // We want current card to start centred (~50% vh), then ride up
+          // to ~30% as k → 1, at which point next is centred.
+          const vh = f.vh;
+          const targetCur = vh * 0.5 - current.offsetHeight / 2;
+          const targetNxt = vh * 0.5 - next.offsetHeight / 2;
+          const offsetCur = targetCur - curTop;
+          const offsetNxt = targetNxt - nxtTop;
+          const eased = k * k * (3 - 2 * k);
+          const y = lerp(offsetCur, offsetNxt, eased);
+          rail.style.transform = `translate3d(0, ${y.toFixed(2)}px, 0)`;
+          // Subtle fade for non-adjacent cards
+          cards.forEach((c, j) => {
+            const dist = Math.abs(j - (i + eased));
+            c.style.opacity = String(Math.max(0.18, 1 - dist * 0.55));
+          });
+          void railRect;
+        }
+      } else if (rail) {
+        if (rail.style.transform) rail.style.transform = "";
+      }
+
       setTMs((11.4 * clamp(t)).toFixed(2));
     });
 
@@ -190,7 +229,7 @@ export function Pipeline() {
                 </div>
 
                 {/* Stages rail — only active stage holds the description */}
-                <div className="pcin-rail">
+                <div ref={railRef} className="pcin-rail" style={{ willChange: "transform" }}>
                   {STAGES.map((s, i) => {
                     const active = i === activeIdx;
                     const past = i < activeIdx;

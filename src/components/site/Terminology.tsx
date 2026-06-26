@@ -38,7 +38,21 @@ export function Terminology() {
       </section>
     );
   }
-  return <TerminologyMobile />;
+  return (
+    <>
+      {/* Marquee restored on mobile — same vocabulary band as desktop, auto-scrolling. */}
+      <section aria-hidden className="drift-band drift-band--mobile">
+        <div className="drift-track">
+          {Array.from({ length: 4 }).map((_, i) => (
+            <span key={i} className="drift-item">
+              {PHRASE}<span className="drift-sep">·</span>
+            </span>
+          ))}
+        </div>
+      </section>
+      <TerminologyMobile />
+    </>
+  );
 }
 
 function useIsMobile() {
