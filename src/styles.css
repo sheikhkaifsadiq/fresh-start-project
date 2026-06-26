@@ -2215,7 +2215,8 @@ input, select, textarea {
 /* ---------- Routing field & ambient: lighter on small / battery ---------- */
 @media (max-width: 720px), (prefers-reduced-motion: reduce) {
   .routing-field { opacity: 0.5; }
-  .drift-band { display: none; }
+  /* Keep .drift-band--mobile visible — it's the restored vocabulary marquee. */
+  .drift-band:not(.drift-band--mobile) { display: none; }
   .blob { filter: blur(40px) !important; opacity: 0.4 !important; }
 }
 
