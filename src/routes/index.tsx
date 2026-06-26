@@ -1,8 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { MobileLanding } from "../components/site/mobile/MobileLanding";
-import { TabletLanding } from "../components/site/tablet/TabletLanding";
-import { useViewport } from "../hooks/use-viewport";
 import { ScrollProgressProvider } from "../lib/scroll-progress";
 import { MotionProvider } from "../lib/motion";
 import { StageProvider, useStage } from "../lib/stage";
@@ -133,17 +131,20 @@ function Scene({
 
 function Index() {
   const [ready, setReady] = useState(false);
-  // Three compositions, not two. Phones never mount the desktop tree;
-  // tablets never mount the cinematic WebGL tree either.
-  const viewport = useViewport();
+  // Synchronous viewport check — phones never mount the desktop tree.
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== "undefined" && window.matchMedia("(max-width: 720px)").matches
+  );
+  useEffect(() => {
+    const mql = window.matchMedia("(max-width: 720px)");
+    const on = () => setIsMobile(mql.matches);
+    mql.addEventListener("change", on);
+    return () => mql.removeEventListener("change", on);
+  }, []);
   return (
     <>
       {!ready && <Preloader onDone={() => setReady(true)} />}
-      {ready && (
-        viewport === "mobile"  ? <MobileLanding /> :
-        viewport === "tablet"  ? <TabletLanding /> :
-        <Experience />
-      )}
+      {ready && (isMobile ? <MobileLanding /> : <Experience />)}
     </>
   );
 }

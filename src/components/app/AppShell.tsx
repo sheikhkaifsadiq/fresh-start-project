@@ -8,8 +8,6 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { Link, useLocation, useNavigate } from "@tanstack/react-router";
 import { useAuthStore } from "@/lib/stores/auth-store";
-import { useViewport } from "@/hooks/use-viewport";
-import { MobileAppShell } from "./mobile/MobileAppShell";
 
 interface NavItem {
   to: string;
@@ -38,17 +36,11 @@ export function AppShell({
   kicker?: string;
   children: ReactNode;
 }) {
-  const viewport = useViewport();
   const user = useAuthStore((s) => s.user);
   const logout = useAuthStore((s) => s.logout);
   const navigate = useNavigate();
   const location = useLocation();
   const [open, setOpen] = useState(false);
-
-  // Phones get a real mobile shell — bottom tab bar, not a hidden sidebar.
-  if (viewport === "mobile") {
-    return <MobileAppShell title={title} kicker={kicker}>{children}</MobileAppShell>;
-  }
 
   // Close drawer on route change
   useEffect(() => { setOpen(false); }, [location.pathname]);
