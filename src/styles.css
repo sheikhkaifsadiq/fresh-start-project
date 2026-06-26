@@ -1929,3 +1929,152 @@ body { padding-bottom: 44px; } /* room for fixed telemetry strip */
   color: var(--muted);
   line-height: 1.55;
 }
+
+/* ─────────────────────────────────────────────────────────────────
+   DS · shared application primitives
+   Reused across every authenticated page. No bespoke per-page CSS.
+────────────────────────────────────────────────────────────────── */
+
+/* Tabs */
+.ds-tabs { display: flex; gap: 0; border-bottom: 1px solid var(--rule); margin-bottom: 32px; }
+.ds-tab {
+  appearance: none; background: transparent; border: 0; border-bottom: 1px solid transparent;
+  padding: 14px 18px; font-family: var(--font-mono); font-size: 11.5px;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); cursor: pointer;
+  margin-bottom: -1px; transition: color 200ms var(--ease-out), border-color 200ms var(--ease-out);
+}
+.ds-tab:hover { color: var(--ink); }
+.ds-tab.is-active { color: var(--ink); border-bottom-color: var(--ink); }
+
+/* Toolbar (filter row) */
+.ds-toolbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  padding: 16px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  margin-bottom: 24px; flex-wrap: wrap;
+}
+.ds-toolbar-l, .ds-toolbar-r { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+
+/* Inputs */
+.ds-input, .ds-select, .ds-textarea {
+  appearance: none; background: transparent; border: 0;
+  border-bottom: 1px solid var(--rule);
+  padding: 10px 2px; font-family: var(--font-mono); font-size: 13px; color: var(--ink);
+  outline: none; width: 100%; border-radius: 0;
+  transition: border-color 200ms var(--ease-out);
+}
+.ds-input::placeholder, .ds-textarea::placeholder { color: color-mix(in oklab, var(--muted) 80%, transparent); }
+.ds-input:focus, .ds-select:focus, .ds-textarea:focus { border-bottom-color: var(--ink); }
+.ds-textarea { min-height: 96px; resize: vertical; }
+.ds-field { display: flex; flex-direction: column; gap: 8px; }
+.ds-field-label { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+.ds-field-help  { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); margin-top: 4px; }
+
+/* Buttons */
+.ds-btn {
+  appearance: none; cursor: pointer; border: 1px solid var(--ink);
+  background: var(--ink); color: var(--paper);
+  padding: 12px 22px; font-family: var(--font-mono); font-size: 11.5px;
+  letter-spacing: 0.16em; text-transform: uppercase; border-radius: 0;
+  transition: background 200ms var(--ease-out), color 200ms var(--ease-out);
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.ds-btn:hover { background: var(--graphite-2); }
+.ds-btn-ghost { background: transparent; color: var(--ink); }
+.ds-btn-ghost:hover { background: var(--ink); color: var(--paper); }
+.ds-btn-quiet { background: transparent; color: var(--muted); border-color: var(--rule); }
+.ds-btn-quiet:hover { color: var(--ink); border-color: var(--ink); background: transparent; }
+.ds-btn-sm { padding: 8px 14px; font-size: 10.5px; }
+
+/* Badges / status pills */
+.ds-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--ink);
+  padding: 4px 8px; border: 1px solid var(--rule); border-radius: 0;
+  background: transparent;
+}
+.ds-badge::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--muted); }
+.ds-badge-ok::before    { background: var(--signal); }
+.ds-badge-warn::before  { background: #c89b2a; }
+.ds-badge-bad::before   { background: var(--ember); }
+.ds-badge-quiet { color: var(--muted); }
+.ds-badge-quiet::before { background: color-mix(in oklab, var(--muted) 60%, transparent); }
+
+/* Tables */
+.ds-table { width: 100%; border-collapse: collapse; font-family: var(--font-mono); font-size: 12.5px; }
+.ds-table thead th {
+  text-align: left; font-weight: 400; font-size: 10.5px;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
+  padding: 12px 14px; border-bottom: 1px solid var(--rule);
+}
+.ds-table tbody td {
+  padding: 16px 14px; border-bottom: 1px solid var(--rule); color: var(--ink); vertical-align: top;
+}
+.ds-table tbody tr:hover td { background: color-mix(in oklab, var(--ink) 3%, transparent); }
+.ds-table tbody tr:last-child td { border-bottom: 1px solid var(--rule); }
+.ds-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.ds-table .muted { color: var(--muted); }
+
+/* Panels (replaces "cards" — no shadow, no rounding) */
+.ds-panel {
+  border: 1px solid var(--rule);
+  background: color-mix(in oklab, var(--paper) 60%, white 40%);
+  padding: 24px;
+}
+.ds-panel-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 16px; gap: 16px; }
+.ds-panel-title {
+  font-family: var(--font-display); font-weight: 400; font-style: italic;
+  font-size: 22px; letter-spacing: -0.01em; color: var(--ink); margin: 0;
+}
+.ds-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.ds-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.ds-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+@media (max-width: 1100px) { .ds-grid-3, .ds-grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .ds-grid-2, .ds-grid-3, .ds-grid-4 { grid-template-columns: 1fr; } }
+
+/* Empty state */
+.ds-empty {
+  border: 1px dashed var(--rule); padding: 56px 32px; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 14px;
+}
+.ds-empty-title { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 26px; letter-spacing: -0.01em; }
+.ds-empty-note  { font-family: var(--font-mono); color: var(--muted); font-size: 12.5px; max-width: 460px; line-height: 1.55; }
+
+/* Pagination */
+.ds-pagination { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); }
+.ds-pagination button { background: transparent; border: 1px solid var(--rule); color: var(--ink); padding: 8px 14px; cursor: pointer; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; }
+.ds-pagination button:disabled { opacity: 0.35; cursor: not-allowed; }
+
+/* Tiny chart (sparkline / bars) */
+.ds-spark { display: block; width: 100%; height: 64px; }
+.ds-bars  { display: flex; align-items: flex-end; gap: 2px; height: 96px; }
+.ds-bars > span { flex: 1; background: color-mix(in oklab, var(--ink) 70%, transparent); transition: background 200ms; }
+.ds-bars > span:hover { background: var(--ember); }
+
+/* Definition list rows (reusable for settings/details) */
+.ds-defs { display: grid; grid-template-columns: 1fr; gap: 0; margin: 0; }
+.ds-defs > div { display: grid; grid-template-columns: 200px 1fr; gap: 24px; padding: 18px 0; border-top: 1px solid var(--rule); font-family: var(--font-mono); font-size: 12.5px; }
+.ds-defs > div:last-child { border-bottom: 1px solid var(--rule); }
+.ds-defs dt { color: var(--muted); letter-spacing: 0.14em; text-transform: uppercase; font-size: 10.5px; margin: 0; }
+.ds-defs dd { margin: 0; color: var(--ink); }
+@media (max-width: 720px) { .ds-defs > div { grid-template-columns: 1fr; gap: 4px; } }
+
+/* Code block */
+.ds-code {
+  font-family: var(--font-mono); font-size: 12px; background: var(--graphite); color: var(--metal-1);
+  padding: 16px 20px; overflow-x: auto; white-space: pre; line-height: 1.6;
+}
+
+/* Loading shimmer line */
+.ds-loading { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); letter-spacing: 0.14em; text-transform: uppercase; }
+.ds-loading::before { content: ""; width: 18px; height: 1px; background: var(--ink); animation: ds-loading 1.4s var(--ease-in-out) infinite; }
+@keyframes ds-loading { 0% { transform: scaleX(0.1); transform-origin: left; } 50% { transform: scaleX(1); transform-origin: left; } 51% { transform-origin: right; } 100% { transform: scaleX(0); transform-origin: right; } }
+
+/* Toast / notice */
+.ds-notice { border-left: 2px solid var(--ink); padding: 14px 18px; font-family: var(--font-mono); font-size: 12.5px; color: var(--ink); background: color-mix(in oklab, var(--paper) 50%, white 50%); }
+.ds-notice-warn { border-left-color: var(--ember); }
+.ds-notice-ok { border-left-color: var(--signal); }
+
+/* Section spacing helper */
+.ds-stack { display: flex; flex-direction: column; gap: 48px; }
+.ds-stack-sm { display: flex; flex-direction: column; gap: 24px; }
