@@ -16,7 +16,7 @@ const STATUSES = [
   "HANDSHAKE COMPLETE",
 ];
 
-export function Preloader() {
+export function Preloader({ onDone }: { onDone?: () => void } = {}) {
   const [progress, setProgress] = useState(0);
   const [done, setDone] = useState(false);
   const [gone, setGone] = useState(false);
@@ -30,7 +30,8 @@ export function Preloader() {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduced) {
       setProgress(1); setCounter(2147893);
-      setDone(true); setTimeout(() => setGone(true), 80);
+      setDone(true);
+      setTimeout(() => { setGone(true); onDone?.(); }, 80);
       return;
     }
 
@@ -54,6 +55,7 @@ export function Preloader() {
         setTimeout(() => {
           setGone(true);
           document.body.style.overflow = prev;
+          onDone?.();
         }, 1700);
       }
     };

@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ScrollProgressProvider } from "../lib/scroll-progress";
 import { MotionProvider } from "../lib/motion";
 import { StageProvider, useStage } from "../lib/stage";
@@ -129,12 +129,21 @@ function Scene({
 }
 
 function Index() {
+  const [ready, setReady] = useState(false);
+  return (
+    <>
+      {!ready && <Preloader onDone={() => setReady(true)} />}
+      {ready && <Experience />}
+    </>
+  );
+}
+
+function Experience() {
   return (
     <MotionProvider>
       <StageProvider>
         <TokenProvider>
         <ScrollProgressProvider>
-          <Preloader />
           <RoutingField />
           <CursorRing />
           <Nav />

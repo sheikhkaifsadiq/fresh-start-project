@@ -7,7 +7,7 @@
 
 import { createFileRoute, useNavigate, redirect } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Mask, Kinetic } from "@/lib/motion";
+import { Mask } from "@/lib/motion";
 import { useAuthStore } from "@/lib/stores/auth-store";
 
 export const Route = createFileRoute("/auth")({
@@ -91,15 +91,23 @@ function AuthPage() {
             <div className="kicker">AegisRoute · console · {new Date().getFullYear()}</div>
           </Mask>
 
-          <Kinetic
-            as="h1"
-            text={mode === "login" ? "Welcome back, operator." : "Open your routing console."}
-            split="word"
-            stagger={60}
-            duration={900}
-            italicWords={[2]}
-            style={{ margin: "20px 0 14px", fontFamily: "var(--font-display)", fontSize: "clamp(40px, 5.4vw, 78px)", letterSpacing: "-0.02em", lineHeight: 1.02 }}
-          />
+          <Mask delay={140} duration={700}>
+            <h1
+              style={{
+                margin: "20px 0 14px",
+                fontFamily: "var(--font-display)",
+                fontSize: "clamp(40px, 5.4vw, 78px)",
+                letterSpacing: "-0.02em",
+                lineHeight: 1.02,
+                fontWeight: 300,
+              }}
+            >
+              {mode === "login" ? "Welcome back, " : "Open your routing "}
+              <em style={{ fontStyle: "italic" }}>
+                {mode === "login" ? "operator." : "console."}
+              </em>
+            </h1>
+          </Mask>
 
           <Mask delay={420}>
             <p className="hero-sub" style={{ maxWidth: 480 }}>
