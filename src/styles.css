@@ -2808,8 +2808,6 @@ pre { max-width: 100%; overflow-x: auto; }
     border-radius: 2px;
   }
   /* shrink the button label so input dominates */
-  .hero-route-btn .btn-label-long { display: none; }
-  .hero-route-btn .btn-label-short { display: inline; }
 
   /* ----- PROBLEM (Section 01): swipeable horizontal snap rail ----- */
   .problem-rail {
