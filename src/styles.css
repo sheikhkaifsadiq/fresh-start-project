@@ -2972,3 +2972,12 @@ pre { max-width: 100%; overflow-x: auto; }
 @media (min-width: 721px) {
   .term-chapter { display: none; }
 }
+
+/* Desktop default for the Problem comparison rail (mobile overrides above). */
+.problem-rail {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
