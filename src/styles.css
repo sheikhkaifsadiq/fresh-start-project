@@ -2590,11 +2590,10 @@ table { max-width: 100%; }
   .ds-panel-title { font-size: 18px; }
 }
 
-/* ════════════════════════════════════════════════════════════════
-   Telemetry chrome already condensed; ensure hidden on very small
-   ═══════════════════════════════════════════════════════════════ */
+/* Telemetry chrome stays alive at every viewport — the live system signal is
+   part of the product, not decoration. Sub-420 just tightens the rail. */
 @media (max-width: 420px) {
-  .telemetry-chrome { display: none !important; }
+  .telemetry-chrome { font-size: 9px; padding: 6px 10px !important; gap: 12px !important; }
 }
 
 /* ════════════════════════════════════════════════════════════════
