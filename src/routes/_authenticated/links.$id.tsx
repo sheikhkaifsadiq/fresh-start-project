@@ -58,7 +58,7 @@ function LinkDetailPage() {
             <dl className="ds-hero-side">
               <div className="ds-side-row"><dt>Slug</dt><dd>/{link.slug}</dd></div>
               <div className="ds-side-row"><dt>Destination</dt><dd style={{ wordBreak: "break-all" }}>{link.destination_url}</dd></div>
-              <div className="ds-side-row"><dt>Status</dt><dd>{link.status ?? "active"}</dd></div>
+              <div className="ds-side-row"><dt>Status</dt><dd>{link.active ? "active" : "paused"}</dd></div>
               <div className="ds-side-row"><dt>Created</dt><dd>{new Date(link.created_at).toLocaleString()}</dd></div>
             </dl>
           </section>
