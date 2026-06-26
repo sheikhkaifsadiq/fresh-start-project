@@ -29,6 +29,13 @@ export function ScrollProgressProvider({ children }: { children: ReactNode }) {
       touchMultiplier: 1.1,
     });
 
+    const onOwnedScroll = (event: Event) => {
+      const active = Boolean((event as CustomEvent<{ active?: boolean }>).detail?.active);
+      if (active) lenis.stop();
+      else lenis.start();
+    };
+    window.addEventListener("aegis:scroll-owner", onOwnedScroll as EventListener);
+
     let raf = 0;
     const loop = (time: number) => {
       lenis.raf(time);
@@ -41,6 +48,7 @@ export function ScrollProgressProvider({ children }: { children: ReactNode }) {
     raf = requestAnimationFrame(loop);
     return () => {
       cancelAnimationFrame(raf);
+      window.removeEventListener("aegis:scroll-owner", onOwnedScroll as EventListener);
       lenis.destroy();
     };
   }, []);

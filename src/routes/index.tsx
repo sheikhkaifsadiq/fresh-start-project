@@ -60,19 +60,6 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-function DriftBand() {
-  const phrase = "Inspect · Score · Decide · Route · Observe · Repeat";
-  return (
-    <section aria-hidden className="drift-band">
-      <div className="drift-track">
-        {Array.from({ length: 4 }).map((_, i) => (
-          <span key={i} className="drift-item">{phrase}<span className="drift-sep">·</span></span>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 /**
  * Scene wrapper — provides:
  *  - oversized drifting glyph (spatial typography)
@@ -156,7 +143,6 @@ function Experience() {
             <Scene glyph="blind." size="20vw" top="6vh" align="left" shade="ember" framing="tiltL">
               <Problem />
             </Scene>
-            <Terminology />
             <Scene glyph="inspect." size="20vw" top="4vh" align="right" over framing="push">
               <Pipeline />
             </Scene>
@@ -166,7 +152,7 @@ function Experience() {
             <Scene glyph="observe." size="20vw" top="4vh" align="right" framing="level">
               <Analytics />
             </Scene>
-            <DriftBand />
+            <Terminology />
             <Scene glyph="38 regions" size="14vw" top="4vh" align="left" over framing="pull">
               <Network />
             </Scene>
