@@ -92,12 +92,16 @@ export function useMobileScrollOwner({
 
     const release = (direction: "forward" | "backward") => {
       const section = sectionRef.current;
-      setActive(false);
-      if (!section) return;
+      if (!section) {
+        setActive(false);
+        return;
+      }
       const y = window.scrollY + section.getBoundingClientRect().top;
       const target = direction === "forward"
         ? y + section.offsetHeight + 1
         : Math.max(0, y - window.innerHeight * 0.24);
+      setActive(false);
+      window.scrollTo({ top: target, behavior: "auto" });
       requestAnimationFrame(() => window.scrollTo({ top: target, behavior: "auto" }));
     };
 
