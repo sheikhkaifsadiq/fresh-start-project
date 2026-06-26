@@ -2611,7 +2611,7 @@ pre { max-width: 100%; overflow-x: auto; }
    of the rail and the horizontal token-travel are recomposed.
    ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 720px) {
-  .pipeline-pin { min-height: 220vh !important; }
+  .pipeline-pin { min-height: 300vh !important; }
   .pipeline-cinema { padding: 18px 16px 22px !important; }
   .pcin-head {
     flex-wrap: wrap; gap: 8px 14px; font-size: 9.5px !important;
