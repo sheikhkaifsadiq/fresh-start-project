@@ -2763,3 +2763,216 @@ pre { max-width: 100%; overflow-x: auto; }
   .finale h2 { font-size: clamp(34px, 10vw, 52px) !important; line-height: 1.02; }
   .finale .btn, .finale .btn-ghost { width: 100%; justify-content: center; min-height: 48px; }
 }
+
+/* ════════════════════════════════════════════════════════════════
+   MOBILE UX PASS — composition, not compression
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 720px) {
+
+  /* ----- Global vertical rhythm: tighten by ~30-40% ----- */
+  section, .problem, .pipeline-section, .threat-section, .analytics-section,
+  .network-section, .layers-section, .confidence-section, .finale {
+    padding-top: 44px !important; padding-bottom: 44px !important;
+  }
+  main > section { padding-bottom: 56px; }
+  .scene-frame + .scene-frame { margin-top: -8px; }
+  .hero { padding: 18px 0 36px !important; }
+  .hero-grid { gap: 28px !important; }
+  .hero-meta { margin-top: 36px !important; padding-top: 16px; }
+  .ds-stack { gap: 22px; }
+
+  /* ----- HERO link bar: no wrap, balanced input + CTA ----- */
+  .link-bar {
+    flex-wrap: nowrap !important;
+    align-items: stretch;
+    gap: 0;
+    padding: 6px !important;
+    border-radius: 4px;
+  }
+  .link-bar .prefix { display: none; }
+  .link-bar input {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    padding: 12px 12px !important;
+    font-size: 15px !important;
+  }
+  .link-bar button,
+  .hero-route-btn {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    margin-top: 0 !important;
+    padding: 12px 16px !important;
+    font-size: 13px !important;
+    white-space: nowrap !important;
+    border-radius: 2px;
+  }
+  /* shrink the button label so input dominates */
+  .hero-route-btn .btn-label-long { display: none; }
+  .hero-route-btn .btn-label-short { display: inline; }
+
+  /* ----- PROBLEM (Section 01): swipeable horizontal snap rail ----- */
+  .problem-rail {
+    display: flex !important;
+    grid-template-columns: none !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    border: none !important;
+    background: transparent !important;
+    gap: 12px !important;
+    margin: 0 -20px;
+    padding: 4px 20px 16px;
+    mask-image: linear-gradient(90deg, transparent, #000 16px, #000 calc(100% - 32px), transparent);
+  }
+  .problem-rail::-webkit-scrollbar { display: none; }
+  .problem-rail > * {
+    flex: 0 0 82%;
+    scroll-snap-align: center;
+    border: 1px solid var(--rule);
+    background: var(--paper);
+    border-radius: 3px;
+    min-height: 360px;
+  }
+  /* page-dot affordance under the rail */
+  .problem-rail::after { content: ""; }
+
+  /* ----- PIPELINE → THREAT transition: kill the void ----- */
+  .pipeline-pin { padding-bottom: 0 !important; margin-bottom: -24px; }
+  .pipeline-section { padding-bottom: 24px !important; }
+  .threat-section { padding-top: 28px !important; }
+
+  /* ----- CONFIDENCE (Section 07): stacked KPI ledger, no overflow ----- */
+  .conf-metrics {
+    grid-template-columns: repeat(2, 1fr) !important;
+    border-left: 1px solid var(--rule);
+    border-right: 1px solid var(--rule);
+  }
+  .conf-metric {
+    padding: 22px 18px !important;
+    border-right: 1px solid var(--rule) !important;
+    border-bottom: 1px solid var(--rule);
+    min-width: 0;
+  }
+  .conf-metric:nth-child(2n) { border-right: none !important; }
+  .conf-metric:nth-last-child(-n+2) { border-bottom: none; }
+  .conf-metric-v {
+    font-size: clamp(26px, 8.2vw, 38px) !important;
+    line-height: 1 !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    letter-spacing: -0.03em !important;
+  }
+  .conf-metric-l {
+    font-size: 9px !important;
+    letter-spacing: 0.16em !important;
+    margin-top: 8px !important;
+    line-height: 1.4;
+  }
+
+  /* ----- TERMINOLOGY chapter (pinned horizontal) ----- */
+  .drift-band { display: block !important; }  /* show our replacement */
+  .term-chapter { display: block; }
+  .drift-band:not(.term-chapter) { display: none !important; }  /* the 2nd legacy drift-band stays hidden on mobile */
+}
+
+/* Default: terminology only renders inside .term-chapter wrapper. The
+   second DriftBand instance (between Analytics and Network) keeps the
+   marquee on desktop and is hidden on mobile by the earlier rule. */
+
+/* ─── Terminology mobile pinned chapter ─── */
+.term-chapter {
+  position: relative;
+  /* tall enough to host one viewport per card */
+  height: calc(100vh * 3.2);
+  background: var(--paper);
+}
+.term-sticky {
+  position: sticky; top: 0;
+  height: 100vh;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+}
+.term-head {
+  padding: 56px 20px 18px;
+  border-bottom: 1px solid var(--rule);
+}
+.term-head .ki {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--muted);
+}
+.term-head .ki span {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--ember);
+}
+.term-title {
+  font-family: var(--font-display); font-weight: 300;
+  font-size: clamp(26px, 7.6vw, 40px);
+  line-height: 1.05; letter-spacing: -0.03em;
+  margin: 14px 0 10px;
+}
+.term-title em { font-style: italic; color: var(--ember); }
+.term-intro {
+  font-family: var(--font-mono); font-size: 10.5px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted);
+}
+.term-intro-sep { margin: 0 8px; color: var(--rule); }
+.term-intro span:first-child { color: var(--ink); font-weight: 500; }
+
+.term-viewport {
+  flex: 1 1 auto;
+  position: relative;
+  overflow: hidden;
+}
+.term-track {
+  position: absolute; inset: 0;
+  display: flex; align-items: center;
+  gap: 14px;
+  padding: 0 9vw;
+  will-change: transform;
+}
+.term-card {
+  flex: 0 0 82vw;
+  height: 64vh;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  border-radius: 3px;
+  padding: 24px 22px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.term-card::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--ember), transparent);
+  opacity: 0.6;
+}
+.term-n {
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.24em; color: var(--muted);
+}
+.term-word {
+  font-family: var(--font-display); font-weight: 300;
+  font-size: clamp(44px, 14vw, 78px);
+  line-height: 0.95; letter-spacing: -0.035em;
+  margin: 0;
+}
+.term-def {
+  font-size: 14px; line-height: 1.55;
+  color: color-mix(in oklab, var(--ink) 72%, transparent);
+  max-width: 36ch;
+}
+.term-tail { flex: 0 0 9vw; }
+
+/* Desktop: term-chapter never engages; the DriftBand inside Terminology
+   handles desktop. */
+@media (min-width: 721px) {
+  .term-chapter { display: none; }
+}
