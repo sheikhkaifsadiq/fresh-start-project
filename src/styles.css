@@ -2807,66 +2807,102 @@ pre { max-width: 100%; overflow-x: auto; }
   }
   /* shrink the button label so input dominates */
 
-  /* ----- PROBLEM (Section 01): swipeable horizontal snap rail ----- */
-  .problem-rail {
-    display: flex !important;
-    grid-template-columns: none !important;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    border: none !important;
-    background: transparent !important;
-    gap: 12px !important;
-    margin: 0 -20px;
-    padding: 4px 20px 16px;
-    mask-image: linear-gradient(90deg, transparent, #000 16px, #000 calc(100% - 32px), transparent);
+  /* ----- PROBLEM (Section 01): pinned horizontal scroll-driven rail -----
+     Real scroll ownership — vertical page scroll is converted into horizontal
+     card translation by Problem.tsx (useStage subscriber). No native overflow,
+     no scroll-snap, no fake CSS scrolling. */
+  .problem-pin {
+    position: relative;
+    /* one viewport per card + a tail viewport so the third card has a beat
+       at centre before releasing scroll */
+    height: calc(100vh * 3.2);
+    background: var(--paper);
   }
-  .problem-rail::-webkit-scrollbar { display: none; }
-  .problem-rail > * {
-    flex: 0 0 82%;
-    scroll-snap-align: center;
+  .problem-sticky {
+    position: sticky; top: 0;
+    height: 100vh;
+    display: flex; flex-direction: column;
+    overflow: hidden;
+  }
+  .problem-progress {
+    padding: 16px 20px 12px;
+    font-family: var(--font-mono); font-size: 10px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--rule);
+  }
+  .problem-progress span { color: var(--ink); font-weight: 500; }
+  .problem-progress-sep { margin: 0 8px; color: var(--rule); }
+  .problem-viewport {
+    flex: 1 1 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .problem-track {
+    position: absolute; inset: 0;
+    display: flex; align-items: center;
+    gap: 14px;
+    padding: 0 9vw;
+    will-change: transform;
+  }
+  .problem-mcard {
+    flex: 0 0 82vw;
+    height: 68vh;
     border: 1px solid var(--rule);
     background: var(--paper);
     border-radius: 3px;
-    min-height: 360px;
+    padding: 22px 20px;
+    display: flex; flex-direction: column; gap: 18px;
+    position: relative;
+    overflow: hidden;
   }
-  /* page-dot affordance under the rail */
-  .problem-rail::after { content: ""; }
+  .problem-mcard .tag.danger { font-size: 10px; }
+  .problem-mcard-diagram { flex: 1 1 auto; min-height: 0; display: flex; align-items: center; justify-content: center; }
+  .problem-mcard-diagram > * { width: 100%; max-height: 100%; }
+  .problem-mcard-title {
+    font-family: var(--font-display); font-weight: 400;
+    font-size: 22px; letter-spacing: -0.01em; line-height: 1.15;
+    margin: 0 0 6px;
+  }
+  .problem-mcard-body { color: var(--ink-soft); font-size: 13px; line-height: 1.55; margin: 0; }
+  .problem-mtail { flex: 0 0 9vw; }
 
   /* ----- PIPELINE → THREAT transition: kill the void ----- */
   .pipeline-pin { padding-bottom: 0 !important; margin-bottom: -24px; }
   .pipeline-section { padding-bottom: 24px !important; }
   .threat-section { padding-top: 28px !important; }
 
-  /* ----- CONFIDENCE (Section 07): stacked KPI ledger, no overflow ----- */
+  /* ----- CONFIDENCE (Section 07): single-column stacked ledger.
+     Typography preserved at editorial scale; each row owns full width so
+     long values (99.997%, 11.4ms) never collide. ----- */
   .conf-metrics {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: 1fr !important;
     border-left: 1px solid var(--rule);
     border-right: 1px solid var(--rule);
   }
   .conf-metric {
-    padding: 22px 18px !important;
-    border-right: 1px solid var(--rule) !important;
+    padding: 22px 20px !important;
+    border-right: none !important;
     border-bottom: 1px solid var(--rule);
     min-width: 0;
+    display: flex; flex-direction: column; gap: 8px;
   }
-  .conf-metric:nth-child(2n) { border-right: none !important; }
-  .conf-metric:nth-last-child(-n+2) { border-bottom: none; }
+  .conf-metric:last-child { border-bottom: none; }
   .conf-metric-v {
-    font-size: clamp(26px, 8.2vw, 38px) !important;
+    font-size: clamp(32px, 9.4vw, 46px) !important;
     line-height: 1 !important;
+    letter-spacing: -0.03em !important;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: clip;
-    letter-spacing: -0.03em !important;
   }
   .conf-metric-l {
-    font-size: 9px !important;
-    letter-spacing: 0.16em !important;
-    margin-top: 8px !important;
+    font-size: 10px !important;
+    letter-spacing: 0.18em !important;
     line-height: 1.4;
+    color: var(--muted);
   }
+
 
   /* ----- TERMINOLOGY chapter (pinned horizontal) ----- */
   .term-chapter { display: block; }
