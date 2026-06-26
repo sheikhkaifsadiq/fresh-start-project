@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Mask, useTilt } from "../../lib/motion";
 import { SectionHead } from "./SectionHead";
 import { useStage } from "../../lib/stage";
+import { useMobileScrollOwner } from "../../lib/mobile-scroll-owner";
 import type { ReactNode } from "react";
 
 const ITEMS = [
@@ -145,30 +146,61 @@ export function Problem() {
  */
 function ProblemMobileRail() {
   const pinRef = useRef<HTMLDivElement>(null);
+  const stickyRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const idxRef = useRef<HTMLSpanElement>(null);
+  const firstCardRef = useRef<HTMLElement | null>(null);
+  const cardRefs = useRef<Array<HTMLElement | null>>([]);
+  const ownedRef = useRef(false);
+  const [owned, setOwned] = useState(false);
   const stage = useStage();
+
+  const applyProgress = (p: number) => {
+    const track = trackRef.current;
+    const cards = cardRefs.current.filter(Boolean) as HTMLElement[];
+    if (!track || cards.length === 0) return;
+    const max = cards.length - 1;
+    const scaled = Math.min(max, Math.max(0, p * max));
+    const i = Math.min(max, Math.floor(scaled));
+    const k = scaled - i;
+    const ease = k * k * (3 - 2 * k);
+    const centerOffset = (idx: number) => {
+      const card = cards[idx];
+      return window.innerWidth / 2 - (card.offsetLeft + card.offsetWidth / 2);
+    };
+    const a = centerOffset(i);
+    const b = centerOffset(Math.min(max, i + 1));
+    const x = a + (b - a) * ease;
+    track.style.transform = `translate3d(${x.toFixed(2)}px, 0, 0)`;
+    if (idxRef.current) idxRef.current.textContent = String(Math.round(scaled) + 1).padStart(2, "0");
+  };
+
+  useMobileScrollOwner({
+    sectionRef: pinRef,
+    triggerRef: firstCardRef,
+    steps: ITEMS.length,
+    pxPerStep: 0.72,
+    onProgress: applyProgress,
+    onActiveChange: (active) => {
+      ownedRef.current = active;
+      setOwned(active);
+    },
+  });
+
   useEffect(() => {
+    applyProgress(0);
     return stage.subscribe((f) => {
+      if (ownedRef.current) return;
       const pin = pinRef.current;
       const track = trackRef.current;
       if (!pin || !track) return;
-      const r = pin.getBoundingClientRect();
-      const total = r.height - f.vh;
-      if (total <= 0) return;
-      const p = Math.min(1, Math.max(0, -r.top / total));
-      const maxX = track.scrollWidth - f.vw;
-      const x = -p * Math.max(0, maxX);
-      track.style.transform = `translate3d(${x.toFixed(2)}px, 0, 0)`;
-      if (idxRef.current) {
-        const active = Math.min(ITEMS.length - 1, Math.floor(p * ITEMS.length + 0.0001));
-        idxRef.current.textContent = String(active + 1).padStart(2, "0");
-      }
+      void f;
+      applyProgress(0);
     });
   }, [stage]);
   return (
     <div ref={pinRef} className="problem-pin" aria-label="Problem rail">
-      <div className="problem-sticky">
+      <div ref={stickyRef} className={`problem-sticky${owned ? " is-owned" : ""}`}>
         <div className="problem-progress">
           <span ref={idxRef}>01</span> / {String(ITEMS.length).padStart(2, "0")}
           <span className="problem-progress-sep">·</span>
@@ -177,7 +209,14 @@ function ProblemMobileRail() {
         <div className="problem-viewport">
           <div ref={trackRef} className="problem-track">
             {ITEMS.map((it, i) => (
-              <article key={i} className="problem-mcard">
+              <article
+                key={i}
+                ref={(el) => {
+                  cardRefs.current[i] = el;
+                  if (i === 0) firstCardRef.current = el;
+                }}
+                className="problem-mcard"
+              >
                 <div className="tag danger" style={{ alignSelf: "flex-start" }}>{it.tag}</div>
                 <div className="problem-mcard-diagram">{it.diagram}</div>
                 <div>

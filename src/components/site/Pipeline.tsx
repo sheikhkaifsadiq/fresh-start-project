@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { SectionHead } from "./SectionHead";
 import { useStage } from "../../lib/stage";
 import { useRequestToken } from "../../lib/token";
+import { useMobileScrollOwner } from "../../lib/mobile-scroll-owner";
 
 /**
  * Decision Pipeline — the centerpiece. 320vh pinned.
@@ -53,6 +54,7 @@ export function Pipeline() {
   const fpRef = useRef<HTMLDivElement>(null);
   const scoreRef = useRef<HTMLDivElement>(null);
   const verdictRef = useRef<HTMLDivElement>(null);
+  const firstStageRef = useRef<HTMLDivElement | null>(null);
   const barRefs = useRef<Array<HTMLDivElement | null>>([]);
   const stageRefs = useRef<Array<HTMLDivElement | null>>([]);
   const stage = useStage();
@@ -60,8 +62,24 @@ export function Pipeline() {
   const [verdict, setVerdict] = useState<"unknown" | "threat" | "safe">("unknown");
   const [activeIdx, setActiveIdx] = useState(0);
   const [tMs, setTMs] = useState("0.00");
+  const ownedRef = useRef(false);
+  const ownedProgressRef = useRef(0);
   // Deterministic — the canonical token resolves the same on every render.
   const isThreat = useRef(token.verdict !== "ALLOW");
+
+  useMobileScrollOwner({
+    sectionRef: wrap,
+    triggerRef: firstStageRef,
+    steps: STAGES.length,
+    pxPerStep: 0.86,
+    onProgress: (p) => {
+      ownedProgressRef.current = p;
+    },
+    onActiveChange: (active) => {
+      ownedRef.current = active;
+      if (active) ownedProgressRef.current = 0;
+    },
+  });
 
   useEffect(() => {
     const el = wrap.current;
@@ -71,7 +89,9 @@ export function Pipeline() {
       const rect = el.getBoundingClientRect();
       const total = rect.height - f.vh;
       const passed = Math.min(total, Math.max(0, -rect.top));
-      const t = total > 0 ? passed / total : 0;
+      const scrollT = total > 0 ? passed / total : 0;
+      const isMobile = window.innerWidth <= 720;
+      const t = isMobile ? (ownedRef.current ? ownedProgressRef.current : 0) : scrollT;
 
       // ─── Camera push-in + slight parallax with scroll velocity ───
       if (cameraRef.current) {
@@ -175,7 +195,6 @@ export function Pipeline() {
           const k = seg - i;                  // 0..1 within current stage
           const current = cards[i];
           const next = cards[Math.min(N - 1, i + 1)];
-          const railRect = rail.getBoundingClientRect();
           const curTop = current.offsetTop;
           const nxtTop = next.offsetTop;
           // We want current card to start centred (~50% vh), then ride up
@@ -193,7 +212,6 @@ export function Pipeline() {
             const dist = Math.abs(j - (i + eased));
             c.style.opacity = String(Math.max(0.18, 1 - dist * 0.55));
           });
-          void railRect;
         }
       } else if (rail) {
         if (rail.style.transform) rail.style.transform = "";
@@ -236,7 +254,7 @@ export function Pipeline() {
                     return (
                       <div
                         key={s.idx}
-                        ref={(el) => { stageRefs.current[i] = el; }}
+                        ref={(el) => { stageRefs.current[i] = el; if (i === 0) firstStageRef.current = el; }}
                         className="pcin-stage"
                         style={{
                           opacity: active ? 1 : past ? 0.42 : 0.22,

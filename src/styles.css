@@ -2215,8 +2215,7 @@ input, select, textarea {
 /* ---------- Routing field & ambient: lighter on small / battery ---------- */
 @media (max-width: 720px), (prefers-reduced-motion: reduce) {
   .routing-field { opacity: 0.5; }
-  /* Keep .drift-band--mobile visible — it's the restored vocabulary marquee. */
-  .drift-band:not(.drift-band--mobile) { display: none; }
+  .drift-band { display: none; }
   .blob { filter: blur(40px) !important; opacity: 0.4 !important; }
 }
 
@@ -2612,16 +2611,14 @@ pre { max-width: 100%; overflow-x: auto; }
    of the rail and the horizontal token-travel are recomposed.
    ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 720px) {
-  /* Pinned 360vh so each of the 5 stages owns ~70vh of vertical scroll.
-     The sticky frame is 100vh; the inner stage column is translated by JS
-     so the active stage is always at viewport centre. */
-  .pipeline-pin { min-height: 360vh !important; }
+  /* Mobile scroll is owned by Pipeline.tsx, not native document height. */
+  .pipeline-pin { min-height: 112vh !important; height: 112vh !important; }
   .pipeline-section .pipeline-pin .sticky {
     top: 0 !important; height: 100vh !important;
     align-items: flex-start !important;
     overflow: hidden;
   }
-  .pipeline-cinema { padding: 14px 16px 18px !important; height: 100vh; box-sizing: border-box; display: flex; flex-direction: column; }
+  .pipeline-cinema { padding: 14px 16px 18px !important; height: 100vh; box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden; }
   .pcin-head {
     flex-wrap: wrap; gap: 8px 14px; font-size: 9.5px !important;
     padding-bottom: 10px; flex: 0 0 auto;
@@ -2635,7 +2632,7 @@ pre { max-width: 100%; overflow-x: auto; }
     padding-left: 22px;
     flex: 1 1 auto;
     align-content: flex-start;
-    transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: none !important;
   }
   /* Left rail connector */
   .pcin-rail::before {
@@ -2814,9 +2811,7 @@ pre { max-width: 100%; overflow-x: auto; }
      no scroll-snap, no fake CSS scrolling. */
   .problem-pin {
     position: relative;
-    /* one viewport per card + a tail viewport so the third card has a beat
-       at centre before releasing scroll */
-    height: calc(100vh * 3.2);
+    height: 104vh;
     background: var(--paper);
   }
   .problem-sticky {
@@ -2825,6 +2820,7 @@ pre { max-width: 100%; overflow-x: auto; }
     display: flex; flex-direction: column;
     overflow: hidden;
   }
+  .problem-sticky.is-owned { touch-action: none; }
   .problem-progress {
     padding: 16px 20px 12px;
     font-family: var(--font-mono); font-size: 10px;
@@ -2845,6 +2841,7 @@ pre { max-width: 100%; overflow-x: auto; }
     gap: 14px;
     padding: 0 9vw;
     will-change: transform;
+    transition: none;
   }
   .problem-mcard {
     flex: 0 0 82vw;
@@ -2869,9 +2866,9 @@ pre { max-width: 100%; overflow-x: auto; }
   .problem-mtail { flex: 0 0 9vw; }
 
   /* ----- PIPELINE → THREAT transition: kill the void ----- */
-  .pipeline-pin { padding-bottom: 0 !important; margin-bottom: -24px; }
-  .pipeline-section { padding-bottom: 24px !important; }
-  .threat-section { padding-top: 28px !important; }
+  .pipeline-pin { padding-bottom: 0 !important; margin-bottom: 0; }
+  .pipeline-section { padding-bottom: 0 !important; }
+  .threat-section { padding-top: 18px !important; }
 
   /* ----- CONFIDENCE (Section 07): single-column stacked ledger.
      Typography preserved at editorial scale; each row owns full width so
@@ -2905,7 +2902,7 @@ pre { max-width: 100%; overflow-x: auto; }
   }
 
 
-  /* ----- TERMINOLOGY chapter (pinned horizontal) ----- */
+  /* ----- TERMINOLOGY chapter (JS-owned pinned horizontal) ----- */
   .term-chapter { display: block; }
 }
 
@@ -2917,8 +2914,7 @@ pre { max-width: 100%; overflow-x: auto; }
 /* ─── Terminology mobile pinned chapter ─── */
 .term-chapter {
   position: relative;
-  /* one viewport per card (6 cards) + tail beat so the last card holds centre */
-  height: calc(100vh * 5.4);
+  height: 104vh;
   background: var(--paper);
 }
 .term-sticky {
@@ -2927,8 +2923,9 @@ pre { max-width: 100%; overflow-x: auto; }
   display: flex; flex-direction: column;
   overflow: hidden;
 }
+.term-sticky.is-owned { touch-action: none; }
 .term-head {
-  padding: 56px 20px 18px;
+  padding: 36px 20px 14px;
   border-bottom: 1px solid var(--rule);
 }
 .term-head .ki {
@@ -2945,9 +2942,21 @@ pre { max-width: 100%; overflow-x: auto; }
   font-family: var(--font-display); font-weight: 300;
   font-size: clamp(26px, 7.6vw, 40px);
   line-height: 1.05; letter-spacing: -0.03em;
-  margin: 14px 0 10px;
+  margin: 14px 0 12px;
 }
 .term-title em { font-style: italic; color: var(--ember); }
+.term-inline-marquee {
+  margin: 0 -20px 12px;
+  overflow: hidden;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: color-mix(in oklab, var(--paper) 74%, white 26%);
+}
+.term-inline-marquee .drift-track { animation-duration: 28s; }
+.term-inline-marquee .drift-item {
+  font-size: clamp(28px, 9vw, 46px);
+  padding: 10px 0;
+}
 .term-intro {
   font-family: var(--font-mono); font-size: 10.5px;
   letter-spacing: 0.18em; text-transform: uppercase;
@@ -2967,6 +2976,7 @@ pre { max-width: 100%; overflow-x: auto; }
   gap: 14px;
   padding: 0 9vw;
   will-change: transform;
+  transition: none;
 }
 .term-card {
   flex: 0 0 82vw;
