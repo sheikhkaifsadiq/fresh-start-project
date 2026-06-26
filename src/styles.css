@@ -2200,16 +2200,16 @@ input, select, textarea {
   /* Section glyph: keep but tame */
   .scene-frame { overflow: hidden; }
 
-  /* Hide cinematic ornamentation that competes with content */
-  .cursor-ring { display: none !important; }
+  /* Cursor ring already hidden for coarse pointers via (hover: none).
+     Cinematic ornamentation stays alive on mobile — only its density scales. */
 }
 
 @media (max-width: 560px) {
-  /* Telemetry footer is decorative on phones — surface only the bar */
-  .telemetry-chrome { font-size: 9.5px; padding: 8px 12px !important; }
-  .telemetry-chrome .tel-cell:nth-child(n+4) { display: none; }
-  /* Handoff token chip is dense, hide on narrow */
-  .handoff-token { display: none !important; }
+  /* Telemetry footer compresses on phones — every cell stays alive, the rail
+     becomes horizontally scrollable so the live system signal is never lost. */
+  .telemetry-chrome { font-size: 9.5px; padding: 8px 12px !important; gap: 14px !important; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; mask-image: linear-gradient(90deg, transparent, #000 18px, #000 calc(100% - 18px), transparent); }
+  .telemetry-chrome::-webkit-scrollbar { display: none; }
+  .telemetry-chrome .tel-cell { flex: 0 0 auto; }
 }
 
 /* ---------- Routing field & ambient: lighter on small / battery ---------- */
