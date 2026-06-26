@@ -20,6 +20,7 @@ import { CursorRing } from "../components/site/CursorRing";
 import { Preloader } from "../components/site/Preloader";
 import { SectionGlyph } from "../components/site/SectionGlyph";
 import { HandoffToken } from "../components/site/HandoffToken";
+import { Terminology } from "../components/site/Terminology";
 
 export const Route = createFileRoute("/")({
   head: () => ({
