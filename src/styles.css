@@ -2611,23 +2611,34 @@ pre { max-width: 100%; overflow-x: auto; }
    of the rail and the horizontal token-travel are recomposed.
    ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 720px) {
-  .pipeline-pin { min-height: 300vh !important; }
-  .pipeline-cinema { padding: 18px 16px 22px !important; }
+  /* Pinned 360vh so each of the 5 stages owns ~70vh of vertical scroll.
+     The sticky frame is 100vh; the inner stage column is translated by JS
+     so the active stage is always at viewport centre. */
+  .pipeline-pin { min-height: 360vh !important; }
+  .pipeline-section .pipeline-pin .sticky {
+    top: 0 !important; height: 100vh !important;
+    align-items: flex-start !important;
+    overflow: hidden;
+  }
+  .pipeline-cinema { padding: 14px 16px 18px !important; height: 100vh; box-sizing: border-box; display: flex; flex-direction: column; }
   .pcin-head {
     flex-wrap: wrap; gap: 8px 14px; font-size: 9.5px !important;
-    padding-bottom: 12px;
+    padding-bottom: 10px; flex: 0 0 auto;
   }
+  /* Stage column — JS translates this vertically. No internal scroll. */
   .pcin-rail {
     grid-template-columns: 1fr !important;
     overflow: visible !important;
-    margin-top: 20px;
+    margin-top: 8px;
     position: relative;
     padding-left: 22px;
+    flex: 1 1 auto;
+    align-content: flex-start;
+    transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
   }
-  /* Left rail connector — replaces the horizontal track */
+  /* Left rail connector */
   .pcin-rail::before {
-    content: "";
-    position: absolute;
+    content: ""; position: absolute;
     left: 7px; top: 8px; bottom: 8px;
     width: 1px;
     background: linear-gradient(to bottom,
@@ -2636,52 +2647,39 @@ pre { max-width: 100%; overflow-x: auto; }
   .pcin-stage {
     border: 1px solid var(--rule) !important;
     border-radius: 2px;
-    padding: 14px 16px 16px !important;
+    padding: 18px 18px 20px !important;
     min-height: 0 !important;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
     position: relative;
+    background: var(--paper);
+    transition: opacity .35s var(--ease-out), transform .35s var(--ease-out), border-color .4s, background .4s !important;
   }
   .pcin-stage:last-child { margin-bottom: 0; }
-  /* Stepper bullet on the connector */
   .pcin-stage::before {
-    content: "";
-    position: absolute;
-    left: -19px; top: 22px;
+    content: ""; position: absolute;
+    left: -19px; top: 24px;
     width: 9px; height: 9px;
     border-radius: 50%;
     background: var(--paper);
     border: 1.5px solid color-mix(in oklab, var(--ink) 35%, var(--rule));
     transition: background .35s var(--ease-out), border-color .35s var(--ease-out), box-shadow .35s var(--ease-out);
   }
-  /* Active stage uses the JS-set background to drive bullet colour */
   .pcin-stage[style*="ember"]::before {
     background: var(--ember);
     border-color: var(--ember);
     box-shadow: 0 0 0 4px color-mix(in oklab, var(--ember) 18%, transparent);
   }
-  .pcin-ttl { font-size: 18px !important; margin-top: 6px !important; }
-  .pcin-desc { font-size: 11.5px !important; line-height: 1.55; }
+  .pcin-ttl { font-size: 20px !important; margin-top: 6px !important; }
+  .pcin-desc { font-size: 12px !important; line-height: 1.55; }
 
-  /* Horizontal travel is meaningless vertically — hide track, token, branch */
+  /* Horizontal travel is meaningless vertically — hide track + branch. */
   .pcin-track, .pcin-branch { display: none !important; }
 
-  .pcin-overlays {
-    grid-template-columns: 1fr !important;
-    gap: 14px !important;
-    margin-top: 20px !important;
-  }
-  .pcin-fp, .pcin-score, .pcin-verdict { padding: 14px 16px !important; }
-  .pcin-fp-hash { font-size: 11px; }
-  .pcin-fp-meta { gap: 8px 12px; font-size: 9.5px; }
-  .pcin-bar-row {
-    grid-template-columns: 1fr !important;
-    gap: 4px !important;
-    margin-top: 10px !important;
-  }
-  .pcin-bar-k { font-size: 10px; letter-spacing: 0.12em; }
-  .pcin-bar { height: 5px; }
-  .pcin-verdict-val { font-size: 17px !important; }
+  /* Overlays hidden on mobile — they don't fit the 100vh sticky frame.
+     Fingerprint/score/verdict information is implied by the active card. */
+  .pcin-overlays { display: none !important; }
 }
+
 
 /* ════════════════════════════════════════════════════════════════
    THREAT — live request rows → stacked cards (≤720px)
