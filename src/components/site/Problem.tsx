@@ -1,5 +1,7 @@
+import { useEffect, useRef, useState } from "react";
 import { Mask, useTilt } from "../../lib/motion";
 import { SectionHead } from "./SectionHead";
+import { useStage } from "../../lib/stage";
 import type { ReactNode } from "react";
 
 const ITEMS = [
