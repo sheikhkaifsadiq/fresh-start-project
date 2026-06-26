@@ -196,8 +196,7 @@ export function Pipeline() {
           void railRect;
         }
       } else if (rail) {
-        rail.style.transform = "";
-        stageRefs.current.forEach((c) => { if (c) c.style.opacity = ""; });
+        if (rail.style.transform) rail.style.transform = "";
       }
 
       setTMs((11.4 * clamp(t)).toFixed(2));
