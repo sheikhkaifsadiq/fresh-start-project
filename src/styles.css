@@ -2227,3 +2227,372 @@ table { max-width: 100%; }
   .ds-panel { padding: 18px; }
   .ds-panel-title { font-size: 18px; }
 }
+
+/* ════════════════════════════════════════════════════════════════
+   RESPONSIVE PRIMITIVES — Phase 2
+   Shared building blocks reused across every page so responsive
+   behaviour is a property of the design system, not a per-page hack.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ---------- Tabs: scrollable rail on narrow ---------- */
+@media (max-width: 720px) {
+  .ds-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+    margin-bottom: 24px;
+    /* edge fade */
+    mask-image: linear-gradient(90deg, transparent, #000 14px, #000 calc(100% - 14px), transparent);
+  }
+  .ds-tabs::-webkit-scrollbar { display: none; }
+  .ds-tab { flex: 0 0 auto; padding: 12px 14px; min-height: 44px; }
+}
+
+/* ---------- Toolbar: wrap + full width on narrow ---------- */
+@media (max-width: 720px) {
+  .ds-toolbar { gap: 12px; padding: 12px 0; }
+  .ds-toolbar-l, .ds-toolbar-r { width: 100%; }
+  .ds-toolbar-l > .ds-input { flex: 1 1 100%; }
+}
+
+/* ---------- Hero metric: vertical on small ---------- */
+@media (max-width: 900px) {
+  .ds-hero-figure { flex-wrap: wrap; gap: 8px; align-items: baseline; }
+  .ds-hero-num { font-size: clamp(64px, 16vw, 96px); }
+  .ds-hero-note { font-size: 15px; max-width: 100%; }
+}
+@media (max-width: 480px) {
+  .ds-side-row { flex-direction: column; align-items: flex-start; gap: 4px; padding: 12px 0; }
+}
+
+/* ---------- Ledger cell: tighter on mobile ---------- */
+@media (max-width: 560px) {
+  .ds-ledger-cell { padding: 18px 16px 20px; min-height: 0; }
+  .ds-cell-value { font-size: 32px; }
+}
+
+/* ---------- Steps: tighter column on mobile ---------- */
+@media (max-width: 560px) {
+  .ds-steps li { grid-template-columns: 36px 1fr; gap: 14px; padding: 16px 0; }
+  .ds-steps li strong { font-size: 17px; }
+}
+
+/* ---------- Section title scales ---------- */
+@media (max-width: 560px) {
+  .ds-section-title { font-size: clamp(22px, 6vw, 28px); }
+}
+
+/* ---------- Table: card-list mode on narrow ----------
+   Add `ds-table-cards` to any <table className="ds-table"> to
+   transform into stacked cards on phones. Cells with [data-label]
+   render their label inline; cells without it render value only.
+   No per-page rewrites required if data-label is provided.
+*/
+.ds-table-wrap { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+@media (max-width: 720px) {
+  .ds-table.ds-table-cards { display: block; }
+  .ds-table.ds-table-cards thead { display: none; }
+  .ds-table.ds-table-cards tbody, .ds-table.ds-table-cards tr {
+    display: block;
+  }
+  .ds-table.ds-table-cards tbody tr {
+    border: 1px solid var(--rule);
+    margin-bottom: 12px;
+    padding: 14px 16px;
+    background: color-mix(in oklab, var(--paper) 60%, white 40%);
+  }
+  .ds-table.ds-table-cards tbody td {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 6px 0;
+    border: 0;
+    text-align: right;
+    font-size: 13px;
+  }
+  .ds-table.ds-table-cards tbody td::before {
+    content: attr(data-label);
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: left;
+    flex-shrink: 0;
+  }
+  .ds-table.ds-table-cards tbody td:not([data-label])::before { content: ""; }
+}
+
+/* ---------- Bottom sheet ---------- */
+.ds-sheet-scrim {
+  position: fixed; inset: 0; background: rgba(20,22,26,0); z-index: 95;
+  pointer-events: none; transition: background .3s var(--ease-out);
+}
+.ds-sheet-scrim.is-open { background: rgba(20,22,26,.45); pointer-events: auto; }
+.ds-sheet {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 96;
+  background: var(--paper); border-top: 1px solid var(--rule);
+  transform: translateY(100%); transition: transform .35s var(--ease-out);
+  max-height: 86dvh; overflow-y: auto;
+  padding: 16px 20px 28px;
+  padding-bottom: max(28px, env(safe-area-inset-bottom));
+  box-shadow: 0 -16px 40px rgba(20,22,26,0.18);
+}
+.ds-sheet.is-open { transform: translateY(0); }
+.ds-sheet-grip {
+  width: 40px; height: 3px; border-radius: 2px; background: var(--rule);
+  margin: 0 auto 16px;
+}
+@media (min-width: 721px) {
+  .ds-sheet { left: auto; right: 0; top: 0; bottom: 0; max-height: none;
+    width: min(420px, 92vw); transform: translateX(100%); border-left: 1px solid var(--rule); border-top: 0; }
+  .ds-sheet.is-open { transform: translateX(0); }
+  .ds-sheet-grip { display: none; }
+}
+
+/* ---------- Sticky action bar (mobile forms) ---------- */
+.ds-action-bar {
+  display: flex; gap: 12px; justify-content: flex-end; align-items: center;
+  padding: 16px 0;
+}
+@media (max-width: 720px) {
+  .ds-action-bar {
+    position: sticky; bottom: 0;
+    background: color-mix(in oklab, var(--paper) 94%, white 6%);
+    border-top: 1px solid var(--rule);
+    margin: 16px -24px 0; padding: 12px 24px;
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+    z-index: 5;
+    justify-content: stretch;
+  }
+  .ds-action-bar .ds-btn { flex: 1; justify-content: center; min-height: 48px; }
+}
+
+/* ---------- Definition list responsive ---------- */
+@media (max-width: 720px) {
+  .ds-defs > div { padding: 14px 0; }
+}
+
+/* ---------- Empty state padding ---------- */
+@media (max-width: 720px) {
+  .ds-empty { padding: 36px 20px; }
+  .ds-empty-title { font-size: 22px; }
+}
+
+/* ---------- Code block responsive ---------- */
+@media (max-width: 720px) {
+  .ds-code { font-size: 11px; padding: 14px 16px; white-space: pre-wrap; word-break: break-word; }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   LANDING — dedicated mobile cinematic
+   Recomposed scenes, reduced motion, vertical pipeline.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Hide cinematic glyph noise; keep a tiny corner mark instead */
+@media (max-width: 720px) {
+  .section-glyph { font-size: 11vw !important; opacity: 0.06 !important; top: 8vh !important; }
+}
+
+/* Hero typography: tighter, faster */
+@media (max-width: 720px) {
+  .hero h1 { font-size: clamp(38px, 11vw, 56px); line-height: 0.98; letter-spacing: -0.03em; }
+  .hero-meta { margin-top: 40px !important; }
+  .hero-meta .cell .v { font-size: clamp(20px, 6.4vw, 28px) !important; }
+  .hero-meta .cell .l { font-size: 9.5px !important; }
+}
+
+/* HeroPipeline — vertical stepper on mobile */
+@media (max-width: 720px) {
+  .hp-stage { padding: 18px 16px !important; }
+  .hp-rail {
+    display: flex; flex-direction: column;
+    height: auto !important; min-height: 0 !important;
+    padding: 8px 0 !important;
+    gap: 18px;
+  }
+  .hp-line, .hp-line-fill, .hp-packet-pos { display: none !important; }
+  .hp-node {
+    position: static !important;
+    left: auto !important;
+    transform: none !important;
+    display: grid !important;
+    grid-template-columns: 22px 1fr !important;
+    gap: 12px;
+    align-items: center;
+    text-align: left !important;
+    width: 100%;
+  }
+  .hp-node .hp-bullet { width: 10px; height: 10px; margin: 0 !important; }
+  .hp-node .hp-label { margin-top: 0 !important; display: flex; align-items: baseline; gap: 10px; }
+  .hp-node .hp-step { font-size: 10px; }
+  .hp-node .hp-name { font-size: 12.5px; }
+  .hp-readout { grid-template-columns: 1fr !important; gap: 8px !important; padding-top: 14px !important; }
+  .hp-field { padding: 6px 0 !important; border-top: 1px solid var(--rule); }
+  .hp-field:first-child { border-top: 0; }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   AUTH page — mobile single column, sticky CTA
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .auth-stage { grid-template-columns: 1fr !important; gap: 32px !important; padding: 0 clamp(16px, 5vw, 32px) !important; }
+  .auth-copy h1 { font-size: clamp(34px, 9vw, 52px) !important; }
+  .auth-card { padding: 24px !important; }
+  .auth-nav { padding: 16px clamp(16px, 5vw, 32px) !important; gap: 12px; }
+  .auth-nav .kicker { display: none; }
+}
+@media (max-width: 560px) {
+  .auth-submit { width: 100%; justify-content: center; min-height: 48px; }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   RULE BUILDER — mobile mode
+   Desktop tree → mobile single-column accordion + bottom-sheet config
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 1080px) {
+  .rb-stage-grid { grid-template-columns: 1fr !important; gap: 24px; }
+  .rb-config { position: sticky; top: 12px; }
+}
+@media (max-width: 720px) {
+  .rb-toolbar { flex-direction: column; align-items: stretch !important; gap: 12px; }
+  .rb-toolbar-actions { width: 100%; display: flex; gap: 8px; }
+  .rb-toolbar-actions .btn { flex: 1; justify-content: center; }
+  .rb-canvas { padding: 14px !important; overflow-x: auto; }
+  .rb-canvas-inner { min-width: 280px; }
+  .rb-node { padding: 14px !important; min-width: 0 !important; width: 100%; }
+  .rb-children { padding-left: 16px !important; }
+  .rb-child { margin-left: 0 !important; }
+  .rb-config { padding: 18px !important; position: static; }
+  .rb-json pre { font-size: 11px; }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   LINKS table — already has card-stack via .lk-* classes; reinforce
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 720px) {
+  .lk-table-head { flex-direction: column; align-items: stretch !important; gap: 12px; padding: 14px !important; }
+  .lk-search { width: 100%; }
+  .lk-search input { width: 100%; }
+  .lk-table { display: block; }
+  .lk-table thead { display: none; }
+  .lk-table tbody, .lk-table tr { display: block; }
+  .lk-table tbody tr {
+    border: 1px solid var(--rule);
+    margin: 0 12px 12px;
+    padding: 14px 16px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px 12px;
+    background: color-mix(in oklab, var(--paper) 60%, white 40%);
+  }
+  .lk-table tbody td { display: block; padding: 0 !important; border: 0 !important; font-size: 12.5px; }
+  .lk-table tbody td:nth-child(1) { grid-column: 1; font-size: 14px; font-weight: 500; color: var(--ink); }
+  .lk-table tbody td:nth-child(2) { grid-column: 1 / -1; color: var(--muted); word-break: break-all; }
+  .lk-table tbody td:nth-child(3) { grid-column: 2; grid-row: 1; text-align: right !important; }
+  .lk-table tbody td:nth-child(4) { grid-column: 1 / -1; color: var(--muted); font-size: 11px; }
+  .lk-table tbody td:nth-child(5) { grid-column: 1; }
+  .lk-table tbody td:nth-child(6) { grid-column: 2; text-align: right !important; }
+  .lk-table-foot { flex-direction: column; gap: 10px; padding: 12px !important; align-items: stretch !important; }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   ANALYTICS chart — readable on phones
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 560px) {
+  .ds-bars { height: 140px; gap: 1px; }
+  .ds-bars > span { min-width: 2px; }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   NAV — mobile drawer (hamburger overlay)
+   ═══════════════════════════════════════════════════════════════ */
+.nav-burger {
+  display: none;
+  width: 44px; height: 44px;
+  background: transparent; border: 1px solid color-mix(in oklab, var(--ink) 20%, transparent);
+  cursor: pointer; padding: 0;
+  flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+}
+.nav-burger span { width: 16px; height: 1px; background: var(--ink); display: block; }
+
+.nav-drawer { display: none; }
+
+@media (max-width: 720px) {
+  .nav-cta { display: none !important; }
+  .nav-burger { display: inline-flex; }
+  .nav-drawer {
+    display: block; position: fixed; inset: 0; z-index: 100;
+    background: rgba(20,22,26,0); pointer-events: none;
+    transition: background .35s var(--ease-out);
+  }
+  .nav-drawer.is-open { background: rgba(20,22,26,0.55); pointer-events: auto; }
+  .nav-drawer-panel {
+    position: absolute; top: 0; right: 0; bottom: 0;
+    width: min(86vw, 360px);
+    background: var(--paper);
+    border-left: 1px solid var(--rule);
+    transform: translateX(100%); transition: transform .35s var(--ease-out);
+    display: flex; flex-direction: column;
+    padding: 20px 24px 28px;
+    padding-bottom: max(28px, env(safe-area-inset-bottom));
+  }
+  .nav-drawer.is-open .nav-drawer-panel { transform: translateX(0); }
+  .nav-drawer-head { display: flex; align-items: center; justify-content: space-between; padding-bottom: 18px; border-bottom: 1px solid var(--rule); }
+  .nav-drawer-close { background: transparent; border: 0; font-size: 28px; line-height: 1; color: var(--ink); cursor: pointer; width: 44px; height: 44px; }
+  .nav-drawer-links { list-style: none; padding: 0; margin: 8px 0 0; flex: 1; }
+  .nav-drawer-links a {
+    display: block; padding: 18px 0;
+    font-family: var(--font-mono); font-size: 13px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink); text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav-drawer-cta { width: 100%; justify-content: center; margin-top: 16px; min-height: 48px; }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   ROUTING FIELD — lighter on small + reduced motion (cascade)
+   Already partially throttled above; cap opacity harder on very small.
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .routing-field { opacity: 0.32 !important; }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   DASHBOARD — phone hero stacks tighter
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 560px) {
+  .ds-hero-l > .ds-kicker { margin-bottom: 8px; }
+  .ds-hero-figure { margin: 0 0 12px; }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   APP TOPBAR title — never overflow
+   ═══════════════════════════════════════════════════════════════ */
+.app-title { overflow-wrap: anywhere; }
+@media (max-width: 560px) {
+  .app-title { font-size: clamp(22px, 6.5vw, 30px); }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   PANEL on mobile (docs cards etc.)
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 560px) {
+  .ds-panel { padding: 16px; }
+  .ds-panel-title { font-size: 18px; }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   Telemetry chrome already condensed; ensure hidden on very small
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 420px) {
+  .telemetry-chrome { display: none !important; }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   Universal: kill horizontal scroll, fluid media
+   ═══════════════════════════════════════════════════════════════ */
+html, body { overflow-x: hidden; }
+pre { max-width: 100%; overflow-x: auto; }
