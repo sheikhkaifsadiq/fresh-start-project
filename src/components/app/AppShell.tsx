@@ -1,11 +1,11 @@
 /**
  * @file src/components/app/AppShell.tsx
- * @description Authenticated application shell — sidebar + topbar + content
- * area. Reuses the landing page's editorial design language: ivory paper,
- * Fraunces display, IBM Plex Mono labels, charcoal ink, RoutingField ambient.
+ * @description Authenticated application shell — sidebar + topbar + content.
+ * Sidebar collapses into a slide-over drawer on tablet / mobile via a
+ * hamburger trigger in the topbar. Closes on route change and ESC.
  */
 
-import { type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { Link, useLocation, useNavigate } from "@tanstack/react-router";
 import { useAuthStore } from "@/lib/stores/auth-store";
 
@@ -40,6 +40,23 @@ export function AppShell({
   const logout = useAuthStore((s) => s.logout);
   const navigate = useNavigate();
   const location = useLocation();
+  const [open, setOpen] = useState(false);
+
+  // Close drawer on route change
+  useEffect(() => { setOpen(false); }, [location.pathname]);
+
+  // Lock body scroll while drawer is open; close on ESC
+  useEffect(() => {
+    if (!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(false); };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
 
   const handleLogout = async () => {
     await logout();
@@ -53,8 +70,14 @@ export function AppShell({
   };
 
   return (
-    <div className="app-shell">
-      <aside className="app-sidebar">
+    <div className={`app-shell${open ? " is-drawer-open" : ""}`}>
+      <button
+        className="app-scrim"
+        aria-hidden={!open}
+        tabIndex={-1}
+        onClick={() => setOpen(false)}
+      />
+      <aside className="app-sidebar" aria-label="Primary">
         <Link to="/dashboard" className="app-brand">
           <span className="app-brand-mark" aria-hidden />
           <span className="app-brand-text">AegisRoute</span>
@@ -95,7 +118,15 @@ export function AppShell({
 
       <main className="app-main">
         <header className="app-topbar">
-          <div>
+          <button
+            className="app-menu-btn"
+            aria-label={open ? "Close navigation" : "Open navigation"}
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            <span /><span /><span />
+          </button>
+          <div className="app-topbar-title">
             {kicker ? <div className="kicker">{kicker}</div> : null}
             <h1 className="app-title">{title}</h1>
           </div>
