@@ -33,31 +33,33 @@ function AuditLogsPage() {
         </div>
       </section>
 
-      <table className="ds-table">
-        <thead>
-          <tr>
-            <th>Time</th>
-            <th>Actor</th>
-            <th>Action</th>
-            <th>Resource</th>
-            <th>Outcome</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td colSpan={5}>
-              <div className="ds-empty">
-                <div className="ds-empty-title">No events yet.</div>
-                <div className="ds-empty-note">
-                  Every create, update, delete, sign-in, key rotation, and
-                  policy change is appended here with a cryptographic hash
-                  chain. Your first action will appear in real time.
+      <div className="ds-table-wrap">
+        <table className="ds-table ds-table-cards">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Actor</th>
+              <th>Action</th>
+              <th>Resource</th>
+              <th>Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colSpan={5}>
+                <div className="ds-empty">
+                  <div className="ds-empty-title">No events yet.</div>
+                  <div className="ds-empty-note">
+                    Every create, update, delete, sign-in, key rotation, and
+                    policy change is appended here with a cryptographic hash
+                    chain. Your first action will appear in real time.
+                  </div>
                 </div>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </AppShell>
   );
 }
