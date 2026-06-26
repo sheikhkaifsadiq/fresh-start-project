@@ -46,6 +46,7 @@ const range = (x: number, [a, b]: number[]) => clamp((x - a) / (b - a));
 
 export function Pipeline() {
   const wrap = useRef<HTMLDivElement>(null);
+  const railRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const tokenRef = useRef<HTMLDivElement>(null);
   const cameraRef = useRef<HTMLDivElement>(null);
