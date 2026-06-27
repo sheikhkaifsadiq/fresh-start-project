@@ -1,0 +1,5142 @@
+[
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/vite.config.ts#default",
+    "keywords": [
+      "default",
+      "module",
+      "vite.config.ts"
+    ],
+    "type": "module",
+    "summary": "A module named default located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/vite.config.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/vite.config.ts",
+    "keywords": [
+      "vite.config.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/vite.config.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/router.tsx#getRouter",
+    "keywords": [
+      "getRouter",
+      "module",
+      "router.tsx"
+    ],
+    "type": "module",
+    "summary": "A module named getRouter located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/router.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/router.tsx",
+    "keywords": [
+      "router.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/router.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts#FileRoutesByFullPath",
+    "keywords": [
+      "FileRoutesByFullPath",
+      "component",
+      "routeTree.gen.ts"
+    ],
+    "type": "component",
+    "summary": "A component named FileRoutesByFullPath located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts#FileRoutesByTo",
+    "keywords": [
+      "FileRoutesByTo",
+      "component",
+      "routeTree.gen.ts"
+    ],
+    "type": "component",
+    "summary": "A component named FileRoutesByTo located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts#FileRoutesById",
+    "keywords": [
+      "FileRoutesById",
+      "component",
+      "routeTree.gen.ts"
+    ],
+    "type": "component",
+    "summary": "A component named FileRoutesById located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts#FileRouteTypes",
+    "keywords": [
+      "FileRouteTypes",
+      "component",
+      "routeTree.gen.ts"
+    ],
+    "type": "component",
+    "summary": "A component named FileRouteTypes located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts#RootRouteChildren",
+    "keywords": [
+      "RootRouteChildren",
+      "component",
+      "routeTree.gen.ts"
+    ],
+    "type": "component",
+    "summary": "A component named RootRouteChildren located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts#routeTree",
+    "keywords": [
+      "routeTree",
+      "module",
+      "routeTree.gen.ts"
+    ],
+    "type": "module",
+    "summary": "A module named routeTree located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "keywords": [
+      "routeTree.gen.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/server.ts#default",
+    "keywords": [
+      "default",
+      "module",
+      "server.ts"
+    ],
+    "type": "module",
+    "summary": "A module named default located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/server.ts",
+    "keywords": [
+      "server.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/start.ts#startInstance",
+    "keywords": [
+      "startInstance",
+      "module",
+      "start.ts"
+    ],
+    "type": "module",
+    "summary": "A module named startInstance located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/start.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/start.ts",
+    "keywords": [
+      "start.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/start.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/hooks/use-mobile.tsx#useIsMobile",
+    "keywords": [
+      "useIsMobile",
+      "hook",
+      "use-mobile.tsx"
+    ],
+    "type": "hook",
+    "summary": "A hook named useIsMobile located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/hooks/use-mobile.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/hooks/use-mobile.tsx",
+    "keywords": [
+      "use-mobile.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/hooks/use-mobile.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#logEvent",
+    "keywords": [
+      "logEvent",
+      "shared utility",
+      "audit-logger.server.ts"
+    ],
+    "type": "shared utility",
+    "summary": "A shared utility named logEvent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#extractIpAddress",
+    "keywords": [
+      "extractIpAddress",
+      "shared utility",
+      "audit-logger.server.ts"
+    ],
+    "type": "shared utility",
+    "summary": "A shared utility named extractIpAddress located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#AuditEventType",
+    "keywords": [
+      "AuditEventType",
+      "component",
+      "audit-logger.server.ts"
+    ],
+    "type": "component",
+    "summary": "A component named AuditEventType located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#AuditEventTypeValue",
+    "keywords": [
+      "AuditEventTypeValue",
+      "component",
+      "audit-logger.server.ts"
+    ],
+    "type": "component",
+    "summary": "A component named AuditEventTypeValue located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#USER_LOGIN_SUCCESS",
+    "keywords": [
+      "USER_LOGIN_SUCCESS",
+      "component",
+      "audit-logger.server.ts"
+    ],
+    "type": "component",
+    "summary": "A component named USER_LOGIN_SUCCESS located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#USER_LOGIN_FAILED",
+    "keywords": [
+      "USER_LOGIN_FAILED",
+      "component",
+      "audit-logger.server.ts"
+    ],
+    "type": "component",
+    "summary": "A component named USER_LOGIN_FAILED located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#USER_SIGNUP",
+    "keywords": [
+      "USER_SIGNUP",
+      "component",
+      "audit-logger.server.ts"
+    ],
+    "type": "component",
+    "summary": "A component named USER_SIGNUP located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#USER_LOGOUT",
+    "keywords": [
+      "USER_LOGOUT",
+      "component",
+      "audit-logger.server.ts"
+    ],
+    "type": "component",
+    "summary": "A component named USER_LOGOUT located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#LINK_CREATED",
+    "keywords": [
+      "LINK_CREATED",
+      "component",
+      "audit-logger.server.ts"
+    ],
+    "type": "component",
+    "summary": "A component named LINK_CREATED located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#LINK_UPDATED",
+    "keywords": [
+      "LINK_UPDATED",
+      "component",
+      "audit-logger.server.ts"
+    ],
+    "type": "component",
+    "summary": "A component named LINK_UPDATED located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#LINK_DELETED",
+    "keywords": [
+      "LINK_DELETED",
+      "component",
+      "audit-logger.server.ts"
+    ],
+    "type": "component",
+    "summary": "A component named LINK_DELETED located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#RULE_CREATED",
+    "keywords": [
+      "RULE_CREATED",
+      "component",
+      "audit-logger.server.ts"
+    ],
+    "type": "component",
+    "summary": "A component named RULE_CREATED located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#RULE_UPDATED",
+    "keywords": [
+      "RULE_UPDATED",
+      "component",
+      "audit-logger.server.ts"
+    ],
+    "type": "component",
+    "summary": "A component named RULE_UPDATED located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#RULE_DELETED",
+    "keywords": [
+      "RULE_DELETED",
+      "component",
+      "audit-logger.server.ts"
+    ],
+    "type": "component",
+    "summary": "A component named RULE_DELETED located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#ML_MODEL_DEPLOYED",
+    "keywords": [
+      "ML_MODEL_DEPLOYED",
+      "component",
+      "audit-logger.server.ts"
+    ],
+    "type": "component",
+    "summary": "A component named ML_MODEL_DEPLOYED located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#ML_MODEL_UPDATED",
+    "keywords": [
+      "ML_MODEL_UPDATED",
+      "component",
+      "audit-logger.server.ts"
+    ],
+    "type": "component",
+    "summary": "A component named ML_MODEL_UPDATED located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#RATE_LIMIT_EXCEEDED",
+    "keywords": [
+      "RATE_LIMIT_EXCEEDED",
+      "component",
+      "audit-logger.server.ts"
+    ],
+    "type": "component",
+    "summary": "A component named RATE_LIMIT_EXCEEDED located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#ASSET_UPLOADED",
+    "keywords": [
+      "ASSET_UPLOADED",
+      "component",
+      "audit-logger.server.ts"
+    ],
+    "type": "component",
+    "summary": "A component named ASSET_UPLOADED located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#UNAUTHORIZED_ACCESS",
+    "keywords": [
+      "UNAUTHORIZED_ACCESS",
+      "component",
+      "audit-logger.server.ts"
+    ],
+    "type": "component",
+    "summary": "A component named UNAUTHORIZED_ACCESS located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#AuditLogDetails",
+    "keywords": [
+      "AuditLogDetails",
+      "component",
+      "audit-logger.server.ts"
+    ],
+    "type": "component",
+    "summary": "A component named AuditLogDetails located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts",
+    "keywords": [
+      "audit-logger.server.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/env.ts#resolvePublicSupabaseUrl",
+    "keywords": [
+      "resolvePublicSupabaseUrl",
+      "shared utility",
+      "env.ts"
+    ],
+    "type": "shared utility",
+    "summary": "A shared utility named resolvePublicSupabaseUrl located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/env.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/env.ts#resolvePublicSupabaseKey",
+    "keywords": [
+      "resolvePublicSupabaseKey",
+      "shared utility",
+      "env.ts"
+    ],
+    "type": "shared utility",
+    "summary": "A shared utility named resolvePublicSupabaseKey located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/env.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/env.ts#PUBLIC_ENV",
+    "keywords": [
+      "PUBLIC_ENV",
+      "component",
+      "env.ts"
+    ],
+    "type": "component",
+    "summary": "A component named PUBLIC_ENV located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/env.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/env.ts",
+    "keywords": [
+      "env.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/env.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/error-capture.ts#consumeLastCapturedError",
+    "keywords": [
+      "consumeLastCapturedError",
+      "shared utility",
+      "error-capture.ts"
+    ],
+    "type": "shared utility",
+    "summary": "A shared utility named consumeLastCapturedError located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/error-capture.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/error-capture.ts",
+    "keywords": [
+      "error-capture.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/error-capture.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/error-page.ts#renderErrorPage",
+    "keywords": [
+      "renderErrorPage",
+      "shared utility",
+      "error-page.ts"
+    ],
+    "type": "shared utility",
+    "summary": "A shared utility named renderErrorPage located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/error-page.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/error-page.ts",
+    "keywords": [
+      "error-page.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/error-page.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/lovable-error-reporting.ts#reportLovableError",
+    "keywords": [
+      "reportLovableError",
+      "shared utility",
+      "lovable-error-reporting.ts"
+    ],
+    "type": "shared utility",
+    "summary": "A shared utility named reportLovableError located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/lovable-error-reporting.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/lovable-error-reporting.ts",
+    "keywords": [
+      "lovable-error-reporting.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/lovable-error-reporting.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/mobile-scroll-owner.ts#useMobileScrollOwner",
+    "keywords": [
+      "useMobileScrollOwner",
+      "hook",
+      "mobile-scroll-owner.ts"
+    ],
+    "type": "hook",
+    "summary": "A hook named useMobileScrollOwner located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/mobile-scroll-owner.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/mobile-scroll-owner.ts",
+    "keywords": [
+      "mobile-scroll-owner.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/mobile-scroll-owner.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#MotionProvider",
+    "keywords": [
+      "MotionProvider",
+      "context",
+      "motion.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named MotionProvider located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#usePointer",
+    "keywords": [
+      "usePointer",
+      "hook",
+      "motion.tsx"
+    ],
+    "type": "hook",
+    "summary": "A hook named usePointer located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#usePrefersReducedMotion",
+    "keywords": [
+      "usePrefersReducedMotion",
+      "hook",
+      "motion.tsx"
+    ],
+    "type": "hook",
+    "summary": "A hook named usePrefersReducedMotion located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#useElementProgress",
+    "keywords": [
+      "useElementProgress",
+      "hook",
+      "motion.tsx"
+    ],
+    "type": "hook",
+    "summary": "A hook named useElementProgress located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#useParallax",
+    "keywords": [
+      "useParallax",
+      "hook",
+      "motion.tsx"
+    ],
+    "type": "hook",
+    "summary": "A hook named useParallax located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#useParallaxRef",
+    "keywords": [
+      "useParallaxRef",
+      "hook",
+      "motion.tsx"
+    ],
+    "type": "hook",
+    "summary": "A hook named useParallaxRef located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#useMagnetic",
+    "keywords": [
+      "useMagnetic",
+      "hook",
+      "motion.tsx"
+    ],
+    "type": "hook",
+    "summary": "A hook named useMagnetic located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#useTilt",
+    "keywords": [
+      "useTilt",
+      "hook",
+      "motion.tsx"
+    ],
+    "type": "hook",
+    "summary": "A hook named useTilt located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#usePointerParallax",
+    "keywords": [
+      "usePointerParallax",
+      "hook",
+      "motion.tsx"
+    ],
+    "type": "hook",
+    "summary": "A hook named usePointerParallax located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#useInView",
+    "keywords": [
+      "useInView",
+      "hook",
+      "motion.tsx"
+    ],
+    "type": "hook",
+    "summary": "A hook named useInView located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#Kinetic",
+    "keywords": [
+      "Kinetic",
+      "component",
+      "motion.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Kinetic located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#Mask",
+    "keywords": [
+      "Mask",
+      "component",
+      "motion.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Mask located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#CountUp",
+    "keywords": [
+      "CountUp",
+      "component",
+      "motion.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CountUp located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx",
+    "keywords": [
+      "motion.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts#EASE",
+    "keywords": [
+      "EASE",
+      "component",
+      "physics.ts"
+    ],
+    "type": "component",
+    "summary": "A component named EASE located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts#SPRING",
+    "keywords": [
+      "SPRING",
+      "component",
+      "physics.ts"
+    ],
+    "type": "component",
+    "summary": "A component named SPRING located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts#lerpK",
+    "keywords": [
+      "lerpK",
+      "shared utility",
+      "physics.ts"
+    ],
+    "type": "shared utility",
+    "summary": "A shared utility named lerpK located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts#clamp",
+    "keywords": [
+      "clamp",
+      "shared utility",
+      "physics.ts"
+    ],
+    "type": "shared utility",
+    "summary": "A shared utility named clamp located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts#lerp",
+    "keywords": [
+      "lerp",
+      "shared utility",
+      "physics.ts"
+    ],
+    "type": "shared utility",
+    "summary": "A shared utility named lerp located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts#range",
+    "keywords": [
+      "range",
+      "shared utility",
+      "physics.ts"
+    ],
+    "type": "shared utility",
+    "summary": "A shared utility named range located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts#arc",
+    "keywords": [
+      "arc",
+      "shared utility",
+      "physics.ts"
+    ],
+    "type": "shared utility",
+    "summary": "A shared utility named arc located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts",
+    "keywords": [
+      "physics.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#SignupSchema",
+    "keywords": [
+      "SignupSchema",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named SignupSchema located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#SignupInput",
+    "keywords": [
+      "SignupInput",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named SignupInput located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#LoginSchema",
+    "keywords": [
+      "LoginSchema",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named LoginSchema located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#LoginInput",
+    "keywords": [
+      "LoginInput",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named LoginInput located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#CreateLinkSchema",
+    "keywords": [
+      "CreateLinkSchema",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named CreateLinkSchema located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#CreateLinkInput",
+    "keywords": [
+      "CreateLinkInput",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named CreateLinkInput located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#UpdateLinkSchema",
+    "keywords": [
+      "UpdateLinkSchema",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named UpdateLinkSchema located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#UpdateLinkInput",
+    "keywords": [
+      "UpdateLinkInput",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named UpdateLinkInput located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#RuleTypeEnum",
+    "keywords": [
+      "RuleTypeEnum",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named RuleTypeEnum located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#RuleType",
+    "keywords": [
+      "RuleType",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named RuleType located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#RedirectRuleSchema",
+    "keywords": [
+      "RedirectRuleSchema",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named RedirectRuleSchema located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#RedirectRuleInput",
+    "keywords": [
+      "RedirectRuleInput",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named RedirectRuleInput located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#UpdateRedirectRuleSchema",
+    "keywords": [
+      "UpdateRedirectRuleSchema",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named UpdateRedirectRuleSchema located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#UpdateRedirectRuleInput",
+    "keywords": [
+      "UpdateRedirectRuleInput",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named UpdateRedirectRuleInput located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#MlModelSchema",
+    "keywords": [
+      "MlModelSchema",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named MlModelSchema located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#MlModelInput",
+    "keywords": [
+      "MlModelInput",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named MlModelInput located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#UpdateMlModelSchema",
+    "keywords": [
+      "UpdateMlModelSchema",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named UpdateMlModelSchema located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#UpdateMlModelInput",
+    "keywords": [
+      "UpdateMlModelInput",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named UpdateMlModelInput located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#PaginationSchema",
+    "keywords": [
+      "PaginationSchema",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named PaginationSchema located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#PaginationInput",
+    "keywords": [
+      "PaginationInput",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named PaginationInput located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#AuditLogQuerySchema",
+    "keywords": [
+      "AuditLogQuerySchema",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named AuditLogQuerySchema located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#AuditLogQueryInput",
+    "keywords": [
+      "AuditLogQueryInput",
+      "component",
+      "schemas.ts"
+    ],
+    "type": "component",
+    "summary": "A component named AuditLogQueryInput located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "keywords": [
+      "schemas.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/scroll-progress.tsx#ScrollProgressProvider",
+    "keywords": [
+      "ScrollProgressProvider",
+      "context",
+      "scroll-progress.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named ScrollProgressProvider located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/scroll-progress.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/scroll-progress.tsx#useProgressRef",
+    "keywords": [
+      "useProgressRef",
+      "hook",
+      "scroll-progress.tsx"
+    ],
+    "type": "hook",
+    "summary": "A hook named useProgressRef located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/scroll-progress.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/scroll-progress.tsx#useProgressSubscribe",
+    "keywords": [
+      "useProgressSubscribe",
+      "hook",
+      "scroll-progress.tsx"
+    ],
+    "type": "hook",
+    "summary": "A hook named useProgressSubscribe located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/scroll-progress.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/scroll-progress.tsx",
+    "keywords": [
+      "scroll-progress.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/scroll-progress.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stage.tsx#StageProvider",
+    "keywords": [
+      "StageProvider",
+      "context",
+      "stage.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named StageProvider located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stage.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stage.tsx#useStage",
+    "keywords": [
+      "useStage",
+      "hook",
+      "stage.tsx"
+    ],
+    "type": "hook",
+    "summary": "A hook named useStage located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stage.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stage.tsx#useStageFrame",
+    "keywords": [
+      "useStageFrame",
+      "hook",
+      "stage.tsx"
+    ],
+    "type": "hook",
+    "summary": "A hook named useStageFrame located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stage.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stage.tsx#StageFrame",
+    "keywords": [
+      "StageFrame",
+      "component",
+      "stage.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named StageFrame located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stage.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stage.tsx",
+    "keywords": [
+      "stage.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stage.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/token.tsx#TokenProvider",
+    "keywords": [
+      "TokenProvider",
+      "context",
+      "token.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named TokenProvider located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/token.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/token.tsx#useRequestToken",
+    "keywords": [
+      "useRequestToken",
+      "hook",
+      "token.tsx"
+    ],
+    "type": "hook",
+    "summary": "A hook named useRequestToken located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/token.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/token.tsx#RequestToken",
+    "keywords": [
+      "RequestToken",
+      "component",
+      "token.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named RequestToken located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/token.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/token.tsx",
+    "keywords": [
+      "token.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/token.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/utils.ts#cn",
+    "keywords": [
+      "cn",
+      "shared utility",
+      "utils.ts"
+    ],
+    "type": "shared utility",
+    "summary": "A shared utility named cn located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/utils.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/utils.ts",
+    "keywords": [
+      "utils.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/utils.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/__root.tsx#Route",
+    "keywords": [
+      "Route",
+      "route",
+      "__root.tsx"
+    ],
+    "type": "route",
+    "summary": "A route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/__root.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/__root.tsx",
+    "keywords": [
+      "__root.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/__root.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated.tsx#Route",
+    "keywords": [
+      "Route",
+      "route",
+      "_authenticated.tsx"
+    ],
+    "type": "route",
+    "summary": "A route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated.tsx",
+    "keywords": [
+      "_authenticated.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/auth.tsx#Route",
+    "keywords": [
+      "Route",
+      "route",
+      "auth.tsx"
+    ],
+    "type": "route",
+    "summary": "A route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/auth.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/auth.tsx",
+    "keywords": [
+      "auth.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/auth.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx#Route",
+    "keywords": [
+      "Route",
+      "route",
+      "index.tsx"
+    ],
+    "type": "route",
+    "summary": "A route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "keywords": [
+      "index.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/sitemap[.]xml.ts#Route",
+    "keywords": [
+      "Route",
+      "route",
+      "sitemap[.]xml.ts"
+    ],
+    "type": "route",
+    "summary": "A route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/sitemap[.]xml.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/sitemap[.]xml.ts",
+    "keywords": [
+      "sitemap[.]xml.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/sitemap[.]xml.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/app/AppShell.tsx#AppShell",
+    "keywords": [
+      "AppShell",
+      "component",
+      "AppShell.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named AppShell located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/app/AppShell.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/app/AppShell.tsx",
+    "keywords": [
+      "AppShell.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/app/AppShell.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/auth/AuthProvider.tsx#AuthProvider",
+    "keywords": [
+      "AuthProvider",
+      "context",
+      "AuthProvider.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named AuthProvider located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/auth/AuthProvider.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/auth/AuthProvider.tsx#default",
+    "keywords": [
+      "default",
+      "module",
+      "AuthProvider.tsx"
+    ],
+    "type": "module",
+    "summary": "A module named default located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/auth/AuthProvider.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/auth/AuthProvider.tsx",
+    "keywords": [
+      "AuthProvider.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/auth/AuthProvider.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/CreateLinkPanel.tsx#CreateLinkPanel",
+    "keywords": [
+      "CreateLinkPanel",
+      "component",
+      "CreateLinkPanel.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CreateLinkPanel located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/CreateLinkPanel.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/CreateLinkPanel.tsx",
+    "keywords": [
+      "CreateLinkPanel.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/CreateLinkPanel.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/LinksManager.tsx#LinksManager",
+    "keywords": [
+      "LinksManager",
+      "component",
+      "LinksManager.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named LinksManager located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/LinksManager.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/LinksManager.tsx",
+    "keywords": [
+      "LinksManager.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/LinksManager.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/LinksTable.tsx#LinksTable",
+    "keywords": [
+      "LinksTable",
+      "component",
+      "LinksTable.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named LinksTable located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/LinksTable.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/LinksTable.tsx",
+    "keywords": [
+      "LinksTable.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/LinksTable.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/RuleBuilder.tsx#RuleBuilder",
+    "keywords": [
+      "RuleBuilder",
+      "component",
+      "RuleBuilder.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named RuleBuilder located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/RuleBuilder.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/RuleBuilder.tsx#ConditionType",
+    "keywords": [
+      "ConditionType",
+      "component",
+      "RuleBuilder.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named ConditionType located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/RuleBuilder.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/RuleBuilder.tsx#ActionType",
+    "keywords": [
+      "ActionType",
+      "component",
+      "RuleBuilder.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named ActionType located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/RuleBuilder.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/RuleBuilder.tsx#RuleNode",
+    "keywords": [
+      "RuleNode",
+      "component",
+      "RuleBuilder.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named RuleNode located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/RuleBuilder.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/RuleBuilder.tsx",
+    "keywords": [
+      "RuleBuilder.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/RuleBuilder.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/types.ts#LinkRecord",
+    "keywords": [
+      "LinkRecord",
+      "component",
+      "types.ts"
+    ],
+    "type": "component",
+    "summary": "A component named LinkRecord located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/types.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/types.ts#SortField",
+    "keywords": [
+      "SortField",
+      "component",
+      "types.ts"
+    ],
+    "type": "component",
+    "summary": "A component named SortField located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/types.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/types.ts#SortOrder",
+    "keywords": [
+      "SortOrder",
+      "component",
+      "types.ts"
+    ],
+    "type": "component",
+    "summary": "A component named SortOrder located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/types.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/types.ts",
+    "keywords": [
+      "types.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/types.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Ambient.tsx#Ambient",
+    "keywords": [
+      "Ambient",
+      "component",
+      "Ambient.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Ambient located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Ambient.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Ambient.tsx",
+    "keywords": [
+      "Ambient.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Ambient.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Analytics.tsx#Analytics",
+    "keywords": [
+      "Analytics",
+      "component",
+      "Analytics.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Analytics located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Analytics.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Analytics.tsx",
+    "keywords": [
+      "Analytics.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Analytics.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Confidence.tsx#Confidence",
+    "keywords": [
+      "Confidence",
+      "component",
+      "Confidence.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Confidence located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Confidence.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Confidence.tsx",
+    "keywords": [
+      "Confidence.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Confidence.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/CursorRing.tsx#CursorRing",
+    "keywords": [
+      "CursorRing",
+      "component",
+      "CursorRing.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CursorRing located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/CursorRing.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/CursorRing.tsx",
+    "keywords": [
+      "CursorRing.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/CursorRing.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Finale.tsx#Finale",
+    "keywords": [
+      "Finale",
+      "component",
+      "Finale.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Finale located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Finale.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Finale.tsx",
+    "keywords": [
+      "Finale.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Finale.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/HandoffToken.tsx#HandoffToken",
+    "keywords": [
+      "HandoffToken",
+      "component",
+      "HandoffToken.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named HandoffToken located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/HandoffToken.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/HandoffToken.tsx",
+    "keywords": [
+      "HandoffToken.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/HandoffToken.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Hero.tsx#Hero",
+    "keywords": [
+      "Hero",
+      "component",
+      "Hero.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Hero located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Hero.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Hero.tsx",
+    "keywords": [
+      "Hero.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Hero.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/HeroPipeline.tsx#HeroPipeline",
+    "keywords": [
+      "HeroPipeline",
+      "component",
+      "HeroPipeline.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named HeroPipeline located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/HeroPipeline.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/HeroPipeline.tsx",
+    "keywords": [
+      "HeroPipeline.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/HeroPipeline.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Layers.tsx#Layers",
+    "keywords": [
+      "Layers",
+      "component",
+      "Layers.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Layers located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Layers.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Layers.tsx",
+    "keywords": [
+      "Layers.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Layers.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/MagneticLink.tsx#MagneticLink",
+    "keywords": [
+      "MagneticLink",
+      "component",
+      "MagneticLink.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named MagneticLink located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/MagneticLink.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/MagneticLink.tsx",
+    "keywords": [
+      "MagneticLink.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/MagneticLink.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Marquee.tsx#Marquee",
+    "keywords": [
+      "Marquee",
+      "component",
+      "Marquee.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Marquee located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Marquee.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Marquee.tsx",
+    "keywords": [
+      "Marquee.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Marquee.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Nav.tsx#Nav",
+    "keywords": [
+      "Nav",
+      "component",
+      "Nav.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Nav located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Nav.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Nav.tsx",
+    "keywords": [
+      "Nav.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Nav.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Network.tsx#Network",
+    "keywords": [
+      "Network",
+      "component",
+      "Network.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Network located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Network.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Network.tsx",
+    "keywords": [
+      "Network.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Network.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Pipeline.tsx#Pipeline",
+    "keywords": [
+      "Pipeline",
+      "component",
+      "Pipeline.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Pipeline located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Pipeline.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Pipeline.tsx",
+    "keywords": [
+      "Pipeline.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Pipeline.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Preloader.tsx#Preloader",
+    "keywords": [
+      "Preloader",
+      "component",
+      "Preloader.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Preloader located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Preloader.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Preloader.tsx",
+    "keywords": [
+      "Preloader.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Preloader.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Problem.tsx#Problem",
+    "keywords": [
+      "Problem",
+      "component",
+      "Problem.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Problem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Problem.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Problem.tsx",
+    "keywords": [
+      "Problem.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Problem.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Reveal.tsx#Reveal",
+    "keywords": [
+      "Reveal",
+      "component",
+      "Reveal.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Reveal located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Reveal.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Reveal.tsx",
+    "keywords": [
+      "Reveal.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Reveal.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/RoutingField.tsx#RoutingField",
+    "keywords": [
+      "RoutingField",
+      "component",
+      "RoutingField.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named RoutingField located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/RoutingField.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/RoutingField.tsx",
+    "keywords": [
+      "RoutingField.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/RoutingField.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/SectionGlyph.tsx#SectionGlyph",
+    "keywords": [
+      "SectionGlyph",
+      "component",
+      "SectionGlyph.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SectionGlyph located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/SectionGlyph.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/SectionGlyph.tsx",
+    "keywords": [
+      "SectionGlyph.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/SectionGlyph.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/SectionHead.tsx#SectionHead",
+    "keywords": [
+      "SectionHead",
+      "component",
+      "SectionHead.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SectionHead located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/SectionHead.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/SectionHead.tsx",
+    "keywords": [
+      "SectionHead.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/SectionHead.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/TelemetryChrome.tsx#TelemetryChrome",
+    "keywords": [
+      "TelemetryChrome",
+      "component",
+      "TelemetryChrome.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named TelemetryChrome located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/TelemetryChrome.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/TelemetryChrome.tsx",
+    "keywords": [
+      "TelemetryChrome.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/TelemetryChrome.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Terminology.tsx#Terminology",
+    "keywords": [
+      "Terminology",
+      "component",
+      "Terminology.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Terminology located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Terminology.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Terminology.tsx",
+    "keywords": [
+      "Terminology.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Terminology.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Threat.tsx#Threat",
+    "keywords": [
+      "Threat",
+      "component",
+      "Threat.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Threat located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Threat.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Threat.tsx",
+    "keywords": [
+      "Threat.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Threat.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/accordion.tsx#Accordion",
+    "keywords": [
+      "Accordion",
+      "component",
+      "accordion.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Accordion located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/accordion.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/accordion.tsx#AccordionItem",
+    "keywords": [
+      "AccordionItem",
+      "component",
+      "accordion.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named AccordionItem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/accordion.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/accordion.tsx#AccordionTrigger",
+    "keywords": [
+      "AccordionTrigger",
+      "component",
+      "accordion.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named AccordionTrigger located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/accordion.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/accordion.tsx#AccordionContent",
+    "keywords": [
+      "AccordionContent",
+      "component",
+      "accordion.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named AccordionContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/accordion.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/accordion.tsx",
+    "keywords": [
+      "accordion.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/accordion.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialog",
+    "keywords": [
+      "AlertDialog",
+      "component",
+      "alert-dialog.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named AlertDialog located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialogPortal",
+    "keywords": [
+      "AlertDialogPortal",
+      "component",
+      "alert-dialog.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named AlertDialogPortal located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialogOverlay",
+    "keywords": [
+      "AlertDialogOverlay",
+      "component",
+      "alert-dialog.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named AlertDialogOverlay located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialogTrigger",
+    "keywords": [
+      "AlertDialogTrigger",
+      "component",
+      "alert-dialog.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named AlertDialogTrigger located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialogContent",
+    "keywords": [
+      "AlertDialogContent",
+      "component",
+      "alert-dialog.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named AlertDialogContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialogHeader",
+    "keywords": [
+      "AlertDialogHeader",
+      "component",
+      "alert-dialog.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named AlertDialogHeader located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialogFooter",
+    "keywords": [
+      "AlertDialogFooter",
+      "component",
+      "alert-dialog.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named AlertDialogFooter located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialogTitle",
+    "keywords": [
+      "AlertDialogTitle",
+      "component",
+      "alert-dialog.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named AlertDialogTitle located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialogDescription",
+    "keywords": [
+      "AlertDialogDescription",
+      "component",
+      "alert-dialog.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named AlertDialogDescription located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialogAction",
+    "keywords": [
+      "AlertDialogAction",
+      "component",
+      "alert-dialog.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named AlertDialogAction located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialogCancel",
+    "keywords": [
+      "AlertDialogCancel",
+      "component",
+      "alert-dialog.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named AlertDialogCancel located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx",
+    "keywords": [
+      "alert-dialog.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert.tsx#Alert",
+    "keywords": [
+      "Alert",
+      "component",
+      "alert.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Alert located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert.tsx#AlertTitle",
+    "keywords": [
+      "AlertTitle",
+      "component",
+      "alert.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named AlertTitle located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert.tsx#AlertDescription",
+    "keywords": [
+      "AlertDescription",
+      "component",
+      "alert.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named AlertDescription located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert.tsx",
+    "keywords": [
+      "alert.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/aspect-ratio.tsx#AspectRatio",
+    "keywords": [
+      "AspectRatio",
+      "component",
+      "aspect-ratio.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named AspectRatio located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/aspect-ratio.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/aspect-ratio.tsx",
+    "keywords": [
+      "aspect-ratio.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/aspect-ratio.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/avatar.tsx#Avatar",
+    "keywords": [
+      "Avatar",
+      "component",
+      "avatar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Avatar located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/avatar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/avatar.tsx#AvatarImage",
+    "keywords": [
+      "AvatarImage",
+      "component",
+      "avatar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named AvatarImage located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/avatar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/avatar.tsx#AvatarFallback",
+    "keywords": [
+      "AvatarFallback",
+      "component",
+      "avatar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named AvatarFallback located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/avatar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/avatar.tsx",
+    "keywords": [
+      "avatar.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/avatar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/badge.tsx#BadgeProps",
+    "keywords": [
+      "BadgeProps",
+      "component",
+      "badge.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named BadgeProps located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/badge.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/badge.tsx#Badge",
+    "keywords": [
+      "Badge",
+      "component",
+      "badge.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Badge located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/badge.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/badge.tsx#badgeVariants",
+    "keywords": [
+      "badgeVariants",
+      "module",
+      "badge.tsx"
+    ],
+    "type": "module",
+    "summary": "A module named badgeVariants located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/badge.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/badge.tsx",
+    "keywords": [
+      "badge.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/badge.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx#Breadcrumb",
+    "keywords": [
+      "Breadcrumb",
+      "component",
+      "breadcrumb.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Breadcrumb located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx#BreadcrumbList",
+    "keywords": [
+      "BreadcrumbList",
+      "component",
+      "breadcrumb.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named BreadcrumbList located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx#BreadcrumbItem",
+    "keywords": [
+      "BreadcrumbItem",
+      "component",
+      "breadcrumb.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named BreadcrumbItem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx#BreadcrumbLink",
+    "keywords": [
+      "BreadcrumbLink",
+      "component",
+      "breadcrumb.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named BreadcrumbLink located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx#BreadcrumbPage",
+    "keywords": [
+      "BreadcrumbPage",
+      "component",
+      "breadcrumb.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named BreadcrumbPage located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx#BreadcrumbSeparator",
+    "keywords": [
+      "BreadcrumbSeparator",
+      "component",
+      "breadcrumb.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named BreadcrumbSeparator located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx#BreadcrumbEllipsis",
+    "keywords": [
+      "BreadcrumbEllipsis",
+      "component",
+      "breadcrumb.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named BreadcrumbEllipsis located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx",
+    "keywords": [
+      "breadcrumb.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/button.tsx#ButtonProps",
+    "keywords": [
+      "ButtonProps",
+      "component",
+      "button.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named ButtonProps located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/button.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/button.tsx#Button",
+    "keywords": [
+      "Button",
+      "component",
+      "button.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Button located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/button.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/button.tsx#buttonVariants",
+    "keywords": [
+      "buttonVariants",
+      "module",
+      "button.tsx"
+    ],
+    "type": "module",
+    "summary": "A module named buttonVariants located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/button.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/button.tsx",
+    "keywords": [
+      "button.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/button.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/calendar.tsx#Calendar",
+    "keywords": [
+      "Calendar",
+      "component",
+      "calendar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Calendar located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/calendar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/calendar.tsx#CalendarDayButton",
+    "keywords": [
+      "CalendarDayButton",
+      "component",
+      "calendar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CalendarDayButton located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/calendar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/calendar.tsx",
+    "keywords": [
+      "calendar.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/calendar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx#Card",
+    "keywords": [
+      "Card",
+      "component",
+      "card.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Card located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx#CardHeader",
+    "keywords": [
+      "CardHeader",
+      "component",
+      "card.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CardHeader located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx#CardFooter",
+    "keywords": [
+      "CardFooter",
+      "component",
+      "card.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CardFooter located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx#CardTitle",
+    "keywords": [
+      "CardTitle",
+      "component",
+      "card.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CardTitle located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx#CardDescription",
+    "keywords": [
+      "CardDescription",
+      "component",
+      "card.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CardDescription located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx#CardContent",
+    "keywords": [
+      "CardContent",
+      "component",
+      "card.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CardContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx",
+    "keywords": [
+      "card.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx#CarouselApi",
+    "keywords": [
+      "CarouselApi",
+      "component",
+      "carousel.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CarouselApi located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx#Carousel",
+    "keywords": [
+      "Carousel",
+      "component",
+      "carousel.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Carousel located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx#CarouselContent",
+    "keywords": [
+      "CarouselContent",
+      "component",
+      "carousel.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CarouselContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx#CarouselItem",
+    "keywords": [
+      "CarouselItem",
+      "component",
+      "carousel.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CarouselItem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx#CarouselPrevious",
+    "keywords": [
+      "CarouselPrevious",
+      "component",
+      "carousel.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CarouselPrevious located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx#CarouselNext",
+    "keywords": [
+      "CarouselNext",
+      "component",
+      "carousel.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CarouselNext located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx",
+    "keywords": [
+      "carousel.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx#ChartConfig",
+    "keywords": [
+      "ChartConfig",
+      "component",
+      "chart.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named ChartConfig located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx#ChartContainer",
+    "keywords": [
+      "ChartContainer",
+      "component",
+      "chart.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named ChartContainer located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx#ChartTooltip",
+    "keywords": [
+      "ChartTooltip",
+      "component",
+      "chart.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named ChartTooltip located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx#ChartTooltipContent",
+    "keywords": [
+      "ChartTooltipContent",
+      "component",
+      "chart.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named ChartTooltipContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx#ChartLegend",
+    "keywords": [
+      "ChartLegend",
+      "component",
+      "chart.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named ChartLegend located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx#ChartLegendContent",
+    "keywords": [
+      "ChartLegendContent",
+      "component",
+      "chart.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named ChartLegendContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx#ChartStyle",
+    "keywords": [
+      "ChartStyle",
+      "component",
+      "chart.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named ChartStyle located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx",
+    "keywords": [
+      "chart.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/checkbox.tsx#Checkbox",
+    "keywords": [
+      "Checkbox",
+      "component",
+      "checkbox.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Checkbox located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/checkbox.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/checkbox.tsx",
+    "keywords": [
+      "checkbox.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/checkbox.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/collapsible.tsx#Collapsible",
+    "keywords": [
+      "Collapsible",
+      "component",
+      "collapsible.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Collapsible located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/collapsible.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/collapsible.tsx#CollapsibleTrigger",
+    "keywords": [
+      "CollapsibleTrigger",
+      "component",
+      "collapsible.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CollapsibleTrigger located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/collapsible.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/collapsible.tsx#CollapsibleContent",
+    "keywords": [
+      "CollapsibleContent",
+      "component",
+      "collapsible.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CollapsibleContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/collapsible.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/collapsible.tsx",
+    "keywords": [
+      "collapsible.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/collapsible.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx#Command",
+    "keywords": [
+      "Command",
+      "component",
+      "command.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Command located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx#CommandDialog",
+    "keywords": [
+      "CommandDialog",
+      "component",
+      "command.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CommandDialog located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx#CommandInput",
+    "keywords": [
+      "CommandInput",
+      "component",
+      "command.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CommandInput located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx#CommandList",
+    "keywords": [
+      "CommandList",
+      "component",
+      "command.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CommandList located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx#CommandEmpty",
+    "keywords": [
+      "CommandEmpty",
+      "component",
+      "command.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CommandEmpty located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx#CommandGroup",
+    "keywords": [
+      "CommandGroup",
+      "component",
+      "command.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CommandGroup located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx#CommandItem",
+    "keywords": [
+      "CommandItem",
+      "component",
+      "command.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CommandItem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx#CommandShortcut",
+    "keywords": [
+      "CommandShortcut",
+      "component",
+      "command.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CommandShortcut located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx#CommandSeparator",
+    "keywords": [
+      "CommandSeparator",
+      "component",
+      "command.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named CommandSeparator located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx",
+    "keywords": [
+      "command.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenu",
+    "keywords": [
+      "ContextMenu",
+      "context",
+      "context-menu.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named ContextMenu located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuTrigger",
+    "keywords": [
+      "ContextMenuTrigger",
+      "context",
+      "context-menu.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named ContextMenuTrigger located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuContent",
+    "keywords": [
+      "ContextMenuContent",
+      "context",
+      "context-menu.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named ContextMenuContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuItem",
+    "keywords": [
+      "ContextMenuItem",
+      "context",
+      "context-menu.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named ContextMenuItem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuCheckboxItem",
+    "keywords": [
+      "ContextMenuCheckboxItem",
+      "context",
+      "context-menu.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named ContextMenuCheckboxItem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuRadioItem",
+    "keywords": [
+      "ContextMenuRadioItem",
+      "context",
+      "context-menu.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named ContextMenuRadioItem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuLabel",
+    "keywords": [
+      "ContextMenuLabel",
+      "context",
+      "context-menu.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named ContextMenuLabel located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuSeparator",
+    "keywords": [
+      "ContextMenuSeparator",
+      "context",
+      "context-menu.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named ContextMenuSeparator located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuShortcut",
+    "keywords": [
+      "ContextMenuShortcut",
+      "context",
+      "context-menu.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named ContextMenuShortcut located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuGroup",
+    "keywords": [
+      "ContextMenuGroup",
+      "context",
+      "context-menu.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named ContextMenuGroup located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuPortal",
+    "keywords": [
+      "ContextMenuPortal",
+      "context",
+      "context-menu.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named ContextMenuPortal located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuSub",
+    "keywords": [
+      "ContextMenuSub",
+      "context",
+      "context-menu.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named ContextMenuSub located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuSubContent",
+    "keywords": [
+      "ContextMenuSubContent",
+      "context",
+      "context-menu.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named ContextMenuSubContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuSubTrigger",
+    "keywords": [
+      "ContextMenuSubTrigger",
+      "context",
+      "context-menu.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named ContextMenuSubTrigger located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuRadioGroup",
+    "keywords": [
+      "ContextMenuRadioGroup",
+      "context",
+      "context-menu.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named ContextMenuRadioGroup located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx",
+    "keywords": [
+      "context-menu.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx#Dialog",
+    "keywords": [
+      "Dialog",
+      "component",
+      "dialog.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Dialog located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx#DialogPortal",
+    "keywords": [
+      "DialogPortal",
+      "component",
+      "dialog.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DialogPortal located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx#DialogOverlay",
+    "keywords": [
+      "DialogOverlay",
+      "component",
+      "dialog.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DialogOverlay located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx#DialogTrigger",
+    "keywords": [
+      "DialogTrigger",
+      "component",
+      "dialog.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DialogTrigger located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx#DialogClose",
+    "keywords": [
+      "DialogClose",
+      "component",
+      "dialog.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DialogClose located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx#DialogContent",
+    "keywords": [
+      "DialogContent",
+      "component",
+      "dialog.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DialogContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx#DialogHeader",
+    "keywords": [
+      "DialogHeader",
+      "component",
+      "dialog.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DialogHeader located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx#DialogFooter",
+    "keywords": [
+      "DialogFooter",
+      "component",
+      "dialog.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DialogFooter located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx#DialogTitle",
+    "keywords": [
+      "DialogTitle",
+      "component",
+      "dialog.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DialogTitle located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx#DialogDescription",
+    "keywords": [
+      "DialogDescription",
+      "component",
+      "dialog.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DialogDescription located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx",
+    "keywords": [
+      "dialog.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx#Drawer",
+    "keywords": [
+      "Drawer",
+      "component",
+      "drawer.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Drawer located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx#DrawerPortal",
+    "keywords": [
+      "DrawerPortal",
+      "component",
+      "drawer.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DrawerPortal located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx#DrawerOverlay",
+    "keywords": [
+      "DrawerOverlay",
+      "component",
+      "drawer.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DrawerOverlay located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx#DrawerTrigger",
+    "keywords": [
+      "DrawerTrigger",
+      "component",
+      "drawer.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DrawerTrigger located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx#DrawerClose",
+    "keywords": [
+      "DrawerClose",
+      "component",
+      "drawer.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DrawerClose located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx#DrawerContent",
+    "keywords": [
+      "DrawerContent",
+      "component",
+      "drawer.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DrawerContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx#DrawerHeader",
+    "keywords": [
+      "DrawerHeader",
+      "component",
+      "drawer.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DrawerHeader located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx#DrawerFooter",
+    "keywords": [
+      "DrawerFooter",
+      "component",
+      "drawer.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DrawerFooter located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx#DrawerTitle",
+    "keywords": [
+      "DrawerTitle",
+      "component",
+      "drawer.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DrawerTitle located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx#DrawerDescription",
+    "keywords": [
+      "DrawerDescription",
+      "component",
+      "drawer.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DrawerDescription located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx",
+    "keywords": [
+      "drawer.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenu",
+    "keywords": [
+      "DropdownMenu",
+      "component",
+      "dropdown-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DropdownMenu located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuTrigger",
+    "keywords": [
+      "DropdownMenuTrigger",
+      "component",
+      "dropdown-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DropdownMenuTrigger located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuContent",
+    "keywords": [
+      "DropdownMenuContent",
+      "component",
+      "dropdown-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DropdownMenuContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuItem",
+    "keywords": [
+      "DropdownMenuItem",
+      "component",
+      "dropdown-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DropdownMenuItem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuCheckboxItem",
+    "keywords": [
+      "DropdownMenuCheckboxItem",
+      "component",
+      "dropdown-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DropdownMenuCheckboxItem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuRadioItem",
+    "keywords": [
+      "DropdownMenuRadioItem",
+      "component",
+      "dropdown-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DropdownMenuRadioItem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuLabel",
+    "keywords": [
+      "DropdownMenuLabel",
+      "component",
+      "dropdown-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DropdownMenuLabel located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuSeparator",
+    "keywords": [
+      "DropdownMenuSeparator",
+      "component",
+      "dropdown-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DropdownMenuSeparator located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuShortcut",
+    "keywords": [
+      "DropdownMenuShortcut",
+      "component",
+      "dropdown-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DropdownMenuShortcut located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuGroup",
+    "keywords": [
+      "DropdownMenuGroup",
+      "component",
+      "dropdown-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DropdownMenuGroup located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuPortal",
+    "keywords": [
+      "DropdownMenuPortal",
+      "component",
+      "dropdown-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DropdownMenuPortal located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuSub",
+    "keywords": [
+      "DropdownMenuSub",
+      "component",
+      "dropdown-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DropdownMenuSub located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuSubContent",
+    "keywords": [
+      "DropdownMenuSubContent",
+      "component",
+      "dropdown-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DropdownMenuSubContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuSubTrigger",
+    "keywords": [
+      "DropdownMenuSubTrigger",
+      "component",
+      "dropdown-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DropdownMenuSubTrigger located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuRadioGroup",
+    "keywords": [
+      "DropdownMenuRadioGroup",
+      "component",
+      "dropdown-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named DropdownMenuRadioGroup located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx",
+    "keywords": [
+      "dropdown-menu.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx#useFormField",
+    "keywords": [
+      "useFormField",
+      "hook",
+      "form.tsx"
+    ],
+    "type": "hook",
+    "summary": "A hook named useFormField located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx#Form",
+    "keywords": [
+      "Form",
+      "component",
+      "form.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Form located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx#FormItem",
+    "keywords": [
+      "FormItem",
+      "component",
+      "form.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named FormItem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx#FormLabel",
+    "keywords": [
+      "FormLabel",
+      "component",
+      "form.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named FormLabel located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx#FormControl",
+    "keywords": [
+      "FormControl",
+      "component",
+      "form.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named FormControl located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx#FormDescription",
+    "keywords": [
+      "FormDescription",
+      "component",
+      "form.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named FormDescription located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx#FormMessage",
+    "keywords": [
+      "FormMessage",
+      "component",
+      "form.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named FormMessage located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx#FormField",
+    "keywords": [
+      "FormField",
+      "component",
+      "form.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named FormField located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx",
+    "keywords": [
+      "form.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/hover-card.tsx#HoverCard",
+    "keywords": [
+      "HoverCard",
+      "component",
+      "hover-card.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named HoverCard located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/hover-card.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/hover-card.tsx#HoverCardTrigger",
+    "keywords": [
+      "HoverCardTrigger",
+      "component",
+      "hover-card.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named HoverCardTrigger located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/hover-card.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/hover-card.tsx#HoverCardContent",
+    "keywords": [
+      "HoverCardContent",
+      "component",
+      "hover-card.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named HoverCardContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/hover-card.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/hover-card.tsx",
+    "keywords": [
+      "hover-card.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/hover-card.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input-otp.tsx#InputOTP",
+    "keywords": [
+      "InputOTP",
+      "component",
+      "input-otp.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named InputOTP located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input-otp.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input-otp.tsx#InputOTPGroup",
+    "keywords": [
+      "InputOTPGroup",
+      "component",
+      "input-otp.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named InputOTPGroup located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input-otp.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input-otp.tsx#InputOTPSlot",
+    "keywords": [
+      "InputOTPSlot",
+      "component",
+      "input-otp.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named InputOTPSlot located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input-otp.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input-otp.tsx#InputOTPSeparator",
+    "keywords": [
+      "InputOTPSeparator",
+      "component",
+      "input-otp.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named InputOTPSeparator located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input-otp.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input-otp.tsx",
+    "keywords": [
+      "input-otp.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input-otp.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input.tsx#Input",
+    "keywords": [
+      "Input",
+      "component",
+      "input.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Input located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input.tsx",
+    "keywords": [
+      "input.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/label.tsx#Label",
+    "keywords": [
+      "Label",
+      "component",
+      "label.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Label located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/label.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/label.tsx",
+    "keywords": [
+      "label.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/label.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#Menubar",
+    "keywords": [
+      "Menubar",
+      "component",
+      "menubar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Menubar located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarMenu",
+    "keywords": [
+      "MenubarMenu",
+      "component",
+      "menubar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named MenubarMenu located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarTrigger",
+    "keywords": [
+      "MenubarTrigger",
+      "component",
+      "menubar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named MenubarTrigger located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarContent",
+    "keywords": [
+      "MenubarContent",
+      "component",
+      "menubar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named MenubarContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarItem",
+    "keywords": [
+      "MenubarItem",
+      "component",
+      "menubar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named MenubarItem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarSeparator",
+    "keywords": [
+      "MenubarSeparator",
+      "component",
+      "menubar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named MenubarSeparator located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarLabel",
+    "keywords": [
+      "MenubarLabel",
+      "component",
+      "menubar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named MenubarLabel located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarCheckboxItem",
+    "keywords": [
+      "MenubarCheckboxItem",
+      "component",
+      "menubar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named MenubarCheckboxItem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarRadioGroup",
+    "keywords": [
+      "MenubarRadioGroup",
+      "component",
+      "menubar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named MenubarRadioGroup located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarRadioItem",
+    "keywords": [
+      "MenubarRadioItem",
+      "component",
+      "menubar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named MenubarRadioItem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarPortal",
+    "keywords": [
+      "MenubarPortal",
+      "component",
+      "menubar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named MenubarPortal located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarSubContent",
+    "keywords": [
+      "MenubarSubContent",
+      "component",
+      "menubar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named MenubarSubContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarSubTrigger",
+    "keywords": [
+      "MenubarSubTrigger",
+      "component",
+      "menubar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named MenubarSubTrigger located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarGroup",
+    "keywords": [
+      "MenubarGroup",
+      "component",
+      "menubar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named MenubarGroup located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarSub",
+    "keywords": [
+      "MenubarSub",
+      "component",
+      "menubar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named MenubarSub located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarShortcut",
+    "keywords": [
+      "MenubarShortcut",
+      "component",
+      "menubar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named MenubarShortcut located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx",
+    "keywords": [
+      "menubar.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx#navigationMenuTriggerStyle",
+    "keywords": [
+      "navigationMenuTriggerStyle",
+      "module",
+      "navigation-menu.tsx"
+    ],
+    "type": "module",
+    "summary": "A module named navigationMenuTriggerStyle located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx#NavigationMenu",
+    "keywords": [
+      "NavigationMenu",
+      "component",
+      "navigation-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named NavigationMenu located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx#NavigationMenuList",
+    "keywords": [
+      "NavigationMenuList",
+      "component",
+      "navigation-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named NavigationMenuList located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx#NavigationMenuItem",
+    "keywords": [
+      "NavigationMenuItem",
+      "component",
+      "navigation-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named NavigationMenuItem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx#NavigationMenuContent",
+    "keywords": [
+      "NavigationMenuContent",
+      "component",
+      "navigation-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named NavigationMenuContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx#NavigationMenuTrigger",
+    "keywords": [
+      "NavigationMenuTrigger",
+      "component",
+      "navigation-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named NavigationMenuTrigger located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx#NavigationMenuLink",
+    "keywords": [
+      "NavigationMenuLink",
+      "component",
+      "navigation-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named NavigationMenuLink located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx#NavigationMenuIndicator",
+    "keywords": [
+      "NavigationMenuIndicator",
+      "component",
+      "navigation-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named NavigationMenuIndicator located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx#NavigationMenuViewport",
+    "keywords": [
+      "NavigationMenuViewport",
+      "component",
+      "navigation-menu.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named NavigationMenuViewport located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx",
+    "keywords": [
+      "navigation-menu.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx#Pagination",
+    "keywords": [
+      "Pagination",
+      "component",
+      "pagination.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Pagination located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx#PaginationContent",
+    "keywords": [
+      "PaginationContent",
+      "component",
+      "pagination.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named PaginationContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx#PaginationLink",
+    "keywords": [
+      "PaginationLink",
+      "component",
+      "pagination.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named PaginationLink located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx#PaginationItem",
+    "keywords": [
+      "PaginationItem",
+      "component",
+      "pagination.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named PaginationItem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx#PaginationPrevious",
+    "keywords": [
+      "PaginationPrevious",
+      "component",
+      "pagination.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named PaginationPrevious located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx#PaginationNext",
+    "keywords": [
+      "PaginationNext",
+      "component",
+      "pagination.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named PaginationNext located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx#PaginationEllipsis",
+    "keywords": [
+      "PaginationEllipsis",
+      "component",
+      "pagination.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named PaginationEllipsis located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx",
+    "keywords": [
+      "pagination.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/popover.tsx#Popover",
+    "keywords": [
+      "Popover",
+      "component",
+      "popover.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Popover located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/popover.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/popover.tsx#PopoverTrigger",
+    "keywords": [
+      "PopoverTrigger",
+      "component",
+      "popover.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named PopoverTrigger located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/popover.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/popover.tsx#PopoverContent",
+    "keywords": [
+      "PopoverContent",
+      "component",
+      "popover.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named PopoverContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/popover.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/popover.tsx#PopoverAnchor",
+    "keywords": [
+      "PopoverAnchor",
+      "component",
+      "popover.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named PopoverAnchor located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/popover.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/popover.tsx",
+    "keywords": [
+      "popover.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/popover.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/progress.tsx#Progress",
+    "keywords": [
+      "Progress",
+      "component",
+      "progress.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Progress located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/progress.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/progress.tsx",
+    "keywords": [
+      "progress.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/progress.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/radio-group.tsx#RadioGroup",
+    "keywords": [
+      "RadioGroup",
+      "component",
+      "radio-group.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named RadioGroup located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/radio-group.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/radio-group.tsx#RadioGroupItem",
+    "keywords": [
+      "RadioGroupItem",
+      "component",
+      "radio-group.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named RadioGroupItem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/radio-group.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/radio-group.tsx",
+    "keywords": [
+      "radio-group.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/radio-group.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/resizable.tsx#ResizablePanelGroup",
+    "keywords": [
+      "ResizablePanelGroup",
+      "component",
+      "resizable.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named ResizablePanelGroup located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/resizable.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/resizable.tsx#ResizablePanel",
+    "keywords": [
+      "ResizablePanel",
+      "component",
+      "resizable.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named ResizablePanel located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/resizable.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/resizable.tsx#ResizableHandle",
+    "keywords": [
+      "ResizableHandle",
+      "component",
+      "resizable.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named ResizableHandle located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/resizable.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/resizable.tsx",
+    "keywords": [
+      "resizable.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/resizable.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/scroll-area.tsx#ScrollArea",
+    "keywords": [
+      "ScrollArea",
+      "component",
+      "scroll-area.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named ScrollArea located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/scroll-area.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/scroll-area.tsx#ScrollBar",
+    "keywords": [
+      "ScrollBar",
+      "component",
+      "scroll-area.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named ScrollBar located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/scroll-area.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/scroll-area.tsx",
+    "keywords": [
+      "scroll-area.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/scroll-area.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx#Select",
+    "keywords": [
+      "Select",
+      "component",
+      "select.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Select located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx#SelectGroup",
+    "keywords": [
+      "SelectGroup",
+      "component",
+      "select.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SelectGroup located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx#SelectValue",
+    "keywords": [
+      "SelectValue",
+      "component",
+      "select.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SelectValue located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx#SelectTrigger",
+    "keywords": [
+      "SelectTrigger",
+      "component",
+      "select.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SelectTrigger located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx#SelectContent",
+    "keywords": [
+      "SelectContent",
+      "component",
+      "select.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SelectContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx#SelectLabel",
+    "keywords": [
+      "SelectLabel",
+      "component",
+      "select.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SelectLabel located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx#SelectItem",
+    "keywords": [
+      "SelectItem",
+      "component",
+      "select.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SelectItem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx#SelectSeparator",
+    "keywords": [
+      "SelectSeparator",
+      "component",
+      "select.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SelectSeparator located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx#SelectScrollUpButton",
+    "keywords": [
+      "SelectScrollUpButton",
+      "component",
+      "select.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SelectScrollUpButton located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx#SelectScrollDownButton",
+    "keywords": [
+      "SelectScrollDownButton",
+      "component",
+      "select.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SelectScrollDownButton located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx",
+    "keywords": [
+      "select.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/separator.tsx#Separator",
+    "keywords": [
+      "Separator",
+      "component",
+      "separator.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Separator located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/separator.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/separator.tsx",
+    "keywords": [
+      "separator.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/separator.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx#Sheet",
+    "keywords": [
+      "Sheet",
+      "component",
+      "sheet.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Sheet located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx#SheetPortal",
+    "keywords": [
+      "SheetPortal",
+      "component",
+      "sheet.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SheetPortal located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx#SheetOverlay",
+    "keywords": [
+      "SheetOverlay",
+      "component",
+      "sheet.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SheetOverlay located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx#SheetTrigger",
+    "keywords": [
+      "SheetTrigger",
+      "component",
+      "sheet.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SheetTrigger located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx#SheetClose",
+    "keywords": [
+      "SheetClose",
+      "component",
+      "sheet.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SheetClose located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx#SheetContent",
+    "keywords": [
+      "SheetContent",
+      "component",
+      "sheet.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SheetContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx#SheetHeader",
+    "keywords": [
+      "SheetHeader",
+      "component",
+      "sheet.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SheetHeader located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx#SheetFooter",
+    "keywords": [
+      "SheetFooter",
+      "component",
+      "sheet.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SheetFooter located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx#SheetTitle",
+    "keywords": [
+      "SheetTitle",
+      "component",
+      "sheet.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SheetTitle located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx#SheetDescription",
+    "keywords": [
+      "SheetDescription",
+      "component",
+      "sheet.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SheetDescription located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx",
+    "keywords": [
+      "sheet.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#Sidebar",
+    "keywords": [
+      "Sidebar",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Sidebar located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarContent",
+    "keywords": [
+      "SidebarContent",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SidebarContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarFooter",
+    "keywords": [
+      "SidebarFooter",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SidebarFooter located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarGroup",
+    "keywords": [
+      "SidebarGroup",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SidebarGroup located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarGroupAction",
+    "keywords": [
+      "SidebarGroupAction",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SidebarGroupAction located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarGroupContent",
+    "keywords": [
+      "SidebarGroupContent",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SidebarGroupContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarGroupLabel",
+    "keywords": [
+      "SidebarGroupLabel",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SidebarGroupLabel located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarHeader",
+    "keywords": [
+      "SidebarHeader",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SidebarHeader located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarInput",
+    "keywords": [
+      "SidebarInput",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SidebarInput located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarInset",
+    "keywords": [
+      "SidebarInset",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SidebarInset located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarMenu",
+    "keywords": [
+      "SidebarMenu",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SidebarMenu located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarMenuAction",
+    "keywords": [
+      "SidebarMenuAction",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SidebarMenuAction located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarMenuBadge",
+    "keywords": [
+      "SidebarMenuBadge",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SidebarMenuBadge located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarMenuButton",
+    "keywords": [
+      "SidebarMenuButton",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SidebarMenuButton located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarMenuItem",
+    "keywords": [
+      "SidebarMenuItem",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SidebarMenuItem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarMenuSkeleton",
+    "keywords": [
+      "SidebarMenuSkeleton",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SidebarMenuSkeleton located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarMenuSub",
+    "keywords": [
+      "SidebarMenuSub",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SidebarMenuSub located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarMenuSubButton",
+    "keywords": [
+      "SidebarMenuSubButton",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SidebarMenuSubButton located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarMenuSubItem",
+    "keywords": [
+      "SidebarMenuSubItem",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SidebarMenuSubItem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarProvider",
+    "keywords": [
+      "SidebarProvider",
+      "context",
+      "sidebar.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named SidebarProvider located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarRail",
+    "keywords": [
+      "SidebarRail",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SidebarRail located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarSeparator",
+    "keywords": [
+      "SidebarSeparator",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SidebarSeparator located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarTrigger",
+    "keywords": [
+      "SidebarTrigger",
+      "component",
+      "sidebar.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named SidebarTrigger located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#useSidebar",
+    "keywords": [
+      "useSidebar",
+      "hook",
+      "sidebar.tsx"
+    ],
+    "type": "hook",
+    "summary": "A hook named useSidebar located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "keywords": [
+      "sidebar.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/skeleton.tsx#Skeleton",
+    "keywords": [
+      "Skeleton",
+      "component",
+      "skeleton.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Skeleton located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/skeleton.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/skeleton.tsx",
+    "keywords": [
+      "skeleton.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/skeleton.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/slider.tsx#Slider",
+    "keywords": [
+      "Slider",
+      "component",
+      "slider.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Slider located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/slider.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/slider.tsx",
+    "keywords": [
+      "slider.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/slider.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sonner.tsx#Toaster",
+    "keywords": [
+      "Toaster",
+      "component",
+      "sonner.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Toaster located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sonner.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sonner.tsx",
+    "keywords": [
+      "sonner.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sonner.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/switch.tsx#Switch",
+    "keywords": [
+      "Switch",
+      "component",
+      "switch.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Switch located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/switch.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/switch.tsx",
+    "keywords": [
+      "switch.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/switch.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx#Table",
+    "keywords": [
+      "Table",
+      "component",
+      "table.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Table located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx#TableHeader",
+    "keywords": [
+      "TableHeader",
+      "component",
+      "table.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named TableHeader located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx#TableBody",
+    "keywords": [
+      "TableBody",
+      "component",
+      "table.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named TableBody located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx#TableFooter",
+    "keywords": [
+      "TableFooter",
+      "component",
+      "table.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named TableFooter located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx#TableHead",
+    "keywords": [
+      "TableHead",
+      "component",
+      "table.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named TableHead located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx#TableRow",
+    "keywords": [
+      "TableRow",
+      "component",
+      "table.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named TableRow located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx#TableCell",
+    "keywords": [
+      "TableCell",
+      "component",
+      "table.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named TableCell located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx#TableCaption",
+    "keywords": [
+      "TableCaption",
+      "component",
+      "table.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named TableCaption located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx",
+    "keywords": [
+      "table.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tabs.tsx#Tabs",
+    "keywords": [
+      "Tabs",
+      "component",
+      "tabs.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Tabs located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tabs.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tabs.tsx#TabsList",
+    "keywords": [
+      "TabsList",
+      "component",
+      "tabs.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named TabsList located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tabs.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tabs.tsx#TabsTrigger",
+    "keywords": [
+      "TabsTrigger",
+      "component",
+      "tabs.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named TabsTrigger located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tabs.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tabs.tsx#TabsContent",
+    "keywords": [
+      "TabsContent",
+      "component",
+      "tabs.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named TabsContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tabs.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tabs.tsx",
+    "keywords": [
+      "tabs.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tabs.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/textarea.tsx#Textarea",
+    "keywords": [
+      "Textarea",
+      "component",
+      "textarea.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Textarea located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/textarea.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/textarea.tsx",
+    "keywords": [
+      "textarea.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/textarea.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/toggle-group.tsx#ToggleGroup",
+    "keywords": [
+      "ToggleGroup",
+      "component",
+      "toggle-group.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named ToggleGroup located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/toggle-group.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/toggle-group.tsx#ToggleGroupItem",
+    "keywords": [
+      "ToggleGroupItem",
+      "component",
+      "toggle-group.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named ToggleGroupItem located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/toggle-group.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/toggle-group.tsx",
+    "keywords": [
+      "toggle-group.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/toggle-group.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/toggle.tsx#Toggle",
+    "keywords": [
+      "Toggle",
+      "component",
+      "toggle.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Toggle located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/toggle.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/toggle.tsx#toggleVariants",
+    "keywords": [
+      "toggleVariants",
+      "module",
+      "toggle.tsx"
+    ],
+    "type": "module",
+    "summary": "A module named toggleVariants located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/toggle.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/toggle.tsx",
+    "keywords": [
+      "toggle.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/toggle.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tooltip.tsx#Tooltip",
+    "keywords": [
+      "Tooltip",
+      "component",
+      "tooltip.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named Tooltip located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tooltip.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tooltip.tsx#TooltipTrigger",
+    "keywords": [
+      "TooltipTrigger",
+      "component",
+      "tooltip.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named TooltipTrigger located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tooltip.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tooltip.tsx#TooltipContent",
+    "keywords": [
+      "TooltipContent",
+      "component",
+      "tooltip.tsx"
+    ],
+    "type": "component",
+    "summary": "A component named TooltipContent located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tooltip.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tooltip.tsx#TooltipProvider",
+    "keywords": [
+      "TooltipProvider",
+      "context",
+      "tooltip.tsx"
+    ],
+    "type": "context",
+    "summary": "A context named TooltipProvider located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tooltip.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tooltip.tsx",
+    "keywords": [
+      "tooltip.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tooltip.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts#AuthUser",
+    "keywords": [
+      "AuthUser",
+      "zustand store",
+      "auth-store.ts"
+    ],
+    "type": "zustand store",
+    "summary": "A zustand store named AuthUser located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts#AuthState",
+    "keywords": [
+      "AuthState",
+      "zustand store",
+      "auth-store.ts"
+    ],
+    "type": "zustand store",
+    "summary": "A zustand store named AuthState located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts#AuthActions",
+    "keywords": [
+      "AuthActions",
+      "zustand store",
+      "auth-store.ts"
+    ],
+    "type": "zustand store",
+    "summary": "A zustand store named AuthActions located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts#useAuthStore",
+    "keywords": [
+      "useAuthStore",
+      "zustand store",
+      "auth-store.ts"
+    ],
+    "type": "zustand store",
+    "summary": "A zustand store named useAuthStore located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts#supabase",
+    "keywords": [
+      "supabase",
+      "zustand store",
+      "auth-store.ts"
+    ],
+    "type": "zustand store",
+    "summary": "A zustand store named supabase located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts",
+    "keywords": [
+      "auth-store.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/supabase/admin.server.ts#createAdminClient",
+    "keywords": [
+      "createAdminClient",
+      "shared utility",
+      "admin.server.ts"
+    ],
+    "type": "shared utility",
+    "summary": "A shared utility named createAdminClient located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/supabase/admin.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/supabase/admin.server.ts",
+    "keywords": [
+      "admin.server.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/supabase/admin.server.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/supabase/client.ts#createClient",
+    "keywords": [
+      "createClient",
+      "shared utility",
+      "client.ts"
+    ],
+    "type": "shared utility",
+    "summary": "A shared utility named createClient located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/supabase/client.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/supabase/client.ts",
+    "keywords": [
+      "client.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/supabase/client.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/analytics.tsx#Route",
+    "keywords": [
+      "Route",
+      "route",
+      "analytics.tsx"
+    ],
+    "type": "route",
+    "summary": "A route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/analytics.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/analytics.tsx",
+    "keywords": [
+      "analytics.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/analytics.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/audit-logs.tsx#Route",
+    "keywords": [
+      "Route",
+      "route",
+      "audit-logs.tsx"
+    ],
+    "type": "route",
+    "summary": "A route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/audit-logs.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/audit-logs.tsx",
+    "keywords": [
+      "audit-logs.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/audit-logs.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/dashboard.tsx#Route",
+    "keywords": [
+      "Route",
+      "route",
+      "dashboard.tsx"
+    ],
+    "type": "route",
+    "summary": "A route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/dashboard.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/dashboard.tsx",
+    "keywords": [
+      "dashboard.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/dashboard.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/docs.tsx#Route",
+    "keywords": [
+      "Route",
+      "route",
+      "docs.tsx"
+    ],
+    "type": "route",
+    "summary": "A route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/docs.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/docs.tsx",
+    "keywords": [
+      "docs.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/docs.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/links.$id.tsx#Route",
+    "keywords": [
+      "Route",
+      "route",
+      "links.$id.tsx"
+    ],
+    "type": "route",
+    "summary": "A route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/links.$id.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/links.$id.tsx",
+    "keywords": [
+      "links.$id.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/links.$id.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/links.tsx#Route",
+    "keywords": [
+      "Route",
+      "route",
+      "links.tsx"
+    ],
+    "type": "route",
+    "summary": "A route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/links.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/links.tsx",
+    "keywords": [
+      "links.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/links.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/ml-engine.tsx#Route",
+    "keywords": [
+      "Route",
+      "route",
+      "ml-engine.tsx"
+    ],
+    "type": "route",
+    "summary": "A route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/ml-engine.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/ml-engine.tsx",
+    "keywords": [
+      "ml-engine.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/ml-engine.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/rules.tsx#Route",
+    "keywords": [
+      "Route",
+      "route",
+      "rules.tsx"
+    ],
+    "type": "route",
+    "summary": "A route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/rules.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/rules.tsx",
+    "keywords": [
+      "rules.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/rules.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/security.tsx#Route",
+    "keywords": [
+      "Route",
+      "route",
+      "security.tsx"
+    ],
+    "type": "route",
+    "summary": "A route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/security.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/security.tsx",
+    "keywords": [
+      "security.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/security.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/settings.tsx#Route",
+    "keywords": [
+      "Route",
+      "route",
+      "settings.tsx"
+    ],
+    "type": "route",
+    "summary": "A route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/settings.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/settings.tsx",
+    "keywords": [
+      "settings.tsx",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/settings.tsx"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/login.ts#Route",
+    "keywords": [
+      "Route",
+      "api route",
+      "login.ts"
+    ],
+    "type": "api route",
+    "summary": "A api route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/login.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/login.ts",
+    "keywords": [
+      "login.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/login.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/logout.ts#Route",
+    "keywords": [
+      "Route",
+      "api route",
+      "logout.ts"
+    ],
+    "type": "api route",
+    "summary": "A api route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/logout.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/logout.ts",
+    "keywords": [
+      "logout.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/logout.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/me.ts#Route",
+    "keywords": [
+      "Route",
+      "api route",
+      "me.ts"
+    ],
+    "type": "api route",
+    "summary": "A api route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/me.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/me.ts",
+    "keywords": [
+      "me.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/me.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/signup.ts#Route",
+    "keywords": [
+      "Route",
+      "api route",
+      "signup.ts"
+    ],
+    "type": "api route",
+    "summary": "A api route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/signup.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/signup.ts",
+    "keywords": [
+      "signup.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/signup.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/links/$id.ts#Route",
+    "keywords": [
+      "Route",
+      "api route",
+      "$id.ts"
+    ],
+    "type": "api route",
+    "summary": "A api route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/links/$id.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/links/$id.ts",
+    "keywords": [
+      "$id.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/links/$id.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/links/check-slug.ts#Route",
+    "keywords": [
+      "Route",
+      "api route",
+      "check-slug.ts"
+    ],
+    "type": "api route",
+    "summary": "A api route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/links/check-slug.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/links/check-slug.ts",
+    "keywords": [
+      "check-slug.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/links/check-slug.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/links/index.ts#Route",
+    "keywords": [
+      "Route",
+      "api route",
+      "index.ts"
+    ],
+    "type": "api route",
+    "summary": "A api route named Route located in C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/links/index.ts"
+  },
+  {
+    "id": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/links/index.ts",
+    "keywords": [
+      "index.ts",
+      "file"
+    ],
+    "type": "file",
+    "summary": "Source file C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/links/index.ts"
+  }
+]

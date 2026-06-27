@@ -1,0 +1,2507 @@
+[
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/vite.config.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/vite.config.ts#default",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/router.tsx",
+    "to": "./routeTree.gen",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/router.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/router.tsx#getRouter",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/__root",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/sitemap[.]xml",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/auth",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/_authenticated",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/index",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/_authenticated/settings",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/_authenticated/security",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/_authenticated/rules",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/_authenticated/ml-engine",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/_authenticated/links",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/_authenticated/docs",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/_authenticated/dashboard",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/_authenticated/audit-logs",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/_authenticated/analytics",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/_authenticated/links.$id",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/api/v1/links/index",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/api/v1/links/check-slug",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/api/v1/links/$id",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/api/v1/auth/signup",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/api/v1/auth/me",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/api/v1/auth/logout",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "./routes/api/v1/auth/login",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts#FileRoutesByFullPath",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts#FileRoutesByTo",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts#FileRoutesById",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts#FileRouteTypes",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts#RootRouteChildren",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routeTree.gen.ts#routeTree",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/server.ts",
+    "to": "./lib/error-capture",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/server.ts",
+    "to": "./lib/error-capture",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/server.ts",
+    "to": "./lib/error-page",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/server.ts#default",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/start.ts",
+    "to": "./lib/error-page",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/start.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/start.ts#startInstance",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/hooks/use-mobile.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/hooks/use-mobile.tsx#useIsMobile",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#logEvent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#extractIpAddress",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#AuditEventType",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#AuditEventTypeValue",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#USER_LOGIN_SUCCESS",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#USER_LOGIN_FAILED",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#USER_SIGNUP",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#USER_LOGOUT",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#LINK_CREATED",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#LINK_UPDATED",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#LINK_DELETED",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#RULE_CREATED",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#RULE_UPDATED",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#RULE_DELETED",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#ML_MODEL_DEPLOYED",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#ML_MODEL_UPDATED",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#RATE_LIMIT_EXCEEDED",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#ASSET_UPLOADED",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#UNAUTHORIZED_ACCESS",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/audit-logger.server.ts#AuditLogDetails",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/env.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/env.ts#resolvePublicSupabaseUrl",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/env.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/env.ts#resolvePublicSupabaseKey",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/env.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/env.ts#PUBLIC_ENV",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/error-capture.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/error-capture.ts#consumeLastCapturedError",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/error-page.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/error-page.ts#renderErrorPage",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/lovable-error-reporting.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/lovable-error-reporting.ts#reportLovableError",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/mobile-scroll-owner.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/mobile-scroll-owner.ts#useMobileScrollOwner",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#MotionProvider",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#usePointer",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#usePrefersReducedMotion",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#useElementProgress",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#useParallax",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#useParallaxRef",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#useMagnetic",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#useTilt",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#usePointerParallax",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#useInView",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#Kinetic",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#Mask",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/motion.tsx#CountUp",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts#EASE",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts#SPRING",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts#lerpK",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts#clamp",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts#lerp",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts#range",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/physics.ts#arc",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#SignupSchema",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#SignupInput",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#LoginSchema",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#LoginInput",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#CreateLinkSchema",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#CreateLinkInput",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#UpdateLinkSchema",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#UpdateLinkInput",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#RuleTypeEnum",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#RuleType",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#RedirectRuleSchema",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#RedirectRuleInput",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#UpdateRedirectRuleSchema",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#UpdateRedirectRuleInput",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#MlModelSchema",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#MlModelInput",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#UpdateMlModelSchema",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#UpdateMlModelInput",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#PaginationSchema",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#PaginationInput",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#AuditLogQuerySchema",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/schemas.ts#AuditLogQueryInput",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/scroll-progress.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/scroll-progress.tsx#ScrollProgressProvider",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/scroll-progress.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/scroll-progress.tsx#useProgressRef",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/scroll-progress.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/scroll-progress.tsx#useProgressSubscribe",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stage.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stage.tsx#StageProvider",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stage.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stage.tsx#useStage",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stage.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stage.tsx#useStageFrame",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stage.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stage.tsx#StageFrame",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/token.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/token.tsx#TokenProvider",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/token.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/token.tsx#useRequestToken",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/token.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/token.tsx#RequestToken",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/utils.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/utils.ts#cn",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/__root.tsx",
+    "to": "../styles.css?url",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/__root.tsx",
+    "to": "../lib/lovable-error-reporting",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/__root.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/__root.tsx#Route",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated.tsx#Route",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/auth.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/auth.tsx#Route",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "../lib/scroll-progress",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "../lib/motion",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "../lib/stage",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "../lib/token",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "../components/site/Nav",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "../components/site/Hero",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "../components/site/Problem",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "../components/site/Pipeline",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "../components/site/Threat",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "../components/site/Analytics",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "../components/site/Network",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "../components/site/Layers",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "../components/site/Confidence",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "../components/site/Finale",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "../components/site/RoutingField",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "../components/site/TelemetryChrome",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "../components/site/CursorRing",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "../components/site/Preloader",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "../components/site/SectionGlyph",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "../components/site/HandoffToken",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "../components/site/Terminology",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx#Route",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/sitemap[.]xml.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/sitemap[.]xml.ts#Route",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/app/AppShell.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/app/AppShell.tsx#AppShell",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/auth/AuthProvider.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/auth/AuthProvider.tsx#AuthProvider",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/auth/AuthProvider.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/auth/AuthProvider.tsx#default",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/CreateLinkPanel.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/CreateLinkPanel.tsx#CreateLinkPanel",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/LinksManager.tsx",
+    "to": "./LinksTable",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/LinksManager.tsx",
+    "to": "./CreateLinkPanel",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/LinksManager.tsx",
+    "to": "./RuleBuilder",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/LinksManager.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/LinksManager.tsx#LinksManager",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/LinksTable.tsx",
+    "to": "./types",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/LinksTable.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/LinksTable.tsx#LinksTable",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/RuleBuilder.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/RuleBuilder.tsx#RuleBuilder",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/RuleBuilder.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/RuleBuilder.tsx#ConditionType",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/RuleBuilder.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/RuleBuilder.tsx#ActionType",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/RuleBuilder.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/RuleBuilder.tsx#RuleNode",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/types.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/types.ts#LinkRecord",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/types.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/types.ts#SortField",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/types.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/links/types.ts#SortOrder",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Ambient.tsx",
+    "to": "../../lib/motion",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Ambient.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Ambient.tsx#Ambient",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Analytics.tsx",
+    "to": "./SectionHead",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Analytics.tsx",
+    "to": "../../lib/motion",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Analytics.tsx",
+    "to": "../../lib/token",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Analytics.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Analytics.tsx#Analytics",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Confidence.tsx",
+    "to": "./SectionHead",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Confidence.tsx",
+    "to": "../../lib/motion",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Confidence.tsx",
+    "to": "../../lib/stage",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Confidence.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Confidence.tsx#Confidence",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/CursorRing.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/CursorRing.tsx#CursorRing",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Finale.tsx",
+    "to": "../../lib/motion",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Finale.tsx",
+    "to": "./MagneticLink",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Finale.tsx",
+    "to": "./Marquee",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Finale.tsx",
+    "to": "../../lib/token",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Finale.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Finale.tsx#Finale",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/HandoffToken.tsx",
+    "to": "../../lib/stage",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/HandoffToken.tsx",
+    "to": "../../lib/token",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/HandoffToken.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/HandoffToken.tsx#HandoffToken",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Hero.tsx",
+    "to": "../../lib/motion",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Hero.tsx",
+    "to": "./MagneticLink",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Hero.tsx",
+    "to": "../../lib/token",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Hero.tsx",
+    "to": "./HeroPipeline",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Hero.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Hero.tsx#Hero",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/HeroPipeline.tsx",
+    "to": "../../lib/token",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/HeroPipeline.tsx",
+    "to": "../../lib/stage",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/HeroPipeline.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/HeroPipeline.tsx#HeroPipeline",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Layers.tsx",
+    "to": "./SectionHead",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Layers.tsx",
+    "to": "../../lib/stage",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Layers.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Layers.tsx#Layers",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/MagneticLink.tsx",
+    "to": "../../lib/motion",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/MagneticLink.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/MagneticLink.tsx#MagneticLink",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Marquee.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Marquee.tsx#Marquee",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Nav.tsx",
+    "to": "./MagneticLink",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Nav.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Nav.tsx#Nav",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Network.tsx",
+    "to": "./SectionHead",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Network.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Network.tsx#Network",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Pipeline.tsx",
+    "to": "./SectionHead",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Pipeline.tsx",
+    "to": "../../lib/stage",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Pipeline.tsx",
+    "to": "../../lib/token",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Pipeline.tsx",
+    "to": "../../lib/mobile-scroll-owner",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Pipeline.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Pipeline.tsx#Pipeline",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Preloader.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Preloader.tsx#Preloader",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Problem.tsx",
+    "to": "../../lib/motion",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Problem.tsx",
+    "to": "./SectionHead",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Problem.tsx",
+    "to": "../../lib/stage",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Problem.tsx",
+    "to": "../../lib/mobile-scroll-owner",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Problem.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Problem.tsx#Problem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Reveal.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Reveal.tsx#Reveal",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/RoutingField.tsx",
+    "to": "../../lib/stage",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/RoutingField.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/RoutingField.tsx#RoutingField",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/SectionGlyph.tsx",
+    "to": "../../lib/stage",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/SectionGlyph.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/SectionGlyph.tsx#SectionGlyph",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/SectionHead.tsx",
+    "to": "./Reveal",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/SectionHead.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/SectionHead.tsx#SectionHead",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/TelemetryChrome.tsx",
+    "to": "../../lib/stage",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/TelemetryChrome.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/TelemetryChrome.tsx#TelemetryChrome",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Terminology.tsx",
+    "to": "../../lib/stage",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Terminology.tsx",
+    "to": "../../lib/mobile-scroll-owner",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Terminology.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Terminology.tsx#Terminology",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Threat.tsx",
+    "to": "./SectionHead",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Threat.tsx",
+    "to": "../../lib/motion",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Threat.tsx",
+    "to": "../../lib/token",
+    "type": "imports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Threat.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/site/Threat.tsx#Threat",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/accordion.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/accordion.tsx#Accordion",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/accordion.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/accordion.tsx#AccordionItem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/accordion.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/accordion.tsx#AccordionTrigger",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/accordion.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/accordion.tsx#AccordionContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialog",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialogPortal",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialogOverlay",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialogTrigger",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialogContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialogHeader",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialogFooter",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialogTitle",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialogDescription",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialogAction",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert-dialog.tsx#AlertDialogCancel",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert.tsx#Alert",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert.tsx#AlertTitle",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/alert.tsx#AlertDescription",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/aspect-ratio.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/aspect-ratio.tsx#AspectRatio",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/avatar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/avatar.tsx#Avatar",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/avatar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/avatar.tsx#AvatarImage",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/avatar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/avatar.tsx#AvatarFallback",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/badge.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/badge.tsx#BadgeProps",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/badge.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/badge.tsx#Badge",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/badge.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/badge.tsx#badgeVariants",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx#Breadcrumb",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx#BreadcrumbList",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx#BreadcrumbItem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx#BreadcrumbLink",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx#BreadcrumbPage",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx#BreadcrumbSeparator",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/breadcrumb.tsx#BreadcrumbEllipsis",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/button.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/button.tsx#ButtonProps",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/button.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/button.tsx#Button",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/button.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/button.tsx#buttonVariants",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/calendar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/calendar.tsx#Calendar",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/calendar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/calendar.tsx#CalendarDayButton",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx#Card",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx#CardHeader",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx#CardFooter",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx#CardTitle",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx#CardDescription",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/card.tsx#CardContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx#CarouselApi",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx#Carousel",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx#CarouselContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx#CarouselItem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx#CarouselPrevious",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/carousel.tsx#CarouselNext",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx#ChartConfig",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx#ChartContainer",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx#ChartTooltip",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx#ChartTooltipContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx#ChartLegend",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx#ChartLegendContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/chart.tsx#ChartStyle",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/checkbox.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/checkbox.tsx#Checkbox",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/collapsible.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/collapsible.tsx#Collapsible",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/collapsible.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/collapsible.tsx#CollapsibleTrigger",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/collapsible.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/collapsible.tsx#CollapsibleContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx#Command",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx#CommandDialog",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx#CommandInput",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx#CommandList",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx#CommandEmpty",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx#CommandGroup",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx#CommandItem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx#CommandShortcut",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/command.tsx#CommandSeparator",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenu",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuTrigger",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuItem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuCheckboxItem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuRadioItem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuLabel",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuSeparator",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuShortcut",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuGroup",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuPortal",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuSub",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuSubContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuSubTrigger",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/context-menu.tsx#ContextMenuRadioGroup",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx#Dialog",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx#DialogPortal",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx#DialogOverlay",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx#DialogTrigger",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx#DialogClose",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx#DialogContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx#DialogHeader",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx#DialogFooter",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx#DialogTitle",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dialog.tsx#DialogDescription",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx#Drawer",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx#DrawerPortal",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx#DrawerOverlay",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx#DrawerTrigger",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx#DrawerClose",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx#DrawerContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx#DrawerHeader",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx#DrawerFooter",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx#DrawerTitle",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/drawer.tsx#DrawerDescription",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenu",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuTrigger",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuItem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuCheckboxItem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuRadioItem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuLabel",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuSeparator",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuShortcut",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuGroup",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuPortal",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuSub",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuSubContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuSubTrigger",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/dropdown-menu.tsx#DropdownMenuRadioGroup",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx#useFormField",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx#Form",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx#FormItem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx#FormLabel",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx#FormControl",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx#FormDescription",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx#FormMessage",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/form.tsx#FormField",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/hover-card.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/hover-card.tsx#HoverCard",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/hover-card.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/hover-card.tsx#HoverCardTrigger",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/hover-card.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/hover-card.tsx#HoverCardContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input-otp.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input-otp.tsx#InputOTP",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input-otp.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input-otp.tsx#InputOTPGroup",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input-otp.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input-otp.tsx#InputOTPSlot",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input-otp.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input-otp.tsx#InputOTPSeparator",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/input.tsx#Input",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/label.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/label.tsx#Label",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#Menubar",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarMenu",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarTrigger",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarItem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarSeparator",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarLabel",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarCheckboxItem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarRadioGroup",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarRadioItem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarPortal",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarSubContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarSubTrigger",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarGroup",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarSub",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/menubar.tsx#MenubarShortcut",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx#navigationMenuTriggerStyle",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx#NavigationMenu",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx#NavigationMenuList",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx#NavigationMenuItem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx#NavigationMenuContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx#NavigationMenuTrigger",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx#NavigationMenuLink",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx#NavigationMenuIndicator",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/navigation-menu.tsx#NavigationMenuViewport",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx#Pagination",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx#PaginationContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx#PaginationLink",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx#PaginationItem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx#PaginationPrevious",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx#PaginationNext",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/pagination.tsx#PaginationEllipsis",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/popover.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/popover.tsx#Popover",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/popover.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/popover.tsx#PopoverTrigger",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/popover.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/popover.tsx#PopoverContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/popover.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/popover.tsx#PopoverAnchor",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/progress.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/progress.tsx#Progress",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/radio-group.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/radio-group.tsx#RadioGroup",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/radio-group.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/radio-group.tsx#RadioGroupItem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/resizable.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/resizable.tsx#ResizablePanelGroup",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/resizable.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/resizable.tsx#ResizablePanel",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/resizable.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/resizable.tsx#ResizableHandle",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/scroll-area.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/scroll-area.tsx#ScrollArea",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/scroll-area.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/scroll-area.tsx#ScrollBar",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx#Select",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx#SelectGroup",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx#SelectValue",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx#SelectTrigger",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx#SelectContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx#SelectLabel",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx#SelectItem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx#SelectSeparator",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx#SelectScrollUpButton",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/select.tsx#SelectScrollDownButton",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/separator.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/separator.tsx#Separator",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx#Sheet",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx#SheetPortal",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx#SheetOverlay",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx#SheetTrigger",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx#SheetClose",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx#SheetContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx#SheetHeader",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx#SheetFooter",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx#SheetTitle",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sheet.tsx#SheetDescription",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#Sidebar",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarFooter",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarGroup",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarGroupAction",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarGroupContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarGroupLabel",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarHeader",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarInput",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarInset",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarMenu",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarMenuAction",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarMenuBadge",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarMenuButton",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarMenuItem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarMenuSkeleton",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarMenuSub",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarMenuSubButton",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarMenuSubItem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarProvider",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarRail",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarSeparator",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#SidebarTrigger",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sidebar.tsx#useSidebar",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/skeleton.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/skeleton.tsx#Skeleton",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/slider.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/slider.tsx#Slider",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sonner.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/sonner.tsx#Toaster",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/switch.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/switch.tsx#Switch",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx#Table",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx#TableHeader",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx#TableBody",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx#TableFooter",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx#TableHead",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx#TableRow",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx#TableCell",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/table.tsx#TableCaption",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tabs.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tabs.tsx#Tabs",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tabs.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tabs.tsx#TabsList",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tabs.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tabs.tsx#TabsTrigger",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tabs.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tabs.tsx#TabsContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/textarea.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/textarea.tsx#Textarea",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/toggle-group.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/toggle-group.tsx#ToggleGroup",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/toggle-group.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/toggle-group.tsx#ToggleGroupItem",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/toggle.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/toggle.tsx#Toggle",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/toggle.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/toggle.tsx#toggleVariants",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tooltip.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tooltip.tsx#Tooltip",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tooltip.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tooltip.tsx#TooltipTrigger",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tooltip.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tooltip.tsx#TooltipContent",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tooltip.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/components/ui/tooltip.tsx#TooltipProvider",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts#AuthUser",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts#AuthState",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts#AuthActions",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts#useAuthStore",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/stores/auth-store.ts#supabase",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/supabase/admin.server.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/supabase/admin.server.ts#createAdminClient",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/supabase/client.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/lib/supabase/client.ts#createClient",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/analytics.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/analytics.tsx#Route",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/audit-logs.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/audit-logs.tsx#Route",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/dashboard.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/dashboard.tsx#Route",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/docs.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/docs.tsx#Route",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/links.$id.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/links.$id.tsx#Route",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/links.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/links.tsx#Route",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/ml-engine.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/ml-engine.tsx#Route",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/rules.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/rules.tsx#Route",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/security.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/security.tsx#Route",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/settings.tsx",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/settings.tsx#Route",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/login.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/login.ts#Route",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/logout.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/logout.ts#Route",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/me.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/me.ts#Route",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/signup.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/auth/signup.ts#Route",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/links/$id.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/links/$id.ts#Route",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/links/check-slug.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/links/check-slug.ts#Route",
+    "type": "exports"
+  },
+  {
+    "from": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/links/index.ts",
+    "to": "C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/api/v1/links/index.ts#Route",
+    "type": "exports"
+  }
+]
