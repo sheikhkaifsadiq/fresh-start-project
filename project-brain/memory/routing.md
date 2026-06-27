@@ -1,18 +1,33 @@
-# ROUTING
+# File-Based Routing and Navigation
 
-## Routes Extracted:
-- C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/__root.tsx
-- C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated.tsx
-- C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/auth.tsx
-- C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/index.tsx
-- C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/sitemap[.]xml.ts
-- C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/analytics.tsx
-- C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/audit-logs.tsx
-- C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/dashboard.tsx
-- C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/docs.tsx
-- C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/links.$id.tsx
-- C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/links.tsx
-- C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/ml-engine.tsx
-- C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/rules.tsx
-- C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/security.tsx
-- C:/Users/Sheikhkaifsadiq/Desktop/Aegis Route/src/routes/_authenticated/settings.tsx
+## 6. Routing
+
+File-based. Conventions in `<tanstack-route-architecture>` apply.
+
+- `/` public landing (SSR on)
+- `/auth` public sign-in/sign-up
+- `/_authenticated/*` gated subtree. The `_authenticated.tsx` layout checks Supabase session client-side and redirects to `/auth` if absent. **Do not author a competing gate elsewhere.**
+- Server routes: `/api/v1/auth/*`, `/api/v1/links/*`.
+- `/sitemap.xml` via `sitemap[.]xml.ts`.
+
+Navigate with `<Link to=... params=...>` from `@tanstack/react-router`. Never `<a href>` for internal routes.
+
+---
+
+
+## Active Route Map
+- [Route](file://C:\Users\Sheikhkaifsadiq\Desktop\Aegis Route/src/routes/__root.tsx)
+- [Route](file://C:\Users\Sheikhkaifsadiq\Desktop\Aegis Route/src/routes/_authenticated.tsx)
+- [Route](file://C:\Users\Sheikhkaifsadiq\Desktop\Aegis Route/src/routes/auth.tsx)
+- [Route](file://C:\Users\Sheikhkaifsadiq\Desktop\Aegis Route/src/routes/index.tsx)
+- [Route](file://C:\Users\Sheikhkaifsadiq\Desktop\Aegis Route/src/routes/sitemap[.]xml.ts)
+- [Route](file://C:\Users\Sheikhkaifsadiq\Desktop\Aegis Route/src/routes/_authenticated/analytics.tsx)
+- [Route](file://C:\Users\Sheikhkaifsadiq\Desktop\Aegis Route/src/routes/_authenticated/audit-logs.tsx)
+- [Route](file://C:\Users\Sheikhkaifsadiq\Desktop\Aegis Route/src/routes/_authenticated/dashboard.tsx)
+- [Route](file://C:\Users\Sheikhkaifsadiq\Desktop\Aegis Route/src/routes/_authenticated/docs.tsx)
+- [Route](file://C:\Users\Sheikhkaifsadiq\Desktop\Aegis Route/src/routes/_authenticated/links.$id.tsx)
+- [Route](file://C:\Users\Sheikhkaifsadiq\Desktop\Aegis Route/src/routes/_authenticated/links.tsx)
+- [Route](file://C:\Users\Sheikhkaifsadiq\Desktop\Aegis Route/src/routes/_authenticated/ml-engine.tsx)
+- [Route](file://C:\Users\Sheikhkaifsadiq\Desktop\Aegis Route/src/routes/_authenticated/rules.tsx)
+- [Route](file://C:\Users\Sheikhkaifsadiq\Desktop\Aegis Route/src/routes/_authenticated/security.tsx)
+- [Route](file://C:\Users\Sheikhkaifsadiq\Desktop\Aegis Route/src/routes/_authenticated/settings.tsx)

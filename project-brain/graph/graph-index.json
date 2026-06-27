@@ -1,5 +1,7 @@
 {
   "totalNodes": 526,
-  "totalEdges": 501,
-  "lastIndexed": "2026-06-27T09:24:52.851Z"
+  "totalEdges": 963,
+  "circularDependencies": 0,
+  "orphanedComponents": 0,
+  "lastIndexed": "2026-06-27T09:33:44.417Z"
 }

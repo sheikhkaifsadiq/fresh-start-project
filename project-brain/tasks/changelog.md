@@ -1,6 +1,4 @@
-# CHANGELOG
+# Changelog
 
-## Structural Changelog
-
-- Brain initialized from AST mapping.
-- Repository scanned: 120 files parsed.
+- **Project Brain Genesis**: Created initial structure based on AST traversal.
+- Total code files scanned: 120

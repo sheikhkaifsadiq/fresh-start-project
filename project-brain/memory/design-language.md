@@ -1,14 +1,6 @@
-# DESIGN-LANGUAGE
+# Design Language & Typography
 
-*Auto-generated context placeholder derived from handover and AST scan.*
+## 4. Design System
 
-# AegisRoute — Engineering Handover
-
-Audience: senior engineer picking this up cold. No prior chat access. Read top-to-bottom before touching code.
-
----
-
-## 1. Product
-
-AegisRoute is an enterprise URL routing + analytics + threat-detection SaaS. The shipped surface is two distinct experiences in one app:
+All tokens are CSS custom properties in `src/styles.css`, exposed to Tailwind via `@theme inline`. **Never hardcode colors** (`text-white`, `bg-[#fff]`) in components — always semantic tokens.
 

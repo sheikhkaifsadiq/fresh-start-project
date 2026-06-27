@@ -1,12 +1,18 @@
 # Engineering Graph Summary
-Total Nodes: 526
-Total Edges: 501
 
-- Components: 314
-- Hooks: 18
-- API Routes: 7
+* Total Nodes: **526**
+* Total Edges: **963**
+* Circular Dependencies: **0**
+* Orphaned Components: **0**
 
-## Legend
-- nodes.json: The detailed AST extraction of the codebase.
-- edges.json: Relationships (imports, exports, context usage).
-- search-index.json: Fast keyword retrieval for MC/AI tools.
+## Graph Coverage By Module Type
+- **module**: 10 nodes
+- **file**: 120 nodes
+- **component**: 314 nodes
+- **hook**: 18 nodes
+- **shared utility**: 13 nodes
+- **context**: 22 nodes
+- **route**: 15 nodes
+- **zustand store**: 5 nodes
+- **supabase integration**: 2 nodes
+- **api route**: 7 nodes
