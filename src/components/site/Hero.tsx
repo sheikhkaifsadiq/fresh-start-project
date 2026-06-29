@@ -78,6 +78,7 @@ export function Hero() {
                   onChange={(e) => setLink(e.target.value)}
                   spellCheck={false}
                   aria-label="Destination URL"
+                  suppressHydrationWarning={true}
                 />
                 <MagneticLink href="#cta" className="hero-route-btn" style={{
                   display: "inline-flex", alignItems: "center",

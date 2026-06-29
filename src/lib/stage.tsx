@@ -78,7 +78,9 @@ export function StageProvider({ children }: { children: ReactNode }) {
 
       // scroll
       const prevY = f.scrollY;
-      f.scrollY = window.scrollY;
+      const newScrollY = window.scrollY;
+      const scrollChanged = Math.abs(newScrollY - prevY) > 0.5;
+      f.scrollY = newScrollY;
       f.scrollMax = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
       f.scrollProgress = Math.min(1, Math.max(0, f.scrollY / f.scrollMax));
       const instV = (f.scrollY - prevY) / Math.max(1, dt * 1000); // px/ms
@@ -87,9 +89,11 @@ export function StageProvider({ children }: { children: ReactNode }) {
 
       // pointer velocity
       const ptDt = Math.max(1, now - ltp);
+      const prevpx = lpx, prevpy = lpy;
       f.vx = (rpx - lpx) / ptDt;
       f.vy = (rpy - lpy) / ptDt;
       lpx = rpx; lpy = rpy; ltp = now;
+      const pointerChanged = Math.abs(rpx - prevpx) > 0.5 || Math.abs(rpy - prevpy) > 0.5;
 
       // normalised + smoothed pointer
       f.px = rpx; f.py = rpy;
@@ -101,7 +105,10 @@ export function StageProvider({ children }: { children: ReactNode }) {
       const speed = Math.min(1, Math.hypot(f.vx, f.vy) / 2.2);
       f.speed += (speed - f.speed) * Math.min(1, dt * 6);
 
-      subs.current.forEach((s) => s(f));
+      // Only dispatch if something actually moved — avoids layout thrash on idle frames
+      if (scrollChanged || pointerChanged) {
+        subs.current.forEach((s) => s(f));
+      }
       raf = requestAnimationFrame(loop);
     };
     raf = requestAnimationFrame(loop);
