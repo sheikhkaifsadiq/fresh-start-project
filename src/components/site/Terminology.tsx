@@ -105,8 +105,8 @@ function TerminologyMobile() {
   }, [stage]);
 
   return (
-    <section ref={sectionRef} className="term-chapter section-pin" aria-label="Vocabulary" style={{ minHeight: "300vh" }}>
-      <div className={`section-pin-inner term-sticky${owned ? " is-owned" : ""}`} style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
+    <section ref={sectionRef} className="term-chapter" aria-label="Vocabulary">
+      <div className={`term-sticky${owned ? " is-owned" : ""}`}>
         <header className="term-head">
           <span className="ki"><span /> Vocabulary</span>
           <h2 className="term-title">

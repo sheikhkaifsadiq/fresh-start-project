@@ -21,28 +21,18 @@ const ARC_PAIRS: [string, string][] = [
 ];
 
 export function Network() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
-    const canvas = document.createElement("canvas");
-    canvas.className = "globe-canvas";
-    canvas.style.opacity = "0";
-    canvas.style.transition = "opacity 1s ease";
-    canvas.style.cursor = "grab";
-    container.appendChild(canvas);
-
-    let width = container.offsetWidth;
-    if (width === 0) width = 500; // Fallback to prevent WebGL crash on 0-width init
-    
+    let width = canvas.offsetWidth;
     let phi = 4.2;
     let pointerDelta = 0;
     let pointerStart: number | null = null;
     let raf = 0;
-    let isDestroyed = false;
 
     const arcs = ARC_PAIRS.map(([a, b]) => {
       const na = NODES.find((n) => n.name === a)!;
@@ -77,27 +67,17 @@ export function Network() {
 
     let first = true;
     const tick = () => {
-      if (isDestroyed) return;
       if (pointerStart === null) phi += 0.0022;
-      
-      try {
-        globe.update({ phi: phi + pointerDelta, width: width * dpr, height: width * dpr });
-      } catch (err) {
-        console.warn("Globe update skipped:", err);
-      }
-      
+      globe.update({ phi: phi + pointerDelta, width: width * dpr, height: width * dpr });
       if (first) {
         first = false;
-        requestAnimationFrame(() => {
-          setReady(true);
-          canvas.style.opacity = "1";
-        });
+        requestAnimationFrame(() => setReady(true));
       }
       raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
 
-    const onResize = () => { width = container.offsetWidth; };
+    const onResize = () => { width = canvas.offsetWidth; };
     window.addEventListener("resize", onResize);
 
     const onDown = (e: PointerEvent) => { pointerStart = e.clientX - pointerDelta * 100; canvas.style.cursor = "grabbing"; };
@@ -110,10 +90,8 @@ export function Network() {
     window.addEventListener("pointermove", onMove);
 
     return () => {
-      isDestroyed = true;
       cancelAnimationFrame(raf);
-      try { globe.destroy(); } catch (e) {}
-      if (canvas.parentNode) canvas.parentNode.removeChild(canvas);
+      globe.destroy();
       window.removeEventListener("resize", onResize);
       canvas.removeEventListener("pointerdown", onDown);
       window.removeEventListener("pointerup", onUp);
@@ -131,8 +109,12 @@ export function Network() {
           body="Every decision runs on the POP nearest the user. Models, policy, and reputation are replicated continuously — no round-trip to a central brain."
         />
         <div className="edge edge-wrap">
-          <div className="globe-stage" ref={containerRef}>
-            {/* canvas dynamically injected here */}
+          <div className="globe-stage">
+            <canvas
+              ref={canvasRef}
+              className="globe-canvas"
+              style={{ opacity: ready ? 1 : 0, cursor: "grab" }}
+            />
           </div>
 
           <div className="edge-legend">

@@ -90,67 +90,7 @@ function WorkspaceTab() {
   );
 }
 
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-
 function ApiKeysTab() {
-  const session = useAuthStore((s) => s.session);
-  const queryClient = useQueryClient();
-  const [showKey, setShowKey] = useState<string | null>(null);
-
-  const { data: keys = [], isLoading } = useQuery({
-    queryKey: ["api-keys"],
-    queryFn: async () => {
-      const res = await fetch("/api/v1/api-keys", {
-        headers: { Authorization: `Bearer ${session?.access_token}` },
-      });
-      if (!res.ok) throw new Error("Failed to load keys");
-      const json = await res.json();
-      return json.data || [];
-    },
-    enabled: !!session?.access_token,
-  });
-
-  const createKey = useMutation({
-    mutationFn: async () => {
-      const res = await fetch("/api/v1/api-keys", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${session?.access_token}`,
-        },
-        body: JSON.stringify({
-          name: `Key generated ${new Date().toLocaleDateString()}`,
-          environment: "live",
-          permissions: ["admin"],
-        }),
-      });
-      if (!res.ok) throw new Error("Failed to create key");
-      return res.json();
-    },
-    onSuccess: (data) => {
-      queryClient.invalidateQueries({ queryKey: ["api-keys"] });
-      if (data.data?.generated?.rawKey) {
-        setShowKey(data.data.generated.rawKey);
-      }
-    },
-  });
-
-  const revokeKey = useMutation({
-    mutationFn: async (id: string) => {
-      if (!confirm("Are you sure you want to revoke this key? This action is immediate and permanent.")) return;
-      const res = await fetch(`/api/v1/api-keys?id=${id}`, {
-        method: "DELETE",
-        headers: { Authorization: `Bearer ${session?.access_token}` },
-      });
-      if (!res.ok) throw new Error("Failed to revoke key");
-    },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["api-keys"] });
-    },
-  });
-
-  const activeKeys = keys.filter((k: any) => !k.revoked);
-
   return (
     <div className="ds-stack">
       <header style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
@@ -158,81 +98,16 @@ function ApiKeysTab() {
           <div className="ds-kicker">Programmatic access</div>
           <h2 className="ds-section-title">API keys.</h2>
         </div>
-        <button 
-          className="ds-btn" 
-          onClick={() => createKey.mutate()} 
-          disabled={createKey.isPending}
-        >
-          {createKey.isPending ? "Generating..." : "+ New key"}
-        </button>
+        <button className="ds-btn">+ New key</button>
       </header>
-      
-      {showKey && (
-        <div style={{ background: "var(--surface)", padding: 16, border: "1px solid var(--rule)", borderRadius: 6, marginBottom: 16 }}>
-          <div style={{ fontWeight: 500, marginBottom: 8, color: "var(--warn)" }}>Store this key now. It will not be shown again.</div>
-          <code style={{ display: "block", background: "var(--ink)", color: "var(--surface)", padding: 12, borderRadius: 4 }}>
-            {showKey}
-          </code>
-          <button className="ds-btn ds-btn-sm" style={{ marginTop: 12 }} onClick={() => setShowKey(null)}>
-            I have stored it
-          </button>
+      <div className="ds-empty">
+        <div className="ds-empty-title">No keys yet.</div>
+        <div className="ds-empty-note">
+          API keys grant programmatic access to issue links and read verdicts.
+          Each key is scoped, rate-limited, and immediately revocable.
         </div>
-      )}
-
-      {isLoading ? (
-        <div className="ds-empty">
-          <div className="ds-empty-title">Loading keys...</div>
-        </div>
-      ) : activeKeys.length === 0 ? (
-        <div className="ds-empty">
-          <div className="ds-empty-title">No keys yet.</div>
-          <div className="ds-empty-note">
-            API keys grant programmatic access to issue links and read verdicts.
-            Each key is scoped, rate-limited, and immediately revocable.
-          </div>
-          <button 
-            className="ds-btn ds-btn-ghost" 
-            onClick={() => createKey.mutate()}
-            disabled={createKey.isPending}
-          >
-            Issue first key
-          </button>
-        </div>
-      ) : (
-        <div className="ds-table-wrap">
-          <table className="ds-table ds-table-cards">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Prefix</th>
-                <th>Created</th>
-                <th>Last Used</th>
-                <th aria-label="Actions"></th>
-              </tr>
-            </thead>
-            <tbody>
-              {activeKeys.map((k: any) => (
-                <tr key={k.id}>
-                  <td>{k.name}</td>
-                  <td className="mono">{k.key_prefix}...</td>
-                  <td>{new Date(k.created_at).toLocaleDateString()}</td>
-                  <td>{k.last_used_at ? new Date(k.last_used_at).toLocaleDateString() : "Never"}</td>
-                  <td style={{ textAlign: "right" }}>
-                    <button 
-                      className="ds-btn ds-btn-sm ds-btn-quiet" 
-                      style={{ color: "var(--warn)" }}
-                      onClick={() => revokeKey.mutate(k.id)}
-                      disabled={revokeKey.isPending}
-                    >
-                      Revoke
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
+        <button className="ds-btn ds-btn-ghost">Issue first key</button>
+      </div>
     </div>
   );
 }

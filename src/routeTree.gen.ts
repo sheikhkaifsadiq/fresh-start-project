@@ -13,7 +13,6 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AuthenticatedRouteImport } from './routes/_authenticated'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as AuthenticatedTelemetryRouteImport } from './routes/_authenticated/telemetry'
 import { Route as AuthenticatedSettingsRouteImport } from './routes/_authenticated/settings'
 import { Route as AuthenticatedSecurityRouteImport } from './routes/_authenticated/security'
 import { Route as AuthenticatedRulesRouteImport } from './routes/_authenticated/rules'
@@ -23,13 +22,7 @@ import { Route as AuthenticatedDocsRouteImport } from './routes/_authenticated/d
 import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
 import { Route as AuthenticatedAuditLogsRouteImport } from './routes/_authenticated/audit-logs'
 import { Route as AuthenticatedAnalyticsRouteImport } from './routes/_authenticated/analytics'
-import { Route as ApiWafEvaluateRouteImport } from './routes/api/waf/evaluate'
-import { Route as ApiV1MlModelsRouteImport } from './routes/api/v1/ml-models'
-import { Route as ApiV1DashboardStatsRouteImport } from './routes/api/v1/dashboard-stats'
-import { Route as ApiV1AuditLogsRouteImport } from './routes/api/v1/audit-logs'
-import { Route as ApiV1ApiKeysRouteImport } from './routes/api/v1/api-keys'
 import { Route as AuthenticatedLinksIdRouteImport } from './routes/_authenticated/links.$id'
-import { Route as ApiV1TelemetryIndexRouteImport } from './routes/api/v1/telemetry/index'
 import { Route as ApiV1LinksIndexRouteImport } from './routes/api/v1/links/index'
 import { Route as ApiV1LinksCheckSlugRouteImport } from './routes/api/v1/links/check-slug'
 import { Route as ApiV1LinksIdRouteImport } from './routes/api/v1/links/$id'
@@ -37,7 +30,6 @@ import { Route as ApiV1AuthSignupRouteImport } from './routes/api/v1/auth/signup
 import { Route as ApiV1AuthMeRouteImport } from './routes/api/v1/auth/me'
 import { Route as ApiV1AuthLogoutRouteImport } from './routes/api/v1/auth/logout'
 import { Route as ApiV1AuthLoginRouteImport } from './routes/api/v1/auth/login'
-import { Route as ApiV1AnalyticsSecurityRouteImport } from './routes/api/v1/analytics/security'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -57,11 +49,6 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
-} as any)
-const AuthenticatedTelemetryRoute = AuthenticatedTelemetryRouteImport.update({
-  id: '/telemetry',
-  path: '/telemetry',
-  getParentRoute: () => AuthenticatedRoute,
 } as any)
 const AuthenticatedSettingsRoute = AuthenticatedSettingsRouteImport.update({
   id: '/settings',
@@ -108,40 +95,10 @@ const AuthenticatedAnalyticsRoute = AuthenticatedAnalyticsRouteImport.update({
   path: '/analytics',
   getParentRoute: () => AuthenticatedRoute,
 } as any)
-const ApiWafEvaluateRoute = ApiWafEvaluateRouteImport.update({
-  id: '/api/waf/evaluate',
-  path: '/api/waf/evaluate',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiV1MlModelsRoute = ApiV1MlModelsRouteImport.update({
-  id: '/api/v1/ml-models',
-  path: '/api/v1/ml-models',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiV1DashboardStatsRoute = ApiV1DashboardStatsRouteImport.update({
-  id: '/api/v1/dashboard-stats',
-  path: '/api/v1/dashboard-stats',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiV1AuditLogsRoute = ApiV1AuditLogsRouteImport.update({
-  id: '/api/v1/audit-logs',
-  path: '/api/v1/audit-logs',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiV1ApiKeysRoute = ApiV1ApiKeysRouteImport.update({
-  id: '/api/v1/api-keys',
-  path: '/api/v1/api-keys',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const AuthenticatedLinksIdRoute = AuthenticatedLinksIdRouteImport.update({
   id: '/$id',
   path: '/$id',
   getParentRoute: () => AuthenticatedLinksRoute,
-} as any)
-const ApiV1TelemetryIndexRoute = ApiV1TelemetryIndexRouteImport.update({
-  id: '/api/v1/telemetry/',
-  path: '/api/v1/telemetry/',
-  getParentRoute: () => rootRouteImport,
 } as any)
 const ApiV1LinksIndexRoute = ApiV1LinksIndexRouteImport.update({
   id: '/api/v1/links/',
@@ -178,11 +135,6 @@ const ApiV1AuthLoginRoute = ApiV1AuthLoginRouteImport.update({
   path: '/api/v1/auth/login',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiV1AnalyticsSecurityRoute = ApiV1AnalyticsSecurityRouteImport.update({
-  id: '/api/v1/analytics/security',
-  path: '/api/v1/analytics/security',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -197,14 +149,7 @@ export interface FileRoutesByFullPath {
   '/rules': typeof AuthenticatedRulesRoute
   '/security': typeof AuthenticatedSecurityRoute
   '/settings': typeof AuthenticatedSettingsRoute
-  '/telemetry': typeof AuthenticatedTelemetryRoute
   '/links/$id': typeof AuthenticatedLinksIdRoute
-  '/api/v1/api-keys': typeof ApiV1ApiKeysRoute
-  '/api/v1/audit-logs': typeof ApiV1AuditLogsRoute
-  '/api/v1/dashboard-stats': typeof ApiV1DashboardStatsRoute
-  '/api/v1/ml-models': typeof ApiV1MlModelsRoute
-  '/api/waf/evaluate': typeof ApiWafEvaluateRoute
-  '/api/v1/analytics/security': typeof ApiV1AnalyticsSecurityRoute
   '/api/v1/auth/login': typeof ApiV1AuthLoginRoute
   '/api/v1/auth/logout': typeof ApiV1AuthLogoutRoute
   '/api/v1/auth/me': typeof ApiV1AuthMeRoute
@@ -212,7 +157,6 @@ export interface FileRoutesByFullPath {
   '/api/v1/links/$id': typeof ApiV1LinksIdRoute
   '/api/v1/links/check-slug': typeof ApiV1LinksCheckSlugRoute
   '/api/v1/links/': typeof ApiV1LinksIndexRoute
-  '/api/v1/telemetry/': typeof ApiV1TelemetryIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -227,14 +171,7 @@ export interface FileRoutesByTo {
   '/rules': typeof AuthenticatedRulesRoute
   '/security': typeof AuthenticatedSecurityRoute
   '/settings': typeof AuthenticatedSettingsRoute
-  '/telemetry': typeof AuthenticatedTelemetryRoute
   '/links/$id': typeof AuthenticatedLinksIdRoute
-  '/api/v1/api-keys': typeof ApiV1ApiKeysRoute
-  '/api/v1/audit-logs': typeof ApiV1AuditLogsRoute
-  '/api/v1/dashboard-stats': typeof ApiV1DashboardStatsRoute
-  '/api/v1/ml-models': typeof ApiV1MlModelsRoute
-  '/api/waf/evaluate': typeof ApiWafEvaluateRoute
-  '/api/v1/analytics/security': typeof ApiV1AnalyticsSecurityRoute
   '/api/v1/auth/login': typeof ApiV1AuthLoginRoute
   '/api/v1/auth/logout': typeof ApiV1AuthLogoutRoute
   '/api/v1/auth/me': typeof ApiV1AuthMeRoute
@@ -242,7 +179,6 @@ export interface FileRoutesByTo {
   '/api/v1/links/$id': typeof ApiV1LinksIdRoute
   '/api/v1/links/check-slug': typeof ApiV1LinksCheckSlugRoute
   '/api/v1/links': typeof ApiV1LinksIndexRoute
-  '/api/v1/telemetry': typeof ApiV1TelemetryIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -259,14 +195,7 @@ export interface FileRoutesById {
   '/_authenticated/rules': typeof AuthenticatedRulesRoute
   '/_authenticated/security': typeof AuthenticatedSecurityRoute
   '/_authenticated/settings': typeof AuthenticatedSettingsRoute
-  '/_authenticated/telemetry': typeof AuthenticatedTelemetryRoute
   '/_authenticated/links/$id': typeof AuthenticatedLinksIdRoute
-  '/api/v1/api-keys': typeof ApiV1ApiKeysRoute
-  '/api/v1/audit-logs': typeof ApiV1AuditLogsRoute
-  '/api/v1/dashboard-stats': typeof ApiV1DashboardStatsRoute
-  '/api/v1/ml-models': typeof ApiV1MlModelsRoute
-  '/api/waf/evaluate': typeof ApiWafEvaluateRoute
-  '/api/v1/analytics/security': typeof ApiV1AnalyticsSecurityRoute
   '/api/v1/auth/login': typeof ApiV1AuthLoginRoute
   '/api/v1/auth/logout': typeof ApiV1AuthLogoutRoute
   '/api/v1/auth/me': typeof ApiV1AuthMeRoute
@@ -274,7 +203,6 @@ export interface FileRoutesById {
   '/api/v1/links/$id': typeof ApiV1LinksIdRoute
   '/api/v1/links/check-slug': typeof ApiV1LinksCheckSlugRoute
   '/api/v1/links/': typeof ApiV1LinksIndexRoute
-  '/api/v1/telemetry/': typeof ApiV1TelemetryIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -291,14 +219,7 @@ export interface FileRouteTypes {
     | '/rules'
     | '/security'
     | '/settings'
-    | '/telemetry'
     | '/links/$id'
-    | '/api/v1/api-keys'
-    | '/api/v1/audit-logs'
-    | '/api/v1/dashboard-stats'
-    | '/api/v1/ml-models'
-    | '/api/waf/evaluate'
-    | '/api/v1/analytics/security'
     | '/api/v1/auth/login'
     | '/api/v1/auth/logout'
     | '/api/v1/auth/me'
@@ -306,7 +227,6 @@ export interface FileRouteTypes {
     | '/api/v1/links/$id'
     | '/api/v1/links/check-slug'
     | '/api/v1/links/'
-    | '/api/v1/telemetry/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -321,14 +241,7 @@ export interface FileRouteTypes {
     | '/rules'
     | '/security'
     | '/settings'
-    | '/telemetry'
     | '/links/$id'
-    | '/api/v1/api-keys'
-    | '/api/v1/audit-logs'
-    | '/api/v1/dashboard-stats'
-    | '/api/v1/ml-models'
-    | '/api/waf/evaluate'
-    | '/api/v1/analytics/security'
     | '/api/v1/auth/login'
     | '/api/v1/auth/logout'
     | '/api/v1/auth/me'
@@ -336,7 +249,6 @@ export interface FileRouteTypes {
     | '/api/v1/links/$id'
     | '/api/v1/links/check-slug'
     | '/api/v1/links'
-    | '/api/v1/telemetry'
   id:
     | '__root__'
     | '/'
@@ -352,14 +264,7 @@ export interface FileRouteTypes {
     | '/_authenticated/rules'
     | '/_authenticated/security'
     | '/_authenticated/settings'
-    | '/_authenticated/telemetry'
     | '/_authenticated/links/$id'
-    | '/api/v1/api-keys'
-    | '/api/v1/audit-logs'
-    | '/api/v1/dashboard-stats'
-    | '/api/v1/ml-models'
-    | '/api/waf/evaluate'
-    | '/api/v1/analytics/security'
     | '/api/v1/auth/login'
     | '/api/v1/auth/logout'
     | '/api/v1/auth/me'
@@ -367,7 +272,6 @@ export interface FileRouteTypes {
     | '/api/v1/links/$id'
     | '/api/v1/links/check-slug'
     | '/api/v1/links/'
-    | '/api/v1/telemetry/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -375,12 +279,6 @@ export interface RootRouteChildren {
   AuthenticatedRoute: typeof AuthenticatedRouteWithChildren
   AuthRoute: typeof AuthRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
-  ApiV1ApiKeysRoute: typeof ApiV1ApiKeysRoute
-  ApiV1AuditLogsRoute: typeof ApiV1AuditLogsRoute
-  ApiV1DashboardStatsRoute: typeof ApiV1DashboardStatsRoute
-  ApiV1MlModelsRoute: typeof ApiV1MlModelsRoute
-  ApiWafEvaluateRoute: typeof ApiWafEvaluateRoute
-  ApiV1AnalyticsSecurityRoute: typeof ApiV1AnalyticsSecurityRoute
   ApiV1AuthLoginRoute: typeof ApiV1AuthLoginRoute
   ApiV1AuthLogoutRoute: typeof ApiV1AuthLogoutRoute
   ApiV1AuthMeRoute: typeof ApiV1AuthMeRoute
@@ -388,7 +286,6 @@ export interface RootRouteChildren {
   ApiV1LinksIdRoute: typeof ApiV1LinksIdRoute
   ApiV1LinksCheckSlugRoute: typeof ApiV1LinksCheckSlugRoute
   ApiV1LinksIndexRoute: typeof ApiV1LinksIndexRoute
-  ApiV1TelemetryIndexRoute: typeof ApiV1TelemetryIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -420,13 +317,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
-    }
-    '/_authenticated/telemetry': {
-      id: '/_authenticated/telemetry'
-      path: '/telemetry'
-      fullPath: '/telemetry'
-      preLoaderRoute: typeof AuthenticatedTelemetryRouteImport
-      parentRoute: typeof AuthenticatedRoute
     }
     '/_authenticated/settings': {
       id: '/_authenticated/settings'
@@ -491,54 +381,12 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAnalyticsRouteImport
       parentRoute: typeof AuthenticatedRoute
     }
-    '/api/waf/evaluate': {
-      id: '/api/waf/evaluate'
-      path: '/api/waf/evaluate'
-      fullPath: '/api/waf/evaluate'
-      preLoaderRoute: typeof ApiWafEvaluateRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/v1/ml-models': {
-      id: '/api/v1/ml-models'
-      path: '/api/v1/ml-models'
-      fullPath: '/api/v1/ml-models'
-      preLoaderRoute: typeof ApiV1MlModelsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/v1/dashboard-stats': {
-      id: '/api/v1/dashboard-stats'
-      path: '/api/v1/dashboard-stats'
-      fullPath: '/api/v1/dashboard-stats'
-      preLoaderRoute: typeof ApiV1DashboardStatsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/v1/audit-logs': {
-      id: '/api/v1/audit-logs'
-      path: '/api/v1/audit-logs'
-      fullPath: '/api/v1/audit-logs'
-      preLoaderRoute: typeof ApiV1AuditLogsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/v1/api-keys': {
-      id: '/api/v1/api-keys'
-      path: '/api/v1/api-keys'
-      fullPath: '/api/v1/api-keys'
-      preLoaderRoute: typeof ApiV1ApiKeysRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/_authenticated/links/$id': {
       id: '/_authenticated/links/$id'
       path: '/$id'
       fullPath: '/links/$id'
       preLoaderRoute: typeof AuthenticatedLinksIdRouteImport
       parentRoute: typeof AuthenticatedLinksRoute
-    }
-    '/api/v1/telemetry/': {
-      id: '/api/v1/telemetry/'
-      path: '/api/v1/telemetry'
-      fullPath: '/api/v1/telemetry/'
-      preLoaderRoute: typeof ApiV1TelemetryIndexRouteImport
-      parentRoute: typeof rootRouteImport
     }
     '/api/v1/links/': {
       id: '/api/v1/links/'
@@ -589,13 +437,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiV1AuthLoginRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/v1/analytics/security': {
-      id: '/api/v1/analytics/security'
-      path: '/api/v1/analytics/security'
-      fullPath: '/api/v1/analytics/security'
-      preLoaderRoute: typeof ApiV1AnalyticsSecurityRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
@@ -620,7 +461,6 @@ interface AuthenticatedRouteChildren {
   AuthenticatedRulesRoute: typeof AuthenticatedRulesRoute
   AuthenticatedSecurityRoute: typeof AuthenticatedSecurityRoute
   AuthenticatedSettingsRoute: typeof AuthenticatedSettingsRoute
-  AuthenticatedTelemetryRoute: typeof AuthenticatedTelemetryRoute
 }
 
 const AuthenticatedRouteChildren: AuthenticatedRouteChildren = {
@@ -633,7 +473,6 @@ const AuthenticatedRouteChildren: AuthenticatedRouteChildren = {
   AuthenticatedRulesRoute: AuthenticatedRulesRoute,
   AuthenticatedSecurityRoute: AuthenticatedSecurityRoute,
   AuthenticatedSettingsRoute: AuthenticatedSettingsRoute,
-  AuthenticatedTelemetryRoute: AuthenticatedTelemetryRoute,
 }
 
 const AuthenticatedRouteWithChildren = AuthenticatedRoute._addFileChildren(
@@ -645,12 +484,6 @@ const rootRouteChildren: RootRouteChildren = {
   AuthenticatedRoute: AuthenticatedRouteWithChildren,
   AuthRoute: AuthRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
-  ApiV1ApiKeysRoute: ApiV1ApiKeysRoute,
-  ApiV1AuditLogsRoute: ApiV1AuditLogsRoute,
-  ApiV1DashboardStatsRoute: ApiV1DashboardStatsRoute,
-  ApiV1MlModelsRoute: ApiV1MlModelsRoute,
-  ApiWafEvaluateRoute: ApiWafEvaluateRoute,
-  ApiV1AnalyticsSecurityRoute: ApiV1AnalyticsSecurityRoute,
   ApiV1AuthLoginRoute: ApiV1AuthLoginRoute,
   ApiV1AuthLogoutRoute: ApiV1AuthLogoutRoute,
   ApiV1AuthMeRoute: ApiV1AuthMeRoute,
@@ -658,18 +491,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiV1LinksIdRoute: ApiV1LinksIdRoute,
   ApiV1LinksCheckSlugRoute: ApiV1LinksCheckSlugRoute,
   ApiV1LinksIndexRoute: ApiV1LinksIndexRoute,
-  ApiV1TelemetryIndexRoute: ApiV1TelemetryIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

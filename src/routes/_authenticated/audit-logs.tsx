@@ -7,8 +7,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { AppShell } from "@/components/app/AppShell";
-import { useAuthStore } from "@/lib/stores/auth-store";
-import { useQuery } from "@tanstack/react-query";
 
 export const Route = createFileRoute("/_authenticated/audit-logs")({
   head: () => ({ meta: [{ title: "Audit Logs — AegisRoute" }] }),
@@ -17,23 +15,6 @@ export const Route = createFileRoute("/_authenticated/audit-logs")({
 
 function AuditLogsPage() {
   const [query, setQuery] = useState("");
-  const session = useAuthStore((s) => s.session);
-
-  const { data, isLoading } = useQuery({
-    queryKey: ["audit-logs", query],
-    queryFn: async () => {
-      const res = await fetch(`/api/v1/audit-logs?limit=50${query ? `&event_type=${query}` : ''}`, {
-        headers: {
-          Authorization: `Bearer ${session?.access_token}`,
-        },
-      });
-      if (!res.ok) throw new Error("Failed to load audit logs");
-      return res.json();
-    },
-    enabled: !!session?.access_token,
-  });
-
-  const logs = data?.data?.logs ?? [];
 
   return (
     <AppShell title="Audit." kicker="APPEND-ONLY · IMMUTABLE · SIGNED">
@@ -57,49 +38,25 @@ function AuditLogsPage() {
           <thead>
             <tr>
               <th>Time</th>
-              <th>IP Address</th>
+              <th>Actor</th>
               <th>Action</th>
-              <th>Bot Score</th>
-              <th>Path</th>
+              <th>Resource</th>
+              <th>Outcome</th>
             </tr>
           </thead>
           <tbody>
-            {isLoading ? (
-              <tr>
-                <td colSpan={5} className="text-center py-8">Loading logs...</td>
-              </tr>
-            ) : logs.length === 0 ? (
-              <tr>
-                <td colSpan={5}>
-                  <div className="ds-empty">
-                    <div className="ds-empty-title">No events yet.</div>
-                    <div className="ds-empty-note">
-                      Every create, update, delete, sign-in, key rotation, and
-                      policy change is appended here with a cryptographic hash
-                      chain. Your first action will appear in real time.
-                    </div>
+            <tr>
+              <td colSpan={5}>
+                <div className="ds-empty">
+                  <div className="ds-empty-title">No events yet.</div>
+                  <div className="ds-empty-note">
+                    Every create, update, delete, sign-in, key rotation, and
+                    policy change is appended here with a cryptographic hash
+                    chain. Your first action will appear in real time.
                   </div>
-                </td>
-              </tr>
-            ) : (
-              logs.map((log: any) => (
-                <tr key={log.id}>
-                  <td>
-                    {new Date(log.created_at).toLocaleString(undefined, {
-                      month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit"
-                    })}
-                  </td>
-                  <td className="font-mono text-sm">{log.ip_address || "—"}</td>
-                  <td>
-                    <span className={`ds-badge ${log.action === "BLOCKED" ? "ds-badge-warn" : "ds-badge-ok"}`}>
-                      {log.action}
-                    </span>
-                  </td>
-                  <td>{log.bot_probability_score !== null ? `${Math.round(log.bot_probability_score * 100)}%` : "—"}</td>
-                  <td className="font-mono text-xs">{log.path || "—"}</td>
-                </tr>
-              ))
-            )}
+                </div>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>

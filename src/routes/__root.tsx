@@ -10,9 +10,8 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { consumeLastCapturedError } from "../lib/error-capture";
+import { reportLovableError } from "../lib/lovable-error-reporting";
 import { AuthProvider } from "@/components/auth/AuthProvider";
-import { ErrorBoundary } from "@/components/ui/ErrorBoundary";
 
 function NotFoundComponent() {
   return (
@@ -40,9 +39,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
-    // Independent telemetry/error tracking could be hooked in here natively.
-    const lastError = consumeLastCapturedError();
-    if (lastError) console.error("[AegisRoute/ErrorBoundary]", lastError);
+    reportLovableError(error, { boundary: "tanstack_root_error_component" });
   }, [error]);
 
   return (
@@ -87,8 +84,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "AegisRoute" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:image", content: "https://aegisroute.com/og-image.png" },
-      { name: "twitter:image", content: "https://aegisroute.com/og-image.png" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/71066c7c-f8a5-459e-973d-763863b028fb/id-preview-6fd5b017--6d8c51e4-8f7e-40d5-801e-632f55e47d48.lovable.app-1782399244860.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/71066c7c-f8a5-459e-973d-763863b028fb/id-preview-6fd5b017--6d8c51e4-8f7e-40d5-801e-632f55e47d48.lovable.app-1782399244860.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -106,7 +103,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "AegisRoute",
-          url: "https://aegisroute.com",
+          url: "https://aegisroute.lovable.app",
           description:
             "Edge-routed URL shortening with AI threat detection and real-time analytics.",
         }),
@@ -124,22 +121,6 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
-        <script dangerouslySetInnerHTML={{ __html: `
-          window.AegisStartup = { htmlReceived: performance.now() };
-          console.log('[Startup] 1. HTML Received / Head Parsed:', performance.now().toFixed(2) + 'ms');
-          
-          // Hack to detect when Vite starts downloading/executing modules
-          new PerformanceObserver((list) => {
-            for (const entry of list.getEntries()) {
-              if (entry.name.includes('/@vite/client') || entry.name.endsWith('.js') || entry.name.endsWith('.tsx')) {
-                if (!window.AegisStartup.firstJs) {
-                  window.AegisStartup.firstJs = entry.startTime;
-                  console.log('[Startup] 2. First JS Bundle Download/Exec:', entry.startTime.toFixed(2) + 'ms', '(', entry.name, ')');
-                }
-              }
-            }
-          }).observe({ entryTypes: ['resource'] });
-        ` }} />
       </head>
       <body>
         {children}
@@ -151,20 +132,13 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-  
-  if (typeof window !== 'undefined' && !(window as any).AegisStartup.reactStart) {
-    (window as any).AegisStartup.reactStart = performance.now();
-    console.log('[Startup] 3. React Hydration Begins:', performance.now().toFixed(2) + 'ms');
-  }
 
   return (
     <QueryClientProvider client={queryClient}>
-      <ErrorBoundary>
-        <AuthProvider>
-          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-          <Outlet />
-        </AuthProvider>
-      </ErrorBoundary>
+      <AuthProvider>
+        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+        <Outlet />
+      </AuthProvider>
     </QueryClientProvider>
   );
 }

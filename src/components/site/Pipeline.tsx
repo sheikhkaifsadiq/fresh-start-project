@@ -234,8 +234,8 @@ export function Pipeline() {
         />
       </div>
 
-      <div ref={wrap} className="section-pin" style={{ minHeight: "320vh" }}>
-        <div className="section-pin-inner" style={{ display: "flex", alignItems: "center" }}>
+      <div ref={wrap} className="pipeline-pin" style={{ minHeight: "320vh" }}>
+        <div className="sticky" style={{ top: 0, height: "100vh", display: "flex", alignItems: "center" }}>
           <div className="container-x" style={{ width: "100%" }}>
             <div ref={cameraRef} className="pipeline-camera" style={{ transformOrigin: "center 60%", willChange: "transform" }}>
               <div className="pipeline-cinema">

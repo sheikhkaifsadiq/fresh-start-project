@@ -16,14 +16,7 @@ const STATUSES = [
   "HANDSHAKE COMPLETE",
 ];
 
-export function Preloader({ onDone }: { onDone: () => void }) {
-  if (typeof window !== 'undefined' && !(window as any).AegisStartup?.preloaderStart) {
-    if ((window as any).AegisStartup) {
-      (window as any).AegisStartup.preloaderStart = performance.now();
-      console.log('[Startup] 4. Preloader Rendered:', performance.now().toFixed(2) + 'ms');
-    }
-  }
-
+export function Preloader({ onDone }: { onDone?: () => void } = {}) {
   const [progress, setProgress] = useState(0);
   const [done, setDone] = useState(false);
   const [gone, setGone] = useState(false);
@@ -42,21 +35,15 @@ export function Preloader({ onDone }: { onDone: () => void }) {
       return;
     }
 
+    const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
     const start = performance.now();
-    const duration = 2400; // Original cinematic loading sequence
+    const duration = 2400;
     let raf = 0;
-    
-    const fallbackTimer = setTimeout(() => {
-      setGone(true);
-      document.body.style.overflow = "";
-      onDone?.();
-    }, duration + 2000);
 
-    const tick = () => {
-      const now = performance.now();
-      const k = Math.min(1, Math.max(0, (now - start) / duration));
+    const tick = (t: number) => {
+      const k = Math.min(1, (t - start) / duration);
       const eased = 1 - Math.pow(1 - k, 2.4);
       setProgress(eased);
       // odometer-style counter, ends at a plausible session figure
@@ -67,9 +54,9 @@ export function Preloader({ onDone }: { onDone: () => void }) {
         setTimeout(() => setDone(true), 240);   // start curtain
         setTimeout(() => {
           setGone(true);
-          document.body.style.overflow = "";
+          document.body.style.overflow = prev;
           onDone?.();
-        }, 1700); // Wait for curtain to clear, then handoff
+        }, 1700);
       }
     };
     raf = requestAnimationFrame(tick);
@@ -79,10 +66,9 @@ export function Preloader({ onDone }: { onDone: () => void }) {
     }, 340);
 
     return () => {
-      clearTimeout(fallbackTimer);
       cancelAnimationFrame(raf);
       clearInterval(statusTimer);
-      document.body.style.overflow = "";
+      document.body.style.overflow = prev;
     };
   }, []);
 
