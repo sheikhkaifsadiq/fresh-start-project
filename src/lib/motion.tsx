@@ -17,8 +17,9 @@ import React, {
 type Pointer = { x: number; y: number; nx: number; ny: number; vx: number; vy: number };
 
 const PointerCtx = createContext<{ ref: { current: Pointer } } | null>(null);
+const PreloaderCtx = createContext<boolean>(true);
 
-export function MotionProvider({ children }: { children: ReactNode }) {
+export function MotionProvider({ children, preloaderDone = true }: { children: ReactNode; preloaderDone?: boolean }) {
   const ref = useRef<Pointer>({ x: 0, y: 0, nx: 0, ny: 0, vx: 0, vy: 0 });
 
   useEffect(() => {
@@ -40,7 +41,11 @@ export function MotionProvider({ children }: { children: ReactNode }) {
     return () => window.removeEventListener("pointermove", onMove);
   }, []);
 
-  return <PointerCtx.Provider value={{ ref }}>{children}</PointerCtx.Provider>;
+  return (
+    <PreloaderCtx.Provider value={preloaderDone}>
+      <PointerCtx.Provider value={{ ref }}>{children}</PointerCtx.Provider>
+    </PreloaderCtx.Provider>
+  );
 }
 
 export function usePointer() {
@@ -298,7 +303,11 @@ export function usePointerParallax<T extends HTMLElement>(strength = 12) {
 export function useInView<T extends HTMLElement>(threshold = 0.2) {
   const ref = useRef<T | null>(null);
   const [seen, setSeen] = useState(false);
+  const preloaderDone = useContext(PreloaderCtx);
+
   useEffect(() => {
+    if (!preloaderDone) return;
+    
     const el = ref.current;
     if (!el) return;
     const check = () => {
@@ -307,7 +316,7 @@ export function useInView<T extends HTMLElement>(threshold = 0.2) {
       // Fire earlier — reveal as the section's top crosses ~115% of the
       // viewport (≈ section bottom at 35–40% from viewport bottom).
       if (r.top < vh * 1.15 && r.bottom > 0) {
-        setSeen(true);
+        requestAnimationFrame(() => setSeen(true));
         return true;
       }
       return false;
@@ -315,7 +324,10 @@ export function useInView<T extends HTMLElement>(threshold = 0.2) {
     if (check()) return;
     const io = new IntersectionObserver(
       (es) => es.forEach((e) => {
-        if (e.isIntersecting) { setSeen(true); io.disconnect(); }
+        if (e.isIntersecting) { 
+          requestAnimationFrame(() => setSeen(true)); 
+          io.disconnect(); 
+        }
       }),
       { threshold, rootMargin: "0px 0px 25% 0px" }
     );
@@ -323,7 +335,7 @@ export function useInView<T extends HTMLElement>(threshold = 0.2) {
     const onScroll = () => { if (check()) { io.disconnect(); window.removeEventListener('scroll', onScroll); } };
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => { io.disconnect(); window.removeEventListener('scroll', onScroll); };
-  }, [threshold]);
+  }, [threshold, preloaderDone]);
   return [ref, seen] as const;
 }
 
