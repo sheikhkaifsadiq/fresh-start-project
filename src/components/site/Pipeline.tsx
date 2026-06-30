@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { SectionHead } from "./SectionHead";
 import { useStage } from "../../lib/stage";
 import { useRequestToken } from "../../lib/token";
-import { useMobileScrollOwner } from "../../lib/mobile-scroll-owner";
 
 /**
  * Decision Pipeline — the centerpiece. 320vh pinned.
@@ -54,7 +53,6 @@ export function Pipeline() {
   const fpRef = useRef<HTMLDivElement>(null);
   const scoreRef = useRef<HTMLDivElement>(null);
   const verdictRef = useRef<HTMLDivElement>(null);
-  const firstStageRef = useRef<HTMLDivElement | null>(null);
   const barRefs = useRef<Array<HTMLDivElement | null>>([]);
   const stageRefs = useRef<Array<HTMLDivElement | null>>([]);
   const stage = useStage();
@@ -62,24 +60,8 @@ export function Pipeline() {
   const [verdict, setVerdict] = useState<"unknown" | "threat" | "safe">("unknown");
   const [activeIdx, setActiveIdx] = useState(0);
   const [tMs, setTMs] = useState("0.00");
-  const ownedRef = useRef(false);
-  const ownedProgressRef = useRef(0);
   // Deterministic — the canonical token resolves the same on every render.
   const isThreat = useRef(token.verdict !== "ALLOW");
-
-  useMobileScrollOwner({
-    sectionRef: wrap,
-    triggerRef: firstStageRef,
-    steps: STAGES.length,
-    pxPerStep: 0.86,
-    onProgress: (p) => {
-      ownedProgressRef.current = p;
-    },
-    onActiveChange: (active) => {
-      ownedRef.current = active;
-      if (active) ownedProgressRef.current = 0;
-    },
-  });
 
   useEffect(() => {
     const el = wrap.current;
@@ -90,8 +72,7 @@ export function Pipeline() {
       const total = rect.height - f.vh;
       const passed = Math.min(total, Math.max(0, -rect.top));
       const scrollT = total > 0 ? passed / total : 0;
-      const isMobile = window.innerWidth <= 720;
-      const t = isMobile ? (ownedRef.current ? ownedProgressRef.current : 0) : scrollT;
+      const t = scrollT;
 
       // ─── Camera push-in + slight parallax with scroll velocity ───
       if (cameraRef.current) {
@@ -181,32 +162,25 @@ export function Pipeline() {
         verdictRef.current.style.opacity = String(range(t, [T.decide[0], T.decide[1]]));
       }
 
-      // ─── Mobile-only: translate the vertical stage column so the active
-      // card sits at viewport centre, drifts up to ~30%, then the next card
-      // takes the centre. The whole rail behaves like a scroll-driven stack. ─
+      // ─── Mobile-only: the viewport is sticky; native vertical scroll is
+      // converted into horizontal rail travel inside the pinned scene. ───
       const rail = railRef.current;
       if (rail && window.innerWidth <= 720) {
         const cards = stageRefs.current.filter(Boolean) as HTMLDivElement[];
         if (cards.length) {
-          // Map timeline [0..1] across N stages, each owns ~equal slice.
           const N = cards.length;
-          const seg = clamp(t) * N;          // 0..N
-          const i = Math.min(N - 1, Math.floor(seg));
-          const k = seg - i;                  // 0..1 within current stage
+          const segX = clamp(t) * (N - 1);
+          const i = Math.min(N - 1, Math.floor(segX));
+          const k = segX - i;
           const current = cards[i];
           const next = cards[Math.min(N - 1, i + 1)];
-          const curTop = current.offsetTop;
-          const nxtTop = next.offsetTop;
-          // We want current card to start centred (~50% vh), then ride up
-          // to ~30% as k → 1, at which point next is centred.
-          const vh = f.vh;
-          const targetCur = vh * 0.5 - current.offsetHeight / 2;
-          const targetNxt = vh * 0.5 - next.offsetHeight / 2;
-          const offsetCur = targetCur - curTop;
-          const offsetNxt = targetNxt - nxtTop;
+          const center = (card: HTMLDivElement) =>
+            f.vw / 2 - (card.offsetLeft + card.offsetWidth / 2);
+          const offsetCur = center(current);
+          const offsetNxt = center(next);
           const eased = k * k * (3 - 2 * k);
-          const y = lerp(offsetCur, offsetNxt, eased);
-          rail.style.transform = `translate3d(0, ${y.toFixed(2)}px, 0)`;
+          const x = lerp(offsetCur, offsetNxt, eased);
+          rail.style.transform = `translate3d(${x.toFixed(2)}px, 0, 0)`;
           // Subtle fade for non-adjacent cards
           cards.forEach((c, j) => {
             const dist = Math.abs(j - (i + eased));
@@ -234,7 +208,7 @@ export function Pipeline() {
         />
       </div>
 
-      <div ref={wrap} className="section-pin" style={{ minHeight: "320vh" }}>
+      <div ref={wrap} className="section-pin pipeline-pin" style={{ minHeight: "320vh" }}>
         <div className="section-pin-inner" style={{ display: "flex", alignItems: "center" }}>
           <div className="container-x" style={{ width: "100%" }}>
             <div ref={cameraRef} className="pipeline-camera" style={{ transformOrigin: "center 60%", willChange: "transform" }}>
@@ -254,7 +228,7 @@ export function Pipeline() {
                     return (
                       <div
                         key={s.idx}
-                        ref={(el) => { stageRefs.current[i] = el; if (i === 0) firstStageRef.current = el; }}
+                        ref={(el) => { stageRefs.current[i] = el; }}
                         className="pcin-stage"
                         style={{
                           opacity: active ? 1 : past ? 0.42 : 0.22,
