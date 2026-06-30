@@ -16,6 +16,10 @@ const STATUSES = [
   "HANDSHAKE COMPLETE",
 ];
 
+const SEQUENCE_MS = 620;
+const CURTAIN_MS = 280;
+const STATUS_MS = 95;
+
 export function Preloader({ onDone }: { onDone: () => void }) {
   if (typeof window !== 'undefined' && !(window as any).AegisStartup?.preloaderStart) {
     if ((window as any).AegisStartup) {
@@ -31,28 +35,35 @@ export function Preloader({ onDone }: { onDone: () => void }) {
   const [tag, setTag] = useState("READY");
   const [counter, setCounter] = useState(0);
   const charsRef = useRef<HTMLSpanElement[]>([]);
+  const handedOffRef = useRef(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
+    const handoff = () => {
+      if (handedOffRef.current) return;
+      handedOffRef.current = true;
+      document.body.style.overflow = "";
+      onDone?.();
+    };
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduced) {
       setProgress(1); setCounter(2147893);
       setDone(true);
-      setTimeout(() => { setGone(true); onDone?.(); }, 80);
+      handoff();
+      setTimeout(() => { setGone(true); }, 80);
       return;
     }
 
     document.body.style.overflow = "hidden";
 
     const start = performance.now();
-    const duration = 2400; // Original cinematic loading sequence
+    const duration = SEQUENCE_MS;
     let raf = 0;
     
     const fallbackTimer = setTimeout(() => {
       setGone(true);
-      document.body.style.overflow = "";
-      onDone?.();
-    }, duration + 2000);
+      handoff();
+    }, duration + CURTAIN_MS + 500);
 
     const tick = () => {
       const now = performance.now();
@@ -64,19 +75,22 @@ export function Preloader({ onDone }: { onDone: () => void }) {
       if (k < 1) raf = requestAnimationFrame(tick);
       else {
         setTag("ROUTING");
-        setTimeout(() => setDone(true), 240);   // start curtain
+        setTimeout(() => {
+          setDone(true);
+          // Make the landing/hydration path live as the curtain starts instead
+          // of waiting for the preloader node to unmount.
+          handoff();
+        }, 80);   // start curtain
         setTimeout(() => {
           setGone(true);
-          document.body.style.overflow = "";
-          onDone?.();
-        }, 1700); // Wait for curtain to clear, then handoff
+        }, CURTAIN_MS); // Wait for curtain to clear, then handoff
       }
     };
     raf = requestAnimationFrame(tick);
 
     const statusTimer = setInterval(() => {
       setStatusIdx((i) => Math.min(STATUSES.length - 1, i + 1));
-    }, 340);
+    }, STATUS_MS);
 
     return () => {
       clearTimeout(fallbackTimer);

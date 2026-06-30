@@ -72,7 +72,7 @@ export const Route = createFileRoute("/")({
  */
 function Scene({
   children, glyph, align = "right", size = "18vw", over = false, top = "auto", shade,
-  framing = "level",
+  framing = "level", className,
 }: {
   children: React.ReactNode;
   glyph: string;
@@ -81,8 +81,9 @@ function Scene({
   over?: boolean;
   top?: string;
   shade?: "ink" | "ember" | "paper";
+  className?: string;
   /** subtle camera framing for the scene */
-  framing?: "level" | "push" | "pull" | "tiltL" | "tiltR";
+    framing?: "none" | "level" | "push" | "pull" | "tiltL" | "tiltR";
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const stage = useStage();
@@ -94,6 +95,7 @@ function Scene({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    if (framing === "none") el.style.transform = "none";
 
     // Cache rect so subscriber never forces a live layout read
     const ro = new ResizeObserver(() => {
@@ -132,6 +134,10 @@ function Scene({
 
     const unsub = stage.subscribe((f) => {
       if (!visibleRef.current || !rectRef.current) return;
+      if (framing === "none") {
+        el.style.transform = "none";
+        return;
+      }
       const r = rectRef.current;
       // -1 (below viewport) → 0 (centred) → +1 (above viewport)
       const c = (r.top + r.height / 2 - f.vh / 2) / f.vh;
@@ -161,7 +167,7 @@ function Scene({
 
 
   return (
-    <div ref={ref} className="scene-frame" style={{ position: "relative" }}>
+    <div ref={ref} className={`scene-frame${className ? ` ${className}` : ""}`} style={{ position: "relative" }}>
       <SectionGlyph text={glyph} align={align} size={size} over={over} top={top} shade={shade} />
       {children}
     </div>
@@ -170,21 +176,26 @@ function Scene({
 
 function Index() {
   const [preloaderDone, setPreloaderDone] = useState(false);
+  const [sectionsReady, setSectionsReady] = useState(false);
+
+  useEffect(() => {
+    if (!preloaderDone) return;
+    const id = window.setTimeout(() => setSectionsReady(true), 80);
+    return () => window.clearTimeout(id);
+  }, [preloaderDone]);
+
   return (
     <>
-      {/* Experience renders IMMEDIATELY so React hydrates the full tree.
-          Preloader sits on top as a CSS overlay and fades out on done. */}
-      <Experience preloaderDone={preloaderDone} />
+      {/* Keep the above-fold product experience eager; defer below-fold chunks
+          until the curtain lifts so the loader cannot sit at 0 while the whole
+          landing hydrates. */}
+      <Experience preloaderDone={preloaderDone} sectionsReady={sectionsReady} />
       {!preloaderDone && <Preloader onDone={() => setPreloaderDone(true)} />}
     </>
   );
 }
 
-function Experience({ preloaderDone }: { preloaderDone: boolean }) {
-  if (typeof window !== 'undefined' && !(window as any).AegisStartup.expStart) {
-    (window as any).AegisStartup.expStart = performance.now();
-    console.log('[Startup] 5. Experience Rendered:', performance.now().toFixed(2) + 'ms');
-  }
+function Experience({ preloaderDone, sectionsReady }: { preloaderDone: boolean; sectionsReady: boolean }) {
   return (
     <MotionProvider preloaderDone={preloaderDone}>
       <StageProvider>
@@ -203,57 +214,61 @@ function Experience({ preloaderDone }: { preloaderDone: boolean }) {
               <Hero />
             </Scene>
 
-            {/* Each section has its OWN Suspense so one slow chunk never
-                blocks the rest. Previously ALL 9 sections shared one
-                boundary — if Network (cobe WebGL) was slow, nothing below
-                Hero rendered until it finished. */}
-            <Suspense fallback={null}>
-              <Scene glyph="blind." size="20vw" top="6vh" align="left" shade="ember" framing="tiltL">
-                <Problem />
-              </Scene>
-            </Suspense>
-            <Suspense fallback={null}>
-              <Scene glyph="inspect." size="20vw" top="4vh" align="right" over framing="push">
-                <Pipeline />
-              </Scene>
-            </Suspense>
-            <Suspense fallback={null}>
-              <Scene glyph="score." size="22vw" top="2vh" align="left" shade="ember" framing="tiltR">
-                <Threat />
-              </Scene>
-            </Suspense>
-            <Suspense fallback={null}>
-              <Scene glyph="observe." size="20vw" top="4vh" align="right" framing="level">
-                <Analytics />
-              </Scene>
-            </Suspense>
-            <Suspense fallback={null}>
-              <Terminology />
-            </Suspense>
-            <Suspense fallback={null}>
-              <Scene glyph="38 regions" size="14vw" top="4vh" align="left" over framing="pull">
-                <Network />
-              </Scene>
-            </Suspense>
-            <Suspense fallback={null}>
-              <Scene glyph="layer." size="22vw" top="2vh" align="right" framing="push">
-                <Layers />
-              </Scene>
-            </Suspense>
-            <Suspense fallback={null}>
-              <Scene glyph="proof." size="20vw" top="6vh" align="left" framing="tiltL">
-                <Confidence />
-              </Scene>
-            </Suspense>
-            <Suspense fallback={null}>
-              <Scene glyph="routed." size="26vw" top="40%" align="center" shade="paper" framing="pull">
-                <Finale />
-              </Scene>
-            </Suspense>
+            {sectionsReady && (
+              <>
+                {/* Each section has its OWN Suspense so one slow chunk never
+                    blocks the rest. */}
+                <Suspense fallback={null}>
+                  <Scene glyph="blind." size="20vw" top="6vh" align="left" shade="ember" framing="tiltL">
+                    <Problem />
+                  </Scene>
+                </Suspense>
+                <Suspense fallback={null}>
+                  <Scene glyph="inspect." size="20vw" top="4vh" align="right" over framing="none" className="pipeline-scene">
+                    <Pipeline />
+                  </Scene>
+                </Suspense>
+                <Suspense fallback={null}>
+                  <Scene glyph="score." size="22vw" top="2vh" align="left" shade="ember" framing="tiltR">
+                    <Threat />
+                  </Scene>
+                </Suspense>
+                <Suspense fallback={null}>
+                  <Scene glyph="observe." size="20vw" top="4vh" align="right" framing="level">
+                    <Analytics />
+                  </Scene>
+                </Suspense>
+                <Suspense fallback={null}>
+                  <Terminology />
+                </Suspense>
+                <Suspense fallback={null}>
+                  <Scene glyph="38 regions" size="14vw" top="4vh" align="left" over framing="pull">
+                    <Network />
+                  </Scene>
+                </Suspense>
+                <Suspense fallback={null}>
+                  <Scene glyph="layer." size="22vw" top="2vh" align="right" framing="push">
+                    <Layers />
+                  </Scene>
+                </Suspense>
+                <Suspense fallback={null}>
+                  <Scene glyph="proof." size="20vw" top="6vh" align="left" framing="tiltL">
+                    <Confidence />
+                  </Scene>
+                </Suspense>
+                <Suspense fallback={null}>
+                  <Scene glyph="routed." size="26vw" top="40%" align="center" shade="paper" framing="pull">
+                    <Finale />
+                  </Scene>
+                </Suspense>
+              </>
+            )}
           </main>
-          <Suspense fallback={null}>
-            <TelemetryChrome />
-          </Suspense>
+          {sectionsReady && (
+            <Suspense fallback={null}>
+              <TelemetryChrome />
+            </Suspense>
+          )}
         </ScrollProgressProvider>
         </TokenProvider>
       </StageProvider>
