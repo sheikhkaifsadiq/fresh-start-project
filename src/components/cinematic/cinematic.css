@@ -123,17 +123,17 @@
 /* ---------- Scroll page (creates scroll length) ---------- */
 .cine-scroll {
   position: relative; z-index: 3;
-  /* 8 chapters × 100vh + tail */
-  min-height: 900vh;
+  /* 8 chapters · tighter cadence */
+  min-height: 720vh;
 }
 
 /* Per-chapter sticky text frames */
 .cine-chapter {
   position: relative;
-  height: 100vh;
+  min-height: 88vh;
   display: flex;
   align-items: center;
-  padding: 0 8vw;
+  padding: 4vh 8vw;
   pointer-events: none;
 }
 .cine-chapter .inner {
@@ -143,6 +143,7 @@
 .cine-chapter.right { justify-content: flex-end; }
 .cine-chapter.center { justify-content: center; text-align: center; }
 .cine-chapter.center .inner { text-align: center; }
+
 
 .cine-kicker {
   font-family: var(--cine-mono);
@@ -344,4 +345,89 @@
   .cine-chapter .cine-lede, .cine-chapter .cine-kicker,
   .cine-chapter .cine-meta, .cine-chapter .cine-cta-row { opacity: 1; transform: none; transition: none; }
   .cine-hud .dot { animation: none; }
+}
+
+/* ============================================================
+   Per-chapter in/out animations — each chapter has its own signature
+   The base reveal is the word mask (kept). These add a body-wide
+   transform on the .inner so each chapter feels physically different.
+   ============================================================ */
+.cine-chapter .inner {
+  transition:
+    transform 1.1s cubic-bezier(.2,.7,.15,1),
+    opacity .9s ease,
+    filter 1.1s ease,
+    clip-path 1.2s cubic-bezier(.2,.7,.15,1);
+  will-change: transform, opacity, filter;
+}
+
+/* default (out) state per anim */
+.cine-anim-mask    .inner { opacity: .0; transform: translateY(40px); filter: blur(10px); }
+.cine-anim-slide-r .inner { opacity: .0; transform: translateX(80px) rotate(.6deg); filter: blur(6px); }
+.cine-anim-split   .inner { opacity: .0; transform: translateY(20px); clip-path: inset(50% 0 50% 0); }
+.cine-anim-zoom    .inner { opacity: .0; transform: scale(.86) rotate(-1.2deg); filter: blur(12px); }
+.cine-anim-flip    .inner { opacity: .0; transform: perspective(1200px) rotateX(28deg) translateY(40px); transform-origin: 50% 0%; }
+.cine-anim-drift   .inner { opacity: .0; transform: translateY(90px) scale(.96); filter: blur(8px); }
+.cine-anim-cascade .inner { opacity: .0; transform: translateY(60px) skewY(2deg); filter: blur(6px); }
+.cine-anim-focus   .inner { opacity: .0; transform: scale(1.18); filter: blur(18px); letter-spacing: .04em; }
+
+/* active state — everything resolves */
+.cine-chapter.is-active .inner {
+  opacity: 1;
+  transform: none;
+  filter: none;
+  clip-path: inset(0 0 0 0);
+  letter-spacing: normal;
+}
+
+/* per-chapter outgoing flavour (when scrolled past) */
+.cine-anim-slide-r:not(.is-active) .inner { /* keeps slide-out direction */ }
+.cine-anim-split:not(.is-active)   .inner { clip-path: inset(50% 0 50% 0); }
+
+/* ============================================================
+   3D depth on data cards
+   ============================================================ */
+.dv-tilt { display: block; transform-style: preserve-3d; }
+.dv-tilt .dv-card {
+  transform: translateZ(40px);
+  box-shadow:
+    0 50px 90px -30px rgba(0,0,0,.85),
+    0 0 0 1px rgba(255,255,255,.04),
+    inset 0 1px 0 rgba(255,255,255,.06);
+}
+.dv-stack { display: flex; flex-direction: column; gap: 14px; }
+.dv-side { perspective: 1400px; }
+
+/* glow ring around side cards */
+.dv-side::before {
+  content: ""; position: absolute; inset: -30px; z-index: -1;
+  background:
+    radial-gradient(50% 50% at 30% 30%, rgba(60,240,212,.18), transparent 70%),
+    radial-gradient(50% 50% at 80% 80%, rgba(255,45,117,.18), transparent 70%);
+  filter: blur(40px); pointer-events: none;
+}
+
+/* ============================================================
+   Waterfall viz
+   ============================================================ */
+.dv-waterfall { display: flex; flex-direction: column; gap: 6px; margin: 8px 0; }
+.dv-wf-row {
+  display: grid; grid-template-columns: 70px 1fr 30px;
+  gap: 8px; align-items: center;
+  font-family: var(--cine-mono);
+}
+.dv-wf-k { font-size: 9px; letter-spacing: .18em; color: var(--cine-chrome); }
+.dv-wf-v { font-family: var(--cine-display); font-size: 12px; color: var(--cine-paper); text-align: right; }
+.dv-wf-track { position: relative; height: 12px; background: rgba(200,194,232,0.05); }
+.dv-wf-track i {
+  position: absolute; top: 0; bottom: 0;
+  box-shadow: 0 0 14px currentColor;
+  animation: dv-wf-in .9s cubic-bezier(.2,.7,.15,1) both;
+}
+@keyframes dv-wf-in { from { transform: scaleX(0); transform-origin: left center; } to { transform: scaleX(1); } }
+
+/* tighter mobile cadence (still data-rich) */
+@media (max-width: 720px) {
+  .cine-scroll { min-height: 760vh; }
+  .cine-chapter { min-height: 92vh; padding: 6vh 6vw 4vh; }
 }

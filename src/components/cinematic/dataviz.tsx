@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { useCinematicScroll } from "./scroll";
 
 /* ============================================================
@@ -21,6 +21,107 @@ function rand(seed: number) {
   const x = Math.sin(seed * 9301 + 49297) * 233280;
   return x - Math.floor(x);
 }
+
+/* SSR-safe client gate — prevents hydration mismatch from Math.random() */
+export function ClientOnly({ children, fallback = null }: { children: ReactNode; fallback?: ReactNode }) {
+  const [m, setM] = useState(false);
+  useEffect(() => setM(true), []);
+  return <>{m ? children : fallback}</>;
+}
+
+/* 3D tilt wrapper — true perspective depth on flat SVG/CSS cards */
+export function Tilt3D({ children, intensity = 10, className = "" }: { children: ReactNode; intensity?: number; className?: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = ref.current; if (!el) return;
+    let raf = 0, tx = 0, ty = 0, cx = 0, cy = 0;
+    const onMove = (e: MouseEvent) => {
+      const r = el.getBoundingClientRect();
+      tx = ((e.clientX - r.left) / r.width  - 0.5) *  intensity;
+      ty = ((e.clientY - r.top)  / r.height - 0.5) * -intensity;
+    };
+    const onLeave = () => { tx = 0; ty = 0; };
+    const tick = () => {
+      cx += (tx - cx) * 0.08; cy += (ty - cy) * 0.08;
+      el.style.transform = `perspective(1400px) rotateX(${cy.toFixed(2)}deg) rotateY(${cx.toFixed(2)}deg) translateZ(0)`;
+      raf = requestAnimationFrame(tick);
+    };
+    el.addEventListener("mousemove", onMove);
+    el.addEventListener("mouseleave", onLeave);
+    raf = requestAnimationFrame(tick);
+    return () => { cancelAnimationFrame(raf); el.removeEventListener("mousemove", onMove); el.removeEventListener("mouseleave", onLeave); };
+  }, [intensity]);
+  return <div ref={ref} className={`dv-tilt ${className}`} style={{ transformStyle: "preserve-3d", willChange: "transform" }}>{children}</div>;
+}
+
+/* Radial heatmap — circular polar grid (new viz) */
+export function RadialHeatmap() {
+  const N = 12, R = 6;
+  const [grid, setGrid] = useState(() => Array.from({ length: N * R }, (_, i) => rand(i)));
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      setGrid((g) => g.map((v, i) => (Math.random() < 0.22 ? Math.random() : v * 0.94)));
+    }, 320);
+    return () => clearInterval(id);
+  }, []);
+  return (
+    <div className="dv-card">
+      <div className="dv-card-head"><span>BEHAVIOURAL HEATMAP · 72 BUCKETS</span><span>POLAR</span></div>
+      <svg viewBox="-100 -100 200 200" style={{ width: "100%", height: 200 }}>
+        {grid.map((v, i) => {
+          const ring = Math.floor(i / N), slice = i % N;
+          const r1 = 12 + ring * 12, r2 = r1 + 11;
+          const a1 = (slice / N) * Math.PI * 2 - Math.PI / 2;
+          const a2 = a1 + (Math.PI * 2) / N - 0.02;
+          const p = (r: number, a: number) => `${(r * Math.cos(a)).toFixed(2)},${(r * Math.sin(a)).toFixed(2)}`;
+          const d = `M${p(r1,a1)} L${p(r2,a1)} A${r2},${r2} 0 0 1 ${p(r2,a2)} L${p(r1,a2)} A${r1},${r1} 0 0 0 ${p(r1,a1)} Z`;
+          const c = v > 0.78 ? "var(--c-magenta)" : v > 0.55 ? "var(--c-amber)" : v > 0.32 ? "var(--c-aqua)" : "var(--c-indigo)";
+          return <path key={i} d={d} fill={c} opacity={0.2 + v * 0.75} style={{ transition: "opacity .35s ease, fill .35s ease" }} />;
+        })}
+        <circle r="9" fill="var(--c-ink)" stroke="var(--cine-line)" />
+        <text textAnchor="middle" dy="3" fontSize="8" fill="var(--cine-paper)" fontFamily="var(--cine-mono)">CORE</text>
+      </svg>
+    </div>
+  );
+}
+
+/* Vertical waterfall — staggered streaming counters */
+export function Waterfall() {
+  const rows = [
+    { k: "DNS",      v: 0.4, c: "var(--c-sky)" },
+    { k: "TLS",      v: 0.9, c: "var(--c-aqua)" },
+    { k: "INGEST",   v: 0.6, c: "var(--c-lime)" },
+    { k: "FEATURES", v: 2.2, c: "var(--c-amber)" },
+    { k: "ML",       v: 3.4, c: "var(--c-coral)" },
+    { k: "RULES",    v: 0.9, c: "var(--c-magenta)" },
+    { k: "DECIDE",   v: 0.4, c: "var(--c-violet)" },
+    { k: "ROUTE",    v: 0.3, c: "var(--c-bubble)" },
+  ];
+  const max = 4.0;
+  let acc = 0;
+  return (
+    <div className="dv-card">
+      <div className="dv-card-head"><span>WATERFALL · STAGE TIMING</span><span>ms</span></div>
+      <div className="dv-waterfall">
+        {rows.map((r, i) => {
+          const left = (acc / 10) * 100;
+          acc += r.v;
+          return (
+            <div key={r.k} className="dv-wf-row">
+              <span className="dv-wf-k">{r.k}</span>
+              <div className="dv-wf-track">
+                <i style={{ left: `${left}%`, width: `${(r.v / 10) * 100}%`, background: r.c, animationDelay: `${i * 80}ms` }} />
+              </div>
+              <span className="dv-wf-v">{r.v.toFixed(1)}</span>
+            </div>
+          );
+        })}
+      </div>
+      <div className="dv-card-foot"><span>END-TO-END</span><span style={{ color: "var(--c-aqua)" }}>{acc.toFixed(1)} ms</span></div>
+    </div>
+  );
+}
+
 
 /* ---------- 1. Live counter chip ---------- */
 export function StatChip({
