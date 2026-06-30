@@ -29,28 +29,39 @@ export function ClientOnly({ children, fallback = null }: { children: ReactNode;
   return <>{m ? children : fallback}</>;
 }
 
-/* 3D tilt wrapper — true perspective depth on flat SVG/CSS cards */
-export function Tilt3D({ children, intensity = 10, className = "" }: { children: ReactNode; intensity?: number; className?: string }) {
+/* 3D tilt wrapper — perspective + cursor magnetism (DOM-side gravity) */
+export function Tilt3D({ children, intensity = 10, className = "", magnet = 0.08 }: { children: ReactNode; intensity?: number; className?: string; magnet?: number }) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const el = ref.current; if (!el) return;
-    let raf = 0, tx = 0, ty = 0, cx = 0, cy = 0;
-    const onMove = (e: MouseEvent) => {
+    let raf = 0, tx = 0, ty = 0, cx = 0, cy = 0, mx = 0, my = 0, cmx = 0, cmy = 0, glow = 0, tglow = 0;
+    const onMove = (e: PointerEvent) => {
       const r = el.getBoundingClientRect();
       tx = ((e.clientX - r.left) / r.width  - 0.5) *  intensity;
       ty = ((e.clientY - r.top)  / r.height - 0.5) * -intensity;
+      const dx = e.clientX - (r.left + r.width / 2);
+      const dy = e.clientY - (r.top + r.height / 2);
+      const dist = Math.hypot(dx, dy);
+      const radius = Math.max(r.width, r.height);
+      if (dist < radius * 1.5) {
+        const k = 1 - dist / (radius * 1.5);
+        mx = dx * magnet * k; my = dy * magnet * k; tglow = k;
+      } else { mx = 0; my = 0; tglow = 0; }
     };
-    const onLeave = () => { tx = 0; ty = 0; };
+    const onLeave = () => { tx = 0; ty = 0; mx = 0; my = 0; tglow = 0; };
     const tick = () => {
-      cx += (tx - cx) * 0.08; cy += (ty - cy) * 0.08;
-      el.style.transform = `perspective(1400px) rotateX(${cy.toFixed(2)}deg) rotateY(${cx.toFixed(2)}deg) translateZ(0)`;
+      cx += (tx - cx) * 0.10; cy += (ty - cy) * 0.10;
+      cmx += (mx - cmx) * 0.12; cmy += (my - cmy) * 0.12;
+      glow += (tglow - glow) * 0.1;
+      el.style.transform = `perspective(1400px) rotateX(${cy.toFixed(2)}deg) rotateY(${cx.toFixed(2)}deg) translate3d(${cmx.toFixed(2)}px, ${cmy.toFixed(2)}px, 0)`;
+      el.style.setProperty("--tilt-glow", glow.toFixed(3));
       raf = requestAnimationFrame(tick);
     };
-    el.addEventListener("mousemove", onMove);
+    window.addEventListener("pointermove", onMove, { passive: true });
     el.addEventListener("mouseleave", onLeave);
     raf = requestAnimationFrame(tick);
-    return () => { cancelAnimationFrame(raf); el.removeEventListener("mousemove", onMove); el.removeEventListener("mouseleave", onLeave); };
-  }, [intensity]);
+    return () => { cancelAnimationFrame(raf); window.removeEventListener("pointermove", onMove); el.removeEventListener("mouseleave", onLeave); };
+  }, [intensity, magnet]);
   return <div ref={ref} className={`dv-tilt ${className}`} style={{ transformStyle: "preserve-3d", willChange: "transform" }}>{children}</div>;
 }
 

@@ -387,7 +387,13 @@
 /* ============================================================
    3D depth on data cards
    ============================================================ */
-.dv-tilt { display: block; transform-style: preserve-3d; }
+.dv-tilt { display: block; transform-style: preserve-3d; position: relative; --tilt-glow: 0; }
+.dv-tilt::after {
+  content: ""; position: absolute; inset: -20px; border-radius: 20px; pointer-events: none;
+  background: radial-gradient(60% 60% at 50% 50%, rgba(60,240,212,.35), rgba(255,45,117,.18) 60%, transparent 80%);
+  opacity: calc(var(--tilt-glow) * .55);
+  filter: blur(28px); transition: opacity .2s ease; z-index: -1;
+}
 .dv-tilt .dv-card {
   transform: translateZ(40px);
   box-shadow:
@@ -396,7 +402,7 @@
     inset 0 1px 0 rgba(255,255,255,.06);
 }
 .dv-stack { display: flex; flex-direction: column; gap: 14px; }
-.dv-side { perspective: 1400px; }
+.dv-side { perspective: 1400px; position: relative; }
 
 /* glow ring around side cards */
 .dv-side::before {
