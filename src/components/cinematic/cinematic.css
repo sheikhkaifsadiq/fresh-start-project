@@ -123,17 +123,17 @@
 /* ---------- Scroll page (creates scroll length) ---------- */
 .cine-scroll {
   position: relative; z-index: 3;
-  /* 8 chapters × 100vh + tail */
-  min-height: 900vh;
+  /* 8 chapters · tighter cadence */
+  min-height: 720vh;
 }
 
 /* Per-chapter sticky text frames */
 .cine-chapter {
   position: relative;
-  height: 100vh;
+  min-height: 88vh;
   display: flex;
   align-items: center;
-  padding: 0 8vw;
+  padding: 4vh 8vw;
   pointer-events: none;
 }
 .cine-chapter .inner {
@@ -143,6 +143,7 @@
 .cine-chapter.right { justify-content: flex-end; }
 .cine-chapter.center { justify-content: center; text-align: center; }
 .cine-chapter.center .inner { text-align: center; }
+
 
 .cine-kicker {
   font-family: var(--cine-mono);
