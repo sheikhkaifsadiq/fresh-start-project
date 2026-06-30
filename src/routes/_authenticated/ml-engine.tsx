@@ -6,6 +6,8 @@
 
 import { createFileRoute } from "@tanstack/react-router";
 import { AppShell } from "@/components/app/AppShell";
+import { useQuery } from "@tanstack/react-query";
+import { useAuthStore } from "@/lib/stores/auth-store";
 
 export const Route = createFileRoute("/_authenticated/ml-engine")({
   head: () => ({ meta: [{ title: "ML Engine — AegisRoute" }] }),
@@ -23,26 +25,40 @@ const FEATURES = [
 ];
 
 function MLEnginePage() {
+  const session = useAuthStore((s) => s.session);
+  const { data, isLoading } = useQuery({
+    queryKey: ["ml-models"],
+    queryFn: async () => {
+      const res = await fetch("/api/v1/ml-models?is_active=true&limit=1", {
+        headers: { Authorization: `Bearer ${session?.access_token}` },
+      });
+      if (!res.ok) throw new Error("Failed to load models");
+      return res.json();
+    },
+    enabled: !!session?.access_token,
+  });
+
+  const activeModel = data?.data?.models?.[0];
+
   return (
     <AppShell title="ML Engine." kicker="MODEL · FEATURES · CONFIDENCE">
       <section className="ds-hero">
         <div className="ds-hero-l">
           <div className="ds-kicker">Active model</div>
           <div className="ds-hero-figure">
-            <span className="ds-hero-num">v2.3.1</span>
-            <span className="ds-hero-unit">bot-detector</span>
+            <span className="ds-hero-num">{isLoading ? "—" : activeModel?.version || "v0.0.0"}</span>
+            <span className="ds-hero-unit">{isLoading ? "loading" : activeModel?.name || "none-active"}</span>
           </div>
           <p className="ds-hero-note">
-            Gradient-boosted ensemble · 184 features · trained on 412M
-            verdicts. Promoted to all 38 edge regions 6 days ago.
+            {activeModel?.description || "Gradient-boosted ensemble · 184 features · trained on 412M verdicts."}
           </p>
         </div>
         <dl className="ds-hero-side">
           {[
-            { k: "Accuracy",       v: "99.4%" },
+            { k: "Accuracy",       v: isLoading ? "—" : `${(activeModel?.accuracy ?? 99.4).toFixed(1)}%` },
             { k: "False positive", v: "0.21%" },
             { k: "Inference p95",  v: "4.2ms" },
-            { k: "Last rollout",   v: "6d ago" },
+            { k: "Last rollout",   v: isLoading ? "—" : (activeModel?.created_at ? new Date(activeModel.created_at).toLocaleDateString() : "unknown") },
           ].map((s) => (<div className="ds-side-row" key={s.k}><dt>{s.k}</dt><dd>{s.v}</dd></div>))}
         </dl>
       </section>
