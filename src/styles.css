@@ -2631,12 +2631,16 @@ pre { max-width: 100%; overflow-x: auto; }
     contain: none !important;
   }
   .pipeline-pin {
-    min-height: 300vh !important;
-    height: 300vh !important;
+    min-height: 420vh !important;
+    height: 420vh !important;
     padding-bottom: 0 !important;
     margin-bottom: 0;
     background: var(--paper);
   }
+  /* Hide the external SectionHead on mobile so the pin engages at the top
+     of the section. The cinema's own header strip carries the context. */
+  .pipeline-section > .container-x:first-child { display: none !important; }
+  .pipeline-section { padding-top: 0 !important; padding-bottom: 0 !important; }
   .pipeline-pin .section-pin-inner {
     position: sticky;
     top: 0 !important;
