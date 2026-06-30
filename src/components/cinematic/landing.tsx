@@ -16,7 +16,7 @@ import { CinematicPreloader } from "./preloader";
 import {
   LiveAreaChart, EdgeLatencyChart, ThreatFeed, ConfidenceGauge,
   PipelineViz, BarRace, GeoMap, DonutMix, StatGrid, SignalMatrix,
-  Sparkline, ScrollRing,
+  Sparkline, ScrollRing, StatChip,
 } from "./dataviz";
 
 const CHAPTERS = 8;
