@@ -29,7 +29,7 @@ export function Reveal({ children, delay = 0, as: Tag = "div", className = "" }:
     return () => io.disconnect();
   }, []);
 
-  const Comp = Tag as ElementType;
+  const Comp: any = Tag;
   return (
     <Comp
       ref={ref as any}
