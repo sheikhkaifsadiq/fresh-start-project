@@ -19,6 +19,7 @@ import {
   Sparkline, ScrollRing, StatChip, ClientOnly, Tilt3D,
   RadialHeatmap, Waterfall,
 } from "./dataviz";
+import { Reveal } from "./reveal";
 
 const CHAPTERS = 8;
 
