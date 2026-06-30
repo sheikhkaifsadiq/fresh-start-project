@@ -4,7 +4,7 @@ import { useStage } from "../../lib/stage";
 import { useRequestToken } from "../../lib/token";
 
 /**
- * Decision Pipeline — the centerpiece. 320vh pinned.
+ * Decision Pipeline — the centerpiece. 300vh pinned.
  * A request packet physically travels across 5 stages while the camera
  * pushes in, a fingerprint extracts mid-flight, ML feature bars build,
  * a verdict resolves, and the branch glows safe-cream or threat-ember.
@@ -208,7 +208,7 @@ export function Pipeline() {
         />
       </div>
 
-      <div ref={wrap} className="section-pin pipeline-pin" style={{ minHeight: "320vh" }}>
+      <div ref={wrap} className="section-pin pipeline-pin" style={{ minHeight: "300vh" }}>
         <div className="section-pin-inner" style={{ display: "flex", alignItems: "center" }}>
           <div className="container-x" style={{ width: "100%" }}>
             <div ref={cameraRef} className="pipeline-camera" style={{ transformOrigin: "center 60%", willChange: "transform" }}>
