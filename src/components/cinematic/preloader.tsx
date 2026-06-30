@@ -50,13 +50,14 @@ export function CinematicPreloader({
       const cap = ready() && elapsed > minMs ? 1 : 0.93;
       setPct((prev) => {
         const next = prev + (cap - prev) * 0.05;
-        return next < cap ? next : cap;
+        return next > 0.999 ? 1 : next < cap ? next : cap;
       });
       raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
   }, [minMs]);
+
 
   /* typewriter cycling */
   useEffect(() => {
