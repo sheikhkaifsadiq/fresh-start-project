@@ -81,13 +81,16 @@ export function CinematicPreloader({
     return () => { cancelled = true; };
   }, [line]);
 
-  /* exit */
+  /* exit — fire once when nearly complete */
+  const exitedRef = useRef(false);
   useEffect(() => {
-    if (pct < 0.995) return;
+    if (pct < 0.995 || exitedRef.current) return;
+    exitedRef.current = true;
     const t1 = window.setTimeout(() => setHidden(true), 260);
     const t2 = window.setTimeout(() => onDone?.(), 1200);
     return () => { clearTimeout(t1); clearTimeout(t2); };
   }, [pct, onDone]);
+
 
   const n = Math.min(100, Math.round(pct * 100));
   const R = 72;
